@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.133, 19.432]},
+      "properties": {
+        "Title": "El Pan de la Chola",
+        "Google Maps URL": "https://maps.google.com/?cid=1",
+        "Location": {"Latitude": 19.432, "Longitude": -99.133, "Address": "Av. Ámsterdam 57, Condesa, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.168, 19.427]},
+      "properties": {
+        "Title": "Panadería Rosetta",
+        "Google Maps URL": "https://maps.google.com/?cid=2",
+        "Location": {"Latitude": 19.427, "Longitude": -99.168, "Address": "Colima 179, Roma Norte, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.160, 19.420]},
+      "properties": {
+        "Title": "Helados Jarocho",
+        "Google Maps URL": "https://maps.google.com/?cid=3",
+        "Location": {"Latitude": 19.420, "Longitude": -99.160, "Address": "Orizaba 145, Roma Norte, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.150, 19.410]},
+      "properties": {
+        "Title": "Nieve de Garrafa La Especial",
+        "Google Maps URL": "https://maps.google.com/?cid=4",
+        "Location": {"Latitude": 19.410, "Longitude": -99.150, "Address": "Álvaro Obregón 100, Roma, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.163, 19.435]},
+      "properties": {
+        "Title": "Mariscos El Güero",
+        "Google Maps URL": "https://maps.google.com/?cid=5",
+        "Location": {"Latitude": 19.435, "Longitude": -99.163, "Address": "Tamaulipas 60, Condesa, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.172, 19.418]},
+      "properties": {
+        "Title": "Ceviche Bar Roma",
+        "Google Maps URL": "https://maps.google.com/?cid=6",
+        "Location": {"Latitude": 19.418, "Longitude": -99.172, "Address": "Sonora 180, Roma Norte, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.145, 19.415]},
+      "properties": {
+        "Title": "Restaurante Contramar",
+        "Google Maps URL": "https://maps.google.com/?cid=7",
+        "Location": {"Latitude": 19.415, "Longitude": -99.145, "Address": "Durango 200, Roma Norte, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.155, 19.425]},
+      "properties": {
+        "Title": "Taquería Los Cocuyos",
+        "Google Maps URL": "https://maps.google.com/?cid=8",
+        "Location": {"Latitude": 19.425, "Longitude": -99.155, "Address": "5 de Febrero 26, Centro, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.180, 19.430]},
+      "properties": {
+        "Title": "Estética Moderna",
+        "Google Maps URL": "https://maps.google.com/?cid=9",
+        "Location": {"Latitude": 19.430, "Longitude": -99.180, "Address": "Jalapa 200, Roma Norte, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.175, 19.422]},
+      "properties": {
+        "Title": "Boutique Polanco Studio",
+        "Google Maps URL": "https://maps.google.com/?cid=10",
+        "Location": {"Latitude": 19.422, "Longitude": -99.175, "Address": "Mazatlán 82, Condesa, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.158, 19.440]},
+      "properties": {
+        "Title": "La Tienda de Enfrente",
+        "Google Maps URL": "https://maps.google.com/?cid=11",
+        "Location": {"Latitude": 19.440, "Longitude": -99.158, "Address": "Tamaulipas 100, Condesa, CDMX"}
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-99.165, 19.445]},
+      "properties": {
+        "Title": "Midpoint Coffee",
+        "Google Maps URL": "https://maps.google.com/?cid=12",
+        "Location": {"Latitude": 19.445, "Longitude": -99.165, "Address": "Av. Tamaulipas 66, Condesa, CDMX"}
+      }
+    }
+  ]
+}
