@@ -284,6 +284,14 @@ KNOWN_PLACES = {
     "pisca": "cafe",
     "oly.": "cafe",
     "tomasa condesa": "cafe",
+    # Hotbook July 2025 hotspots
+    "ricochet apero": "bars",
+    "la romana": "bars",
+    "alterna": "fine_dining",
+    "la belle epoque": "fine_dining",
+    "wagyu jyube": "fine_dining",
+    "cochilada": "dinner",
+    "chopsticks": "fine_dining",
     # Dinner — neighborhood and casual restaurants
     "bartola": "dinner",
     "cursi": "dinner",
