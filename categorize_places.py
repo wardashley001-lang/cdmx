@@ -217,7 +217,7 @@ KNOWN_PLACES = {
     "castizo roma": "fine_dining",
     "l'enfant": "fine_dining",
     "el jamil": "fine_dining",
-    "alma mia condesa": "fine_dining",
+    "alma mia condesa": "cafe",
     "casa mandarine": "fine_dining",
     "havre 77": "fine_dining",
     "balcon del zocalo": "fine_dining",
@@ -237,7 +237,7 @@ KNOWN_PLACES = {
     "tlecan": "bars",
     "caiman": "bars",
     "balagan": "bars",
-    "arda": "bars",
+    "arda": "fine_dining",
     "kinshasa roma": "bars",
     "anonimo": "bars",
     "el tigre silencioso": "bars",
@@ -272,7 +272,7 @@ KNOWN_PLACES = {
     # Healthy — juice bars, smoothies, organic markets
     "happy fruit": "healthy",
     "blend station": "healthy",
-    "botanica granel": "healthy",
+    "botanica granel": "stores",
     "the green corner": "healthy",
     # Stores (keyword-missed)
     "armario comunal": "stores",
@@ -281,14 +281,19 @@ KNOWN_PLACES = {
     "casa simera": "hotel",
     "haab project condesa": "hotel",
     # Café (keyword-missed)
-    "pisca": "cafe",
+    "pisca": "wine",
     "oly.": "cafe",
     "tomasa condesa": "cafe",
+    # Audit corrections — proper-noun overrides for keyword false-positives
+    "restaurante rosetta": "fine_dining",   # Elena Reygadas; "restaurante" keyword → dinner
+    "salon palomilla": "bars",              # cantina/pulquería; "salon" keyword → salons
+    "disco cafe & bar": "bars",             # late-night bar; "cafe" keyword → cafe
+    "tokyo music bar": "nightlife",         # live music venue; "bar" keyword → bars
     # Hotbook July 2025 hotspots
     "ricochet apero": "bars",
     "la romana": "bars",
     "alterna": "fine_dining",
-    "la belle epoque": "fine_dining",
+    "la belle epoque": "dessert",
     "wagyu jyube": "fine_dining",
     "cochilada": "dinner",
     "chopsticks": "fine_dining",
@@ -301,12 +306,16 @@ KNOWN_PLACES = {
     "casa visconti": "dinner",
     "el olvidado": "dinner",
     "amin": "dinner",
-    "cordoba 87": "dinner",
-    "amsterdam 133": "dinner",
-    "amsterdam 213": "dinner",
-    "durango 136": "dinner",
-    "av nuevo leon 155": "dinner",
-    "av. nuevo leon 206": "dinner",
+}
+
+# Raw street addresses saved as location pins — no useful place info, excluded from output.
+SKIP_PLACES = {
+    "cordoba 87",
+    "amsterdam 133",
+    "amsterdam 213",
+    "durango 136",
+    "av nuevo leon 155",
+    "av. nuevo leon 206",
 }
 
 
@@ -330,6 +339,9 @@ def classify(title: str, note: str = "", tags: str = "") -> str:
             return category
 
     norm_title = normalize(title)
+
+    if norm_title in SKIP_PLACES:
+        return "_skip"
 
     if norm_title in KNOWN_PLACES:
         return KNOWN_PLACES[norm_title]
@@ -564,6 +576,8 @@ def main():
 
     for place in unique:
         cat = classify(place["name"], place.get("note", ""), place.get("tags", ""))
+        if cat == "_skip":
+            continue
         if cat == "uncategorized" and args.api_key:
             print(f"  Querying API for: {place['name']}")
             cat = try_api_classify(place, args.api_key)
