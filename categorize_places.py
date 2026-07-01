@@ -2,29 +2,32 @@
 """
 Categorize Google Maps saved places from Google Takeout exports.
 
+Supports both CSV and GeoJSON formats exported from Google Takeout.
+
 HOW TO GET YOUR DATA:
   1. Go to https://takeout.google.com
   2. Click "Deselect all", then check only "Maps (your places)"
   3. Click "Next step", choose export format, and create export
   4. Download the ZIP, extract it
   5. Your saved list files are in: Takeout/Maps (your places)/
-     Each list is a separate JSON file (e.g. "CDMX.json", "Mexico City manifesto.json")
+     Each list is a separate CSV or JSON file
 
 USAGE:
   # Single list:
-  python categorize_places.py "CDMX.json"
+  python categorize_places.py data/CDMX.csv
 
-  # Multiple lists (merged before categorizing):
-  python categorize_places.py "CDMX.json" "Mexico City manifesto.json"
-
-  # With Google Places API for better accuracy on ambiguous places:
-  python categorize_places.py "CDMX.json" --api-key YOUR_API_KEY
+  # Multiple lists merged and deduplicated:
+  python categorize_places.py data/CDMX.csv data/Hotlist.csv data/Dinner.csv
 
   # Custom output folder:
-  python categorize_places.py "CDMX.json" --output-dir my_lists
+  python categorize_places.py data/CDMX.csv --output-dir my_sorted_lists
+
+  # With Google Places API for better accuracy on ambiguous names:
+  python categorize_places.py data/CDMX.csv --api-key YOUR_API_KEY
 """
 
 import argparse
+import csv
 import json
 import os
 import sys
@@ -32,16 +35,19 @@ import unicodedata
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Category definitions — ordered by priority (earlier = higher priority).
-# Seafood must come before Dinner because "mariscos" can match both.
+# Category definitions — ordered by priority (earlier wins on a tie).
+# Seafood before dinner: "mariscos" overlaps.
+# Salons before bars: "nail bar" should go to salons, not bars.
 # ---------------------------------------------------------------------------
 CATEGORIES = [
     (
         "seafood",
         [
-            "mariscos", "seafood", "pescado", "ceviche", "ostión", "ostion",
-            "camarón", "camaron", "shrimp", "oyster", "pulpo", "jaiba",
-            "langosta", "tuna", "atún", "atun", "salmón", "salmon",
+            "mariscos", "marisqueria", "marisquería", "seafood", "pescado",
+            "ceviche", "ostión", "ostion", "ostería", "osteria", "ostrería",
+            "ostreria", "camarón", "camaron", "shrimp", "oyster", "pulpo",
+            "jaiba", "langosta", "atún", "atun", "salmón", "salmon",
+            "abrasamar", "contramar", "tibur",
         ],
     ),
     (
@@ -49,7 +55,8 @@ CATEGORIES = [
         [
             "panadería", "panaderia", "bakery", "pastelería", "pasteleria",
             "boulangerie", "croissant", "bread", "horno", "brioche",
-            "baguette", "muffin", "donut", "dona", "rosquilla",
+            "baguette", "muffin", "donut", "dona", "rosquilla", "churrería",
+            "churreria", "churro", "bagel", "delicatessen",
         ],
     ),
     (
@@ -57,27 +64,44 @@ CATEGORIES = [
         [
             "helado", "ice cream", "nieve", "paleta", "postre", "dulce",
             "chocolate", "waffle", "crepe", "gelato", "candy", "sweet",
-            "pastel", "cake", "cupcake", "brownie", "macaron", "tarta",
-            "churro", "flan", "mousse",
+            "cake", "cupcake", "brownie", "macaron", "tarta", "flan",
+            "mousse", "amorino",
+        ],
+    ),
+    (
+        "cafe",
+        [
+            "café", "cafe", "caffè", "caffe", "coffee", "momo coffee",
+            "cafebrería", "cafeteria", "cafetería", "matcha", "espresso",
+        ],
+    ),
+    # Salons before bars so "nail bar" / "self-care bar" stay in salons
+    (
+        "salons",
+        [
+            "nail", "nails", "nailbar", "nail bar", "uñas", "unas",
+            "estética", "estetica", "beauty", "peluquería", "peluqueria",
+            "barbería", "barberia", "cabello", "hair", "salon", "salón",
+            "spa", "wellness", "massage", "masaje", "hydrafacial",
+            "manicura", "pedicure", "sauna", "recovery", "self-care",
+        ],
+    ),
+    (
+        "bars",
+        [
+            "wine bar", "bar", "speakeasy", "mezcalería", "mezcaleria",
+            "pulquería", "pulqueria", "cervecería", "cerveceria",
+            "meadery", "cocktail", "rooftop", "roof top", "terraza",
         ],
     ),
     (
         "dinner",
         [
-            "restaurante", "restaurant", "bistro", "cantina", "taquería",
-        "taqueria", "tacos", "comida", "grill", "cocina", "fonda",
-            "brasserie", "taberna", "steakhouse", "carne", "bbq",
-            "barbacoa", "carnitas", "pozole", "mole", "enchiladas",
-            "sushi", "ramen", "pizza", "burger", "hamburgesa",
-        ],
-    ),
-    (
-        "salons",
-        [
-            "salón", "salon", "spa", "estética", "estetica", "nail",
-            "uñas", "unas", "beauty", "peluquería", "peluqueria",
-            "barbería", "barberia", "barber", "cabello", "hair",
-            "cosmetología", "cosmetologia", "masaje", "massage",
+            "restaurante", "restaurant", "bistro", "taquería", "taqueria",
+            "tacos", "comida", "grill", "cocina", "fonda", "brasserie",
+            "taberna", "taverna", "steakhouse", "carne", "bbq", "barbacoa",
+            "carnitas", "pozole", "mole", "enchiladas", "sushi", "ramen",
+            "pizza", "burger", "hamburgesa", "asador", "estiatorio",
         ],
     ),
     (
@@ -88,12 +112,34 @@ CATEGORIES = [
             "librería", "libreria", "bookstore", "galería", "galeria",
             "vintage", "thrift", "moda", "fashion", "ropa", "clothing",
             "joyería", "joyeria", "jewelry", "ferretería", "ferreteria",
-            "electronica", "electrónica",
+            "electronica", "electrónica", "concept store", "perfumérica",
+            "perfumerica", "sartoria",
         ],
     ),
 ]
 
 CATEGORY_NAMES = [c[0] for c in CATEGORIES]
+
+# Note/tag values that hard-override keyword matching on title
+NOTE_OVERRIDES = {
+    "bar": "bars",
+    "speakeasy": "bars",
+    "wine bar": "bars",
+    "cocktail": "bars",
+    "hotel": "hotel",
+    "airbnb": "hotel",
+    "restaurant": "dinner",
+    "omakase": "dinner",
+    "breakfast": "dinner",
+    "pizza": "dinner",
+    "nail": "salons",
+    "nails": "salons",
+    "spa": "salons",
+    "wellness": "salons",
+    "coffee": "cafe",
+    "smoothie": "cafe",
+    "matcha": "cafe",
+}
 
 
 def normalize(text: str) -> str:
@@ -102,49 +148,110 @@ def normalize(text: str) -> str:
     return "".join(c for c in nfkd if not unicodedata.combining(c))
 
 
-def classify(title: str) -> str:
-    """Return the best matching category for a place title, or 'uncategorized'."""
+def classify(title: str, note: str = "", tags: str = "") -> str:
+    """
+    Return the best category. Checks note/tags first (explicit user labels),
+    then title keywords. Short keywords use word-boundary matching.
+    """
+    hints = (note + " " + tags).lower().strip()
+    for hint_kw, category in NOTE_OVERRIDES.items():
+        if hint_kw in hints:
+            return category
+
     norm_title = normalize(title)
     for category, keywords in CATEGORIES:
         for kw in keywords:
-            if normalize(kw) in norm_title:
-                return category
+            norm_kw = normalize(kw)
+            if len(norm_kw) <= 4:
+                # Word-boundary check: pad with spaces so "bar" won't match inside "barra"
+                if f" {norm_kw} " in f" {norm_title} ":
+                    return category
+            else:
+                if norm_kw in norm_title:
+                    return category
+
     return "uncategorized"
 
 
-def parse_takeout_file(path: str) -> list[dict]:
-    """Parse a Google Takeout saved-places JSON file into a list of place dicts."""
+# ---------------------------------------------------------------------------
+# Parsers
+# ---------------------------------------------------------------------------
+
+def parse_csv_file(path: str) -> list[dict]:
+    places = []
+    with open(path, encoding="utf-8-sig") as f:
+        lines = f.readlines()
+
+    # Find the CSV header line (starts with "Title")
+    start = 0
+    for i, line in enumerate(lines):
+        if line.strip().startswith("Title"):
+            start = i
+            break
+
+    reader = csv.DictReader("".join(lines[start:]).splitlines())
+    for row in reader:
+        title = (row.get("Title") or "").strip()
+        if not title or title == "Title":
+            continue
+        if title.lower().startswith("dropped pin"):
+            continue
+
+        place = {
+            "name": title,
+            "note": (row.get("Note") or "").strip(),
+            "tags": (row.get("Tags") or "").strip(),
+            "maps_url": (row.get("URL") or "").strip(),
+            "address": "",
+            "source_file": os.path.basename(path),
+        }
+        places.append(place)
+    return places
+
+
+def parse_geojson_file(path: str) -> list[dict]:
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 
     places = []
-
-    # Standard Google Takeout format: GeoJSON FeatureCollection
-    if data.get("type") == "FeatureCollection":
-        features = data.get("features", [])
-        for feat in features:
-            props = feat.get("properties", {})
-            loc = props.get("Location", {})
-            geo = feat.get("geometry") or {}
-            coords = geo.get("coordinates", [None, None])
-
-            place = {
-                "name": props.get("Title", "Unknown"),
-                "address": loc.get("Address", ""),
-                "maps_url": props.get("Google Maps URL", ""),
-                "latitude": loc.get("Latitude") or (coords[1] if len(coords) > 1 else None),
-                "longitude": loc.get("Longitude") or (coords[0] if coords else None),
-                "source_file": os.path.basename(path),
-            }
-            places.append(place)
-    else:
+    if data.get("type") != "FeatureCollection":
         print(f"  Warning: {path} is not a GeoJSON FeatureCollection — skipping.")
+        return places
 
+    for feat in data.get("features", []):
+        props = feat.get("properties", {})
+        loc = props.get("Location", {})
+        title = props.get("Title", "").strip()
+        if not title or title.lower().startswith("dropped pin"):
+            continue
+        place = {
+            "name": title,
+            "note": "",
+            "tags": "",
+            "maps_url": props.get("Google Maps URL", ""),
+            "address": loc.get("Address", ""),
+            "source_file": os.path.basename(path),
+        }
+        places.append(place)
     return places
 
 
+def parse_file(path: str) -> list[dict]:
+    ext = Path(path).suffix.lower()
+    if ext == ".csv":
+        return parse_csv_file(path)
+    elif ext == ".json":
+        return parse_geojson_file(path)
+    else:
+        print(f"  Warning: unsupported file type {path} — skipping.")
+        return []
+
+
+# ---------------------------------------------------------------------------
+# Optional Google Places API enrichment
+# ---------------------------------------------------------------------------
+
 def try_api_classify(place: dict, api_key: str) -> str:
-    """Use Google Places Text Search API to get place types for better categorization."""
     try:
         import urllib.parse
         import urllib.request
@@ -154,12 +261,14 @@ def try_api_classify(place: dict, api_key: str) -> str:
             query += " " + place["address"]
 
         params = urllib.parse.urlencode({
-            "query": query,
+            "input": query,
+            "inputtype": "textquery",
             "key": api_key,
             "fields": "types",
             "language": "es",
+            "locationbias": "circle:50000@19.4326,-99.1332",
         })
-        url = f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?{params}&inputtype=textquery"
+        url = f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?{params}"
 
         with urllib.request.urlopen(url, timeout=5) as resp:
             result = json.loads(resp.read())
@@ -168,30 +277,16 @@ def try_api_classify(place: dict, api_key: str) -> str:
         if not candidates:
             return "uncategorized"
 
-        types = candidates[0].get("types", [])
-
-        # Map Google place types to our categories
         type_map = {
-            "bakery": "bakery",
-            "cafe": "bakery",
-            "meal_takeaway": "dinner",
-            "restaurant": "dinner",
-            "food": "dinner",
-            "meal_delivery": "dinner",
-            "seafood_restaurant": "seafood",
-            "beauty_salon": "salons",
-            "hair_care": "salons",
-            "spa": "salons",
-            "clothing_store": "stores",
-            "store": "stores",
-            "shopping_mall": "stores",
-            "supermarket": "stores",
-            "pharmacy": "stores",
-            "book_store": "stores",
-            "jewelry_store": "stores",
+            "bakery": "bakery", "cafe": "cafe", "coffee_shop": "cafe",
+            "restaurant": "dinner", "meal_takeaway": "dinner", "food": "dinner",
+            "seafood_restaurant": "seafood", "bar": "bars", "night_club": "bars",
+            "beauty_salon": "salons", "hair_care": "salons", "spa": "salons",
+            "nail_salon": "salons", "clothing_store": "stores", "store": "stores",
+            "shopping_mall": "stores", "supermarket": "stores",
+            "pharmacy": "stores", "book_store": "stores", "jewelry_store": "stores",
         }
-
-        for t in types:
+        for t in candidates[0].get("types", []):
             if t in type_map:
                 return type_map[t]
 
@@ -201,40 +296,50 @@ def try_api_classify(place: dict, api_key: str) -> str:
     return "uncategorized"
 
 
+# ---------------------------------------------------------------------------
+# Output
+# ---------------------------------------------------------------------------
+
 def write_output(categorized: dict[str, list], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    for category, places in categorized.items():
-        out_path = output_dir / f"{category}.json"
-        with open(out_path, "w", encoding="utf-8") as f:
+    all_cats = CATEGORY_NAMES + ["hotel", "uncategorized"]
+
+    for cat, places in categorized.items():
+        if not places:
+            continue
+        with open(output_dir / f"{cat}.json", "w", encoding="utf-8") as f:
             json.dump(places, f, ensure_ascii=False, indent=2)
 
-    # Human-readable summary
-    summary_lines = ["GOOGLE MAPS PLACES — CATEGORY SUMMARY", "=" * 45, ""]
+    summary_lines = ["GOOGLE MAPS PLACES — CATEGORY SUMMARY", "=" * 48, ""]
     total = sum(len(p) for p in categorized.values())
     summary_lines.append(f"Total places processed: {total}")
     summary_lines.append("")
 
-    for category in CATEGORY_NAMES + ["uncategorized"]:
-        places = categorized.get(category, [])
-        summary_lines.append(f"{'─' * 40}")
-        summary_lines.append(f"  {category.upper()}  ({len(places)} places)")
-        summary_lines.append(f"{'─' * 40}")
-        for p in sorted(places, key=lambda x: x["name"]):
-            summary_lines.append(f"  • {p['name']}")
-            if p.get("address"):
-                summary_lines.append(f"    {p['address']}")
+    for cat in all_cats:
+        places = categorized.get(cat, [])
+        if not places:
+            continue
+        summary_lines.append(f"{'─' * 44}")
+        summary_lines.append(f"  {cat.upper()}  ({len(places)} places)")
+        summary_lines.append(f"{'─' * 44}")
+        for p in sorted(places, key=lambda x: x["name"].lower()):
+            line = f"  • {p['name']}"
+            hints = [h for h in [p.get("note"), p.get("tags")] if h]
+            if hints:
+                line += f"  ({', '.join(hints)})"
+            summary_lines.append(line)
         summary_lines.append("")
 
     summary_text = "\n".join(summary_lines)
-    summary_path = output_dir / "summary.txt"
-    with open(summary_path, "w", encoding="utf-8") as f:
-        f.write(summary_text)
-
+    (output_dir / "summary.txt").write_text(summary_text, encoding="utf-8")
     print(summary_text)
-    print(f"\nOutput written to: {output_dir}/")
-    print(f"  JSON files per category + summary.txt")
+    print(f"Output written to: {output_dir}/")
 
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 
 def main():
     parser = argparse.ArgumentParser(
@@ -242,70 +347,53 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument(
-        "input_files",
-        nargs="+",
-        metavar="FILE",
-        help="One or more Saved Places JSON files from Google Takeout",
-    )
-    parser.add_argument(
-        "--output-dir",
-        default="output",
-        metavar="DIR",
-        help="Directory to write categorized JSON files (default: ./output)",
-    )
-    parser.add_argument(
-        "--api-key",
-        metavar="KEY",
-        help="Google Places API key for improved categorization of ambiguous places",
-    )
+    parser.add_argument("input_files", nargs="+", metavar="FILE",
+                        help="CSV or JSON files from Google Takeout")
+    parser.add_argument("--output-dir", default="output", metavar="DIR",
+                        help="Directory to write results (default: ./output)")
+    parser.add_argument("--api-key", metavar="KEY",
+                        help="Google Places API key for better accuracy on ambiguous names")
     args = parser.parse_args()
 
-    # --- Load all input files ---
     all_places: list[dict] = []
     for path in args.input_files:
         if not os.path.exists(path):
             print(f"Error: file not found: {path}", file=sys.stderr)
             sys.exit(1)
-        print(f"Loading {path}...")
-        places = parse_takeout_file(path)
-        print(f"  Found {len(places)} places")
+        places = parse_file(path)
+        print(f"Loaded {path}: {len(places)} places")
         all_places.extend(places)
 
     if not all_places:
-        print("No places found in the provided files.")
+        print("No places found.")
         sys.exit(0)
 
-    # Deduplicate by name + address
-    seen = set()
-    unique_places = []
+    seen: set[str] = set()
+    unique: list[dict] = []
     for p in all_places:
-        key = (normalize(p["name"]), normalize(p.get("address", "")))
+        key = normalize(p["name"])
         if key not in seen:
             seen.add(key)
-            unique_places.append(p)
+            unique.append(p)
 
-    dupes = len(all_places) - len(unique_places)
+    dupes = len(all_places) - len(unique)
     if dupes:
-        print(f"\nRemoved {dupes} duplicate(s) across files.")
+        print(f"Removed {dupes} duplicate(s).")
 
-    print(f"\nCategorizing {len(unique_places)} places...")
+    print(f"\nCategorizing {len(unique)} unique places...\n")
 
-    # --- Categorize ---
-    categorized: dict[str, list] = {c: [] for c in CATEGORY_NAMES}
-    categorized["uncategorized"] = []
+    all_cats = CATEGORY_NAMES + ["hotel", "uncategorized"]
+    categorized: dict[str, list] = {c: [] for c in all_cats}
 
-    for place in unique_places:
-        category = classify(place["name"])
-
-        # If still uncategorized and API key provided, try the API
-        if category == "uncategorized" and args.api_key:
+    for place in unique:
+        cat = classify(place["name"], place.get("note", ""), place.get("tags", ""))
+        if cat == "uncategorized" and args.api_key:
             print(f"  Querying API for: {place['name']}")
-            category = try_api_classify(place, args.api_key)
+            cat = try_api_classify(place, args.api_key)
+        if cat not in categorized:
+            cat = "uncategorized"
+        categorized[cat].append(place)
 
-        categorized[category].append(place)
-
-    # --- Write output ---
     write_output(categorized, Path(args.output_dir))
 
 
