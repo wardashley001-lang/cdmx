@@ -38,6 +38,10 @@ from pathlib import Path
 # Category definitions — ordered by priority (earlier wins on a tie).
 # Seafood before dinner: "mariscos" overlaps.
 # Salons before bars: "nail bar" should go to salons, not bars.
+# Healthy before cafe: juice/smoothie before coffee.
+# Wine before bars: wine bars go to wine, not cocktail bars.
+# Fine dining before dinner: tasting/degustación keywords win.
+# Attractions at end: landmark keywords are broad.
 # ---------------------------------------------------------------------------
 CATEGORIES = [
     (
@@ -69,6 +73,14 @@ CATEGORIES = [
         ],
     ),
     (
+        "healthy",
+        [
+            "juice", "jugo", "jugos", "smoothie", "granel", "organico",
+            "orgánico", "vegano", "vegan", "frutas", "wheatgrass",
+            "superfoods", "acai", "açaí", "detox",
+        ],
+    ),
+    (
         "cafe",
         [
             "café", "cafe", "caffè", "caffe", "coffee", "momo coffee",
@@ -86,12 +98,33 @@ CATEGORIES = [
             "manicura", "pedicure", "sauna", "recovery", "self-care",
         ],
     ),
+    # Wine before bars so wine bars go to wine, not cocktail bars
+    (
+        "wine",
+        [
+            "vino", "vinos", "wine", "enoteca", "vinoteca", "cava",
+            "vineria", "viñedo", "vinedo", "sommelier", "natural wine",
+            "vigneron",
+        ],
+    ),
     (
         "bars",
         [
             "wine bar", "bar", "speakeasy", "mezcalería", "mezcaleria",
             "pulquería", "pulqueria", "cervecería", "cerveceria",
             "meadery", "cocktail", "rooftop", "roof top", "terraza",
+        ],
+    ),
+    (
+        "nightlife",
+        [
+            "nightclub", "disco", "after party", "dj set",
+        ],
+    ),
+    (
+        "fine_dining",
+        [
+            "tasting menu", "degustación", "degustacion", "omakase",
         ],
     ),
     (
@@ -116,6 +149,15 @@ CATEGORIES = [
             "perfumerica", "sartoria",
         ],
     ),
+    (
+        "attractions",
+        [
+            "museo", "museum", "castle", "castillo", "palacio", "palace",
+            "biblioteca", "library", "zona arqueologica", "zona arqueológica",
+            "pyramid", "piramide", "pirámide", "monument", "monumento",
+            "parque", "catedral", "cathedral", "templo mayor",
+        ],
+    ),
 ]
 
 CATEGORY_NAMES = [c[0] for c in CATEGORIES]
@@ -129,7 +171,9 @@ NOTE_OVERRIDES = {
     "hotel": "hotel",
     "airbnb": "hotel",
     "restaurant": "dinner",
-    "omakase": "dinner",
+    "omakase": "fine_dining",
+    "tasting": "fine_dining",
+    "fine dining": "fine_dining",
     "breakfast": "dinner",
     "pizza": "dinner",
     "nail": "salons",
@@ -137,21 +181,140 @@ NOTE_OVERRIDES = {
     "spa": "salons",
     "wellness": "salons",
     "coffee": "cafe",
-    "smoothie": "cafe",
+    "smoothie": "healthy",
     "matcha": "cafe",
+    "wine": "wine",
+    "club": "nightlife",
+    "museum": "attractions",
+    "attraction": "attractions",
+}
+
+# ---------------------------------------------------------------------------
+# Known Mexico City places — exact normalized name → category.
+# Used for places whose names give no keyword signal (proper nouns, addresses).
+# ---------------------------------------------------------------------------
+KNOWN_PLACES = {
+    # Fine dining — chef-driven, creative, reservations often required
+    "quintonil": "fine_dining",
+    "em": "fine_dining",
+    "lardo": "fine_dining",
+    "ticuchi": "fine_dining",
+    "migrante": "fine_dining",
+    "feral": "fine_dining",
+    "baldio": "fine_dining",
+    "maizajo": "fine_dining",
+    "cometa": "fine_dining",
+    "huset": "fine_dining",
+    "rosa negra": "fine_dining",
+    "animal masaryk": "fine_dining",
+    "san angel inn": "fine_dining",
+    "blanco colima": "fine_dining",
+    "botanico": "fine_dining",
+    "propio": "fine_dining",
+    "rapsodia": "fine_dining",
+    "etranger": "fine_dining",
+    "darosa": "fine_dining",
+    "castizo roma": "fine_dining",
+    "l'enfant": "fine_dining",
+    "el jamil": "fine_dining",
+    "alma mia condesa": "fine_dining",
+    "casa mandarine": "fine_dining",
+    "havre 77": "fine_dining",
+    "balcon del zocalo": "fine_dining",
+    "orbita": "fine_dining",
+    # Wine bars & natural wine spots
+    "plonk": "wine",
+    "vigneron": "wine",
+    "despacho margarita": "wine",
+    "hugo": "wine",
+    "fournier rousseau": "wine",
+    # Bars / cocktail spots that keyword matching missed
+    "barra lupe": "bars",
+    "essex": "bars",
+    "dacopa": "bars",
+    "ololo": "bars",
+    "roca": "bars",
+    "tlecan": "bars",
+    "caiman": "bars",
+    "balagan": "bars",
+    "arda": "bars",
+    "kinshasa roma": "bars",
+    "anonimo": "bars",
+    "el tigre silencioso": "bars",
+    "yage": "bars",
+    "zimo": "bars",
+    "maleza": "bars",
+    "altanera roma": "bars",
+    "carajo maria": "bars",
+    # Nightlife — clubs, music venues, DJ and live music spots
+    "void": "nightlife",
+    "trampa": "nightlife",
+    "ruido": "nightlife",
+    "departamento": "nightlife",
+    "jazzatlan capital": "nightlife",
+    "fonico": "nightlife",
+    "sona - listening space": "nightlife",
+    # Attractions — museums, landmarks, cultural sites, day trips
+    "frida kahlo museum": "attractions",
+    "museo soumaya": "attractions",
+    "chapultepec castle": "attractions",
+    "palacio de bellas artes": "attractions",
+    "biblioteca vasconcelos": "attractions",
+    "la gruta": "attractions",
+    "xochimilco": "attractions",
+    "tepotzotlan": "attractions",
+    "the house of tiles": "attractions",
+    "parque quetzalcoatl": "attractions",
+    "nido de quetzalcoatl": "attractions",
+    "national art museum": "attractions",
+    "lagoalgo": "attractions",
+    "alae's art room": "attractions",
+    # Healthy — juice bars, smoothies, organic markets
+    "happy fruit": "healthy",
+    "blend station": "healthy",
+    "botanica granel": "healthy",
+    "the green corner": "healthy",
+    # Stores (keyword-missed)
+    "armario comunal": "stores",
+    "fueguia 1833 mexico": "stores",
+    # Hotels (keyword-missed)
+    "casa simera": "hotel",
+    "haab project condesa": "hotel",
+    # Café (keyword-missed)
+    "pisca": "cafe",
+    "oly.": "cafe",
+    "tomasa condesa": "cafe",
+    # Dinner — neighborhood and casual restaurants
+    "bartola": "dinner",
+    "cursi": "dinner",
+    "lotti": "dinner",
+    "babero": "dinner",
+    "biggie's": "dinner",
+    "casa visconti": "dinner",
+    "el olvidado": "dinner",
+    "amin": "dinner",
+    "cordoba 87": "dinner",
+    "amsterdam 133": "dinner",
+    "amsterdam 213": "dinner",
+    "durango 136": "dinner",
+    "av nuevo leon 155": "dinner",
+    "av. nuevo leon 206": "dinner",
 }
 
 
 def normalize(text: str) -> str:
-    """Lowercase and strip accents for robust matching."""
+    """Lowercase, strip accents, and normalize curly apostrophes for robust matching."""
+    text = text.replace("‘", "'").replace("’", "'")
     nfkd = unicodedata.normalize("NFKD", text.lower())
     return "".join(c for c in nfkd if not unicodedata.combining(c))
 
 
 def classify(title: str, note: str = "", tags: str = "") -> str:
     """
-    Return the best category. Checks note/tags first (explicit user labels),
-    then title keywords. Short keywords use word-boundary matching.
+    Return the best category. Priority order:
+    1. Note/tag overrides (explicit user labels)
+    2. Known places lookup (proper-noun CDMX venues)
+    3. Title keyword matching (short keywords use word-boundary check)
     """
     hints = (note + " " + tags).lower().strip()
     for hint_kw, category in NOTE_OVERRIDES.items():
@@ -159,6 +322,10 @@ def classify(title: str, note: str = "", tags: str = "") -> str:
             return category
 
     norm_title = normalize(title)
+
+    if norm_title in KNOWN_PLACES:
+        return KNOWN_PLACES[norm_title]
+
     for category, keywords in CATEGORIES:
         for kw in keywords:
             norm_kw = normalize(kw)
@@ -280,11 +447,13 @@ def try_api_classify(place: dict, api_key: str) -> str:
         type_map = {
             "bakery": "bakery", "cafe": "cafe", "coffee_shop": "cafe",
             "restaurant": "dinner", "meal_takeaway": "dinner", "food": "dinner",
-            "seafood_restaurant": "seafood", "bar": "bars", "night_club": "bars",
+            "seafood_restaurant": "seafood", "bar": "bars", "night_club": "nightlife",
             "beauty_salon": "salons", "hair_care": "salons", "spa": "salons",
             "nail_salon": "salons", "clothing_store": "stores", "store": "stores",
             "shopping_mall": "stores", "supermarket": "stores",
             "pharmacy": "stores", "book_store": "stores", "jewelry_store": "stores",
+            "museum": "attractions", "tourist_attraction": "attractions",
+            "park": "attractions", "library": "attractions",
         }
         for t in candidates[0].get("types", []):
             if t in type_map:
@@ -311,7 +480,7 @@ def write_output(categorized: dict[str, list], output_dir: Path) -> None:
         with open(output_dir / f"{cat}.json", "w", encoding="utf-8") as f:
             json.dump(places, f, ensure_ascii=False, indent=2)
 
-    summary_lines = ["GOOGLE MAPS PLACES — CATEGORY SUMMARY", "=" * 48, ""]
+    summary_lines = ["GOOGLE MAPS PLACES — MASTER CDMX GUIDE", "=" * 48, ""]
     total = sum(len(p) for p in categorized.values())
     summary_lines.append(f"Total places processed: {total}")
     summary_lines.append("")
@@ -321,7 +490,7 @@ def write_output(categorized: dict[str, list], output_dir: Path) -> None:
         if not places:
             continue
         summary_lines.append(f"{'─' * 44}")
-        summary_lines.append(f"  {cat.upper()}  ({len(places)} places)")
+        summary_lines.append(f"  {cat.upper().replace('_', ' ')}  ({len(places)} places)")
         summary_lines.append(f"{'─' * 44}")
         for p in sorted(places, key=lambda x: x["name"].lower()):
             line = f"  • {p['name']}"
