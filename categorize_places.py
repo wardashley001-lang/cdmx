@@ -37,7 +37,8 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # Category definitions — ordered by priority (earlier wins on a tie).
 # Seafood before dinner: "mariscos" overlaps.
-# Salons before bars: "nail bar" should go to salons, not bars.
+# Brunch before dessert: waffle/hotcakes venues beat dessert spots.
+# Salons before bars: "nail bar" / "self-care bar" stay in salons.
 # Healthy before cafe: juice/smoothie before coffee.
 # Wine before bars: wine bars go to wine, not cocktail bars.
 # Fine dining before dinner: tasting/degustación keywords win.
@@ -50,7 +51,9 @@ CATEGORIES = [
             "mariscos", "marisqueria", "marisquería", "seafood", "pescado",
             "ceviche", "ostión", "ostion", "ostería", "osteria", "ostrería",
             "ostreria", "camarón", "camaron", "shrimp", "oyster", "pulpo",
-            "jaiba", "langosta", "atún", "atun", "salmón", "salmon",
+            "jaiba", "langosta", "langostino", "atún", "atun", "salmón", "salmon",
+            "callo", "almeja", "almejas", "aguachile", "bacalao", "marlin",
+            "tikin", "ostras", "clamato", "tostada de atun",
             "abrasamar", "contramar", "tibur",
         ],
     ),
@@ -60,7 +63,18 @@ CATEGORIES = [
             "panadería", "panaderia", "bakery", "pastelería", "pasteleria",
             "boulangerie", "croissant", "bread", "horno", "brioche",
             "baguette", "muffin", "donut", "dona", "rosquilla", "churrería",
-            "churreria", "churro", "bagel", "delicatessen",
+            "churreria", "churro", "bagel", "delicatessen", "repostería",
+            "reposteria", "pâtisserie", "patisserie", "galleta", "cookie",
+            "polvorón", "polvoron", "medialuna", "concha", "conchas", "danish",
+        ],
+    ),
+    # Brunch before dessert: "hotcakes" and "waffle" at brunch spots beat dessert
+    (
+        "brunch",
+        [
+            "brunch", "desayunos", "desayuno", "hotcakes", "pancakes",
+            "omelette", "omeletes", "omelet", "french toast",
+            "avocado toast", "eggs benedict", "benedict",
         ],
     ),
     (
@@ -69,7 +83,8 @@ CATEGORIES = [
             "helado", "ice cream", "nieve", "paleta", "postre", "dulce",
             "chocolate", "waffle", "crepe", "gelato", "candy", "sweet",
             "cake", "cupcake", "brownie", "macaron", "tarta", "flan",
-            "mousse", "amorino",
+            "mousse", "amorino", "sorbete", "parfait", "sundae",
+            "pastelito", "marquesita", "rolled ice cream", "trufas",
         ],
     ),
     (
@@ -77,7 +92,9 @@ CATEGORIES = [
         [
             "juice", "jugo", "jugos", "smoothie", "granel", "organico",
             "orgánico", "vegano", "vegan", "frutas", "wheatgrass",
-            "superfoods", "acai", "açaí", "detox",
+            "superfoods", "acai", "açaí", "detox", "bowl", "ensalada",
+            "salad", "poke", "plant-based", "granola", "juicery",
+            "raw food", "sin gluten", "gluten free", "nutricion", "nutrición",
         ],
     ),
     (
@@ -85,6 +102,9 @@ CATEGORIES = [
         [
             "café", "cafe", "caffè", "caffe", "coffee", "momo coffee",
             "cafebrería", "cafeteria", "cafetería", "matcha", "espresso",
+            "brewing", "roastery", "cold brew", "third wave",
+            "specialty coffee", "boba", "bubble tea", "té", "teahouse",
+            "chai",
         ],
     ),
     # Salons before bars so "nail bar" / "self-care bar" stay in salons
@@ -96,6 +116,8 @@ CATEGORIES = [
             "barbería", "barberia", "cabello", "hair", "salon", "salón",
             "spa", "wellness", "massage", "masaje", "hydrafacial",
             "manicura", "pedicure", "sauna", "recovery", "self-care",
+            "lash", "brow", "wax", "depilación", "depilacion",
+            "skincare", "facial", "threading", "pilates", "yoga",
         ],
     ),
     # Wine before bars so wine bars go to wine, not cocktail bars
@@ -104,27 +126,34 @@ CATEGORIES = [
         [
             "vino", "vinos", "wine", "enoteca", "vinoteca", "cava",
             "vineria", "viñedo", "vinedo", "sommelier", "natural wine",
-            "vigneron",
+            "vigneron", "bodega", "champagne", "champán", "champan",
+            "vino natural", "vinos naturales", "pet nat", "ampelidae",
         ],
     ),
     (
         "bars",
         [
             "wine bar", "bar", "speakeasy", "mezcalería", "mezcaleria",
+            "mezcal", "tequila", "agave", "destilería", "destileria",
             "pulquería", "pulqueria", "cervecería", "cerveceria",
             "meadery", "cocktail", "rooftop", "roof top", "terraza",
+            "cantina", "tepache", "sotol", "raicilla", "charanda",
         ],
     ),
     (
         "nightlife",
         [
             "nightclub", "disco", "after party", "dj set",
+            "club nocturno", "live music", "música en vivo", "musica en vivo",
+            "jazz club", "rave", "after hours",
         ],
     ),
     (
         "fine_dining",
         [
             "tasting menu", "degustación", "degustacion", "omakase",
+            "chef's table", "prix fixe", "gastronomico", "gastronómico",
+            "alta cocina",
         ],
     ),
     (
@@ -135,6 +164,11 @@ CATEGORIES = [
             "taberna", "taverna", "steakhouse", "carne", "bbq", "barbacoa",
             "carnitas", "pozole", "mole", "enchiladas", "sushi", "ramen",
             "pizza", "burger", "hamburgesa", "asador", "estiatorio",
+            "comedor", "birria", "tlayuda", "mixiote", "tamales",
+            "italiana", "italiano", "japonés", "japones", "coreano", "coreana",
+            "libanés", "libanes", "mediterráneo", "mediterraneo", "thai",
+            "vietnamita", "francesa", "francés", "frances", "peruano", "peruana",
+            "griega", "griego", "argentina", "colombiano",
         ],
     ),
     (
@@ -146,7 +180,11 @@ CATEGORIES = [
             "vintage", "thrift", "moda", "fashion", "ropa", "clothing",
             "joyería", "joyeria", "jewelry", "ferretería", "ferreteria",
             "electronica", "electrónica", "concept store", "perfumérica",
-            "perfumerica", "sartoria",
+            "perfumerica", "sartoria", "zapatos", "zapatería", "zapateria",
+            "shoes", "sneakers", "accesorios", "accessories", "regalo",
+            "florería", "floreria", "flores", "floristería", "floristeria",
+            "cerámica", "ceramica", "artesanías", "artesanias", "handmade",
+            "antigüedades", "antiguedades", "antiques", "consignment",
         ],
     ),
     (
@@ -156,6 +194,9 @@ CATEGORIES = [
             "biblioteca", "library", "zona arqueologica", "zona arqueológica",
             "pyramid", "piramide", "pirámide", "monument", "monumento",
             "parque", "catedral", "cathedral", "templo mayor",
+            "jardín", "jardin", "centro cultural", "ex convento", "hacienda",
+            "mirador", "azotea", "teatro", "theater", "galería de arte",
+            "mercado de artesanias", "zona arqueológica",
         ],
     ),
 ]
@@ -168,25 +209,34 @@ NOTE_OVERRIDES = {
     "speakeasy": "bars",
     "wine bar": "bars",
     "cocktail": "bars",
+    "mezcal": "bars",
+    "cantina": "bars",
     "hotel": "hotel",
     "airbnb": "hotel",
     "restaurant": "dinner",
     "omakase": "fine_dining",
     "tasting": "fine_dining",
     "fine dining": "fine_dining",
-    "breakfast": "dinner",
+    "brunch": "brunch",
+    "desayuno": "brunch",
+    "breakfast": "brunch",
     "pizza": "dinner",
     "nail": "salons",
     "nails": "salons",
     "spa": "salons",
     "wellness": "salons",
+    "yoga": "salons",
+    "pilates": "salons",
     "coffee": "cafe",
     "smoothie": "healthy",
+    "vegan": "healthy",
     "matcha": "cafe",
     "wine": "wine",
     "club": "nightlife",
     "museum": "attractions",
     "attraction": "attractions",
+    "seafood": "seafood",
+    "ceviche": "seafood",
 }
 
 # ---------------------------------------------------------------------------
@@ -222,12 +272,28 @@ KNOWN_PLACES = {
     "havre 77": "fine_dining",
     "balcon del zocalo": "fine_dining",
     "orbita": "fine_dining",
+    # More fine dining — marquee CDMX restaurants
+    "pujol": "fine_dining",
+    "dulce patria": "fine_dining",
+    "merotoro": "fine_dining",
+    "maximo bistrot": "fine_dining",
+    "limosneros": "fine_dining",
+    "expendio de maiz": "fine_dining",
+    "guzina oaxaca": "fine_dining",
+    "rokai": "fine_dining",
+    "crudo": "fine_dining",
+    "sartoria": "fine_dining",     # Italian pasta restaurant (not a tailor shop)
+    "pastel": "fine_dining",        # Modern Mexican in Polanco
+    "amaya": "fine_dining",
+    "lorea": "fine_dining",
+    "mog": "fine_dining",
     # Wine bars & natural wine spots
     "plonk": "wine",
     "vigneron": "wine",
     "despacho margarita": "wine",
     "hugo": "wine",
     "fournier rousseau": "wine",
+    "pisca": "wine",
     # Bars / cocktail spots that keyword matching missed
     "barra lupe": "bars",
     "essex": "bars",
@@ -246,6 +312,10 @@ KNOWN_PLACES = {
     "maleza": "bars",
     "altanera roma": "bars",
     "carajo maria": "bars",
+    "licoreria limantour": "bars",
+    "salon corona": "bars",         # Historic cantina
+    "la polar": "bars",             # Historic cantina
+    "el nivel": "bars",             # Oldest cantina in CDMX
     # Nightlife — clubs, music venues, DJ and live music spots
     "void": "nightlife",
     "trampa": "nightlife",
@@ -254,6 +324,47 @@ KNOWN_PLACES = {
     "jazzatlan capital": "nightlife",
     "fonico": "nightlife",
     "sona - listening space": "nightlife",
+    "multiforo alicia": "nightlife",
+    "tokyo music bar": "nightlife",  # Live music venue; "bar" keyword → bars
+    # Seafood — ceviche bars, oyster spots
+    "la docena": "seafood",          # Oyster bar
+    "entremar": "seafood",
+    # Brunch spots
+    "todo en domingo": "brunch",
+    "lula bistro": "brunch",
+    "evoka": "brunch",
+    # Healthy — juice bars, smoothies, organic markets
+    "happy fruit": "healthy",
+    "blend station": "healthy",
+    "botanica granel": "stores",
+    "the green corner": "healthy",
+    "por siempre vegano": "healthy",
+    "wild": "healthy",
+    # Dinner — neighborhood and casual restaurants
+    "nicos": "dinner",
+    "el turix": "dinner",
+    "boca grande": "dinner",
+    "bartola": "dinner",
+    "cursi": "dinner",
+    "lotti": "dinner",
+    "babero": "dinner",
+    "biggie's": "dinner",
+    "casa visconti": "dinner",
+    "el olvidado": "dinner",
+    "amin": "dinner",
+    # Bakery
+    "molino el pujol": "bakery",
+    # Stores (keyword-missed)
+    "armario comunal": "stores",
+    "fueguia 1833 mexico": "stores",
+    # Hotels (keyword-missed)
+    "casa simera": "hotel",
+    "haab project condesa": "hotel",
+    # Café (keyword-missed)
+    "oly.": "cafe",
+    "tomasa condesa": "cafe",
+    "buna": "cafe",
+    "almanegra cafe": "cafe",
     # Attractions — museums, landmarks, cultural sites, day trips
     "frida kahlo museum": "attractions",
     "museo soumaya": "attractions",
@@ -269,26 +380,10 @@ KNOWN_PLACES = {
     "national art museum": "attractions",
     "lagoalgo": "attractions",
     "alae's art room": "attractions",
-    # Healthy — juice bars, smoothies, organic markets
-    "happy fruit": "healthy",
-    "blend station": "healthy",
-    "botanica granel": "stores",
-    "the green corner": "healthy",
-    # Stores (keyword-missed)
-    "armario comunal": "stores",
-    "fueguia 1833 mexico": "stores",
-    # Hotels (keyword-missed)
-    "casa simera": "hotel",
-    "haab project condesa": "hotel",
-    # Café (keyword-missed)
-    "pisca": "wine",
-    "oly.": "cafe",
-    "tomasa condesa": "cafe",
     # Audit corrections — proper-noun overrides for keyword false-positives
     "restaurante rosetta": "fine_dining",   # Elena Reygadas; "restaurante" keyword → dinner
-    "salon palomilla": "bars",              # cantina/pulquería; "salon" keyword → salons
-    "disco cafe & bar": "bars",             # late-night bar; "cafe" keyword → cafe
-    "tokyo music bar": "nightlife",         # live music venue; "bar" keyword → bars
+    "salon palomilla": "bars",              # Cantina/pulquería; "salon" keyword → salons
+    "disco cafe & bar": "bars",             # Late-night bar; "cafe" keyword → cafe
     # Hotbook July 2025 hotspots
     "ricochet apero": "bars",
     "la romana": "bars",
@@ -297,15 +392,6 @@ KNOWN_PLACES = {
     "wagyu jyube": "fine_dining",
     "cochilada": "dinner",
     "chopsticks": "fine_dining",
-    # Dinner — neighborhood and casual restaurants
-    "bartola": "dinner",
-    "cursi": "dinner",
-    "lotti": "dinner",
-    "babero": "dinner",
-    "biggie's": "dinner",
-    "casa visconti": "dinner",
-    "el olvidado": "dinner",
-    "amin": "dinner",
 }
 
 # Raw street addresses saved as location pins — no useful place info, excluded from output.
