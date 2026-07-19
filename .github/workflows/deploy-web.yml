@@ -1,4 +1,4 @@
-# Re-run after enabling GitHub Pages (Settings > Pages > Source: GitHub Actions)
+# Re-run after upgrading to GitHub Pro (unlocks Pages on private repos)
 name: Deploy CDMX guide to GitHub Pages
 
 on:
