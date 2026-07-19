@@ -1,3 +1,4 @@
+# Re-run after enabling GitHub Pages (Settings > Pages > Source: GitHub Actions)
 name: Deploy CDMX guide to GitHub Pages
 
 on:
