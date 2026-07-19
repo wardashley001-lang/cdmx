@@ -1,4 +1,4 @@
-# Re-run after upgrading to GitHub Pro (unlocks Pages on private repos)
+# Re-run after allowing this branch to deploy to the github-pages environment
 name: Deploy CDMX guide to GitHub Pages
 
 on:
