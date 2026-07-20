@@ -358,13 +358,13 @@ KNOWN_PLACES = {
     "armario comunal": "stores",
     "fueguia 1833 mexico": "stores",
     # Hotels (keyword-missed)
-    "casa simera": "hotel",
     "haab project condesa": "hotel",
     # Café (keyword-missed)
     "oly.": "cafe",
     "tomasa condesa": "cafe",
     "buna": "cafe",
     "almanegra cafe": "cafe",
+    "casa simera": "cafe",  # viral café/pilates studio in Polanco, not lodging
     # Attractions — museums, landmarks, cultural sites, day trips
     "frida kahlo museum": "attractions",
     "museo soumaya": "attractions",
