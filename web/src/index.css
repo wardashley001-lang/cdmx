@@ -116,3 +116,15 @@ body {
 .leaflet-popup-tip {
   background: var(--surface);
 }
+
+/* Teardrop map pins — the one deliberate exception to the sharp-corner
+   ethos elsewhere; pins read as pins because of this shape. */
+.guide-pin span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid white;
+  box-shadow: var(--shadow);
+}

@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { Category } from "./pages/Category";
 import { MapPage } from "./pages/MapPage";
+import { SearchResults } from "./pages/SearchResults";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/category/:id" element={<Category />} />
             <Route path="/map" element={<MapPage />} />
+            <Route path="/search" element={<SearchResults />} />
           </Routes>
         </main>
         <footer className="mx-auto max-w-6xl w-full px-4 sm:px-6 py-10 font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: "var(--muted)" }}>

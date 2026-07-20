@@ -1,5 +1,6 @@
 import type { ColorToken, Place } from "../types";
 import { TOKEN_VAR } from "./CategoryTile";
+import { CategoryBadge, PriceTierBadge } from "./CategoryBadge";
 import { instagramUrl, mapsSearchUrl } from "../lib/data";
 
 function IconMaps() {
@@ -20,8 +21,17 @@ function IconInstagram() {
   );
 }
 
-export function PlaceCard({ place, token }: { place: Place; token: ColorToken }) {
+export function PlaceCard({
+  place,
+  token,
+  categoryLabel,
+}: {
+  place: Place;
+  token: ColorToken;
+  categoryLabel?: string;
+}) {
   const mapsHref = place.mapsUrl || mapsSearchUrl(place.name);
+  const hasBadges = categoryLabel || place.priceTier;
 
   return (
     <article
@@ -44,6 +54,13 @@ export function PlaceCard({ place, token }: { place: Place; token: ColorToken })
             </p>
           )}
         </div>
+
+        {hasBadges && (
+          <div className="shrink-0 flex flex-col items-end gap-1.5">
+            {categoryLabel && <CategoryBadge token={token} label={categoryLabel} />}
+            {place.priceTier && <PriceTierBadge tier={place.priceTier} />}
+          </div>
+        )}
       </div>
 
       <div className="mt-3.5 flex items-center gap-2">

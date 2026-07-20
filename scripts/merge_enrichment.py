@@ -19,6 +19,7 @@ ENRICHMENT_FILES = [
     "enrich_dinner_wine_nightlife.json",
     "enrich_cafe_salons_healthy.json",
     "enrich_stores_attractions_hotel.json",
+    "enrich_gap_fill.json",
 ]
 
 

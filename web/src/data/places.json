@@ -72,6 +72,7 @@
       "vibe": "Gulf-of-Mexico-style seafood with viral towers under a retractable gravel-floor roof.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -84,6 +85,7 @@
       "vibe": "Oyster bar and grill on Nuevo León focused on fresh, seasonal Mexican seafood.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -96,6 +98,7 @@
       "vibe": "The Michelin Bib Gourmand palapa institution since 1998 — go for the pink-sauce tuna tostadas.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -108,6 +111,7 @@
       "vibe": "High-energy Sinaloa-style marisquería with banda music, caguamas, and towering seafood platters.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -120,6 +124,7 @@
       "vibe": "CDMX's first fully sustainable fish market, with full traceability on every catch.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Market.csv"
     },
     {
@@ -132,6 +137,7 @@
       "vibe": "Barrio seafood spot mixing Oaxaca, Peru, and Asia influences into a casual raw bar.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Seafood.csv"
     },
     {
@@ -144,6 +150,7 @@
       "vibe": "New-school bagel shop on Jalapa turning out proper everything bagels.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -156,6 +163,7 @@
       "vibe": "Jewish deli famous for bagels and smoked salmon, a brunch spot that's hosted the odd celebrity.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -168,6 +176,7 @@
       "vibe": "The guava pastry that broke the internet — Elena Reygadas' plant-filled bakery icon.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -180,6 +189,7 @@
       "vibe": "24-hour churros-and-hot-chocolate institution on Eje Central, going strong since 1935.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -192,6 +202,7 @@
       "vibe": "Cozy French-Mexican brunch spot on Culiacán known for chilaquiles and artisanal pastries.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -204,6 +215,7 @@
       "vibe": "Italian gelato hand-shaped into rose 'flowers' — the photogenic scoop of CDMX.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -216,6 +228,7 @@
       "vibe": "French fine-dining newcomer with red walls and a chandelier; chef Max Righi's tarte tatin is the move.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -228,6 +241,7 @@
       "vibe": "Cheerful fruit-themed spot on Campeche for fresh salads, smoothies, and vegan bowls.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -240,6 +254,7 @@
       "vibe": "Mostly-vegan organic market-restaurant serving healthy juices and dishes like enmoladas.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Market.csv"
     },
     {
@@ -252,6 +267,7 @@
       "vibe": "Pet-friendly specialty coffee spot on Tamaulipas known for smoothies and outdoor seating.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -264,6 +280,7 @@
       "vibe": "Coffee, smoothies, and high vibes at this San Luis Potosí corner spot.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -276,6 +293,7 @@
       "vibe": "Pink-toned bakery famous for conchas stuffed with chilaquiles or cochinita pibil.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Bakery.csv"
     },
     {
@@ -288,6 +306,7 @@
       "vibe": "A modest café facade hides a wild karaoke-and-cocktails night club behind a secret door.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -300,6 +319,7 @@
       "vibe": "Low-key neighborhood coffee spot on Álvaro Obregón for a chill afternoon.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -312,6 +332,7 @@
       "vibe": "Day café that flips into a vinyl-and-cocktails bar by night, walk-ins only, no reservations.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -324,6 +345,7 @@
       "vibe": "Cozy yet sophisticated all-day café on Álvaro Obregón beloved for long brunches.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -336,6 +358,7 @@
       "vibe": "Open-air, pet-friendly corner café on Jalapa known for horchata coffee and easy mornings.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -348,6 +371,20 @@
       "vibe": "Sleek specialty-coffee mini-chain that's become a go-to for CDMX remote workers.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
+      "sourceFile": "CDMX.csv"
+    },
+    {
+      "id": "cafe-casa-simera",
+      "name": "Casa Simera",
+      "category": "cafe",
+      "mapsUrl": "https://www.google.com/maps/place/Casa+Simera/data=!4m2!3m1!1s0x85d2030065d014d5:0xe5daa4ca9ba0147",
+      "neighborhood": "Polanco",
+      "instagram": "casasimera______",
+      "vibe": "Viral café with pilates upstairs — matcha, lavender-lemon pancakes, and a line out the door.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -360,6 +397,7 @@
       "vibe": "Bright brunch café where the chilaquiles and French toast keep the regulars coming back.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -372,6 +410,7 @@
       "vibe": "Casual-elegant Mediterranean neighborhood spot on Alfonso Reyes, known for lemon pasta.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -384,6 +423,7 @@
       "vibe": "Legendary bookstore-café stacked with novels and plants, a Condesa institution since 1993.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Cafe.csv"
     },
     {
@@ -396,6 +436,7 @@
       "vibe": "No-reservations café on Plaza Río de Janeiro known for daily brunch and cake orders.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Cafe.csv"
     },
     {
@@ -408,6 +449,7 @@
       "vibe": "Family-run, homey café pouring Chiapas coffee with standout avocado toast.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Cafe.csv"
     },
     {
@@ -420,6 +462,7 @@
       "vibe": "The CDMX coffee mini-chain that started here and now spans Roma, Condesa, and Juárez.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Default_list1.csv"
     },
     {
@@ -432,6 +475,7 @@
       "vibe": "Design-forward café-bar inside the Pensión guesthouse, playing off 85 years of history.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -444,6 +488,7 @@
       "vibe": "Matcha-focused café inside the Andaz Hotel, big on natural light and photogenic drinks.",
       "lat": null,
       "lng": null,
+      "priceTier": "$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -456,6 +501,7 @@
       "vibe": "New members-club-style wellness reset that opened in Roma for CDMX's health-conscious crowd.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -468,6 +514,7 @@
       "vibe": "Trendy nail studio on Tabasco known for clean, minimalist manicure sets.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -480,6 +527,7 @@
       "vibe": "Boutique nail bar with a minimalist look and a loyal Roma Norte and Polanco following.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -492,6 +540,7 @@
       "vibe": "Self-care-first nail and beauty bar where every treatment comes with a coffee or matcha.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -504,6 +553,7 @@
       "vibe": "Chic little nail bar on Puebla street with a devoted local following.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -516,6 +566,7 @@
       "vibe": "Understated neighborhood hair-and-beauty salon tucked into the Hipódromo.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -528,6 +579,7 @@
       "vibe": "Vegan hair, nail, and spa studio on Coahuila run by master stylists using Aveda and OPI.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -540,6 +592,7 @@
       "vibe": "Biohacking wellness studio with sauna, cold plunge, and a Hydrafacial recovery menu.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -552,6 +605,7 @@
       "vibe": "Russian manicure specialists run by two Ukrainian beauty entrepreneurs on Álvaro Obregón.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Wellness.csv"
     },
     {
@@ -564,6 +618,7 @@
       "vibe": "Intimate contrast-therapy spot on Coahuila with private sauna and cold-plunge rooms.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Wellness.csv"
     },
     {
@@ -576,6 +631,7 @@
       "vibe": "A sake-and-natural-wine bar tucked inside Yoru Sushi, made for raw plates and late-night robata.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -588,6 +644,7 @@
       "vibe": "A French pastry café on Álvaro Obregón that doubles as one of the city's go-to natural wine stops.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -600,6 +657,7 @@
       "vibe": "Chef Flor Camorlinga's Bib Gourmand open-kitchen spot pours mostly Old World, minimal-intervention wine.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -612,6 +670,7 @@
       "vibe": "Sunny Condesa brunch spot with avocado toast by day and a well-picked wine list by night.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Cafe.csv"
     },
     {
@@ -624,6 +683,7 @@
       "vibe": "Darkly romantic natural wine den on Veracruz street, French-New York small plates, ~100 labels deep.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -636,6 +696,7 @@
       "vibe": "A Bib Gourmand natural wine reference point on Jalapa street, big on small French producers.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Vino.csv"
     },
     {
@@ -648,6 +709,7 @@
       "vibe": "The Licorería Limantour team's ode to the margarita, agave archive and frozen machine included.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "Vino.csv"
     },
     {
@@ -660,6 +722,7 @@
       "vibe": "Electronic-music nightclub in a restored century-old brothel, craft cocktails and big-name DJs.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bakery.csv"
     },
     {
@@ -672,6 +735,7 @@
       "vibe": "Under-the-radar Roma Norte pour house—quality drinks, no hype, mostly locals.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -684,6 +748,7 @@
       "vibe": "New-wave terrace bar on Álvaro Obregón for draft cocktails and tight bites.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -696,6 +761,7 @@
       "vibe": "Contemporary cantina reinvention in Juárez—unpretentious drinks, good music, no fuss.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -708,6 +774,7 @@
       "vibe": "Minimalist Condesa speakeasy with genuinely creative author cocktails and house music.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -720,6 +787,7 @@
       "vibe": "Orange-hued speakeasy above NIICH spinning vinyl and digital sets with mezcal-forward drinks.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -732,6 +800,7 @@
       "vibe": "Audiophile listening bar with a custom sound system, turntables, and a killer martini.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -744,6 +813,7 @@
       "vibe": "1970s-Italy-inspired bar ranked #2 in North America's 50 Best—reserve by DM.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -756,6 +826,7 @@
       "vibe": "Live jazz under a dramatic ceiling oculus, with espresso martinis and mezcal-heavy pours.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -768,6 +839,7 @@
       "vibe": "Retractable-roof rooftop above Mercado Roma, all Afro/melodic house till 2am.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -780,6 +852,7 @@
       "vibe": "Tiny mezcalería ranked among North America's best bars—13 small-batch mezcals, standing room only.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -792,6 +865,7 @@
       "vibe": "Tiny neighborhood bar for negronis and palomas, dog-friendly, zero pretension.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -804,6 +878,7 @@
       "vibe": "One of the last real bars in Condesa—natural wine, sharp classics, a nostalgic 90s playlist.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -816,6 +891,7 @@
       "vibe": "Plant-filled Juárez patio for Mediterranean bites, DJs, and a retractable glass roof.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -828,6 +904,7 @@
       "vibe": "Gastro-bar 'liquid laboratory' with hi-fi sound and double-distilled house spirits.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -840,6 +917,7 @@
       "vibe": "Red-lit hidden speakeasy inside Pavorosso's kitchen—ask the host for access.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -852,6 +930,7 @@
       "vibe": "Cantina reinvented around nixtamalized corn, with author cocktails honoring sotol and menyul.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -864,6 +943,7 @@
       "vibe": "Small Condesa space mixing cooking, art, mezcal, and wine into one late-night hang.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -876,6 +956,7 @@
       "vibe": "Fresh-pasta Italian wine bar with vinyl on the turntable and cocktails on the side.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -888,6 +969,7 @@
       "vibe": "Retro disco-ball café by day, low-key bar by night, big on nostalgia and warm lighting.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -900,6 +982,7 @@
       "vibe": "Art-deco rooftop in Nápoles/Juárez for cocktails, good food, and skyline views.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -912,6 +995,7 @@
       "vibe": "Farm-driven Condesa kitchen and bar spotlighting small Valle de México producers.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -924,6 +1008,7 @@
       "vibe": "Cozy rooftop terrace with nightly DJs, Mexican-Asian bites, and a solid wine list.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -936,6 +1021,7 @@
       "vibe": "Condesa corner spot that turns from pasta lunches into natural-wine and cocktail nights.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -948,6 +1034,7 @@
       "vibe": "Penthouse rooftop over Roma with sweeping CDMX views and contemporary Mexican plates.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -960,6 +1047,7 @@
       "vibe": "Jungle-decked rooftop over Reforma's skyline, upbeat house music, big-name guest DJs.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -972,6 +1060,7 @@
       "vibe": "Fifth-floor terrace inside the historic Gran Hotel with views over the Zócalo and Catedral.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -984,6 +1073,7 @@
       "vibe": "Gourmet cantina in a 1914 mansion—vermouth on tap and serious bar snacks.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -996,6 +1086,7 @@
       "vibe": "Unmarked basement bar with a shamanic theme, smoke-heavy drinks, and underground house.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Default_list.csv"
     },
     {
@@ -1008,6 +1099,7 @@
       "vibe": "Mexico's first meadery—house-brewed hidromiel alongside Mexican-barbecue bites.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Default_list.csv"
     },
     {
@@ -1020,6 +1112,7 @@
       "vibe": "New apero bar channeling 1970s aperitivo culture on Chapultepec—clean, confident, low-key.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1032,6 +1125,7 @@
       "vibe": "Italodisco on the speakers, high-end cocktails with a Mexican twist, nightly till 2am.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1044,6 +1138,7 @@
       "vibe": "Drinks-and-tapas corner spot on Alfonso Reyes that always takes walk-ins.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -1056,6 +1151,7 @@
       "vibe": "The dinner-to-club pipeline done right — mezcal, light bites, then the music takes over.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -1068,6 +1164,7 @@
       "vibe": "Hi-fi vinyl, Japanese whisky and gold barstools in Little Tokyo, from the Edo Kobayashi group.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -1080,6 +1177,7 @@
       "vibe": "Live jazz every single night, the CDMX outpost of Puebla's long-running Jazzatlán club.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1092,6 +1190,7 @@
       "vibe": "Rooftop-and-indoor complex on Álvaro Obregón mixing DJ sets and live music for a no-pretense crowd.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1104,6 +1203,7 @@
       "vibe": "Eleven-year-old DnB and techno stronghold tucked into a Doctores warehouse.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1116,6 +1216,7 @@
       "vibe": "Northwestern Mexican cooking from chef Billy Maldonado with live music setting the pace.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1128,6 +1229,7 @@
       "vibe": "No phones, no talking, no alcohol — just deep listening on a serious hi-fi rig in Hipódromo Condesa.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Listening_room.csv"
     },
     {
@@ -1140,6 +1242,7 @@
       "vibe": null,
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -1152,6 +1255,7 @@
       "vibe": "Chef Aram Abisahi's French brasserie on Casa Prim's 3rd floor, with a secret rooftop terrace.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1164,6 +1268,7 @@
       "vibe": "Chef Milu Crespo's contemporary Spanish-Mediterranean cooking in a Condesa mansion.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1176,6 +1281,7 @@
       "vibe": "Family-run Lebanese kitchen since 2006 — go for the hummus and grape leaves.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1188,6 +1294,7 @@
       "vibe": "Walk-in-only Edomae sushi bar cutting fish at an intimate counter — no reservations.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1200,6 +1307,7 @@
       "vibe": "Tables piled with Italian dishes made for sharing in a Juárez townhouse.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1212,6 +1320,7 @@
       "vibe": null,
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1224,6 +1333,7 @@
       "vibe": "Chef Rodrigo Gallardo's small, precise French bistronomy that shifts with the day's ingredients.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1236,6 +1346,7 @@
       "vibe": "Smoke-and-fire cooking from chefs Germán Caraballo and Luis Solano inside a historic Roma mansion.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1248,6 +1359,7 @@
       "vibe": "Enrique Olvera's cave-like agave bar on Pujol's original site — mezcal and Oaxacan snacks in near-darkness.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1260,6 +1372,7 @@
       "vibe": "Steakhouse-meets-nightclub on Masaryk — Latin American grill, live shows, big scene energy.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1272,6 +1385,7 @@
       "vibe": "Charcoal-grilled meats meet Mexican-Japanese flavors, with live music turning dinner into a party.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1284,6 +1398,7 @@
       "vibe": "Young husband-and-wife chef duo's open-kitchen newcomer — creative plates, sit at the counter if you can.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1296,6 +1411,7 @@
       "vibe": "Retro coffee bar by day, DJ-fueled cocktail bar by night — walk-ins only.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1308,6 +1424,7 @@
       "vibe": "Lucho Martínez's Michelin-starred ode to Veracruz — a nine-course tasting menu that tells a story.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1320,6 +1437,7 @@
       "vibe": "Eduardo García's ode to French cuisine in a 19th-century house — onion soup, oysters, duck.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1332,6 +1450,7 @@
       "vibe": "Chef Fernando Martínez's Michelin-listed mashup of Mexican, Asian and French technique.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1344,6 +1463,7 @@
       "vibe": "\"Cocina de campo\" built around a wood-fired grill in a leafy Porfirian mansion patio.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1356,6 +1476,7 @@
       "vibe": "Jorge Vallejo's tasting-menu temple, a Pujol alum turned World's 50 Best regular — book weeks out.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1368,6 +1489,7 @@
       "vibe": null,
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1380,6 +1502,7 @@
       "vibe": "Elena Reygadas' casual Rosetta sibling — croque monsieur, pizzas and Sunday brunch queues.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1392,6 +1515,7 @@
       "vibe": "Chef Pepe Salinas' Mexican fine dining on a rooftop balcony overlooking the Cathedral and Zócalo.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1404,6 +1528,7 @@
       "vibe": "Unpretentious upscale bistro in a Porfirian mansion, with one of the city's deepest mezcal lists.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1416,6 +1541,7 @@
       "vibe": "Elena Reygadas' Michelin-starred Mexican-Mediterranean landmark — the guava bread alone is worth it.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1428,6 +1554,7 @@
       "vibe": "Colonial hacienda dating to 1963, favorite of politicians — classic Mexican dishes amid gardens.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1440,6 +1567,7 @@
       "vibe": "Modern bistro fare served around a secret cactus garden and koi pond.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1452,6 +1580,7 @@
       "vibe": "Chef Paola Sepúlveda's French-Oriental-Mexican mashup in a lively, chic dining room.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1464,6 +1593,7 @@
       "vibe": "Mexico's first zero-waste restaurant, CDMX's only Michelin Green Star — regenerative, farmer-first cooking.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1471,11 +1601,12 @@
       "name": "Alterna",
       "category": "fine_dining",
       "mapsUrl": "",
-      "neighborhood": null,
+      "neighborhood": "Condesa",
       "instagram": null,
-      "vibe": null,
+      "vibe": "Chef Cosimo Branca's (ex-Magazzino) intimate new spot — warm wood, international cooking, mood lighting.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1488,6 +1619,7 @@
       "vibe": "Mexico's first 100% Japanese wagyu omakase counter.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1500,6 +1632,7 @@
       "vibe": null,
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1512,6 +1645,7 @@
       "vibe": "Cult tortillería reviving heirloom criollo corn — tacos, tlacoyos and totopos made from their own nixtamal.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Hotlist.csv"
     },
     {
@@ -1524,6 +1658,7 @@
       "vibe": "Contemporary Italian osteria where fresh pasta is treated like ritual — often called CDMX's best Italian.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -1536,6 +1671,7 @@
       "vibe": "Walk-in-only NY-style slices from an American pizza expat until the dough runs out.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bakery.csv"
     },
     {
@@ -1548,6 +1684,7 @@
       "vibe": "An English-inspired bistro-café serving slow-made European plates in a quiet Coyoacán corner.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bakery.csv"
     },
     {
@@ -1560,6 +1697,7 @@
       "vibe": "A daytime café that flips into bold, inventive cocina de autor once the sun goes down.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1572,6 +1710,7 @@
       "vibe": "Weekly-changing menus, guest-chef pop-ups and live DJs keep this Roma spot unpredictable.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1584,6 +1723,7 @@
       "vibe": "A 12-seat counter where a veteran Osaka-trained chef runs unpretentious, fish-flown-from-Japan omakase.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1596,6 +1736,7 @@
       "vibe": "Chef Fernando Torres's Michelin-starred take on elevated, contemporary Mexican comfort food.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1608,6 +1749,7 @@
       "vibe": "A pink-tinged Condesa bakery-turned-restaurant serving homey Mexican cooking with a design-forward glow.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1620,6 +1762,7 @@
       "vibe": "Chef Milu Crespo's Spanish-Mediterranean menu anchors this all-day Condesa favorite.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1632,6 +1775,7 @@
       "vibe": "A nameless, low-key Roma taquería reinterpreting classic tacos late into the night.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1644,6 +1788,7 @@
       "vibe": "Mediterranean smoke cookery from Grupo Archipiélago inside a beautifully restored 1900s Juárez house.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1656,6 +1801,7 @@
       "vibe": "Real deal Greek seafood and good wine for long, lingering lunches in Lomas.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1668,6 +1814,7 @@
       "vibe": "Italian gelato done properly, scooped at a string of cult little Condesa and Coyoacán windows.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dessert.csv"
     },
     {
@@ -1680,6 +1827,7 @@
       "vibe": "Italo-American bistro comfort food with charm, chicken parm included, on Roma Norte's Tabasco street.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1692,6 +1840,7 @@
       "vibe": "A romantic little steakhouse on Chihuahua street that's become one of Roma's hardest-to-book new spots.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1704,6 +1853,7 @@
       "vibe": "Swiss chef Luc Liebster reworks European tradition with Mexican ingredients inside a 1915 Porfirian mansion.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1716,6 +1866,7 @@
       "vibe": "Fire, firewood and a hidden patio from the Campobaja crew — order the tacos and linger.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1728,6 +1879,7 @@
       "vibe": "Trendy Italian plates like ibérico croquetas and seafood risotto in a buzzy Roma Norte room.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Dinner.csv"
     },
     {
@@ -1740,6 +1892,7 @@
       "vibe": null,
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
@@ -1752,6 +1905,7 @@
       "vibe": "One of the Juárez neighborhood's newest openings, already drawing a loyal after-work crowd.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Hotlist.csv"
     },
     {
@@ -1764,6 +1918,7 @@
       "vibe": "A Notorious B.I.G.-inspired bistro pouring house IPA and negronis under a hip-hop bodega vibe.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Hotlist.csv"
     },
     {
@@ -1776,6 +1931,7 @@
       "vibe": "A gourmet neighborhood café on Michoacán street good for breakfast through dinner.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -1788,6 +1944,7 @@
       "vibe": "The Monterrey-style taco chain that built a cult following one queue-out-the-door location at a time.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Tacos.csv"
     },
     {
@@ -1800,6 +1957,7 @@
       "vibe": "Roma's newest speakeasy — a bookshop by day, hidden cocktail bar with canned bites by night.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -1812,6 +1970,7 @@
       "vibe": "Condesa's go-to secondhand shop — vintage and thrifted pieces from $50 pesos up.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1824,6 +1983,7 @@
       "vibe": "An old pharmacy reborn as an all-day café — expect a line for brunch on weekends.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1836,6 +1996,7 @@
       "vibe": "Feels like a perfume lab — sniff testers through brass horns to find your signature scent.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1848,6 +2009,7 @@
       "vibe": "Argentine niche perfumery on Córdoba — botanical fragrances built like tiny art pieces.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1860,6 +2022,7 @@
       "vibe": "Sister-run concept store stocking handmade goods from artisans across Mexico.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1872,6 +2035,7 @@
       "vibe": "Concept store and workshop reworking Mexican craft into original, wearable design.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1884,6 +2048,7 @@
       "vibe": "Zero-waste bulk market — bring your own jars for grains, teas, and bar shampoo.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Market.csv"
     },
     {
@@ -1896,6 +2061,7 @@
       "vibe": "Bohemian womenswear mixing vintage finds with contemporary pieces on Atlixco.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -1908,6 +2074,7 @@
       "vibe": "Rent designer fashion instead of buying it — vintage and local labels too.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$",
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -1920,6 +2087,7 @@
       "vibe": "Floating steel bookshelves and a suspended whale skeleton — modern Mexico's cathedral of books.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1932,6 +2100,7 @@
       "vibe": "Baroque ex-convent turned museum, plus one of Mexico's most gilded churrigueresque façades.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1944,6 +2113,7 @@
       "vibe": "Art deco/nouveau marble palace — Tiffany glass curtain, murals by Rivera and Orozco inside.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1956,6 +2126,7 @@
       "vibe": "Lakeside dining and rotating chef residencies inside Chapultepec Park's midcentury pavilion.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1968,6 +2139,7 @@
       "vibe": "La Casa Azul — Kahlo's cobalt-blue home, studio, and garden where it all happened.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1980,6 +2152,7 @@
       "vibe": "Free entry into a hexagon-clad silver blob housing Rodins and 30 centuries of art.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -1992,6 +2165,7 @@
       "vibe": "Mexican art from viceregal times to the 20th century inside a Beaux-Arts former palace.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2004,6 +2178,7 @@
       "vibe": "The only royal castle in the Americas — Maximilian's residence, now a history museum with skyline views.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2016,6 +2191,7 @@
       "vibe": "Newly reopened park by the Toltec ruins — feathered-serpent fountains and family-friendly space.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2028,6 +2204,7 @@
       "vibe": "Buffet lunch inside an actual cave steps from the Teotihuacán pyramids — touristy but memorable.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2040,6 +2217,7 @@
       "vibe": "Javier Senosiain's snaking, mosaic-covered organic architecture — like stepping into a dream.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2052,6 +2230,7 @@
       "vibe": "Colorful trajineras drift through Aztec-era canals — mariachi, micheladas, and chaos included.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2064,6 +2243,7 @@
       "vibe": "Talavera-tiled 18th-century palace turned Sanborns — an Orozco mural over the breakfast crowd.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2076,6 +2256,7 @@
       "vibe": "Pole and aerial fitness studio in Roma Norte — strength training that feels like performance art.",
       "lat": null,
       "lng": null,
+      "priceTier": null,
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
@@ -2088,6 +2269,7 @@
       "vibe": "Quiet aparthotel near Auditorio Nacional — built for travelers who want to work in peace.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2097,21 +2279,10 @@
       "mapsUrl": "https://www.google.com/maps/place/Frontera+99/data=!4m2!3m1!1s0x85d1ff2557bf44cb:0x6dbc4d0de44c10b3",
       "neighborhood": "Roma Norte",
       "instagram": null,
-      "vibe": null,
+      "vibe": "A short-term rental apartment in the heart of Roma Norte, not a traditional hotel.",
       "lat": null,
       "lng": null,
-      "sourceFile": "CDMX.csv"
-    },
-    {
-      "id": "hotel-casa-simera",
-      "name": "Casa Simera",
-      "category": "hotel",
-      "mapsUrl": "https://www.google.com/maps/place/Casa+Simera/data=!4m2!3m1!1s0x85d2030065d014d5:0xe5daa4ca9ba0147",
-      "neighborhood": "Polanco",
-      "instagram": "casasimera______",
-      "vibe": "Viral café with pilates upstairs — matcha, lavender-lemon pancakes, and a line out the door.",
-      "lat": null,
-      "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     },
     {
@@ -2124,6 +2295,7 @@
       "vibe": "Members' coworking club on Amsterdam — restaurant, events, and design-forward workspaces.",
       "lat": null,
       "lng": null,
+      "priceTier": "$$$",
       "sourceFile": "CDMX.csv"
     }
   ]

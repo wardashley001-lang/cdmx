@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
+import L from "leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { CATEGORY_ORDER, DATA, resolveCoords } from "../lib/data";
 import { TOKEN_VAR } from "../components/CategoryTile";
 import type { ColorToken } from "../types";
@@ -7,6 +8,21 @@ import { instagramUrl, mapsSearchUrl } from "../lib/data";
 import "leaflet/dist/leaflet.css";
 
 const CDMX_CENTER: [number, number] = [19.4126, -99.1670];
+
+const pinIconCache = new Map<ColorToken, L.DivIcon>();
+function pinIcon(token: ColorToken): L.DivIcon {
+  const cached = pinIconCache.get(token);
+  if (cached) return cached;
+  const icon = L.divIcon({
+    className: "guide-pin",
+    html: `<span style="background:${TOKEN_VAR[token]}"></span>`,
+    iconSize: [22, 28],
+    iconAnchor: [11, 28],
+    popupAnchor: [0, -26],
+  });
+  pinIconCache.set(token, icon);
+  return icon;
+}
 
 export function MapPage() {
   const [active, setActive] = useState<string | null>(null);
@@ -28,6 +44,17 @@ export function MapPage() {
     : DATA.places
   ).length - pins.length;
 
+  const legend = useMemo(() => {
+    const groups = new Map<ColorToken, string[]>();
+    for (const id of CATEGORY_ORDER) {
+      const meta = DATA.categories[id];
+      const token = meta.token as ColorToken;
+      if (!groups.has(token)) groups.set(token, []);
+      groups.get(token)!.push(meta.label);
+    }
+    return Array.from(groups.entries());
+  }, []);
+
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
       <div className="flex items-start justify-between gap-4 flex-wrap mb-2">
@@ -47,7 +74,7 @@ export function MapPage() {
         until exact coordinates are imported from a GeoJSON Takeout export.
       </div>
 
-      <div className="flex flex-wrap gap-1.5 mb-4">
+      <div className="flex flex-wrap gap-1.5 mb-3">
         <button
           onClick={() => setActive(null)}
           className="px-3 py-1.5 text-[12px] font-semibold tracking-wide font-mono uppercase transition-opacity"
@@ -79,6 +106,19 @@ export function MapPage() {
         })}
       </div>
 
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4 font-mono text-[10px] uppercase tracking-[0.06em]" style={{ color: "var(--muted)" }}>
+        {legend.map(([token, labels]) => (
+          <span key={token} className="inline-flex items-center gap-1.5">
+            <span
+              aria-hidden="true"
+              className="inline-block w-2 h-2 rounded-full"
+              style={{ background: TOKEN_VAR[token] }}
+            />
+            {labels.join(", ")}
+          </span>
+        ))}
+      </div>
+
       <div className="h-[60vh] sm:h-[70vh] w-full overflow-hidden" style={{ border: "1px solid var(--border)" }}>
         <MapContainer center={CDMX_CENTER} zoom={13} scrollWheelZoom style={{ height: "100%", width: "100%" }}>
           <TileLayer
@@ -88,25 +128,14 @@ export function MapPage() {
           {pins.map(({ place, coords }) => {
             const token = DATA.categories[place.category].token as ColorToken;
             return (
-              <CircleMarker
-                key={place.id}
-                center={[coords.lat, coords.lng]}
-                radius={7}
-                pathOptions={{
-                  color: "white",
-                  weight: 2,
-                  fillColor: TOKEN_VAR[token].startsWith("var")
-                    ? getComputedColor(TOKEN_VAR[token])
-                    : TOKEN_VAR[token],
-                  fillOpacity: 0.9,
-                }}
-              >
+              <Marker key={place.id} position={[coords.lat, coords.lng]} icon={pinIcon(token)}>
                 <Popup>
                   <div className="font-display font-700 text-[14px]">{place.name}</div>
-                  {place.neighborhood && (
+                  {(place.neighborhood || place.priceTier) && (
                     <div className="font-mono text-[10px] uppercase tracking-wide opacity-70 mt-0.5">
                       {place.neighborhood}
                       {coords.approximate ? " · approx." : ""}
+                      {place.priceTier ? ` · ${place.priceTier}` : ""}
                     </div>
                   )}
                   {place.vibe && <p className="text-[12px] mt-1.5">{place.vibe}</p>}
@@ -121,18 +150,11 @@ export function MapPage() {
                     )}
                   </div>
                 </Popup>
-              </CircleMarker>
+              </Marker>
             );
           })}
         </MapContainer>
       </div>
     </div>
   );
-}
-
-function getComputedColor(cssVar: string): string {
-  if (typeof window === "undefined") return "#E0227A";
-  const match = cssVar.match(/var\((--[\w-]+)\)/);
-  if (!match) return cssVar;
-  return getComputedStyle(document.documentElement).getPropertyValue(match[1]).trim() || "#E0227A";
 }

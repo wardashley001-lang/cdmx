@@ -1,4 +1,5 @@
 export type ColorToken = "pink" | "cobalt" | "ochre" | "terracotta" | "violet";
+export type PriceTier = "$" | "$$" | "$$$" | "$$$$";
 
 export interface CategoryMeta {
   label: string;
@@ -15,6 +16,7 @@ export interface Place {
   vibe: string | null;
   lat: number | null;
   lng: number | null;
+  priceTier: PriceTier | null;
   sourceFile: string;
 }
 

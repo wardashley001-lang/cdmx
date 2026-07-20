@@ -32,6 +32,26 @@ CATEGORY_META = {
     "hotel":       {"label": "Hotels",      "token": "ochre"},
 }
 
+# Rough heuristic price tier per category — not researched per-place, just a
+# reasonable default so cards/popups have *something* until real data exists.
+CATEGORY_PRICE_TIER = {
+    "seafood":     "$$$",
+    "bakery":      "$",
+    "brunch":      "$$",
+    "dessert":     "$",
+    "healthy":     "$$",
+    "cafe":        "$",
+    "salons":      "$$",
+    "wine":        "$$$",
+    "bars":        "$$",
+    "nightlife":   "$$",
+    "fine_dining": "$$$$",
+    "dinner":      "$$",
+    "stores":      "$$",
+    "attractions": None,
+    "hotel":       "$$$",
+}
+
 
 def slugify(name: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
@@ -56,6 +76,7 @@ def main():
                 "vibe": None,
                 "lat": None,
                 "lng": None,
+                "priceTier": CATEGORY_PRICE_TIER.get(cat_id),
                 "sourceFile": item.get("source_file", ""),
             })
 
