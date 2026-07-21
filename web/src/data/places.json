@@ -2,15 +2,15 @@
   "categories": {
     "seafood": {
       "label": "Seafood",
-      "token": "terracotta"
+      "token": "sky"
     },
     "bakery": {
       "label": "Bakery",
-      "token": "ochre"
+      "token": "gold"
     },
     "brunch": {
       "label": "Brunch",
-      "token": "pink"
+      "token": "ochre"
     },
     "dessert": {
       "label": "Dessert",
@@ -18,19 +18,19 @@
     },
     "healthy": {
       "label": "Healthy",
-      "token": "cobalt"
+      "token": "emerald"
     },
     "cafe": {
       "label": "Café",
-      "token": "cobalt"
+      "token": "terracotta"
     },
     "salons": {
       "label": "Salons",
-      "token": "pink"
+      "token": "plum"
     },
     "wine": {
       "label": "Wine",
-      "token": "cobalt"
+      "token": "crimson"
     },
     "bars": {
       "label": "Bars",
@@ -38,27 +38,27 @@
     },
     "nightlife": {
       "label": "Nightlife",
-      "token": "violet"
+      "token": "indigo"
     },
     "fine_dining": {
       "label": "Fine Dining",
-      "token": "terracotta"
+      "token": "jade"
     },
     "dinner": {
       "label": "Dinner",
-      "token": "terracotta"
+      "token": "moss"
     },
     "stores": {
       "label": "Stores",
-      "token": "ochre"
+      "token": "olive"
     },
     "attractions": {
       "label": "Attractions",
-      "token": "violet"
+      "token": "turquoise"
     },
     "hotel": {
       "label": "Hotels",
-      "token": "ochre"
+      "token": "cobalt"
     }
   },
   "places": [

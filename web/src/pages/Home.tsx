@@ -12,15 +12,15 @@ export function Home() {
           {DATA.places.length} places · Ciudad de México
         </p>
         <h1
-          className="font-display font-900 leading-[0.92] tracking-tight text-[13vw] sm:text-[64px] lg:text-[84px]"
-          style={{ fontStretch: "expanded", textWrap: "balance", maxWidth: "16ch" }}
+          className="font-display font-900 leading-[0.92] tracking-tight text-[13vw] sm:text-[58px] lg:text-[76px]"
+          style={{ fontStretch: "expanded", textWrap: "balance", maxWidth: "18ch" }}
         >
-          The México City guide, sorted.
+          México City, but make it main character.
         </h1>
         <p className="mt-5 max-w-xl text-[15px] sm:text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-          Every saved place, organized by category — with the neighborhood, the
-          vibe, and a direct link to Maps and Instagram, so you never have to
-          scroll a messy list again.
+          Every place we've actually saved — sorted by vibe, tagged by
+          neighborhood, one tap from Maps or Instagram. No more digging
+          through screenshots for "that one restaurant."
         </p>
 
         <div className="mt-8 max-w-md">

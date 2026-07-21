@@ -1,4 +1,19 @@
-export type ColorToken = "pink" | "cobalt" | "ochre" | "terracotta" | "violet";
+export type ColorToken =
+  | "pink"
+  | "terracotta"
+  | "ochre"
+  | "gold"
+  | "olive"
+  | "moss"
+  | "emerald"
+  | "jade"
+  | "turquoise"
+  | "sky"
+  | "cobalt"
+  | "indigo"
+  | "violet"
+  | "plum"
+  | "crimson";
 export type PriceTier = "$" | "$$" | "$$$" | "$$$$";
 
 export interface CategoryMeta {

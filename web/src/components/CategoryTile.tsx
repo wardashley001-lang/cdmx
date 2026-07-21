@@ -3,17 +3,37 @@ import type { ColorToken } from "../types";
 
 const TOKEN_VAR: Record<ColorToken, string> = {
   pink: "var(--pink)",
-  cobalt: "var(--cobalt)",
-  ochre: "var(--ochre)",
   terracotta: "var(--terracotta)",
+  ochre: "var(--ochre)",
+  gold: "var(--gold)",
+  olive: "var(--olive)",
+  moss: "var(--moss)",
+  emerald: "var(--emerald)",
+  jade: "var(--jade)",
+  turquoise: "var(--turquoise)",
+  sky: "var(--sky)",
+  cobalt: "var(--cobalt)",
+  indigo: "var(--indigo)",
   violet: "var(--violet)",
+  plum: "var(--plum)",
+  crimson: "var(--crimson)",
 };
 const TOKEN_INK: Record<ColorToken, string> = {
   pink: "var(--pink-ink)",
-  cobalt: "var(--cobalt-ink)",
-  ochre: "var(--ochre-ink)",
   terracotta: "var(--terracotta-ink)",
+  ochre: "var(--ochre-ink)",
+  gold: "var(--gold-ink)",
+  olive: "var(--olive-ink)",
+  moss: "var(--moss-ink)",
+  emerald: "var(--emerald-ink)",
+  jade: "var(--jade-ink)",
+  turquoise: "var(--turquoise-ink)",
+  sky: "var(--sky-ink)",
+  cobalt: "var(--cobalt-ink)",
+  indigo: "var(--indigo-ink)",
   violet: "var(--violet-ink)",
+  plum: "var(--plum-ink)",
+  crimson: "var(--crimson-ink)",
 };
 
 export function CategoryTile({

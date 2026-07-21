@@ -15,21 +15,21 @@ OUTPUT_DIR = REPO_ROOT / "output"
 DEST = REPO_ROOT / "web" / "src" / "data" / "places.json"
 
 CATEGORY_META = {
-    "seafood":     {"label": "Seafood",     "token": "terracotta"},
-    "bakery":      {"label": "Bakery",      "token": "ochre"},
-    "brunch":      {"label": "Brunch",      "token": "pink"},
+    "seafood":     {"label": "Seafood",     "token": "sky"},
+    "bakery":      {"label": "Bakery",      "token": "gold"},
+    "brunch":      {"label": "Brunch",      "token": "ochre"},
     "dessert":     {"label": "Dessert",     "token": "pink"},
-    "healthy":     {"label": "Healthy",     "token": "cobalt"},
-    "cafe":        {"label": "Café",        "token": "cobalt"},
-    "salons":      {"label": "Salons",      "token": "pink"},
-    "wine":        {"label": "Wine",        "token": "cobalt"},
+    "healthy":     {"label": "Healthy",     "token": "emerald"},
+    "cafe":        {"label": "Café",        "token": "terracotta"},
+    "salons":      {"label": "Salons",      "token": "plum"},
+    "wine":        {"label": "Wine",        "token": "crimson"},
     "bars":        {"label": "Bars",        "token": "violet"},
-    "nightlife":   {"label": "Nightlife",   "token": "violet"},
-    "fine_dining": {"label": "Fine Dining", "token": "terracotta"},
-    "dinner":      {"label": "Dinner",      "token": "terracotta"},
-    "stores":      {"label": "Stores",      "token": "ochre"},
-    "attractions": {"label": "Attractions", "token": "violet"},
-    "hotel":       {"label": "Hotels",      "token": "ochre"},
+    "nightlife":   {"label": "Nightlife",   "token": "indigo"},
+    "fine_dining": {"label": "Fine Dining", "token": "jade"},
+    "dinner":      {"label": "Dinner",      "token": "moss"},
+    "stores":      {"label": "Stores",      "token": "olive"},
+    "attractions": {"label": "Attractions", "token": "turquoise"},
+    "hotel":       {"label": "Hotels",      "token": "cobalt"},
 }
 
 # Rough heuristic price tier per category — not researched per-place, just a
