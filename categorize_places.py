@@ -149,26 +149,65 @@ CATEGORIES = [
         ],
     ),
     (
-        "fine_dining",
+        "mexican",
         [
-            "tasting menu", "degustación", "degustacion", "omakase",
-            "chef's table", "prix fixe", "gastronomico", "gastronómico",
-            "alta cocina",
+            "taquería", "taqueria", "tacos", "carnitas", "pozole", "mole",
+            "enchiladas", "birria", "tlayuda", "mixiote", "tamales",
+            "antojitos", "cocina mexicana", "mexicana", "mexicano",
+            "oaxaqueño", "oaxaqueña", "yucateco", "yucateca",
+        ],
+    ),
+    (
+        "italian",
+        [
+            "italiana", "italiano", "pizza", "pasta", "osteria", "trattoria",
+            "risotto", "gnocchi",
+        ],
+    ),
+    (
+        "japanese",
+        [
+            "japonés", "japones", "sushi", "ramen", "omakase", "izakaya",
+            "yakitori", "robata", "wagyu",
+        ],
+    ),
+    (
+        "mediterranean",
+        [
+            "mediterráneo", "mediterraneo", "libanés", "libanes", "griega",
+            "griego", "hummus", "falafel", "shawarma", "tapas",
+        ],
+    ),
+    (
+        "french",
+        [
+            "francesa", "francés", "frances", "bistro", "brasserie",
+            "croque monsieur", "bistronomy",
+        ],
+    ),
+    (
+        "american",
+        [
+            "burger", "hamburgesa", "steakhouse", "bbq", "barbacoa", "grill",
+            "diner",
+        ],
+    ),
+    (
+        "contemporary",
+        [
+            "fusion", "mashup", "cocina de autor", "open-kitchen",
+            "open kitchen", "creative plates",
         ],
     ),
     (
         "dinner",
         [
-            "restaurante", "restaurant", "bistro", "taquería", "taqueria",
-            "tacos", "comida", "grill", "cocina", "fonda", "brasserie",
-            "taberna", "taverna", "steakhouse", "carne", "bbq", "barbacoa",
-            "carnitas", "pozole", "mole", "enchiladas", "sushi", "ramen",
-            "pizza", "burger", "hamburgesa", "asador", "estiatorio",
-            "comedor", "birria", "tlayuda", "mixiote", "tamales",
-            "italiana", "italiano", "japonés", "japones", "coreano", "coreana",
-            "libanés", "libanes", "mediterráneo", "mediterraneo", "thai",
-            "vietnamita", "francesa", "francés", "frances", "peruano", "peruana",
-            "griega", "griego", "argentina", "colombiano",
+            "restaurante", "restaurant", "comida", "cocina", "fonda",
+            "taberna", "taverna", "carne", "asador", "estiatorio", "comedor",
+            "coreano", "coreana", "thai", "vietnamita", "peruano", "peruana",
+            "argentina", "colombiano", "tasting menu", "degustación",
+            "degustacion", "chef's table", "prix fixe", "gastronomico",
+            "gastronómico", "alta cocina",
         ],
     ),
     (
@@ -214,9 +253,9 @@ NOTE_OVERRIDES = {
     "hotel": "hotel",
     "airbnb": "hotel",
     "restaurant": "dinner",
-    "omakase": "fine_dining",
-    "tasting": "fine_dining",
-    "fine dining": "fine_dining",
+    "omakase": "japanese",
+    "tasting": "dinner",
+    "fine dining": "dinner",
     "brunch": "brunch",
     "desayuno": "brunch",
     "breakfast": "brunch",
@@ -244,49 +283,81 @@ NOTE_OVERRIDES = {
 # Used for places whose names give no keyword signal (proper nouns, addresses).
 # ---------------------------------------------------------------------------
 KNOWN_PLACES = {
-    # Fine dining — chef-driven, creative, reservations often required
-    "quintonil": "fine_dining",
-    "em": "fine_dining",
-    "lardo": "fine_dining",
-    "ticuchi": "fine_dining",
-    "migrante": "fine_dining",
-    "feral": "fine_dining",
-    "baldio": "fine_dining",
-    "maizajo": "fine_dining",
-    "cometa": "fine_dining",
-    "huset": "fine_dining",
-    "rosa negra": "fine_dining",
-    "animal masaryk": "fine_dining",
-    "san angel inn": "fine_dining",
-    "blanco colima": "fine_dining",
-    "botanico": "fine_dining",
-    "propio": "fine_dining",
-    "rapsodia": "fine_dining",
-    "etranger": "fine_dining",
-    "darosa": "fine_dining",
-    "castizo roma": "fine_dining",
-    "l'enfant": "fine_dining",
-    "el jamil": "fine_dining",
+    # Cuisine — chef-driven / sit-down restaurants, classified by cuisine
+    # rather than a flat "fine dining"/"dinner" split. Source: per-place
+    # research (vibe text + web search); see the audit notes below for
+    # places whose true identity turned out to be a bar/cafe/dessert spot
+    # rather than a cuisine restaurant.
+    "cometa": "dinner",   # ambiguous — common name, no confident match
+    "l'enfant": "french",
+    "castizo roma": "mediterranean",
+    "el jamil": "mediterranean",
+    "fugu sushi": "japanese",
+    "darosa": "italian",
+    "rapsodia": "dinner",  # ambiguous — multiple unrelated venues share the name
+    "etranger": "french",
+    "arda": "contemporary",
+    "ticuchi": "bars",     # Olvera's agave/mezcal bar, not a full restaurant
+    "rosa negra": "american",
+    "animal masaryk": "contemporary",
+    "propio": "contemporary",
+    "orbita": "bars",      # coffee-bar-by-day/cocktail-bar-by-night hybrid
+    "em": "mexican",
+    "havre 77": "french",
+    "migrante": "contemporary",
+    "huset": "mexican",
+    "quintonil": "mexican",
+    "casa mandarine": "dinner",  # ambiguous — matches a concept store, not confirmed as a restaurant
+    "lardo": "mediterranean",
+    "balcon del zocalo": "mexican",
+    "blanco colima": "mediterranean",
+    "restaurante rosetta": "mexican",
+    "san angel inn": "mexican",
+    "botanico": "italian",
+    "feral": "contemporary",
+    "baldio": "mexican",
+    "alterna": "contemporary",
+    "wagyu jyube": "japanese",
+    "chopsticks": "dinner",  # ambiguous — no confident CDMX match found
+    "maizajo": "mexican",
+    "sartoria": "italian",   # Italian pasta restaurant (not a tailor shop)
+    "boogie's pizza": "american",
+    "el olvidado": "cafe",   # English-inspired bakery/café, not a cuisine restaurant
+    "gaba restaurante": "contemporary",
+    "travieso travieso": "nightlife",  # natural-wine bar + DJs, shifts into a dance venue
+    "homare cocina tradicional japonesa": "japanese",
+    "auna restaurante": "mexican",
+    "casa elena restaurante": "mexican",
+    "restaurante castizo": "mediterranean",
+    "taqueria \"sin nombre\"": "mexican",
+    "taverna": "mediterranean",
+    "estiatorio nostos (lomas)": "mediterranean",
+    "casa visconti": "dessert",  # Italian gelato shop, not a cuisine restaurant
+    "bartola": "italian",
+    "cursi": "american",
+    "lotti": "contemporary",
+    "la pantera asador": "mexican",
+    "babero": "italian",
+    "cochilada": "dinner",  # ambiguous — no matching venue found
+    "tosco restaurante": "contemporary",
+    "biggie's": "american",
+    "amin": "cafe",  # gourmet neighborhood café, not a cuisine restaurant
+    "taqueria orinoco": "mexican",
     "alma mia condesa": "cafe",
-    "casa mandarine": "fine_dining",
-    "havre 77": "fine_dining",
-    "balcon del zocalo": "fine_dining",
-    "orbita": "fine_dining",
-    # More fine dining — marquee CDMX restaurants
-    "pujol": "fine_dining",
-    "dulce patria": "fine_dining",
-    "merotoro": "fine_dining",
-    "maximo bistrot": "fine_dining",
-    "limosneros": "fine_dining",
-    "expendio de maiz": "fine_dining",
-    "guzina oaxaca": "fine_dining",
-    "rokai": "fine_dining",
-    "crudo": "fine_dining",
-    "sartoria": "fine_dining",     # Italian pasta restaurant (not a tailor shop)
-    "pastel": "fine_dining",        # Modern Mexican in Polanco
-    "amaya": "fine_dining",
-    "lorea": "fine_dining",
-    "mog": "fine_dining",
+    # More cuisine restaurants — marquee CDMX names, for future re-imports
+    "pujol": "mexican",
+    "dulce patria": "mexican",
+    "merotoro": "mexican",
+    "maximo bistrot": "mexican",
+    "limosneros": "mexican",
+    "expendio de maiz": "mexican",
+    "guzina oaxaca": "mexican",
+    "rokai": "japanese",
+    "crudo": "seafood",
+    "pastel": "mexican",     # Modern Mexican in Polanco
+    "amaya": "mexican",
+    "lorea": "mexican",
+    "mog": "japanese",
     # Wine bars & natural wine spots
     "plonk": "wine",
     "vigneron": "wine",
@@ -303,7 +374,6 @@ KNOWN_PLACES = {
     "tlecan": "bars",
     "caiman": "bars",
     "balagan": "bars",
-    "arda": "fine_dining",
     "kinshasa roma": "bars",
     "anonimo": "bars",
     "el tigre silencioso": "bars",
@@ -340,18 +410,10 @@ KNOWN_PLACES = {
     "the green corner": "healthy",
     "por siempre vegano": "healthy",
     "wild": "healthy",
-    # Dinner — neighborhood and casual restaurants
-    "nicos": "dinner",
-    "el turix": "dinner",
-    "boca grande": "dinner",
-    "bartola": "dinner",
-    "cursi": "dinner",
-    "lotti": "dinner",
-    "babero": "dinner",
-    "biggie's": "dinner",
-    "casa visconti": "dinner",
-    "el olvidado": "dinner",
-    "amin": "dinner",
+    # More casual restaurants — marquee names, for future re-imports
+    "nicos": "mexican",
+    "el turix": "mexican",
+    "boca grande": "mexican",
     # Bakery
     "molino el pujol": "bakery",
     # Stores (keyword-missed)
@@ -381,17 +443,12 @@ KNOWN_PLACES = {
     "lagoalgo": "attractions",
     "alae's art room": "attractions",
     # Audit corrections — proper-noun overrides for keyword false-positives
-    "restaurante rosetta": "fine_dining",   # Elena Reygadas; "restaurante" keyword → dinner
     "salon palomilla": "bars",              # Cantina/pulquería; "salon" keyword → salons
     "disco cafe & bar": "bars",             # Late-night bar; "cafe" keyword → cafe
     # Hotbook July 2025 hotspots
     "ricochet apero": "bars",
     "la romana": "bars",
-    "alterna": "fine_dining",
     "la belle epoque": "dessert",
-    "wagyu jyube": "fine_dining",
-    "cochilada": "dinner",
-    "chopsticks": "fine_dining",
 }
 
 # Raw street addresses saved as location pins — no useful place info, excluded from output.

@@ -1,6 +1,6 @@
 import type { ColorToken, Place } from "../types";
 import { TOKEN_VAR } from "./CategoryTile";
-import { CategoryBadge, PriceTierBadge } from "./CategoryBadge";
+import { CategoryBadge, PriceTierBadge, TagPill } from "./CategoryBadge";
 import { instagramUrl, mapsSearchUrl } from "../lib/data";
 
 function IconMaps() {
@@ -52,6 +52,14 @@ export function PlaceCard({
             <p className="mt-2.5 text-[13.5px] leading-relaxed" style={{ color: "var(--text)", opacity: 0.85, maxWidth: "60ch" }}>
               {place.vibe}
             </p>
+          )}
+
+          {place.occasionTags.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {place.occasionTags.map((tag) => (
+                <TagPill key={tag} tag={tag} />
+              ))}
+            </div>
           )}
         </div>
 

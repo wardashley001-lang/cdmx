@@ -5,11 +5,26 @@ import type { CategoryMeta, Place } from "../types";
 // appear literally in enough vibe lines or category labels to be found
 // by substring matching alone.
 const KEYWORD_ALIASES: Record<string, string[]> = {
-  taco: ["dinner"],
-  tacos: ["dinner"],
-  sushi: ["dinner", "fine_dining"],
-  pizza: ["dinner"],
-  omakase: ["fine_dining"],
+  taco: ["mexican"],
+  tacos: ["mexican"],
+  taqueria: ["mexican"],
+  antojitos: ["mexican"],
+  sushi: ["japanese"],
+  ramen: ["japanese"],
+  omakase: ["japanese"],
+  izakaya: ["japanese"],
+  pizza: ["italian"],
+  pasta: ["italian"],
+  trattoria: ["italian"],
+  burger: ["american"],
+  burgers: ["american"],
+  steak: ["american"],
+  bbq: ["american"],
+  hummus: ["mediterranean"],
+  shawarma: ["mediterranean"],
+  falafel: ["mediterranean"],
+  tapas: ["mediterranean"],
+  bistro: ["french"],
   mezcal: ["bars", "nightlife"],
   cocktail: ["bars", "nightlife"],
   cocktails: ["bars", "nightlife"],
@@ -19,9 +34,6 @@ const KEYWORD_ALIASES: Record<string, string[]> = {
   vegetarian: ["healthy"],
   speakeasy: ["bars", "nightlife"],
   jazz: ["nightlife"],
-  italian: ["dinner", "fine_dining"],
-  french: ["dinner", "fine_dining", "cafe"],
-  japanese: ["dinner", "fine_dining"],
   club: ["nightlife"],
   dancing: ["nightlife"],
   shopping: ["stores"],
@@ -54,6 +66,7 @@ export function searchPlaces(
     if (p.vibe && normalize(p.vibe).includes(q)) return true;
     const categoryLabel = categories[p.category]?.label;
     if (categoryLabel && normalize(categoryLabel).includes(q)) return true;
+    if (p.occasionTags.some((t) => normalize(t).includes(q))) return true;
     if (aliasCategories.has(p.category)) return true;
     return false;
   });

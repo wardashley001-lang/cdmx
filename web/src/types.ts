@@ -1,20 +1,36 @@
 export type ColorToken =
-  | "pink"
+  | "wine"
+  | "crimson"
+  | "cherry"
   | "terracotta"
-  | "ochre"
+  | "rust"
+  | "tan"
+  | "amber"
+  | "mustard"
   | "gold"
-  | "olive"
-  | "moss"
-  | "emerald"
-  | "jade"
-  | "turquoise"
-  | "sky"
-  | "cobalt"
-  | "indigo"
-  | "violet"
+  | "blush"
+  | "fuchsia"
+  | "magenta"
+  | "orchid"
   | "plum"
-  | "crimson";
+  | "navy"
+  | "slate"
+  | "denim"
+  | "teal"
+  | "sage"
+  | "olive"
+  | "taupe";
+
 export type PriceTier = "$" | "$$" | "$$$" | "$$$$";
+
+export type OccasionTag =
+  | "romantic"
+  | "trendy"
+  | "casual"
+  | "lively atmosphere"
+  | "good for lunch"
+  | "good for dinner"
+  | "outdoor";
 
 export interface CategoryMeta {
   label: string;
@@ -32,6 +48,7 @@ export interface Place {
   lat: number | null;
   lng: number | null;
   priceTier: PriceTier | null;
+  occasionTags: OccasionTag[];
   sourceFile: string;
 }
 

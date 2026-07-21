@@ -89,7 +89,7 @@ export function Header() {
           <span className="font-display font-900 text-xl tracking-tight" style={{ letterSpacing: "-0.01em" }}>
             GUÍA
           </span>
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em]" style={{ color: "var(--pink)" }}>
+          <span className="font-mono text-[11px] uppercase tracking-[0.18em]" style={{ color: "var(--accent)" }}>
             CDMX
           </span>
         </NavLink>

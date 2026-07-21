@@ -8,14 +8,14 @@ export function Home() {
     <div>
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 pt-12 sm:pt-20 pb-10 sm:pb-14">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: "var(--pink)" }}>
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: "var(--accent)" }}>
           {DATA.places.length} places · Ciudad de México
         </p>
         <h1
           className="font-display font-900 leading-[0.92] tracking-tight text-[13vw] sm:text-[58px] lg:text-[76px]"
           style={{ fontStretch: "expanded", textWrap: "balance", maxWidth: "18ch" }}
         >
-          México City, but make it main character.
+          La güera's guide to Mexico City.
         </h1>
         <p className="mt-5 max-w-xl text-[15px] sm:text-base leading-relaxed" style={{ color: "var(--muted)" }}>
           Every place we've actually saved — sorted by vibe, tagged by

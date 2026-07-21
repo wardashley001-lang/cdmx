@@ -69,7 +69,7 @@ export function MapPage() {
         </div>
       </div>
 
-      <div className="mb-4 p-3 text-[12.5px] leading-relaxed" style={{ background: "var(--ochre-ink)", color: "var(--text)", border: "1px solid var(--border)" }}>
+      <div className="mb-4 p-3 text-[12.5px] leading-relaxed" style={{ background: "var(--surface-2)", color: "var(--text)", border: "1px solid var(--border)" }}>
         <strong className="font-semibold">Pins are approximate</strong> — clustered near each place's neighborhood
         until exact coordinates are imported from a GeoJSON Takeout export.
       </div>
