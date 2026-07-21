@@ -1,9 +1,8 @@
-# Re-run after allowing this branch to deploy to the github-pages environment
 name: Deploy CDMX guide to GitHub Pages
 
 on:
   push:
-    branches: [Two-nights-in, claude/google-maps-category-lists-8w3hfp]
+    branches: [main]
     paths:
       - "web/**"
       - ".github/workflows/deploy-web.yml"
