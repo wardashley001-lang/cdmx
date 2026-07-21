@@ -33,6 +33,6 @@ export (see `Place.lat` / `Place.lng` in `src/types.ts`).
 
 ## Deployment
 
-Pushes to `Two-nights-in` or `claude/google-maps-category-lists-8w3hfp` that
-touch `web/**` trigger `.github/workflows/deploy-web.yml`, which builds and
-publishes to GitHub Pages.
+Pushes to `main` that touch `web/**` trigger
+`.github/workflows/deploy-web.yml`, which builds and publishes to GitHub
+Pages.
