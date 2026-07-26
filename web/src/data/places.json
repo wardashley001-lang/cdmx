@@ -328,24 +328,6 @@
       "sourceFile": "Dessert.csv"
     },
     {
-      "id": "dessert-la-belle-epoque",
-      "name": "La Belle Epoque",
-      "category": "dessert",
-      "mapsUrl": "",
-      "neighborhood": "Roma Norte",
-      "instagram": "labelleepoque.mx",
-      "vibe": "French fine-dining newcomer with red walls and a chandelier; chef Max Righi's tarte tatin is the move.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$",
-      "occasionTags": [
-        "romantic",
-        "trendy",
-        "good for dinner"
-      ],
-      "sourceFile": "Hotbook_July_2025.csv"
-    },
-    {
       "id": "healthy-happy-fruit",
       "name": "Happy Fruit",
       "category": "healthy",
@@ -472,12 +454,14 @@
       "mapsUrl": "https://www.google.com/maps/place/Cafe+Ocaso/data=!4m2!3m1!1s0x85d1ff0061c69e11:0xd1615e6b923b89c2",
       "neighborhood": "Roma Norte",
       "instagram": "cafeocasomx",
-      "vibe": "Low-key neighborhood coffee spot on Álvaro Obregón for a chill afternoon.",
+      "vibe": "Chef Emiliano Padilla's (Voraz) Álvaro Obregón spot that runs as a specialty coffee café by day and flips into a cocktail-and-music bar by night.",
       "lat": null,
       "lng": null,
       "priceTier": "$",
       "occasionTags": [
-        "casual"
+        "trendy",
+        "lively atmosphere",
+        "good for dinner"
       ],
       "sourceFile": "Bars_cocktails.csv"
     },
@@ -1698,24 +1682,6 @@
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
-      "id": "bars-bar-ocaso",
-      "name": "Bar Ocaso",
-      "category": "bars",
-      "mapsUrl": "",
-      "neighborhood": "Roma Norte",
-      "instagram": "cafeocasomx",
-      "vibe": "Chef Emiliano Padilla's (Voraz) Álvaro Obregón spot that runs as a specialty coffee café by day and flips into a cocktail-and-music bar by night.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [
-        "trendy",
-        "lively atmosphere",
-        "good for dinner"
-      ],
-      "sourceFile": "New_Places_2026.csv"
-    },
-    {
       "id": "bars-less-is-more",
       "name": "Less is More",
       "category": "bars",
@@ -1888,24 +1854,6 @@
         "trendy"
       ],
       "sourceFile": "Listening_room.csv"
-    },
-    {
-      "id": "nightlife-popcorn-salon",
-      "name": "Popcorn Salon",
-      "category": "nightlife",
-      "mapsUrl": "",
-      "neighborhood": "Roma Norte",
-      "instagram": "salon_palomilla",
-      "vibe": "A discreet second-floor lounge in Roma Norte with low light, an open ceiling and a buzzing bar built for stretching the night out.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [
-        "lively atmosphere",
-        "trendy",
-        "outdoor"
-      ],
-      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "nightlife-bar-amici",
@@ -2605,6 +2553,24 @@
         "good for dinner"
       ],
       "sourceFile": "CDMX.csv"
+    },
+    {
+      "id": "french-la-belle-epoque",
+      "name": "La Belle Epoque",
+      "category": "french",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "labelleepoque.mx",
+      "vibe": "French fine-dining newcomer with red walls and a chandelier; chef Max Righi's tarte tatin is the move.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "romantic",
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "Hotbook_July_2025.csv"
     },
     {
       "id": "french-au-pied-de-cochon",

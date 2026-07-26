@@ -291,7 +291,6 @@ KNOWN_PLACES = {
     "niv": "wine",
     "oropel": "wine",
     "berta": "wine",
-    "bar ocaso": "bars",
     "fierro": "mexican",
     "siembra taqueria": "mexican",
     "au pied de cochon": "french",
@@ -301,7 +300,6 @@ KNOWN_PLACES = {
     "sushi kyo": "japanese",
     "lina": "contemporary",
     "less is more": "bars",
-    "popcorn salon": "nightlife",
     "varde": "bars",
     "coppola very nice": "italian",
     "nommo sushi": "japanese",
@@ -477,7 +475,7 @@ KNOWN_PLACES = {
     # Hotbook July 2025 hotspots
     "ricochet apero": "bars",
     "la romana": "bars",
-    "la belle epoque": "dessert",
+    "la belle epoque": "french",
 }
 
 # Raw street addresses saved as location pins — no useful place info, excluded from output.
