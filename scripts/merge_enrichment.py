@@ -21,6 +21,7 @@ ENRICHMENT_FILES = [
     "enrich_stores_attractions_hotel.json",
     "enrich_gap_fill.json",
     "enrich_new_places_2026.json",
+    "enrich_audit_fixes_2026.json",
 ]
 
 

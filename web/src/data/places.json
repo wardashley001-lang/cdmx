@@ -79,10 +79,6 @@
     "attractions": {
       "label": "Attractions",
       "token": "teal"
-    },
-    "hotel": {
-      "label": "Hotels",
-      "token": "slate"
     }
   },
   "places": [
@@ -205,6 +201,24 @@
         "good for dinner"
       ],
       "sourceFile": "Seafood.csv"
+    },
+    {
+      "id": "bakery-tomasa-condesa",
+      "name": "Tomasa Condesa",
+      "category": "bakery",
+      "mapsUrl": "https://www.google.com/maps/place/Tomasa+Condesa/data=!4m2!3m1!1s0x85d1ff0fd8450659:0xd4cabd15fb6886a7",
+      "neighborhood": "Condesa",
+      "instagram": "tomasa.mx",
+      "vibe": "Pink-toned bakery famous for conchas stuffed with chilaquiles or cochinita pibil.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$",
+      "occasionTags": [
+        "trendy",
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "Bakery.csv"
     },
     {
       "id": "bakery-migo-bagels",
@@ -413,24 +427,6 @@
       "sourceFile": "Bakery.csv"
     },
     {
-      "id": "cafe-tomasa-condesa",
-      "name": "Tomasa Condesa",
-      "category": "cafe",
-      "mapsUrl": "https://www.google.com/maps/place/Tomasa+Condesa/data=!4m2!3m1!1s0x85d1ff0fd8450659:0xd4cabd15fb6886a7",
-      "neighborhood": "Condesa",
-      "instagram": "tomasa.mx",
-      "vibe": "Pink-toned bakery famous for conchas stuffed with chilaquiles or cochinita pibil.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$",
-      "occasionTags": [
-        "trendy",
-        "casual",
-        "good for lunch"
-      ],
-      "sourceFile": "Bakery.csv"
-    },
-    {
       "id": "cafe-caf-drama",
       "name": "Café Drama",
       "category": "cafe",
@@ -567,24 +563,6 @@
       "occasionTags": [
         "casual",
         "good for lunch"
-      ],
-      "sourceFile": "CDMX.csv"
-    },
-    {
-      "id": "cafe-oly",
-      "name": "oly.",
-      "category": "cafe",
-      "mapsUrl": "https://www.google.com/maps/place/oly./data=!4m2!3m1!1s0x85d1ffe147ce5801:0x317a07faefc1b6f9",
-      "neighborhood": "Condesa",
-      "instagram": "oly._____",
-      "vibe": "Casual-elegant Mediterranean neighborhood spot on Alfonso Reyes, known for lemon pasta.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$",
-      "occasionTags": [
-        "romantic",
-        "outdoor",
-        "good for dinner"
       ],
       "sourceFile": "CDMX.csv"
     },
@@ -892,6 +870,24 @@
         "good for dinner"
       ],
       "sourceFile": "Bars_cocktails.csv"
+    },
+    {
+      "id": "wine-zimo",
+      "name": "Zimo",
+      "category": "wine",
+      "mapsUrl": "https://www.google.com/maps/place/Zimo/data=!4m2!3m1!1s0x85d1ffbb976f98d7:0x68233e5ce564586d",
+      "neighborhood": "Condesa",
+      "instagram": "zimo_mx",
+      "vibe": "Fresh-pasta Italian wine bar with vinyl on the turntable and cocktails on the side.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "trendy",
+        "good for dinner",
+        "lively atmosphere"
+      ],
+      "sourceFile": "CDMX.csv"
     },
     {
       "id": "wine-fournier-rousseau",
@@ -1402,24 +1398,6 @@
       "sourceFile": "CDMX.csv"
     },
     {
-      "id": "bars-zimo",
-      "name": "Zimo",
-      "category": "bars",
-      "mapsUrl": "https://www.google.com/maps/place/Zimo/data=!4m2!3m1!1s0x85d1ffbb976f98d7:0x68233e5ce564586d",
-      "neighborhood": "Condesa",
-      "instagram": "zimo_mx",
-      "vibe": "Fresh-pasta Italian wine bar with vinyl on the turntable and cocktails on the side.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [
-        "trendy",
-        "good for dinner",
-        "lively atmosphere"
-      ],
-      "sourceFile": "CDMX.csv"
-    },
-    {
       "id": "bars-disco-caf-bar",
       "name": "Disco Café & Bar",
       "category": "bars",
@@ -1766,6 +1744,20 @@
         "romantic",
         "trendy"
       ],
+      "sourceFile": "Bars_cocktails.csv"
+    },
+    {
+      "id": "nightlife-cometa",
+      "name": "Cometa",
+      "category": "nightlife",
+      "mapsUrl": "https://www.google.com/maps/place/Cometa/data=!4m2!3m1!1s0x85d1ff001a8ad915:0x79c71250f295baa7",
+      "neighborhood": "Roma Norte",
+      "instagram": "cometadisco",
+      "vibe": "Pablo Gorozpe's design-forward disco above Selva wine bar on Córdoba — red lighting, house music, a notoriously hard door.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [],
       "sourceFile": "Bars_cocktails.csv"
     },
     {
@@ -2334,6 +2326,23 @@
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
+      "id": "japanese-chopsticks",
+      "name": "Chopsticks",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": null,
+      "vibe": "Sushi counter on Calle Versalles known for torched otoro nigiri.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "casual",
+        "good for dinner"
+      ],
+      "sourceFile": "Hotbook_July_2025.csv"
+    },
+    {
       "id": "japanese-sushi-kyo",
       "name": "Sushi Kyo",
       "category": "japanese",
@@ -2386,22 +2395,6 @@
       "sourceFile": "New_Places_2026.csv"
     },
     {
-      "id": "mediterranean-castizo-roma",
-      "name": "CASTIZO ROMA",
-      "category": "mediterranean",
-      "mapsUrl": "https://www.google.com/maps/place/CASTIZO+ROMA/data=!4m2!3m1!1s0x85d1ffca7137cb4b:0x314bab62f97065ab",
-      "neighborhood": "Condesa",
-      "instagram": "castizomx",
-      "vibe": "Chef Milu Crespo's contemporary Spanish-Mediterranean cooking in a Condesa mansion.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$$",
-      "occasionTags": [
-        "romantic"
-      ],
-      "sourceFile": "CDMX.csv"
-    },
-    {
       "id": "mediterranean-el-jamil",
       "name": "El Jamil",
       "category": "mediterranean",
@@ -2419,20 +2412,38 @@
       "sourceFile": "CDMX.csv"
     },
     {
-      "id": "mediterranean-restaurante-castizo",
-      "name": "Restaurante Castizo",
+      "id": "mediterranean-castizo",
+      "name": "Castizo",
       "category": "mediterranean",
       "mapsUrl": "https://www.google.com/maps/place/Restaurante+Castizo/data=!4m2!3m1!1s0x85d1ff09aa344311:0xb7eb81da3b6c75dd",
       "neighborhood": "Condesa",
       "instagram": "castizomx",
-      "vibe": "Chef Milu Crespo's Spanish-Mediterranean menu anchors this all-day Condesa favorite.",
+      "vibe": "Chef Milu Crespo's Spanish-Mediterranean menu anchors this all-day Condesa mansion favorite.",
       "lat": null,
       "lng": null,
       "priceTier": "$$$",
       "occasionTags": [
+        "romantic",
         "good for lunch",
-        "good for dinner",
-        "casual"
+        "good for dinner"
+      ],
+      "sourceFile": "CDMX.csv"
+    },
+    {
+      "id": "mediterranean-oly",
+      "name": "oly.",
+      "category": "mediterranean",
+      "mapsUrl": "https://www.google.com/maps/place/oly./data=!4m2!3m1!1s0x85d1ffe147ce5801:0x317a07faefc1b6f9",
+      "neighborhood": "Condesa",
+      "instagram": "oly._____",
+      "vibe": "Casual-elegant Mediterranean neighborhood spot on Alfonso Reyes, known for lemon pasta.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "romantic",
+        "outdoor",
+        "good for dinner"
       ],
       "sourceFile": "CDMX.csv"
     },
@@ -2864,20 +2875,6 @@
       "sourceFile": "New_Places_2026.csv"
     },
     {
-      "id": "dinner-cometa",
-      "name": "Cometa",
-      "category": "dinner",
-      "mapsUrl": "https://www.google.com/maps/place/Cometa/data=!4m2!3m1!1s0x85d1ff001a8ad915:0x79c71250f295baa7",
-      "neighborhood": null,
-      "instagram": null,
-      "vibe": null,
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [],
-      "sourceFile": "Bars_cocktails.csv"
-    },
-    {
       "id": "dinner-travieso-travieso",
       "name": "Travieso Travieso",
       "category": "dinner",
@@ -2909,39 +2906,11 @@
       "sourceFile": "CDMX.csv"
     },
     {
-      "id": "dinner-casa-mandarine",
-      "name": "Casa Mandarine",
-      "category": "dinner",
-      "mapsUrl": "https://www.google.com/maps/place/Casa+Mandarine/data=!4m2!3m1!1s0x85d1ffd48cadd497:0xe8c3c4433f571619",
-      "neighborhood": null,
-      "instagram": null,
-      "vibe": null,
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [],
-      "sourceFile": "CDMX.csv"
-    },
-    {
       "id": "dinner-cochilada",
       "name": "Cochilada",
       "category": "dinner",
       "mapsUrl": "",
       "neighborhood": null,
-      "instagram": null,
-      "vibe": null,
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$",
-      "occasionTags": [],
-      "sourceFile": "Hotbook_July_2025.csv"
-    },
-    {
-      "id": "dinner-chopsticks",
-      "name": "Chopsticks",
-      "category": "dinner",
-      "mapsUrl": "",
-      "neighborhood": "Juárez",
       "instagram": null,
       "vibe": null,
       "lat": null,
@@ -3047,6 +3016,20 @@
       "occasionTags": [
         "trendy"
       ],
+      "sourceFile": "CDMX.csv"
+    },
+    {
+      "id": "stores-casa-mandarine",
+      "name": "Casa Mandarine",
+      "category": "stores",
+      "mapsUrl": "https://www.google.com/maps/place/Casa+Mandarine/data=!4m2!3m1!1s0x85d1ffd48cadd497:0xe8c3c4433f571619",
+      "neighborhood": "Condesa",
+      "instagram": "casamandarine",
+      "vibe": "Concept store on Zamora stocking handmade clothing, bags, and accessories from 30+ Latin American designers.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [],
       "sourceFile": "CDMX.csv"
     },
     {
@@ -3351,52 +3334,6 @@
         "trendy"
       ],
       "sourceFile": "Mexico_City_Manifesto.csv"
-    },
-    {
-      "id": "hotel-the-wild-oscar",
-      "name": "The Wild Oscar",
-      "category": "hotel",
-      "mapsUrl": "https://www.google.com/maps/place/The+Wild+Oscar/data=!4m2!3m1!1s0x85d1ff55577956b7:0xc577df992a0402c4",
-      "neighborhood": "Polanco",
-      "instagram": "thewildoscar",
-      "vibe": "Quiet aparthotel near Auditorio Nacional — built for travelers who want to work in peace.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$$",
-      "occasionTags": [
-        "outdoor"
-      ],
-      "sourceFile": "CDMX.csv"
-    },
-    {
-      "id": "hotel-frontera-99",
-      "name": "Frontera 99",
-      "category": "hotel",
-      "mapsUrl": "https://www.google.com/maps/place/Frontera+99/data=!4m2!3m1!1s0x85d1ff2557bf44cb:0x6dbc4d0de44c10b3",
-      "neighborhood": "Roma Norte",
-      "instagram": null,
-      "vibe": "A short-term rental apartment in the heart of Roma Norte, not a traditional hotel.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$$",
-      "occasionTags": [],
-      "sourceFile": "CDMX.csv"
-    },
-    {
-      "id": "hotel-haab-project-condesa",
-      "name": "Haab Project Condesa",
-      "category": "hotel",
-      "mapsUrl": "https://www.google.com/maps/place/Haab+Project+Condesa/data=!4m2!3m1!1s0x85d1ff1e47c06ad5:0xe51b8d1140b9de46",
-      "neighborhood": "Condesa",
-      "instagram": "haabproject",
-      "vibe": "Members' coworking club on Amsterdam — restaurant, events, and design-forward workspaces.",
-      "lat": null,
-      "lng": null,
-      "priceTier": "$$$",
-      "occasionTags": [
-        "trendy"
-      ],
-      "sourceFile": "CDMX.csv"
     }
   ]
 }

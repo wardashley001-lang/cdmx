@@ -35,7 +35,6 @@ CATEGORY_META = {
     "dinner":        {"label": "Dinner",        "token": "taupe"},
     "stores":        {"label": "Stores",        "token": "olive"},
     "attractions":   {"label": "Attractions",   "token": "teal"},
-    "hotel":         {"label": "Hotels",        "token": "slate"},
 }
 
 # Rough heuristic price tier per category — not researched per-place, just a
@@ -61,7 +60,6 @@ CATEGORY_PRICE_TIER = {
     "dinner":        "$$",
     "stores":        "$$",
     "attractions":   None,
-    "hotel":         "$$$",
 }
 
 

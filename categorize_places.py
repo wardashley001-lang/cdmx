@@ -315,9 +315,8 @@ KNOWN_PLACES = {
     # research (vibe text + web search); see the audit notes below for
     # places whose true identity turned out to be a bar/cafe/dessert spot
     # rather than a cuisine restaurant.
-    "cometa": "dinner",   # ambiguous — common name, no confident match
+    "cometa": "nightlife",  # confirmed: Pablo Gorozpe's disco above Selva, Córdoba 104, Roma Norte
     "l'enfant": "french",
-    "castizo roma": "mediterranean",
     "el jamil": "mediterranean",
     "fugu sushi": "japanese",
     "darosa": "italian",
@@ -334,7 +333,7 @@ KNOWN_PLACES = {
     "migrante": "contemporary",
     "huset": "mexican",
     "quintonil": "mexican",
-    "casa mandarine": "dinner",  # ambiguous — matches a concept store, not confirmed as a restaurant
+    "casa mandarine": "stores",  # confirmed: concept store on Zamora, Condesa (@casamandarine)
     "lardo": "mediterranean",
     "balcon del zocalo": "mexican",
     "blanco colima": "mediterranean",
@@ -345,7 +344,7 @@ KNOWN_PLACES = {
     "baldio": "mexican",
     "alterna": "contemporary",
     "wagyu jyube": "japanese",
-    "chopsticks": "dinner",  # ambiguous — no confident CDMX match found
+    "chopsticks": "japanese",  # sushi counter, Calle Versalles, Juárez (per user screenshot)
     "maizajo": "mexican",
     "sartoria": "italian",   # Italian pasta restaurant (not a tailor shop)
     "boogie's pizza": "american",
@@ -355,7 +354,7 @@ KNOWN_PLACES = {
     "homare cocina tradicional japonesa": "japanese",
     "auna restaurante": "mexican",
     "casa elena restaurante": "mexican",
-    "restaurante castizo": "mediterranean",
+    "castizo": "mediterranean",
     "taqueria \"sin nombre\"": "mexican",
     "taverna": "mediterranean",
     "estiatorio nostos (lomas)": "mediterranean",
@@ -405,7 +404,7 @@ KNOWN_PLACES = {
     "anonimo": "bars",
     "el tigre silencioso": "bars",
     "yage": "bars",
-    "zimo": "bars",
+    "zimo": "wine",  # self-described "Italian wine bar" — wine bars go to wine, not bars
     "maleza": "bars",
     "altanera roma": "bars",
     "carajo maria": "bars",
@@ -448,9 +447,8 @@ KNOWN_PLACES = {
     "fueguia 1833 mexico": "stores",
     # Hotels (keyword-missed)
     "haab project condesa": "hotel",
-    # Café (keyword-missed)
-    "oly.": "cafe",
-    "tomasa condesa": "cafe",
+    "oly.": "mediterranean",       # "Mediterranean neighborhood spot... known for lemon pasta"
+    "tomasa condesa": "bakery",    # "Pink-toned bakery famous for conchas..."
     "buna": "cafe",
     "almanegra cafe": "cafe",
     "casa simera": "cafe",  # viral café/pilates studio in Polanco, not lodging
