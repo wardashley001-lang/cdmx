@@ -20,6 +20,7 @@ TAG_FILES = [
     "tags_bars_wine.json",
     "tags_misc.json",
     "tags_other.json",
+    "tags_new_places_2026.json",
 ]
 
 VALID_TAGS = {

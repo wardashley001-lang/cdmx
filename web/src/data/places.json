@@ -172,6 +172,23 @@
       "sourceFile": "Market.csv"
     },
     {
+      "id": "seafood-ultramarinos-demar",
+      "name": "Ultramarinos Demar",
+      "category": "seafood",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "ultramarinos.rest",
+      "vibe": "Chef Lucho Martínez's fire-driven seafood spot with a diner-meets-bistro look — Michelin Bib Gourmand raw plates, pastas and an open kitchen.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "seafood-el-tibur",
       "name": "EL TIBUR",
       "category": "seafood",
@@ -708,6 +725,23 @@
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
+      "id": "cafe-crissis",
+      "name": "Crissis",
+      "category": "cafe",
+      "mapsUrl": "",
+      "neighborhood": "Lomas de Chapultepec",
+      "instagram": "crissis.crissis",
+      "vibe": "Isabela Romo's Bar San Calisto-inspired hideaway next to her restaurant Issi, coffee and pancakes by day, drinks and hand-eaten bites by night.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$",
+      "occasionTags": [
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "salons-owa-wellness",
       "name": "Owa Wellness",
       "category": "salons",
@@ -946,6 +980,96 @@
         "good for dinner"
       ],
       "sourceFile": "Dinner.csv"
+    },
+    {
+      "id": "wine-fantasma",
+      "name": "Fantasma",
+      "category": "wine",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "fantasmawines",
+      "vibe": "A sidewalk natural-wine bar and shop on Orizaba, next door to sister restaurant Fugaz, pouring mostly Mexican bottles by the glass.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "casual",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "wine-natas-wines",
+      "name": "Natas Wines",
+      "category": "wine",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "instagram": "nataswines",
+      "vibe": "An intimate Condesa wine-and-vinyl listening bar pouring vibrant French and Mexican natural wines, no food, just street-side people-watching.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "trendy",
+        "casual",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "wine-niv",
+      "name": "Niv",
+      "category": "wine",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "instagram": "nivbar.mx",
+      "vibe": "A candlelit Hipódromo Condesa wine bar pairing small-production French, Italian and Mexican bottles with a French-Mexican tapas menu and vinyl records.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "romantic",
+        "trendy",
+        "good for dinner",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "wine-oropel",
+      "name": "Oropel",
+      "category": "wine",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "oropelcdmx",
+      "vibe": "Mexico City's first vermutería, a tiny no-menu counter on Chihuahua pouring 20-plus vermouths, natural wine and mezcal shots to a sidewalk crowd.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "trendy",
+        "casual",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "wine-berta",
+      "name": "Berta",
+      "category": "wine",
+      "mapsUrl": "",
+      "neighborhood": "Cuauhtémoc",
+      "instagram": "bertasinh",
+      "vibe": "A close-tabled bistro and organic-wine bar from three women (Eli Varscher, Gaia Lampreabe, Sabrina Crottogini) blending Argentine, Uruguayan and Mexican plates.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "romantic",
+        "good for dinner",
+        "trendy"
+      ],
+      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "wine-vigneron",
@@ -1574,6 +1698,58 @@
       "sourceFile": "Hotbook_July_2025.csv"
     },
     {
+      "id": "bars-bar-ocaso",
+      "name": "Bar Ocaso",
+      "category": "bars",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "cafeocasomx",
+      "vibe": "Chef Emiliano Padilla's (Voraz) Álvaro Obregón spot that runs as a specialty coffee café by day and flips into a cocktail-and-music bar by night.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "trendy",
+        "lively atmosphere",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "bars-less-is-more",
+      "name": "Less is More",
+      "category": "bars",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "lessismore_mx",
+      "vibe": "Author cocktails built on a minimalist, math-driven formula — a nine-drink menu split between a day-drinkery front room and a moodier back bar.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "trendy",
+        "lively atmosphere"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "bars-varde",
+      "name": "Varde",
+      "category": "bars",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "varde____",
+      "vibe": "A gastro-cocktail bar inside a restored Porfirian mansion on Córdoba, chef Alexis Ayala's short menu paired with a tight, well-executed drink list.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "romantic",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "nightlife-trampa",
       "name": "TRAMPA",
       "category": "nightlife",
@@ -1712,6 +1888,41 @@
         "trendy"
       ],
       "sourceFile": "Listening_room.csv"
+    },
+    {
+      "id": "nightlife-popcorn-salon",
+      "name": "Popcorn Salon",
+      "category": "nightlife",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "salon_palomilla",
+      "vibe": "A discreet second-floor lounge in Roma Norte with low light, an open ceiling and a buzzing bar built for stretching the night out.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "lively atmosphere",
+        "trendy",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "nightlife-bar-amici",
+      "name": "Bar Amici",
+      "category": "nightlife",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "baramici.cdmx",
+      "vibe": "Red-velvet, burlesque-glam lounge from the Piazza Pasticcio team, pouring Italian-inflected classic cocktails with bottle service.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "trendy",
+        "lively atmosphere"
+      ],
+      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "mexican-a-na-restaurante",
@@ -1915,6 +2126,77 @@
       "sourceFile": "Hotlist.csv"
     },
     {
+      "id": "mexican-fierro",
+      "name": "Fierro",
+      "category": "mexican",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "fierrocdmx",
+      "vibe": "Chefs Lucía Cañas and Roberto Almaguer's contemporary neo-cantina channeling northern Mexican fire cooking, carne asada and machaca, with an all-Mexican wine list.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "lively atmosphere",
+        "good for dinner",
+        "trendy"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "mexican-siembra-taqueria",
+      "name": "Siembra Taqueria",
+      "category": "mexican",
+      "mapsUrl": "",
+      "neighborhood": "Polanco",
+      "instagram": "siembra.taqueria",
+      "vibe": "Chefs Karina Mejía and Israel Montero's Michelin-recommended sidewalk taquería, built on its own in-house nixtamalized tortillería.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "casual",
+        "good for lunch",
+        "outdoor"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "mexican-pujolitto",
+      "name": "Pujolitto",
+      "category": "mexican",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "pujol.itto",
+      "vibe": "Enrique Olvera's intimate 12-seat bar at Tokio 110 where Japanese technique meets Mexican street-food soul in a ten-course tasting.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "mexican-el-sella-bar",
+      "name": "El Sella Bar",
+      "category": "mexican",
+      "mapsUrl": "",
+      "neighborhood": "Doctores",
+      "instagram": "elsellabar",
+      "vibe": "A 70-year-old Doctores cantina famous for its bone-in chamorro, cider-braised chorizo and Galician octopus in a lively, no-frills dining room.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "casual",
+        "lively atmosphere",
+        "good for lunch"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "mexican-taquer-a-orinoco",
       "name": "Taquería Orinoco",
       "category": "mexican",
@@ -2017,6 +2299,42 @@
       "sourceFile": "Mexico_City_Manifesto.csv"
     },
     {
+      "id": "italian-coppola-very-nice",
+      "name": "Coppola Very Nice",
+      "category": "italian",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "coppolaverynice",
+      "vibe": "Sourdough New York-style pizza, craft cocktails and a vinyl soundtrack in a retro-leaning Juárez pizza-and-bar hangout with a lot of personality.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "lively atmosphere",
+        "casual",
+        "trendy"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "italian-la-bellezza",
+      "name": "La Bellezza",
+      "category": "italian",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "labellezza.mexico",
+      "vibe": "Big Mamma Group's first Latin American opening: a maximalist Perugian-courtyard trattoria with Neapolitan pizza and chef Mimmo's grandmother's ragù.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$",
+      "occasionTags": [
+        "romantic",
+        "lively atmosphere",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "japanese-fugu-sushi",
       "name": "Fugu Sushi",
       "category": "japanese",
@@ -2066,6 +2384,58 @@
         "good for dinner"
       ],
       "sourceFile": "Hotbook_July_2025.csv"
+    },
+    {
+      "id": "japanese-sushi-kyo",
+      "name": "Sushi Kyo",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "kyosushiya",
+      "vibe": "Edomae omakase at a 13-seat counter behind an unmarked door on Havre, led by chef Yoshimasa Aoki with fish flown in from Japan.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "japanese-nommo-sushi",
+      "name": "Nommo Sushi",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "nommo.sushi",
+      "vibe": "Urban sushi near the Glorieta de los Insurgentes — a calm, casual counter-and-terrace space for hamachi and salmon handrolls without the omakase formality.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "casual",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "japanese-futari",
+      "name": "Futari",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "maison.futari",
+      "vibe": "Kappo-style sushi bar in a Roma Norte mansion, à la carte by day and prix-fixe omakase by night from Tokyo- and Kyoto-trained chefs.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "trendy",
+        "good for lunch",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "mediterranean-castizo-roma",
@@ -2235,6 +2605,57 @@
         "good for dinner"
       ],
       "sourceFile": "CDMX.csv"
+    },
+    {
+      "id": "french-au-pied-de-cochon",
+      "name": "Au Pied de Cochon",
+      "category": "french",
+      "mapsUrl": "",
+      "neighborhood": "Polanco",
+      "instagram": "aupieddecochonmx",
+      "vibe": "The 24-hour Parisian brasserie inside the InterContinental Presidente Mexico City, serving the original 1947 Les Halles onion soup and pork classics since 2000.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "good for dinner",
+        "lively atmosphere"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "french-les-moustaches",
+      "name": "Les Moustaches",
+      "category": "french",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "les_moustaches",
+      "vibe": "Nearly 50-year-old French institution in a 19th-century mansion, famed for beef Wellington, onion soup, and a flambéed pistachio soufflé.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "romantic",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
+      "id": "french-arturo-s",
+      "name": "Arturo's",
+      "category": "french",
+      "mapsUrl": "",
+      "neighborhood": "Hipódromo",
+      "instagram": null,
+      "vibe": "One of the city's most traditional French restaurants, still doing tableside cart service and flambéed crêpes Suzette.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "romantic",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "american-boogie-s-pizza",
@@ -2460,6 +2881,23 @@
       "sourceFile": "Hotlist.csv"
     },
     {
+      "id": "contemporary-lina",
+      "name": "Lina",
+      "category": "contemporary",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "lina.cdmx",
+      "vibe": "Chef Mariana Villegas, alum of Pujol and Cosme, turns seasonal vegetables and seafood into the star of a wood-fire, softly lit dining room.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$$$",
+      "occasionTags": [
+        "romantic",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
+    },
+    {
       "id": "dinner-cometa",
       "name": "Cometa",
       "category": "dinner",
@@ -2537,7 +2975,7 @@
       "name": "Chopsticks",
       "category": "dinner",
       "mapsUrl": "",
-      "neighborhood": null,
+      "neighborhood": "Juárez",
       "instagram": null,
       "vibe": null,
       "lat": null,
@@ -2545,6 +2983,24 @@
       "priceTier": "$$",
       "occasionTags": [],
       "sourceFile": "Hotbook_July_2025.csv"
+    },
+    {
+      "id": "dinner-casa-parral",
+      "name": "Casa Parral",
+      "category": "dinner",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "instagram": "casa.parral",
+      "vibe": "Hidden café bar and dining suite tucked inside Void's vintage boutique, pairing raw-bar seafood and cheese wheels with craft cocktails by candlelight.",
+      "lat": null,
+      "lng": null,
+      "priceTier": "$$",
+      "occasionTags": [
+        "romantic",
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "New_Places_2026.csv"
     },
     {
       "id": "stores-librer-a-valladolid",

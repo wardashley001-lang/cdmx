@@ -283,6 +283,35 @@ NOTE_OVERRIDES = {
 # Used for places whose names give no keyword signal (proper nouns, addresses).
 # ---------------------------------------------------------------------------
 KNOWN_PLACES = {
+    # July 2026 batch — 26 places sourced from Instagram carousels/lists,
+    # researched per-place (web search) before landing here.
+    "fantasma": "wine",
+    "natas wines": "wine",
+    "crissis": "cafe",
+    "niv": "wine",
+    "oropel": "wine",
+    "berta": "wine",
+    "bar ocaso": "bars",
+    "fierro": "mexican",
+    "siembra taqueria": "mexican",
+    "au pied de cochon": "french",
+    "pujolitto": "mexican",
+    "el sella bar": "mexican",
+    "ultramarinos demar": "seafood",
+    "sushi kyo": "japanese",
+    "lina": "contemporary",
+    "less is more": "bars",
+    "popcorn salon": "nightlife",
+    "varde": "bars",
+    "coppola very nice": "italian",
+    "nommo sushi": "japanese",
+    "la bellezza": "italian",
+    "bar amici": "nightlife",
+    "les moustaches": "french",
+    "arturo's": "french",
+    "casa parral": "dinner",
+    "futari": "japanese",
+
     # Cuisine — chef-driven / sit-down restaurants, classified by cuisine
     # rather than a flat "fine dining"/"dinner" split. Source: per-place
     # research (vibe text + web search); see the audit notes below for
