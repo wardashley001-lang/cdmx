@@ -16,12 +16,8 @@ SCRATCH = Path(
     "f6a2025c-0e65-5107-b863-a68e110a288c/scratchpad"
 )
 TAG_FILES = [
-    "cuisine_and_tags.json",
-    "tags_bars_wine.json",
-    "tags_misc.json",
-    "tags_other.json",
-    "tags_new_places_2026.json",
-    "tags_audit_fixes_2026.json",
+    "tags_baseline_2026-09.json",
+    "tags_new_places_2026-09.json",
 ]
 
 VALID_TAGS = {

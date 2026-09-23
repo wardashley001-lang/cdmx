@@ -14,14 +14,8 @@ SCRATCH = Path(
     "f6a2025c-0e65-5107-b863-a68e110a288c/scratchpad"
 )
 ENRICHMENT_FILES = [
-    "enrich_fine_dining.json",
-    "enrich_bars.json",
-    "enrich_dinner_wine_nightlife.json",
-    "enrich_cafe_salons_healthy.json",
-    "enrich_stores_attractions_hotel.json",
-    "enrich_gap_fill.json",
-    "enrich_new_places_2026.json",
-    "enrich_audit_fixes_2026.json",
+    "enrich_baseline_2026-09.json",
+    "enrich_new_places_2026-09.json",
 ]
 
 
