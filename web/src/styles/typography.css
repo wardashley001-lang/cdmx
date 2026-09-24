@@ -1,0 +1,18 @@
+:root{
+--font-serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+--font-caps:"Syne","Helvetica Neue",sans-serif;
+--font-script:"Mrs Saint Delafield","Snell Roundhand",cursive;
+--font-sans:"Instrument Sans",system-ui,sans-serif;
+--font-mono:"Courier Prime","Courier New",monospace;
+
+--fs-mega:clamp(72px,12vw,176px);--fs-display-1:clamp(52px,8vw,112px);--fs-display-2:clamp(40px,5.5vw,72px);
+--fs-h1:44px;--fs-h2:32px;--fs-h3:22px;--fs-h4:18px;
+--fs-body-lg:18px;--fs-body:15px;--fs-body-sm:13px;--fs-caption:12px;--fs-label:11px;
+--lh-tight:.92;--lh-snug:1.12;--lh-body:1.55;
+--ls-display:-.02em;--ls-caps:.14em;--ls-caps-wide:.24em;
+--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;--fw-black:800;
+--type-display:italic 400 var(--fs-display-1)/var(--lh-tight) var(--font-serif);
+--type-h1:400 var(--fs-h1)/1.05 var(--font-serif);
+--type-body:400 var(--fs-body)/var(--lh-body) var(--font-sans);
+--type-label:700 var(--fs-label)/1.2 var(--font-caps);
+}

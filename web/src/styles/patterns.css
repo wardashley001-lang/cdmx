@@ -1,0 +1,7 @@
+:root{
+--pattern-checker:conic-gradient(var(--vino-800) 25%,var(--rosa-300) 0 50%,var(--vino-800) 0 75%,var(--rosa-300) 0) 0 0/48px 48px;
+--pattern-storia:linear-gradient(90deg,transparent 50%,rgba(122,26,46,.92) 50%) 0 0/64px 64px,linear-gradient(0deg,var(--rosa-300) 50%,var(--cielo-300) 50%) 0 0/64px 64px;
+--pattern-gingham:repeating-linear-gradient(0deg,rgba(215,55,43,.55) 0 14px,transparent 14px 44px),repeating-linear-gradient(90deg,rgba(142,138,43,.75) 0 14px,transparent 14px 44px),var(--rosa-400);
+--pattern-stripes:repeating-linear-gradient(90deg,var(--rosa-200) 0 22px,var(--tomate-500) 22px 44px);
+--pattern-carpet:repeating-linear-gradient(90deg,var(--rosa-300) 0 3px,transparent 3px 8px) 0 0/100% 100%,var(--tomate-600);
+}

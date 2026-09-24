@@ -1,186 +1,24 @@
 @import "tailwindcss";
+@import "./styles/colors.css";
+@import "./styles/typography.css";
+@import "./styles/spacing.css";
+@import "./styles/patterns.css";
+@import "./styles/base.css";
 
-/* ── Tokens ──────────────────────────────────────────────────── */
-:root {
-  /* Ground — soft warm editorial paper, not architectural cream */
-  --bg: #F6EFEC;
-  --surface: #FBF7F5;
-  --surface-2: #EDE2DE;
-  --text: #241E28;
-  --muted: #6B5F68;
-  --border: #DDD0CC;
+/* Fonts inlined here (not via @import) so relative url() paths resolve
+   correctly through the Tailwind v4 PostCSS import pipeline.
 
-  /* Editorial-chic palette — 20 hues, one per category. Warm-forward
-     (wine/crimson/rose/gold family) with cool jewel accents (plum/
-     navy/teal), tuned for a fashion-magazine feel, not architecture. */
-  --wine: #892450;         --wine-ink: #F5EFF2;
-  --crimson: #D02547;      --crimson-ink: #F5EFF0;
-  --cherry: #CF3030;       --cherry-ink: #F5EFEF;
-  --terracotta: #D25E41;   --terracotta-ink: #F5F0EF;
-  --rust: #CA6A2B;         --rust-ink: #F5F2EF;
-  --tan: #C8A87E;          --tan-ink: #F5F3EF;
-  --amber: #E0A329;        --amber-ink: #F5F3EF;
-  --mustard: #C6A82F;      --mustard-ink: #F5F4EF;
-  --gold: #EADB53;         --gold-ink: #F5F5EF;
-  --blush: #EC7981;        --blush-ink: #F5EFEF;
-  --fuchsia: #C52089;      --fuchsia-ink: #F5EFF3;
-  --magenta: #B635A9;      --magenta-ink: #F5EFF5;
-  --orchid: #9B55C3;       --orchid-ink: #F3EFF5;
-  --plum: #72447E;         --plum-ink: #F4EFF5;
-  --navy: #2C3B59;         --navy-ink: #EFF1F5;
-  --slate: #41648B;        --slate-ink: #EFF2F5;
-  --denim: #4E9BBC;        --denim-ink: #EFF4F5;
-  --teal: #2D7B78;         --teal-ink: #EFF5F5;
-  --sage: #539373;         --sage-ink: #EFF5F2;
-  --olive: #68833F;        --olive-ink: #F3F5EF;
-  --taupe: #8A6E60;        --taupe-ink: #F5F1F0;
-
-  --accent: var(--crimson);
-  --accent-ink: var(--crimson-ink);
-
-  --shadow: 0 1px 2px rgba(36,30,40,.07), 0 6px 20px rgba(36,30,40,.07);
-  --radius: 2px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #17131A;
-    --surface: #1F1A22;
-    --surface-2: #2A232D;
-    --text: #F3ECEF;
-    --muted: #A6969F;
-    --border: #392F3D;
-
-    --wine: #DB4385;       --wine-ink: #361221;
-    --crimson: #F0758E;    --crimson-ink: #361219;
-    --cherry: #EB8484;     --cherry-ink: #361212;
-    --terracotta: #EB9984; --terracotta-ink: #361912;
-    --rust: #ECA779;       --rust-ink: #362012;
-    --tan: #DBBC94;        --tan-ink: #352613;
-    --amber: #F4CC7B;      --amber-ink: #362A12;
-    --mustard: #EAD47B;    --mustard-ink: #362E12;
-    --gold: #F6EA79;       --gold-ink: #363212;
-    --blush: #F47B83;      --blush-ink: #361214;
-    --fuchsia: #F066BD;    --fuchsia-ink: #361228;
-    --magenta: #E278D8;    --magenta-ink: #361232;
-    --orchid: #C38EE1;     --orchid-ink: #281236;
-    --plum: #B170C2;       --plum-ink: #2C1631;
-    --navy: #4568B0;       --navy-ink: #151F33;
-    --slate: #729BCB;      --slate-ink: #142333;
-    --denim: #90C7DF;      --denim-ink: #122B36;
-    --teal: #4CCDC8;       --teal-ink: #123634;
-    --sage: #8BCBAB;       --sage-ink: #173124;
-    --olive: #A2C76B;      --olive-ink: #273314;
-    --taupe: #B69D91;      --taupe-ink: #30231D;
-
-    --accent: var(--crimson);
-    --accent-ink: var(--crimson-ink);
-    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #17131A; --surface: #1F1A22; --surface-2: #2A232D;
-  --text: #F3ECEF; --muted: #A6969F; --border: #392F3D;
-  --wine: #DB4385;       --wine-ink: #361221;
-  --crimson: #F0758E;    --crimson-ink: #361219;
-  --cherry: #EB8484;     --cherry-ink: #361212;
-  --terracotta: #EB9984; --terracotta-ink: #361912;
-  --rust: #ECA779;       --rust-ink: #362012;
-  --tan: #DBBC94;        --tan-ink: #352613;
-  --amber: #F4CC7B;      --amber-ink: #362A12;
-  --mustard: #EAD47B;    --mustard-ink: #362E12;
-  --gold: #F6EA79;       --gold-ink: #363212;
-  --blush: #F47B83;      --blush-ink: #361214;
-  --fuchsia: #F066BD;    --fuchsia-ink: #361228;
-  --magenta: #E278D8;    --magenta-ink: #361232;
-  --orchid: #C38EE1;     --orchid-ink: #281236;
-  --plum: #B170C2;       --plum-ink: #2C1631;
-  --navy: #4568B0;       --navy-ink: #151F33;
-  --slate: #729BCB;      --slate-ink: #142333;
-  --denim: #90C7DF;      --denim-ink: #122B36;
-  --teal: #4CCDC8;       --teal-ink: #123634;
-  --sage: #8BCBAB;       --sage-ink: #173124;
-  --olive: #A2C76B;      --olive-ink: #273314;
-  --taupe: #B69D91;      --taupe-ink: #30231D;
-  --accent: var(--crimson); --accent-ink: var(--crimson-ink);
-  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
-}
-:root[data-theme="light"] {
-  --bg: #F6EFEC; --surface: #FBF7F5; --surface-2: #EDE2DE;
-  --text: #241E28; --muted: #6B5F68; --border: #DDD0CC;
-  --wine: #892450;         --wine-ink: #F5EFF2;
-  --crimson: #D02547;      --crimson-ink: #F5EFF0;
-  --cherry: #CF3030;       --cherry-ink: #F5EFEF;
-  --terracotta: #D25E41;   --terracotta-ink: #F5F0EF;
-  --rust: #CA6A2B;         --rust-ink: #F5F2EF;
-  --tan: #C8A87E;          --tan-ink: #F5F3EF;
-  --amber: #E0A329;        --amber-ink: #F5F3EF;
-  --mustard: #C6A82F;      --mustard-ink: #F5F4EF;
-  --gold: #EADB53;         --gold-ink: #F5F5EF;
-  --blush: #EC7981;        --blush-ink: #F5EFEF;
-  --fuchsia: #C52089;      --fuchsia-ink: #F5EFF3;
-  --magenta: #B635A9;      --magenta-ink: #F5EFF5;
-  --orchid: #9B55C3;       --orchid-ink: #F3EFF5;
-  --plum: #72447E;         --plum-ink: #F4EFF5;
-  --navy: #2C3B59;         --navy-ink: #EFF1F5;
-  --slate: #41648B;        --slate-ink: #EFF2F5;
-  --denim: #4E9BBC;        --denim-ink: #EFF4F5;
-  --teal: #2D7B78;         --teal-ink: #EFF5F5;
-  --sage: #539373;         --sage-ink: #EFF5F2;
-  --olive: #68833F;        --olive-ink: #F3F5EF;
-  --taupe: #8A6E60;        --taupe-ink: #F5F1F0;
-  --accent: var(--crimson); --accent-ink: var(--crimson-ink);
-  --shadow: 0 1px 2px rgba(36,30,40,.07), 0 6px 20px rgba(36,30,40,.07);
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-.font-display {
-  font-family: 'Archivo', ui-sans-serif, system-ui, sans-serif;
-  font-stretch: expanded;
-}
-.font-mono {
-  font-family: 'IBM Plex Mono', ui-monospace, monospace;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-}
-
-::selection { background: var(--accent); color: var(--accent-ink); }
-
-/* Leaflet overrides to match the design system */
-.leaflet-container {
-  background: var(--surface-2);
-  font-family: 'Work Sans', sans-serif;
-}
-.leaflet-popup-content-wrapper {
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 2px;
-  box-shadow: var(--shadow);
-}
-.leaflet-popup-tip {
-  background: var(--surface);
-}
-
-/* Teardrop map pins — the one deliberate exception to the sharp-corner
-   ethos elsewhere; pins read as pins because of this shape. */
-.guide-pin span {
-  display: block;
-  width: 22px;
-  height: 22px;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  border: 2px solid white;
-  box-shadow: var(--shadow);
-}
+   Note: the design system's handoff bundle ships each "weight variant" of
+   Bodoni Moda / Syne / Instrument Sans as a byte-identical copy of the
+   Regular file (verified via checksum) — there are no real 600/700/800
+   cuts. Only one real face per family/style is declared below; heavier
+   font-weight values used elsewhere fall back to the browser's synthetic
+   bold rather than silently rendering as unstyled Regular. Courier Prime
+   and Mrs Saint Delafield are genuine. */
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400;font-display:swap;src:url("./assets/fonts/BodoniModa-400i.woff2") format("woff2");}
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/BodoniModa-400.woff2") format("woff2");}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/CourierPrime-400.woff2") format("woff2");}
+@font-face{font-family:"Courier Prime";font-style:normal;font-weight:700;font-display:swap;src:url("./assets/fonts/CourierPrime-700.woff2") format("woff2");}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/InstrumentSans-400.woff2") format("woff2");}
+@font-face{font-family:"Mrs Saint Delafield";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/MrsSaintDelafield-400.woff2") format("woff2");}
+@font-face{font-family:"Syne";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/Syne-600.woff2") format("woff2");}

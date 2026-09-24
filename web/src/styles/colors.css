@@ -1,0 +1,30 @@
+:root{
+/* Vino — oxblood, velvet banquettes, red wine. The dominant dark. */
+--vino-900:#2A0710;--vino-800:#4A0B18;--vino-700:#5E1122;--vino-600:#7A1A2E;--vino-400:#A3354B;
+/* Rosa — rosa mexicano to ballet pink */
+--rosa-600:#C81F72;--rosa-500:#E0368C;--rosa-400:#EE7FB4;--rosa-300:#F4A9C8;--rosa-200:#F7CAD8;--rosa-100:#FBE4EA;
+/* Tomate — tomato red, salsa, lipstick */
+--tomate-600:#B32A1F;--tomate-500:#D7372B;--tomate-300:#EC7B63;
+/* Olivo — olive, nopal, martini olive */
+--olivo-800:#3D3A12;--olivo-600:#6E6A1F;--olivo-500:#8E8A2B;--olivo-300:#BDB872;
+/* Cielo — powder blue (Storia checker) */
+--cielo-500:#6F93C9;--cielo-300:#A9C3E8;--cielo-100:#DCE7F6;
+/* Nude — latte, cantera, skin */
+--nude-500:#B98772;--nude-300:#DDB9A6;--nude-100:#F2E2D8;
+/* Leche — pink-tinted whites (no yellow cream) */
+--leche-0:#FFFFFF;--leche-50:#FFF8F7;--leche-100:#FBEFF0;
+/* Warm neutrals tinted toward vino */
+--neutral-200:#EBD9DC;--neutral-300:#D8BFC4;--neutral-500:#9C7A81;--neutral-700:#6A4750;
+
+/* Semantic */
+--bg-page:var(--leche-100);--bg-inverse:var(--vino-800);--bg-deep:var(--vino-900);--bg-pink:var(--rosa-200);
+--surface-card:var(--leche-50);--surface-sunk:var(--neutral-200);--surface-overlay:rgba(42,7,16,.62);
+--text-1:var(--vino-900);--text-2:var(--vino-700);--text-3:var(--neutral-700);
+--text-on-dark:var(--rosa-200);--text-on-dark-2:var(--nude-300);--text-on-pink:var(--vino-900);
+--line:var(--vino-900);--line-soft:var(--neutral-300);--line-on-dark:rgba(247,202,216,.35);
+--accent:var(--rosa-500);--accent-hover:var(--rosa-600);--accent-2:var(--tomate-500);--accent-3:var(--olivo-500);
+--focus-ring:var(--rosa-400);
+--status-open:var(--olivo-600);--status-open-bg:#E6E4C4;--status-closed:var(--tomate-600);--status-closed-bg:var(--rosa-100);
+/* Category colors — pins, tags */
+--cat-comer:var(--tomate-500);--cat-beber:var(--rosa-500);--cat-cafe:var(--olivo-500);--cat-bailar:var(--cielo-500);--cat-tienda:var(--nude-500);--cat-ver:var(--vino-600);
+}
