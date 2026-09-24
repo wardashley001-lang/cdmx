@@ -1,0 +1,300 @@
+{
+  "updated": "September 2026",
+  "dropPlaceholderPrices": true,
+  "categoryOrder": [
+    "mexican",
+    "tacos",
+    "seafood",
+    "italian",
+    "japanese",
+    "french",
+    "mediterranean",
+    "american",
+    "contemporary",
+    "brunch",
+    "healthy",
+    "bars",
+    "wine",
+    "nightlife",
+    "cafe",
+    "bakery",
+    "dessert",
+    "stores",
+    "salons",
+    "attractions",
+    "daytrips"
+  ],
+  "categoryLabels": {
+    "italian": "Italian & Pizza",
+    "japanese": "Japanese & Asian",
+    "stores": "Shops & Markets",
+    "salons": "Beauty & Wellness",
+    "attractions": "Sights"
+  },
+  "newCategories": {
+    "tacos": {
+      "label": "Tacos",
+      "token": "amber"
+    },
+    "daytrips": {
+      "label": "Day Trips",
+      "token": "slate"
+    }
+  },
+  "removeCategories": [
+    "dinner"
+  ],
+  "groups": {
+    "eat": [
+      "mexican",
+      "tacos",
+      "seafood",
+      "italian",
+      "japanese",
+      "french",
+      "mediterranean",
+      "american",
+      "contemporary",
+      "brunch",
+      "healthy"
+    ],
+    "drinks": [
+      "bars",
+      "wine",
+      "nightlife"
+    ],
+    "coffee": [
+      "cafe",
+      "bakery",
+      "dessert"
+    ],
+    "beyond": [
+      "stores",
+      "salons",
+      "attractions",
+      "daytrips"
+    ]
+  },
+  "moves": {
+    "Boogie's Pizza": "italian",
+    "Botánico": "contemporary",
+    "Alae's Art Room": "salons",
+    "LagoAlgo": "contemporary",
+    "Nido de Quetzalcoatl": "daytrips",
+    "La Gruta": "daytrips",
+    "Tepotzotlán": "daytrips",
+    "Parque Quetzalcoatl": "daytrips",
+    "Mendl Delicatessen": "brunch",
+    "Alma Mia Condesa": "brunch",
+    "Cafe Trucha": "brunch",
+    "Farmacia Internacional": "brunch",
+    "Pisca": "brunch",
+    "Maleza": "contemporary",
+    "Café Drama": "nightlife",
+    "Blend Station": "cafe",
+    "CounterCulture Club Roma Norte": "cafe",
+    "JOE & THE JUICE ROMA": "cafe",
+    "Fournier Rousseau": "bakery",
+    "Despacho Margarita": "bars",
+    "PLONK": "contemporary",
+    "Fónico": "mexican",
+    "sona - listening space": "attractions",
+    "Librería Valladolid": "bars",
+    "Smart Food Pescado Sustentable": "stores",
+    "Asador Nerón": "contemporary",
+    "Travieso Travieso": "contemporary",
+    "Viamonte": "contemporary",
+    "Cochilada": "contemporary",
+    "Rapsodia": "contemporary",
+    "Casa Parral": "bars",
+    "El Mekong ទន្លេមេគង្គ": "japanese",
+    "Pujolitto": "contemporary",
+    "Tacos Los Caramelos - Condesa": "tacos",
+    "Taquería \"Sin Nombre\"": "tacos",
+    "Taquería Orinoco": "tacos",
+    "Siembra Taqueria": "tacos",
+    "La Once Mil - Roma Norte": "tacos",
+    "Maizajo": "tacos",
+    "Asaderos Orozco": "tacos",
+    "Taco Tasting Room": "tacos"
+  },
+  "hot": [
+    "Natas Wines",
+    "Niv",
+    "Oropel",
+    "Berta",
+    "Fierro",
+    "Pujolitto",
+    "Sushi Kyo",
+    "Less is More",
+    "Coppola Very Nice",
+    "La Bellezza",
+    "Bar Amici",
+    "Futari",
+    "Casa Parral",
+    "Tosco Restaurante",
+    "Biggie’s"
+  ],
+  "essentials": [
+    "Panadería Rosetta",
+    "San Ángel Inn",
+    "Churrería El Moro",
+    "Freddo - Condesa",
+    "Cafebrería El Péndulo Condesa",
+    "Les Moustaches",
+    "Arturo's",
+    "El Jamil",
+    "El Sella Bar",
+    "Sartoria",
+    "Caiman",
+    "Bar Mauro",
+    "Tlecan",
+    "VOID"
+  ],
+  "michelin": {
+    "Quintonil": {
+      "level": "two-star"
+    },
+    "Em": {
+      "level": "one-star"
+    },
+    "Gaba Restaurante": {
+      "level": "one-star",
+      "new": true
+    },
+    "La Once Mil - Roma Norte": {
+      "level": "one-star",
+      "new": true,
+      "note": "Michelin's star is for the Lomas location"
+    },
+    "Restaurante Rosetta": {
+      "level": "one-star"
+    },
+    "Contramar": {
+      "level": "bib"
+    },
+    "Ultramarinos Demar": {
+      "level": "bib"
+    },
+    "PLONK": {
+      "level": "bib"
+    },
+    "Vigneron": {
+      "level": "bib"
+    },
+    "Siembra Taqueria": {
+      "level": "bib",
+      "note": "Listed by Michelin as Siembra Tortillería"
+    },
+    "Baldío": {
+      "level": "green-star"
+    },
+    "El Vilsito": {
+      "level": "bib"
+    },
+    "Los Cocuyos": {
+      "level": "bib"
+    },
+    "La 89": {
+      "level": "bib"
+    },
+    "Los Consentidos del Barrio": {
+      "level": "bib"
+    },
+    "Tacos Charly": {
+      "level": "bib"
+    },
+    "Tacos del Valle (Roma Norte)": {
+      "level": "bib"
+    },
+    "Taquería El Jarocho": {
+      "level": "bib"
+    },
+    "Taquería Los Milanesos": {
+      "level": "bib"
+    }
+  },
+  "additions": [
+    {
+      "name": "El Vilsito",
+      "category": "tacos",
+      "neighborhood": "Narvarte",
+      "vibe": "Late-night taquería set inside a working auto shop: trompo-spun al pastor and cheesy gringas under fluorescent lights.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Los Cocuyos",
+      "category": "tacos",
+      "neighborhood": "Centro Histórico",
+      "vibe": "A taquero with a cleaver working a bubbling cauldron of meat since 1980. Order the cabeza or the al pastor.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "La 89",
+      "category": "tacos",
+      "neighborhood": "Roma Norte",
+      "vibe": "Tiny Roma Norte taco nook grilling carne asada and quesabirria to order, on plastic stools with no frills.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Los Consentidos del Barrio",
+      "category": "tacos",
+      "neighborhood": "Del Valle",
+      "vibe": "Upstairs charcoal grill serving thin-sliced tacos al carbón and a pink-centered arrachera.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Tacos Charly",
+      "category": "tacos",
+      "neighborhood": "Tlalpan",
+      "vibe": "Cash-only stand in Tlalpan known for confit-simmered suadero and carved al pastor. Get there early.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Tacos del Valle (Roma Norte)",
+      "category": "tacos",
+      "neighborhood": "Roma Norte",
+      "vibe": "Retro-diner taquería on Álvaro Obregón spinning pork and beef on the trompo, finished with squeeze-bottle salsas.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Taquería El Jarocho",
+      "category": "tacos",
+      "neighborhood": "Roma Norte",
+      "vibe": "Three generations deep in Roma Norte, serving guisado tacos out of a former tortillería. The pork flank in morita chile is the one.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    },
+    {
+      "name": "Taquería Los Milanesos",
+      "category": "tacos",
+      "neighborhood": null,
+      "vibe": "Cash-only taco stand under an orange awning, piling on breaded pork cutlet.",
+      "instagram": null,
+      "occasionTags": [
+        "casual"
+      ]
+    }
+  ],
+  "tacoSection": true
+}

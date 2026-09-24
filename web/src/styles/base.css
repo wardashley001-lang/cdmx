@@ -1,0 +1,21 @@
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg-page);color:var(--text-1);font:var(--type-body);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance}
+a{color:var(--rosa-600);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--vino-800)}
+::selection{background:var(--rosa-500);color:var(--leche-0)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}
+
+@media (prefers-reduced-motion: reduce) {
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* Leaflet overrides to match the design system */
+.leaflet-container{background:var(--surface-sunk);font-family:var(--font-sans)}
+.leaflet-popup-content-wrapper{background:var(--surface-card);color:var(--text-1);border-radius:var(--radius-md);box-shadow:var(--shadow-soft)}
+.leaflet-popup-tip{background:var(--surface-card)}
+.leaflet-tile-pane{filter:sepia(.45) hue-rotate(-38deg) saturate(1.5)}
+
+/* Teardrop map pins */
+.guide-pin{background:transparent;border:none}

@@ -5,9 +5,9 @@ import type { CategoryMeta, Place } from "../types";
 // appear literally in enough vibe lines or category labels to be found
 // by substring matching alone.
 const KEYWORD_ALIASES: Record<string, string[]> = {
-  taco: ["mexican"],
-  tacos: ["mexican"],
-  taqueria: ["mexican"],
+  taco: ["tacos"],
+  tacos: ["tacos"],
+  taqueria: ["tacos"],
   antojitos: ["mexican"],
   sushi: ["japanese"],
   ramen: ["japanese"],
