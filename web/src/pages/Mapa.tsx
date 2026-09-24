@@ -144,7 +144,7 @@ export function Mapa() {
 
   const map = (
     <MapContainer center={CDMX_CENTER} zoom={13} zoomControl={false} scrollWheelZoom style={{ position: "absolute", inset: 0, background: "var(--nude-100)" }}>
-      <TileLayer attribution="&copy; OpenStreetMap &copy; CARTO" url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {filtered.map(({ place, coords }) => (
         <Marker
           key={place.id}
