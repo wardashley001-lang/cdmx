@@ -3425,7 +3425,7 @@
       "category": "japanese",
       "mapsUrl": "https://www.google.com/maps/place/ChopStick/data=!4m2!3m1!1s0x85d1ff21e608f4d1:0x58be90dab5d78574",
       "neighborhood": "Juárez",
-      "instagram": null,
+      "instagram": "chopstickscdmx",
       "vibe": "Sushi counter on Calle Versalles known for torched otoro nigiri.",
       "lat": null,
       "lng": null,
@@ -5082,6 +5082,365 @@
         "level": "bib"
       },
       "image": null
+    },
+    {
+      "id": "japanese-torobi-by-kazu-kumoto",
+      "name": "Torobi by Kazu Kumoto",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Polanco",
+      "instagram": "torobimx",
+      "vibe": "Chef Kazu Kumoto's Polanco spot where each table has its own built-in grill and you cook your own cuts from the best ingredients, at your own pace.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-max",
+      "name": "Max",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Juárez",
+      "instagram": "max.sushibar",
+      "vibe": "A traditional tachinomi-style Japanese standing bar in Juárez for good food and strong drinks -- no chairs, open 5pm to close, Monday to Saturday.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "lively atmosphere"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-itzu-prado-sur",
+      "name": "Itzu Prado Sur",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Las Virreyes",
+      "instagram": "itzumx_oficial",
+      "vibe": "The Lomas-Virreyes branch of Itzu, serving sushi, ramen, bowls, and a rib-eye sukiyaki alongside its usual Japanese menu.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "good for dinner"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-reko-mx",
+      "name": "Rekō Mx",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Cuauhtémoc",
+      "instagram": "rekomx_",
+      "vibe": "A new asian-fusion spot on Reforma -- order the tostadas, a lychee martini, and close with the chocolate cake.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-tori",
+      "name": "Tori",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Polanco",
+      "instagram": "tori.japanese",
+      "vibe": "Born in Japan, built for Mexico: a Polanco spot for rolls, nigiri, teppanyaki, and oysters.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "american-maison-frite",
+      "name": "Maison Frite",
+      "category": "american",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "maisonfrite",
+      "vibe": "A Roma Norte spot devoted entirely to double-cooked French fries -- classic, goat cheese, or dressed up with house sauces.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "cafe-cafe-tim",
+      "name": "Café Tim",
+      "category": "cafe",
+      "mapsUrl": "",
+      "neighborhood": "Santa María la Ribera",
+      "instagram": "cafe_tim__",
+      "vibe": "A Santa María la Ribera café with good coffee and cooler-than-average merch, open Monday to Saturday.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "coffee",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-tatsumi",
+      "name": "Tatsumi",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Lomas de Chapultepec",
+      "instagram": "tatsumi.rest",
+      "vibe": "An intimate Lomas de Chapultepec sushi bar built entirely around its counter -- a self-described bridge between Mexico and Japan.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "romantic"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "brunch-siembra-terraza",
+      "name": "Siembra Terraza",
+      "category": "brunch",
+      "mapsUrl": "",
+      "neighborhood": "San Miguel Chapultepec",
+      "instagram": "siembra.terraza",
+      "vibe": "From the Siembra family, a wide, warm-toned San Miguel Chapultepec terrace for breakfast, tacos, and corn-forward plates, or just drinks.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "outdoor",
+        "good for lunch"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "japanese-kari-kari",
+      "name": "Kari Kari",
+      "category": "japanese",
+      "mapsUrl": "",
+      "neighborhood": "Las Virreyes",
+      "instagram": "karikarimx",
+      "vibe": "A New-York-style temaki counter in Las Virreyes for fast, high-quality, everyday sushi.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "seafood-chalino-chino-coyoacan",
+      "name": "Chalino Chino Coyoacán",
+      "category": "seafood",
+      "mapsUrl": "",
+      "neighborhood": "Coyoacán",
+      "instagram": "chalinochino.mx",
+      "vibe": "The Coyoacán branch of the Sinaloa-style seafood spot with Asian touches that keeps expanding across the city.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "lively atmosphere"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "italian-fame-pizza",
+      "name": "Fame Pizza",
+      "category": "italian",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "famedehambre",
+      "vibe": "CDMX's first Milano-style pizzeria, in Roma Norte -- tall, fried, and heavy on the cheese.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "trendy"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "american-club-sandwich",
+      "name": "Club Sándwich",
+      "category": "american",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "instagram": "clubsandwich_____",
+      "vibe": "An unfussy Condesa sandwich shop open 8am to 10pm daily, doing simple things well.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "dessert-myka-parque-duraznos",
+      "name": "Myka Parque Duraznos",
+      "category": "dessert",
+      "mapsUrl": "",
+      "neighborhood": "Bosque de las Lomas",
+      "instagram": "myka_greek.mx",
+      "vibe": "A second CDMX location for the Greek frozen yogurt everyone's obsessed with, this one in Bosque de las Lomas.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "coffee",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "cafe-cafe-cruda",
+      "name": "Café Cruda",
+      "category": "cafe",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "cafe_cruda",
+      "vibe": "A Roma Norte café built around local, agroecological sourcing -- coffee, natural wine, and bread to go.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "good for lunch"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "coffee",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "american-taller-de-grassa",
+      "name": "Taller de Grassa",
+      "category": "american",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "instagram": "tallerdegrassa",
+      "vibe": "The Condesa spot that gave smash burgers a proper home, open Wednesday to Sunday from 2pm.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "casual"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "seafood-payna",
+      "name": "Payna",
+      "category": "seafood",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "paynamx",
+      "vibe": "Fresh-forward Roma Norte seafood -- oysters, tacos, tostadas -- from a new Mexico City marisco spot.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy",
+        "good for dinner"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "eat",
+      "image": null,
+      "hot": true
+    },
+    {
+      "id": "dessert-crumbl",
+      "name": "Crumbl",
+      "category": "dessert",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "instagram": "crumbl.mx",
+      "vibe": "The viral pink-box cookie chain's first Mexico City spot, in Roma Norte, with a rotating weekly lineup alongside the classic chocolate chip.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "trendy"
+      ],
+      "sourceFile": "TheHappening_2026.csv",
+      "group": "coffee",
+      "image": null,
+      "hot": true
     }
   ],
   "meta": {

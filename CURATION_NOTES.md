@@ -36,3 +36,6 @@ Bib Gourmand includes Fugaz (next door to your Fantasma), Galea, Filigrana, Raí
 
 ## Photos
 None included. Add your own to `web/public/photos/` and run `python scripts/attach_photos.py`. Places without a photo show a pink-initial tile.
+
+## Added from The Happening (September 2026)
+18 new places pulled from three thehappening.com roundups (new hotspots for July/August/September 2026, plus a sushi-specific and an "oriental food" roundup), all tagged `hot`: Torobi by Kazu Kumoto, Max, Itzu Prado Sur, Rekō Mx, Tori, Maison Frite, Café Tim, Tatsumi, Siembra Terraza, Kari Kari, Chalino Chino Coyoacán, Fame Pizza, Club Sándwich, Myka Parque Duraznos, Café Cruda, Taller de Grassa, Payna, Crumbl. Six other places from those same articles (El Mekong, Asaderos Orozco, Bar Amici, Pujolitto, Chopsticks, Futari) were already in the guide, so weren't re-added — Chopsticks did get its Instagram handle filled in from the article, though. None of the 18 have a Google Maps link yet (the Maps button falls back to a search) or exact lat/lng, since the articles only gave street addresses, not place IDs.
