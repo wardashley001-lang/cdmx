@@ -56,6 +56,8 @@ export interface Place {
   /** Which top-level section of the guide the place lives in. */
   group: Group;
   hot?: boolean;
+  /** Ashley-approved first-person note. Only places with this get the "Güera's pick" stamp and signature. */
+  pick?: { text: string; approvedOn: string };
   /** Explicit Home candidate order; independent from raw JSON position. */
   featuredOrder?: number;
   /** Approval gate for the ordered Home candidate surface. */

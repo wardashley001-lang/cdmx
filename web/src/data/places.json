@@ -2044,8 +2044,6 @@
     },
     {
       "id": "wine-natas-wines",
-      "featuredOrder": 1,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Natas Wines",
       "category": "wine",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Natas%20Wines%2C%20Pachuca%2013%2C%20Condesa%2C%20CDMX",
@@ -2087,8 +2085,6 @@
     },
     {
       "id": "wine-niv",
-      "featuredOrder": 2,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Niv",
       "category": "wine",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=NIV%20Bar%2C%20Atlixco%20132%2C%20Condesa%2C%20CDMX",
@@ -2131,8 +2127,6 @@
     },
     {
       "id": "wine-oropel",
-      "featuredOrder": 3,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Oropel",
       "category": "wine",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Oropel%2C%20Chihuahua%20182%2C%20Roma%20Norte%2C%20CDMX",
@@ -2174,8 +2168,6 @@
     },
     {
       "id": "wine-berta",
-      "featuredOrder": 4,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Berta",
       "category": "wine",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Berta%2C%20R%C3%ADo%20Hudson%2015%2C%20Cuauht%C3%A9moc%2C%20CDMX",
@@ -3372,8 +3364,6 @@
     },
     {
       "id": "bars-less-is-more",
-      "featuredOrder": 5,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Less is More",
       "category": "bars",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Less%20is%20More%2C%20Puebla%20289%2C%20Roma%20Norte%2C%20CDMX",
@@ -3714,8 +3704,6 @@
     },
     {
       "id": "nightlife-bar-amici",
-      "featuredOrder": 6,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Bar Amici",
       "category": "nightlife",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Amici%2C%20Praga%2033%2C%20Ju%C3%A1rez%2C%20CDMX",
@@ -3752,7 +3740,9 @@
       ],
       "group": "drinks",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 2,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "mexican-casa-elena-restaurante",
@@ -4039,8 +4029,6 @@
     },
     {
       "id": "mexican-fierro",
-      "featuredOrder": 7,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Fierro",
       "category": "mexican",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fierro%20Cantina%2C%20Marsella%2053%2C%20Ju%C3%A1rez%2C%20CDMX",
@@ -4197,8 +4185,6 @@
     },
     {
       "id": "mexican-pujolitto",
-      "featuredOrder": 8,
-      "featuredApprovalState": "pending-ashley-review",
       "name": "Pujolitto",
       "category": "contemporary",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pujol.itto%2C%20Tokio%20110%20Local%201%2C%20Ju%C3%A1rez%2C%20CDMX",
@@ -4601,7 +4587,11 @@
         }
       ],
       "group": "eat",
-      "image": null
+      "image": null,
+      "pick": {
+        "text": "Dinner in a botanical garden, basically: an old Condesa mansion's courtyard, cacti everywhere. The tuna tostada is my favorite, the burger is amazing, and honestly so is everything else.",
+        "approvedOn": "2026-11-02"
+      }
     },
     {
       "id": "italian-babero",
@@ -7682,7 +7672,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 8,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "cafe-cafe-tim",
@@ -7762,7 +7754,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 1,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "brunch-siembra-terraza",
@@ -7803,7 +7797,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 6,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "japanese-kari-kari",
@@ -7923,7 +7919,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 5,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "american-club-sandwich",
@@ -8042,7 +8040,9 @@
       ],
       "group": "coffee",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 4,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "american-taller-de-grassa",
@@ -8082,7 +8082,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 7,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "seafood-payna",
@@ -8122,7 +8124,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 3,
+      "featuredApprovalState": "pending-ashley-review"
     },
     {
       "id": "dessert-crumbl",
@@ -8399,7 +8403,11 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null
+      "image": null,
+      "pick": {
+        "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel, and I'm ordering the prosciutto before I even sit down. Save room for the tiramisu.",
+        "approvedOn": "2026-11-02"
+      }
     },
     {
       "id": "mexican-la-once-mil-lomas",
@@ -8435,7 +8443,11 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null
+      "image": null,
+      "pick": {
+        "text": "My favorite tacos. The room is fun, they hand you a beer when you walk in, and the Lomas original just earned a Michelin star. No reservations, so expect a line.",
+        "approvedOn": "2026-11-02"
+      }
     },
     {
       "id": "bars-el-silverio",
@@ -8470,12 +8482,16 @@
         "Exact map pin"
       ],
       "group": "drinks",
-      "image": null
+      "image": null,
+      "pick": {
+        "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador with the energy of a gastronomic pub, which is exactly the point.",
+        "approvedOn": "2026-11-02"
+      }
     }
   ],
   "meta": {
     "updated": "September 2026",
     "catalogRevisedOn": "2026-11-02",
-    "featuredSourcesCheckedOn": "2026-10-30"
+    "featuredSourcesCheckedOn": "2026-11-02"
   }
 }

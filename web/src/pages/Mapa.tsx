@@ -8,7 +8,7 @@ import { Tabs } from "../components/ds/Tabs";
 import { IconButton } from "../components/ds/IconButton";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
-import { DATA, resolveCoords, photoUrl } from "../lib/data";
+import { DATA, noteOf, resolveCoords, photoUrl } from "../lib/data";
 import { pinIcon } from "../lib/leafletPin";
 import { GROUP_LABEL, GROUP_ORDER } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
@@ -117,9 +117,9 @@ export function Mapa() {
         category={place.category}
         price={place.priceTier}
         hot={place.hot}
-        essential={place.essential}
+        pick={!!place.pick}
         michelin={place.michelin}
-        note={place.vibe}
+        note={noteOf(place)}
         image={photoUrl(place)}
         selected={place.id === activeId}
         saved={saved.includes(place.id)}

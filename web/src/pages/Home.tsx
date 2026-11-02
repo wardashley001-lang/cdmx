@@ -6,7 +6,7 @@ import { Tag } from "../components/ds/Tag";
 import { Badge } from "../components/ds/Badge";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
-import { DATA, photoUrl } from "../lib/data";
+import { DATA, noteOf, photoUrl } from "../lib/data";
 import { GROUP_LABEL, GROUP_ORDER } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
@@ -54,9 +54,9 @@ function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave
           category={p.category}
           price={p.priceTier}
           hot={p.hot}
-          essential={p.essential}
+          pick={!!p.pick}
           michelin={p.michelin}
-          note={p.vibe}
+          note={noteOf(p)}
           image={photoUrl(p)}
           saved={isSaved(p.id)}
           onSave={() => onSave(p)}
@@ -87,18 +87,20 @@ export function Home() {
     []
   );
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
-  const essentials = useMemo(() => DATA.places.filter((p) => p.essential), []);
-  const tacos = useMemo(() => DATA.places.filter((p) => p.category === "tacos").sort((a, b) => a.name.localeCompare(b.name)), []);
+  const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
+  const shownAbove = useMemo(() => new Set([...featuredCandidates, ...picks].map((p) => p.id)), [featuredCandidates, picks]);
+  const essentials = useMemo(() => DATA.places.filter((p) => p.essential && !shownAbove.has(p.id)), [shownAbove]);
+  const tacos = useMemo(() => DATA.places.filter((p) => p.category === "tacos" && !shownAbove.has(p.id)).sort((a, b) => a.name.localeCompare(b.name)), [shownAbove]);
   const michelinByLevel = useMemo(() => {
     const map = new Map<Michelin["level"], Place[]>();
     for (const p of DATA.places) {
-      if (!p.michelin || p.category === "tacos") continue;
+      if (!p.michelin || p.category === "tacos" || shownAbove.has(p.id)) continue;
       const list = map.get(p.michelin.level) ?? [];
       list.push(p);
       map.set(p.michelin.level, list);
     }
     return map;
-  }, []);
+  }, [shownAbove]);
 
   const hoods = useMemo(() => {
     const counts = new Map<string, number>();
@@ -162,18 +164,18 @@ export function Home() {
         </div>
       </section>
 
-      {/* Hot ahorita */}
+      {/* New & hot */}
       {featuredCandidates.length > 0 && (
         <Section>
           <div style={{ display: "flex", alignItems: "flex-end", gap: 24, marginBottom: 32, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 620 }}>
               <Eyebrow color="var(--rosa-600)">Sources checked {displayDate(DATA.meta?.featuredSourcesCheckedOn)}</Eyebrow>
               <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-                Hot <i>ahorita</i>
+                New &amp; <i>hot</i>
               </h2>
               <p style={{ margin: "16px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
                 {hasPendingFeatured
-                  ? "Preview candidates in provisional order. Final picks are pending approval; confirm details before you go."
+                  ? "Recent openings and fresh buzz, in provisional order. Final picks are pending approval; confirm details before you go."
                   : "The approved order, with dated source checks. Confirm details before you go."}
               </p>
             </div>
@@ -183,6 +185,20 @@ export function Home() {
             </Button>
           </div>
           <CardGrid places={featuredCandidates} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+        </Section>
+      )}
+
+      {/* La Güera's Picks */}
+      {picks.length > 0 && (
+        <Section style={{ background: "var(--rosa-100)" }}>
+          <Eyebrow color="var(--rosa-600)">In my words</Eyebrow>
+          <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 12px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
+            La Güera&apos;s <i>Picks</i>
+          </h2>
+          <p style={{ margin: "0 0 32px", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
+            The places I&apos;d send a friend to first.
+          </p>
+          <CardGrid places={picks} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 

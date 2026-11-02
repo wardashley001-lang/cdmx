@@ -69,3 +69,8 @@ export function sectionOf(place: Place): SectionId {
   if (place.essential) return "essentials";
   return place.group;
 }
+
+/** The note to show for a place: Ashley's approved pick text if it has one, else the researched description. */
+export function noteOf(place: Place): string | null {
+  return place.pick?.text ?? place.vibe;
+}

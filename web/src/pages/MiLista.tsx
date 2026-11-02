@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SpotCard } from "../components/ds/SpotCard";
 import { Button } from "../components/ds/Button";
 import { SpotDetail } from "../components/SpotDetail";
-import { DATA, photoUrl } from "../lib/data";
+import { DATA, noteOf, photoUrl } from "../lib/data";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
 import type { Place } from "../types";
@@ -53,9 +53,9 @@ export function MiLista() {
               category={p.category}
               price={p.priceTier}
               hot={p.hot}
-              essential={p.essential}
+              pick={!!p.pick}
               michelin={p.michelin}
-              note={p.vibe}
+              note={noteOf(p)}
               image={photoUrl(p)}
               saved
               onSave={() => onToggle(p)}
