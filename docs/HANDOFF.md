@@ -103,7 +103,13 @@ Google place IDs by hand was off by kilometers, so don't.
   del Barrio, Tacos del Valle.
 
 **Agent can do**
-- Closure and new-opening check across the catalog with dated sources.
+- Closure and new-opening check, place by place, with dated sources. On
+  2026-11-02 an automated Google Maps sweep failed (Google stopped answering
+  after the earlier pin lookups), and a news search found no 2026 list of
+  Mexico City closures. So the catalog is **not** verified for closures. The
+  featured places were all named in Oct-Nov 2026 guides; the Michelin tags were
+  checked on 2026-11-02. Em's address (Ámsterdam 76, Condesa) matches Google;
+  a Wikipedia claim that it moved in October 2026 was not confirmed.
 - Direct Google Maps place URLs for places that only have a name-and-address
   search link.
 - Add Michelin-listed places that aren't in the guide yet (Pujol, Esquina
