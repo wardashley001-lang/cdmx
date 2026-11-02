@@ -14,6 +14,8 @@ Instagram handle, 4 lack a vibe note, and 284 image slots are still empty
 pending identity, reuse-rights, credit, and approval checks. Prices are not
 currently published.
 
+Working notes for the next person or agent: [`docs/HANDOFF.md`](../docs/HANDOFF.md).
+
 ## Stack
 
 React + TypeScript + Vite, Tailwind CSS v4, React Router (hash routing, so it
