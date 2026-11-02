@@ -8540,7 +8540,7 @@
       "neighborhood": "Condesa",
       "address": "Alfonso Reyes 203, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
       "instagram": "el_bar_condesa",
-      "vibe": null,
+      "vibe": "A Hipódromo hotspot for good drinks, good food and good music: deli-style small plates like green peppercorn potatoes, and reinvented classic cocktails like the Lorenzo Martini with Tanqueray, tomato cordial and paprika oil.",
       "lat": 19.4072438,
       "lng": -99.1743099,
       "priceTier": null,
@@ -8560,10 +8560,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "A Google Maps search for the address returns a listing named EL BAR at Alfonso Reyes 203, Hipódromo; exact coordinates taken from it."
+        },
+        {
+          "label": "The Happening Instagram post (@thehappeningmx), October 2026",
+          "checkedOn": "2026-11-02",
+          "note": "Screenshot from Ashley; gives the Alfonso Reyes 203, Hipódromo address, the concept and the menu items quoted in the description."
         }
-      ],
-      "unverifiedFields": [
-        "Description/vibe: no independent source found yet"
       ]
     }
   ],
