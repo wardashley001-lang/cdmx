@@ -112,9 +112,21 @@ Google place IDs by hand was off by kilometers, so don't.
   a Wikipedia claim that it moved in October 2026 was not confirmed.
 - Direct Google Maps place URLs for places that only have a name-and-address
   search link.
-- Add Michelin-listed places that aren't in the guide yet (Pujol, Esquina
-  Común, Expendio de Maíz, Masala y Maíz, Máximo, Sud 777, and the Bib list)
-  **only if Ashley wants them**.
+- Add the remaining Michelin-listed places that aren't in the guide yet. Ashley
+  said yes on 2026-11-02. 10 are added (Pujol, Esquina Común, Máximo, Expendio de
+  Maíz, Raíz, Aleli Rooftop, Jowong, Caracol de Mar, Comedor Jacinta, Molino El
+  Pujol) with building-level OpenStreetMap pins. These 10 are **held back**
+  because only a street-level pin was available and Google Maps had started
+  blocking automated lookups (do not work around that). Add each with an exact
+  pin from a Google Maps share link, which Ashley can send, then confirm the
+  Michelin page text and write a short sourced description:
+  Pargot (Córdoba 212, Roma Norte), Tacos Los Alexis (Chiapas 46, Roma Norte),
+  Comal Oculto (Gob. Protasio Tagle 66A, San Miguel Chapultepec), Fugaz (Orizaba
+  3B, Roma Norte), Filigrana (Av. Veracruz 62, Roma Norte), Galea (Sinaloa 67,
+  Roma Norte), Galanga Thai House (Monterrey 204, Roma Norte), Masala y Maíz
+  (Artículo 123 #116, Centro), Sud 777 (Blvd. de la Luz 777, Pedregal), Pink
+  Rambo (Cedro 66, Santa María la Ribera). Also swap the 10 added OSM pins for
+  Google Maps ones when possible.
 - Link-preview image once the final domain is known.
 - Brand assets (Instagram profile picture options) are in `brand/`.
 

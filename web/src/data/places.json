@@ -8693,6 +8693,477 @@
         }
       ],
       "imageCredit": "Photo: El Bar (@el_bar_condesa)"
+    },
+    {
+      "id": "contemporary-pujol",
+      "name": "Pujol",
+      "category": "contemporary",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pujol%2C%20Tennyson%20133%2C%20Polanco%2C%20Miguel%20Hidalgo%2C%2011550%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Polanco",
+      "address": "Tennyson 133, Polanco, Miguel Hidalgo, 11550 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "Enrique Olvera's landmark Polanco dining room, with a seasonal tasting menu and a taco omakase.",
+      "lat": 19.4322947,
+      "lng": -99.1946572,
+      "priceTier": null,
+      "occasionTags": [
+        "special occasion"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "two-star"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap listing for Pujol on Calle Alfredo Tennyson. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "contemporary-esquina-comun",
+      "name": "Esquina Común",
+      "category": "contemporary",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Esquina%20Com%C3%BAn%2C%20Fernando%20Montes%20de%20Oca%2086%2C%20Condesa%2C%20Cuauht%C3%A9moc%2C%2006140%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Condesa",
+      "address": "Fernando Montes de Oca 86, Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A covered rooftop in Condesa with lots of greenery and a tasting-menu style from chef Ana Dolores González. Per Michelin, reservations are only by direct message on Instagram.",
+      "lat": 19.4138693,
+      "lng": -99.1767578,
+      "priceTier": null,
+      "occasionTags": [
+        "special occasion",
+        "rooftop"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "one-star"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (86, Calle Fernando Montes de Oca). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "contemporary-maximo",
+      "name": "Máximo",
+      "category": "contemporary",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=M%C3%A1ximo%2C%20%C3%81lvaro%20Obreg%C3%B3n%2065%20Bis%2C%20Roma%20Norte%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Álvaro Obregón 65 Bis, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A bright converted industrial space in Roma Norte with whitewashed brick and high ceilings, serving chef Eduardo García's French-influenced Mexican cooking à la carte or as a tasting menu.",
+      "lat": 19.4190015,
+      "lng": -99.1580885,
+      "priceTier": null,
+      "occasionTags": [
+        "special occasion"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "one-star"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (65 Bis, Avenida Álvaro Obregón). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "mexican-expendio-de-maiz",
+      "name": "Expendio de Maíz",
+      "category": "mexican",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Expendio%20de%20Ma%C3%ADz%2C%20Av.%20Yucat%C3%A1n%2084%2C%20Roma%20Norte%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Av. Yucatán 84, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A sidewalk operation with four communal tables, no sign and no menu: cash only, built around heirloom corn nixtamalized and ground in house.",
+      "lat": 19.414185,
+      "lng": -99.1626311,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "one-star"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (84, Avenida Yucatán). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "contemporary-raiz",
+      "name": "Raíz",
+      "category": "contemporary",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ra%C3%ADz%2C%20Schiller%20331%2C%20Polanco%2C%20Miguel%20Hidalgo%2C%2011570%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Polanco",
+      "address": "Schiller 331, Polanco, Miguel Hidalgo, 11570 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "Contemporary Mexican cooking on the ground floor of a residential building in Polanco, with two tasting options and an aguachile in cuttlefish ink broth.",
+      "lat": 19.4320047,
+      "lng": -99.1866349,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap listing for Raíz at 331, Calle Schiller. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "mexican-aleli-rooftop",
+      "name": "Aleli Rooftop",
+      "category": "mexican",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Aleli%20Rooftop%2C%20Sinaloa%20141%2C%20Roma%20Norte%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Sinaloa 141, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A rooftop grill in Roma Norte serving traditional Mexican dishes cooked over embers; Michelin suggests a seat at the bar to watch the grill.",
+      "lat": 19.420312,
+      "lng": -99.1701368,
+      "priceTier": null,
+      "occasionTags": [
+        "rooftop"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (141, Calle Sinaloa). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "japanese-jowong",
+      "name": "Jowong",
+      "category": "japanese",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jowong%2C%20C.%20Pachuca%2051%2C%20Condesa%2C%20Cuauht%C3%A9moc%2C%2006140%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Condesa",
+      "address": "C. Pachuca 51, Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A stylish Korean restaurant in Condesa with a tight menu: banchan to start, a prime-rib barbecue feast for groups and gimbap.",
+      "lat": 19.4168495,
+      "lng": -99.1770949,
+      "priceTier": null,
+      "occasionTags": [
+        "good for groups"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (51, Calle Pachuca). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "contemporary-caracol-de-mar",
+      "name": "Caracol de Mar",
+      "category": "contemporary",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Caracol%20de%20Mar%2C%20Campeche%20340%2C%20Hip%C3%B3dromo%2C%20Cuauht%C3%A9moc%2C%2006100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Condesa",
+      "address": "Campeche 340, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A second-floor dining room on a Hipódromo corner, reached by a wooden spiral staircase, serving a seasonal contemporary Mexican menu.",
+      "lat": 19.4089746,
+      "lng": -99.1735088,
+      "priceTier": null,
+      "occasionTags": [
+        "romantic"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap listing for Caracol de Mar at 340, Calle Campeche. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "mexican-comedor-jacinta",
+      "name": "Comedor Jacinta",
+      "category": "mexican",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Comedor%20Jacinta%2C%20Virgilio%2040%2C%20Polanco%2C%20Miguel%20Hidalgo%2C%2011550%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Polanco",
+      "address": "Virgilio 40, Polanco, Miguel Hidalgo, 11550 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "Chef Edgar Núñez's cozy Polanco restaurant, with traditional dishes drawn from his childhood memories, corn-based botanas and molcajetes at reasonable prices.",
+      "lat": 19.4305201,
+      "lng": -99.1962677,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap listing for Comedor Jacinta at 40, Calle Virgilio. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
+    },
+    {
+      "id": "mexican-molino-el-pujol",
+      "name": "Molino El Pujol",
+      "category": "mexican",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Molino%20El%20Pujol%2C%20Benjam%C3%ADn%20Hill%20146%2C%20Hip%C3%B3dromo%2C%20Cuauht%C3%A9moc%2C%2006100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
+      "neighborhood": "Condesa",
+      "address": "Benjamín Hill 146, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+      "instagram": null,
+      "vibe": "A small Condesa counter with six seats and a few outside, built around corn nixtamalized daily on site: tamales, tacos, chilaquiles and enfrijoladas.",
+      "lat": 19.4076619,
+      "lng": -99.1770196,
+      "priceTier": null,
+      "occasionTags": [
+        "casual"
+      ],
+      "sourceFile": "michelin-2026",
+      "group": "eat",
+      "image": null,
+      "michelin": {
+        "year": 2026,
+        "level": "bib"
+      },
+      "sources": [
+        {
+          "label": "Michelin Guide Mexico 2026",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name and distinction confirmed on Michelin's own list."
+        },
+        {
+          "label": "Michelin Guide restaurant page",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/ciudad-de-mexico",
+          "note": "Street address and the cuisine/setting details in the description (paraphrased)."
+        },
+        {
+          "label": "OpenStreetMap",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.openstreetmap.org",
+          "note": "Pin: OpenStreetMap address match on the building number (146, Calle General Benjamín Hill). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        }
+      ],
+      "unverifiedFields": [
+        "Instagram handle",
+        "Exact pin confirmed on Google Maps"
+      ]
     }
   ],
   "meta": {
