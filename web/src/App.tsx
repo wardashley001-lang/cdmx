@@ -1,8 +1,9 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer, MobileTabBar } from "./components/layout/Header";
 import { Home } from "./pages/Home";
-import { Mapa } from "./pages/Mapa";
+import { lazy, Suspense } from "react";
 import { MiLista } from "./pages/MiLista";
+const Mapa = lazy(() => import("./pages/Mapa").then((m) => ({ default: m.Mapa })));
 import { ToastProvider } from "./lib/ToastProvider";
 import { SavedProvider } from "./lib/useSaved";
 
@@ -16,7 +17,7 @@ function App() {
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/mapa" element={<Mapa />} />
+                <Route path="/mapa" element={<Suspense fallback={null}><Mapa /></Suspense>} />
                 <Route path="/mi-lista" element={<MiLista />} />
               </Routes>
             </main>
