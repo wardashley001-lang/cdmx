@@ -110,6 +110,7 @@ Google place IDs by hand was off by kilometers, so don't.
   Común, Expendio de Maíz, Masala y Maíz, Máximo, Sud 777, and the Bib list)
   **only if Ashley wants them**.
 - Link-preview image once the final domain is known.
+- Brand assets (Instagram profile picture options) are in `brand/`.
 
 **Domain (not done)**
 `laguerasguide.com` was available on 2026-11-02; nothing is registered. When
