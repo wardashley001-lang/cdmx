@@ -3740,9 +3740,7 @@
       ],
       "group": "drinks",
       "image": null,
-      "hot": true,
-      "featuredOrder": 2,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "mexican-casa-elena-restaurante",
@@ -4467,7 +4465,9 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "featuredOrder": 6,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "italian-barolo",
@@ -4865,7 +4865,10 @@
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps place listing for the saved place link."
         }
-      ]
+      ],
+      "hot": true,
+      "featuredOrder": 3,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "italian-hank-s-pizza-choza",
@@ -5519,7 +5522,10 @@
       "unverifiedFields": [
         "Google Maps place-ID permalink",
         "Exact map pin"
-      ]
+      ],
+      "hot": true,
+      "featuredOrder": 5,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "french-au-pied-de-cochon",
@@ -7672,9 +7678,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 8,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "cafe-cafe-tim",
@@ -7754,9 +7758,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 1,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "brunch-siembra-terraza",
@@ -7797,9 +7799,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 6,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "japanese-kari-kari",
@@ -7919,9 +7919,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 5,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "american-club-sandwich",
@@ -8040,9 +8038,7 @@
       ],
       "group": "coffee",
       "image": null,
-      "hot": true,
-      "featuredOrder": 4,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "american-taller-de-grassa",
@@ -8082,9 +8078,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 7,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "seafood-payna",
@@ -8124,9 +8118,7 @@
       ],
       "group": "eat",
       "image": null,
-      "hot": true,
-      "featuredOrder": 3,
-      "featuredApprovalState": "pending-ashley-review"
+      "hot": true
     },
     {
       "id": "dessert-crumbl",
@@ -8208,7 +8200,10 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null
+      "image": null,
+      "hot": true,
+      "featuredOrder": 7,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "cafe-ritmo-cafe",
@@ -8280,7 +8275,10 @@
         }
       ],
       "group": "eat",
-      "image": null
+      "image": null,
+      "hot": true,
+      "featuredOrder": 8,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "bars-pistilo",
@@ -8407,7 +8405,10 @@
       "pick": {
         "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel, and I'm ordering the prosciutto before I even sit down. Save room for the tiramisu.",
         "approvedOn": "2026-11-02"
-      }
+      },
+      "hot": true,
+      "featuredOrder": 2,
+      "featuredApprovalState": "approved"
     },
     {
       "id": "mexican-la-once-mil-lomas",
@@ -8486,7 +8487,50 @@
       "pick": {
         "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador with the energy of a gastronomic pub, which is exactly the point.",
         "approvedOn": "2026-11-02"
-      }
+      },
+      "hot": true,
+      "featuredOrder": 1,
+      "featuredApprovalState": "approved"
+    },
+    {
+      "id": "wine-astronomic",
+      "name": "Astronomic",
+      "category": "wine",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Astronomic%2C%20Versalles%2057%2C%20Ju%C3%A1rez%2C%20CDMX",
+      "neighborhood": "Juárez",
+      "address": "C. Versalles 57, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+      "instagram": "astronomic___",
+      "vibe": "An astronomy-themed wine bar, cocktail spot and restaurant in Juárez, with the kitchen run by chef Max Bucio, who also founded Donny's Kebabs next door.",
+      "lat": 19.4294754,
+      "lng": -99.15528,
+      "priceTier": null,
+      "occasionTags": [
+        "trendy"
+      ],
+      "sourceFile": "ashley-2026-11-02",
+      "group": "drinks",
+      "image": null,
+      "hot": true,
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@astronomic___)",
+          "checkedOn": "2026-11-02",
+          "note": "Screenshot gives Versalles 57, Juárez, Metrobús Hamburgo, and hours Tue-Thu 3-11pm, Fri-Sat 3pm-1am, Sun 1-6pm."
+        },
+        {
+          "label": "Time Out México review",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/bares-y-cantinas/astronomic",
+          "note": "Confirms the Versalles 57 address, wine bar/cocktail/restaurant concept and chef Max Bucio."
+        },
+        {
+          "label": "Google Maps listing",
+          "checkedOn": "2026-11-02",
+          "note": "Exact coordinates from the Google Maps search result (name and address matched)."
+        }
+      ],
+      "featuredOrder": 4,
+      "featuredApprovalState": "approved"
     }
   ],
   "meta": {

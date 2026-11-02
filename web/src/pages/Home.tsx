@@ -176,7 +176,7 @@ export function Home() {
               <p style={{ margin: "16px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
                 {hasPendingFeatured
                   ? "Recent openings and fresh buzz, in provisional order. Final picks are pending approval; confirm details before you go."
-                  : "The approved order, with dated source checks. Confirm details before you go."}
+                  : "New and buzzing right now, picked by me. Sources checked on the date above; confirm details before you go."}
               </p>
             </div>
             <span style={{ flex: 1 }} />
