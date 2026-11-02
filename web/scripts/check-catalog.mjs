@@ -19,6 +19,9 @@ for (const [index, place] of catalog.places.entries()) {
   if (!catalog.categories[place.category]) errors.push(`${label}: unknown category ${place.category}`);
   if (!place.group) errors.push(`${label}: missing group`);
   if ((place.lat == null) !== (place.lng == null)) errors.push(`${label}: incomplete coordinate pair`);
+  if (place.image && !place.imageCredit) {
+    errors.push(`${label}: a place with a photo needs imageCredit`);
+  }
   if (place.pick && (!place.pick.text?.trim() || !place.pick.approvedOn)) {
     errors.push(`${label}: a pick needs text and an approvedOn date`);
   }

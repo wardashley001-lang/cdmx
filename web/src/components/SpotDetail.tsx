@@ -46,6 +46,11 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
           }}
         >
           {badge && <Badge variant={badge} shape="stamp" style={{ position: "absolute", bottom: 14, left: 14 }} />}
+          {photo && spot.imageCredit && (
+            <span style={{ position: "absolute", top: 10, left: 10, right: 10, fontFamily: "var(--font-mono)", fontSize: 10, color: "#fff", textShadow: "0 1px 3px rgba(0,0,0,.7)" }}>
+              {spot.imageCredit}
+            </span>
+          )}
         </div>
         <div style={{ padding: mobile ? "20px 0 0" : "32px 32px 28px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
