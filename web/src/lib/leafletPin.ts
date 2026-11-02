@@ -1,7 +1,6 @@
 import L from "leaflet";
 import { CATEGORY_STYLE, BUCKET_STYLE } from "../data/categoryStyle";
-
-const LUCIDE = "https://unpkg.com/lucide-static@0.460.0/icons";
+import { iconAssetUrl } from "./iconAsset";
 
 const cache = new Map<string, L.DivIcon>();
 
@@ -24,8 +23,8 @@ export function pinIcon(category: string, selected: boolean): L.DivIcon {
       display:flex;align-items:center;justify-content:center;">
       <span style="transform:rotate(45deg);display:inline-flex;width:${iconSize}px;height:${iconSize}px;
         background-color:${fg};
-        -webkit-mask:url(${LUCIDE}/${cat.icon}.svg) center/contain no-repeat;
-        mask:url(${LUCIDE}/${cat.icon}.svg) center/contain no-repeat;"></span>
+        -webkit-mask:url(${iconAssetUrl(cat.icon)}) center/contain no-repeat;
+        mask:url(${iconAssetUrl(cat.icon)}) center/contain no-repeat;"></span>
     </div>`;
 
   const icon = L.divIcon({

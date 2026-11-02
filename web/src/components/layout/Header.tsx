@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Wordmark } from "../ds/Wordmark";
 import { Button } from "../ds/Button";
 import { IconButton } from "../ds/IconButton";
+import { Icon } from "../ds/Icon";
 import { useSaved } from "../../lib/useSaved";
 
 const NAV: { path: string; label: string }[] = [
@@ -62,7 +63,7 @@ export function Header() {
           </Button>
         </span>
         <span className="sm:hidden">
-          <IconButton icon="search" label="Search" size={40} variant="inverse" onClick={() => navigate("/mapa")} />
+          <IconButton icon="search" label="Search" variant="inverse" onClick={() => navigate("/mapa")} />
         </span>
       </div>
     </header>
@@ -81,7 +82,7 @@ export function MobileTabBar() {
   return (
     <nav
       className="hidden max-sm:flex"
-      style={{ position: "fixed", left: 14, right: 14, bottom: 14, zIndex: 45, height: 60, background: "var(--vino-900)", borderRadius: 999, padding: 6, boxShadow: "var(--shadow-float)" }}
+      style={{ position: "fixed", left: 14, right: 14, bottom: "calc(14px + env(safe-area-inset-bottom, 0px))", zIndex: 45, height: 60, background: "var(--vino-900)", borderRadius: 999, padding: 6, boxShadow: "var(--shadow-float)" }}
     >
       {items.map((it) => {
         const on = pathname === it.path;
@@ -107,7 +108,7 @@ export function MobileTabBar() {
               cursor: "pointer",
             }}
           >
-            <IconMask icon={it.icon} />
+            <Icon name={it.icon} size={17} />
             {on && it.label}
             {it.path === "/mi-lista" && saved.length > 0 && !on && (
               <span style={{ font: "italic 400 14px var(--font-serif)", letterSpacing: 0, color: "var(--rosa-400)" }}>{saved.length}</span>
@@ -119,24 +120,9 @@ export function MobileTabBar() {
   );
 }
 
-function IconMask({ icon }: { icon: string }) {
-  return (
-    <span
-      style={{
-        display: "inline-block",
-        width: 17,
-        height: 17,
-        backgroundColor: "currentColor",
-        WebkitMask: `url(https://unpkg.com/lucide-static@0.460.0/icons/${icon}.svg) center/contain no-repeat`,
-        mask: `url(https://unpkg.com/lucide-static@0.460.0/icons/${icon}.svg) center/contain no-repeat`,
-      }}
-    />
-  );
-}
-
 export function Footer() {
   return (
-    <footer style={{ background: "var(--vino-900)", color: "var(--rosa-200)", padding: "72px 20px 96px" }}>
+    <footer style={{ background: "var(--vino-900)", color: "var(--rosa-200)", padding: "72px 20px calc(112px + env(safe-area-inset-bottom, 0px))" }}>
       <div style={{ maxWidth: "var(--container)", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 32, alignItems: "flex-end", justifyContent: "space-between" }}>
         <Wordmark size={72} tone="rosa" />
         <div style={{ display: "flex", flexDirection: "column", gap: 6, alignItems: "flex-end" }}>

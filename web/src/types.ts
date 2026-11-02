@@ -11,6 +11,8 @@ export type OccasionTag =
 
 export type Group = "eat" | "drinks" | "coffee" | "beyond";
 
+export type FeaturedApprovalState = "pending-ashley-review" | "approved";
+
 export type MichelinLevel = "two-star" | "one-star" | "bib" | "green-star";
 
 export interface Michelin {
@@ -27,12 +29,21 @@ export interface CategoryMeta {
   group: Group;
 }
 
+export interface PlaceSource {
+  label: string;
+  checkedOn: string;
+  url?: string;
+  note?: string;
+}
+
 export interface Place {
   id: string;
   name: string;
   category: string;
   mapsUrl: string;
   neighborhood: string | null;
+  address?: string | null;
+  hours?: string | null;
   instagram: string | null;
   vibe: string | null;
   lat: number | null;
@@ -40,9 +51,15 @@ export interface Place {
   priceTier: PriceTier | null;
   occasionTags: OccasionTag[];
   sourceFile: string;
+  sources?: PlaceSource[];
+  unverifiedFields?: string[];
   /** Which top-level section of the guide the place lives in. */
   group: Group;
   hot?: boolean;
+  /** Explicit Home candidate order; independent from raw JSON position. */
+  featuredOrder?: number;
+  /** Approval gate for the ordered Home candidate surface. */
+  featuredApprovalState?: FeaturedApprovalState;
   essential?: boolean;
   michelin?: Michelin;
   /** Path under web/public, e.g. "photos/contramar.jpg". */
@@ -50,7 +67,14 @@ export interface Place {
 }
 
 export interface PlacesData {
-  meta?: { updated?: string };
+  meta?: {
+    /** Legacy source-batch label; not presented as a whole-catalog verification date. */
+    updated?: string;
+    /** Date the local catalog structure/content was last revised. */
+    catalogRevisedOn?: string;
+    /** Latest source-check date shared by the ordered featured candidates. */
+    featuredSourcesCheckedOn?: string;
+  };
   categories: Record<string, CategoryMeta>;
   places: Place[];
 }

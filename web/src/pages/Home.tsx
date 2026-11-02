@@ -21,6 +21,16 @@ const MICHELIN_ORDER: { level: Michelin["level"]; label: string }[] = [
   { level: "bib", label: "Bib Gourmand" },
 ];
 
+function displayDate(value?: string) {
+  if (!value) return "date pending";
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
+}
+
 function Eyebrow({ children, color }: { children: React.ReactNode; color: string }) {
   return (
     <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", textTransform: "uppercase", color }}>
@@ -70,7 +80,13 @@ export function Home() {
     showToast(wasSaved ? "Removed. Their loss." : "Saved. Good taste.", wasSaved ? "heart-off" : "heart");
   }
 
-  const hot = useMemo(() => DATA.places.filter((p) => p.hot), []);
+  const featuredCandidates = useMemo(
+    () => DATA.places
+      .filter((p) => p.featuredOrder != null)
+      .sort((a, b) => (a.featuredOrder ?? 0) - (b.featuredOrder ?? 0)),
+    []
+  );
+  const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const essentials = useMemo(() => DATA.places.filter((p) => p.essential), []);
   const tacos = useMemo(() => DATA.places.filter((p) => p.category === "tacos").sort((a, b) => a.name.localeCompare(b.name)), []);
   const michelinByLevel = useMemo(() => {
@@ -138,7 +154,7 @@ export function Home() {
           <div className="hidden sm:block" style={{ position: "relative", justifySelf: "end", width: "min(100%,440px)" }}>
             <div style={{ aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-storia)", overflow: "hidden", display: "flex", alignItems: "flex-end", padding: 18 }}>
               <span style={{ font: "400 12px var(--font-mono)", color: "var(--vino-900)", background: "var(--leche-50)", padding: "4px 8px", borderRadius: 2 }}>
-                {DATA.places.length} spots · updated {DATA.meta?.updated ?? ""}
+                {DATA.places.length} spots · catalog revised {displayDate(DATA.meta?.catalogRevisedOn)}
               </span>
             </div>
             <Badge variant="pick" shape="stamp" style={{ position: "absolute", top: 40, right: -10, width: 90, height: 90, fontSize: 16 }} />
@@ -147,21 +163,26 @@ export function Home() {
       </section>
 
       {/* Hot ahorita */}
-      {hot.length > 0 && (
+      {featuredCandidates.length > 0 && (
         <Section>
-          <div style={{ display: "flex", alignItems: "flex-end", gap: 16, marginBottom: 32, flexWrap: "wrap" }}>
-            <div>
-              <Eyebrow color="var(--rosa-600)">This week</Eyebrow>
+          <div style={{ display: "flex", alignItems: "flex-end", gap: 24, marginBottom: 32, flexWrap: "wrap" }}>
+            <div style={{ maxWidth: 620 }}>
+              <Eyebrow color="var(--rosa-600)">Sources checked {displayDate(DATA.meta?.featuredSourcesCheckedOn)}</Eyebrow>
               <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
                 Hot <i>ahorita</i>
               </h2>
+              <p style={{ margin: "16px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
+                {hasPendingFeatured
+                  ? "Preview candidates in provisional order. Final picks are pending approval; confirm details before you go."
+                  : "The approved order, with dated source checks. Confirm details before you go."}
+              </p>
             </div>
             <span style={{ flex: 1 }} />
             <Button variant="ghost" iconRight="arrow-right" onClick={() => goToMap()}>
-              See all
+              Open the map
             </Button>
           </div>
-          <CardGrid places={hot.slice(0, 8)} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+          <CardGrid places={featuredCandidates} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 

@@ -118,6 +118,43 @@
     "Asaderos Orozco": "tacos",
     "Taco Tasting Room": "tacos"
   },
+  "placeUpdates": {
+    "Bikini Pizza": {
+      "address": "Chilpancingo 35, Condesa, CDMX",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@tasteofcdmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "Official Instagram profile (indexed live search)",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/bikini_____pizza/",
+          "note": "Profile address matches the existing Bikini Pizza Maps record and catalog identity."
+        }
+      ]
+    },
+    "La Belle Epoque": {
+      "address": "Oaxaca 80, Roma Norte, CDMX",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Belle%20Epoque%2C%20Oaxaca%2080%2C%20Roma%20Norte%2C%20CDMX",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@tasteofcdmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "La Belle Epoque official website",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.labelleepoque.mx/",
+          "note": "Official site confirms Oaxaca 80, Roma Norte."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ]
+    }
+  },
   "hot": [
     "Natas Wines",
     "Niv",
@@ -508,6 +545,58 @@
       "occasionTags": [
         "casual",
         "trendy"
+      ]
+    },
+    {
+      "name": "Cassette",
+      "category": "american",
+      "neighborhood": "Roma Norte",
+      "address": "Tabasco 156, Roma Norte, CDMX",
+      "instagram": "cassette_cdmx",
+      "vibe": "Burgers, hot dogs and beer in Roma Norte, with a 1990s-rock soundtrack.",
+      "occasionTags": [
+        "casual",
+        "lively atmosphere"
+      ],
+      "sourceFile": "Ashley Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@thehappeningmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "@cassette_cdmx and recent indexed Instagram coverage",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/cassette_cdmx/",
+          "note": "Live indexed results confirm Roma Norte and Tabasco 156."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ]
+    },
+    {
+      "name": "El Silverio",
+      "category": "bars",
+      "neighborhood": "Condesa",
+      "address": "Fernando Montes de Oca 83, Condesa, CDMX",
+      "hours": "Wednesday–Sunday, 1 PM–1 AM",
+      "instagram": "elsilverio.cdmx",
+      "vibe": "Tapas, grilled dishes and vermouth on tap in Condesa.",
+      "occasionTags": [],
+      "sourceFile": "Ashley Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@elsilverio.cdmx)",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/elsilverio.cdmx/",
+          "note": "Official profile confirms the address, concept and posted hours."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
       ]
     }
   ],

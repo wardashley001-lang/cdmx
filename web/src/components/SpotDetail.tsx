@@ -23,7 +23,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
   const cat = CATEGORY_STYLE[spot.category];
   const c = BUCKET_STYLE[cat.bucket];
   const saved = isSaved(spot.id);
-  const gmaps = spot.mapsUrl || mapsSearchUrl(spot.name);
+  const gmaps = spot.mapsUrl || mapsSearchUrl(spot.name, spot.address);
   const photo = photoUrl(spot);
   const badge = spot.hot ? "hot" : spot.essential ? "pick" : undefined;
 
@@ -33,7 +33,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
   }
 
   return (
-    <Dialog open onClose={onClose} variant={mobile ? "sheet" : "modal"} width={600} style={{ padding: mobile ? "10px 20px 28px" : 0 }}>
+    <Dialog open onClose={onClose} ariaLabel={spot.name} variant={mobile ? "sheet" : "modal"} width={600} style={{ padding: mobile ? "10px 20px 28px" : 0 }}>
       <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "220px 1fr" }}>
         <div
           style={{
@@ -60,6 +60,12 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
           <h2 style={{ margin: "10px 0 16px", font: `400 ${mobile ? 40 : 48}px/.95 var(--font-serif)`, letterSpacing: "-.02em", paddingRight: mobile ? 0 : 36 }}>
             {spot.name}
           </h2>
+          {(spot.address || spot.hours) && (
+            <div style={{ margin: "-6px 0 16px", font: "400 12px/1.55 var(--font-mono)", color: "var(--text-3)" }}>
+              {spot.address && <div>{spot.address}</div>}
+              {spot.hours && <div>{spot.hours}</div>}
+            </div>
+          )}
           {spot.vibe && <p style={{ margin: 0, font: "italic 400 19px/1.4 var(--font-serif)", color: "var(--vino-700)" }}>&ldquo;{spot.vibe}&rdquo;</p>}
           <div style={{ font: "400 30px/1 var(--font-script)", color: "var(--rosa-500)", margin: "6px 0 0 60%", transform: "rotate(-4deg)" }}>la güera</div>
           {spot.michelin?.note && (
