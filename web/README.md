@@ -2,17 +2,17 @@
 
 An interactive Mexico City catalog with Home collections, a searchable and
 filterable map/list, and a saveable **Mi lista**. The current build contains
-284 places. Editorial collections and ordering remain review candidates until
+283 places. Editorial collections and ordering remain review candidates until
 Ashley approves them; the app does not present that pending state as an
 endorsement.
 
-Catalog coverage is intentionally explicit rather than implied: 10 records
-have source-backed exact coordinates, 54 lack a direct Google Maps URL, 22
-lack an Instagram handle, 5 lack a vibe note, and every image slot is still
-empty pending identity, reuse-rights, credit, and approval checks. Mapa uses
-labeled neighborhood-level approximations where available and keeps the one
-unresolved record searchable in the list without fabricating a pin. Prices are
-not currently published.
+Catalog coverage is intentionally explicit rather than implied: all 283 records
+have exact map coordinates and a street address taken from their Google Maps
+listing (checked 2026-11-02), 22 lack a direct Google Maps place URL (the
+Cómo llegar button falls back to a name-and-address search), 21 lack an
+Instagram handle, 4 lack a vibe note, and 283 image slots are still empty
+pending identity, reuse-rights, credit, and approval checks. Prices are not
+currently published.
 
 ## Stack
 
@@ -75,9 +75,9 @@ neighborhood consistency, and the honest unpinned-list state. Run it after
 every data or curation change; the counts above reflect its 2026-10-31 result
 and should be updated from the generated catalog rather than by assumption.
 
-`src/data/neighborhoods.ts` holds approximate centroid coordinates used to
-place map pins until exact lat/lng are available from a GeoJSON Takeout
-export (see `Place.lat` / `Place.lng` in `src/types.ts`).
+`src/data/neighborhoods.ts` holds approximate neighborhood centers. They are only a
+fallback for any new place that does not yet have exact `lat`/`lng` in
+`src/data/places.json`.
 
 ## Deployment
 

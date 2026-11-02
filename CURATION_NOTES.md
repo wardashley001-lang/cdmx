@@ -16,7 +16,7 @@ Your 8 saved taquerías plus 8 Bib Gourmand taquerías from Michelin's 2026 sele
 2. **La Once Mil** — Michelin's star is for the Lomas de Chapultepec location. You saved the Roma Norte one. Tagged with a note on the card.
 3. **Siembra Taqueria** — Michelin lists it as Siembra Tortillería (Bib Gourmand). Tagged Bib with a note.
 4. **Migrante** ("Michelin-listed") and **Taco Tasting Room** — could not confirm a 2026 distinction, so not tagged.
-5. **Missing info:** Cochilada, Rapsodia, La Papaya Smoothie House, Animacura, BAR-RICA have no neighborhood, description, or tags. Amorino has no neighborhood. 25 places have no vibe tags, so they disappear when a filter chip is on.
+5. **Missing info:** Cochilada, La Papaya Smoothie House, Animacura, BAR-RICA have no neighborhood, description, or tags. Amorino has no neighborhood. 25 places have no vibe tags, so they disappear when a filter chip is on.
 
 ## Categories fixed (cross-group mistakes)
 - Sights split into **Sights** and **Day Trips** (Teotihuacán's La Gruta, Tepotzotlán, Nido de Quetzalcoatl, Parque Quetzalcoatl).
