@@ -4370,6 +4370,10 @@
         "level": "one-star",
         "new": true,
         "note": "Michelin's star is for the Lomas location"
+      },
+      "pick": {
+        "text": "My favorite tacos. The room is fun, they hand you a beer when you walk in, and the Lomas original just earned a Michelin star. No reservations, so expect a line.",
+        "approvedOn": "2026-11-02"
       }
     },
     {
@@ -8444,11 +8448,7 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null,
-      "pick": {
-        "text": "My favorite tacos. The room is fun, they hand you a beer when you walk in, and the Lomas original just earned a Michelin star. No reservations, so expect a line.",
-        "approvedOn": "2026-11-02"
-      }
+      "image": null
     },
     {
       "id": "bars-el-silverio",
@@ -8531,6 +8531,40 @@
       ],
       "featuredOrder": 4,
       "featuredApprovalState": "approved"
+    },
+    {
+      "id": "bars-el-bar-condesa",
+      "name": "El Bar",
+      "category": "bars",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Bar%2C%20Alfonso%20Reyes%20203%2C%20Hip%C3%B3dromo%2C%20CDMX",
+      "neighborhood": "Condesa",
+      "address": "Alfonso Reyes 203, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+      "instagram": "el_bar_condesa",
+      "vibe": null,
+      "lat": 19.4072438,
+      "lng": -99.1743099,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "ashley-2026-11-02",
+      "group": "drinks",
+      "image": null,
+      "hot": true,
+      "featuredOrder": 9,
+      "featuredApprovalState": "approved",
+      "sources": [
+        {
+          "label": "Ashley: name, Instagram handle (@el_bar_condesa) and address",
+          "checkedOn": "2026-11-02"
+        },
+        {
+          "label": "Google Maps listing",
+          "checkedOn": "2026-11-02",
+          "note": "A Google Maps search for the address returns a listing named EL BAR at Alfonso Reyes 203, Hipódromo; exact coordinates taken from it."
+        }
+      ],
+      "unverifiedFields": [
+        "Description/vibe: no independent source found yet"
+      ]
     }
   ],
   "meta": {
