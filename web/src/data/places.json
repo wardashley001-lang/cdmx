@@ -8547,7 +8547,7 @@
       "occasionTags": [],
       "sourceFile": "ashley-2026-11-02",
       "group": "drinks",
-      "image": null,
+      "image": "photos/bars-el-bar-condesa.webp",
       "hot": true,
       "featuredOrder": 9,
       "featuredApprovalState": "approved",
@@ -8565,8 +8565,14 @@
           "label": "The Happening Instagram post (@thehappeningmx), October 2026",
           "checkedOn": "2026-11-02",
           "note": "Screenshot from Ashley; gives the Alfonso Reyes 203, Hipódromo address, the concept and the menu items quoted in the description."
+        },
+        {
+          "label": "Photo from El Bar's Instagram (@el_bar_condesa), supplied by Ashley",
+          "checkedOn": "2026-11-02",
+          "note": "Ashley directed use of the venue's Instagram photos. Venue/photographer permission not separately confirmed; credit shown on the place card."
         }
-      ]
+      ],
+      "imageCredit": "Photo: El Bar (@el_bar_condesa)"
     }
   ],
   "meta": {

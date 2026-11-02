@@ -66,6 +66,7 @@ export interface Place {
   michelin?: Michelin;
   /** Path under web/public, e.g. "photos/contramar.jpg". */
   image?: string | null;
+  imageCredit?: string;
 }
 
 export interface PlacesData {
