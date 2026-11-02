@@ -39,6 +39,7 @@ export interface SpotCardProps {
   image?: string | null;
   hot?: boolean;
   essential?: boolean;
+  pick?: boolean;
   michelin?: Michelin;
   saved?: boolean;
   onSave?: () => void;
@@ -56,7 +57,7 @@ export function SpotCard({
   price,
   image,
   hot,
-  essential,
+  pick,
   michelin,
   saved,
   onSave,
@@ -67,7 +68,7 @@ export function SpotCard({
 }: SpotCardProps) {
   const [h, setH] = useState(false);
   const on = h && !!onClick;
-  const badge = hot ? "hot" : essential ? "pick" : undefined;
+  const badge = pick ? "pick" : hot ? "hot" : undefined;
   const openFromKeyboard = (event: KeyboardEvent<HTMLDivElement>) => {
     if (!onClick || (event.key !== "Enter" && event.key !== " ")) return;
     event.preventDefault();

@@ -19,6 +19,9 @@ for (const [index, place] of catalog.places.entries()) {
   if (!catalog.categories[place.category]) errors.push(`${label}: unknown category ${place.category}`);
   if (!place.group) errors.push(`${label}: missing group`);
   if ((place.lat == null) !== (place.lng == null)) errors.push(`${label}: incomplete coordinate pair`);
+  if (place.pick && (!place.pick.text?.trim() || !place.pick.approvedOn)) {
+    errors.push(`${label}: a pick needs text and an approvedOn date`);
+  }
   if ((place.featuredOrder == null) !== (place.featuredApprovalState == null)) {
     errors.push(`${label}: featured order and approval state must be set together`);
   }

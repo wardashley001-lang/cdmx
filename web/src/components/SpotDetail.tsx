@@ -25,7 +25,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
   const saved = isSaved(spot.id);
   const gmaps = spot.mapsUrl || mapsSearchUrl(spot.name, spot.address);
   const photo = photoUrl(spot);
-  const badge = spot.hot ? "hot" : spot.essential ? "pick" : undefined;
+  const badge = spot.pick ? "pick" : spot.hot ? "hot" : undefined;
 
   function onToggle() {
     toggle(spot!.id);
@@ -66,8 +66,14 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
               {spot.hours && <div>{spot.hours}</div>}
             </div>
           )}
-          {spot.vibe && <p style={{ margin: 0, font: "italic 400 19px/1.4 var(--font-serif)", color: "var(--vino-700)" }}>&ldquo;{spot.vibe}&rdquo;</p>}
-          <div style={{ font: "400 30px/1 var(--font-script)", color: "var(--rosa-500)", margin: "6px 0 0 60%", transform: "rotate(-4deg)" }}>la güera</div>
+          {spot.pick ? (
+            <>
+              <p style={{ margin: 0, font: "italic 400 19px/1.4 var(--font-serif)", color: "var(--vino-700)" }}>&ldquo;{spot.pick.text}&rdquo;</p>
+              <div style={{ font: "400 30px/1 var(--font-script)", color: "var(--rosa-500)", margin: "6px 0 0 60%", transform: "rotate(-4deg)" }}>la güera</div>
+            </>
+          ) : (
+            spot.vibe && <p style={{ margin: 0, font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)" }}>{spot.vibe}</p>
+          )}
           {spot.michelin?.note && (
             <div style={{ marginTop: 16, font: "400 13px/1.5 var(--font-mono)", color: "var(--text-3)" }}>{spot.michelin.note}</div>
           )}
