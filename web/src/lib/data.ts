@@ -32,8 +32,9 @@ export function resolveCoords(
   return null;
 }
 
-export function mapsSearchUrl(name: string) {
-  return "https://maps.google.com/?q=" + encodeURIComponent(name + " Ciudad de Mexico");
+export function mapsSearchUrl(name: string, address?: string | null) {
+  const query = address ? `${name}, ${address}` : `${name} Ciudad de Mexico`;
+  return "https://maps.google.com/?q=" + encodeURIComponent(query);
 }
 
 export function instagramUrl(handle: string) {

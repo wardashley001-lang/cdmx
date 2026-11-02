@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from "react";
+import { useState, type CSSProperties, type KeyboardEvent } from "react";
 import { IconButton } from "./IconButton";
 import { Tag } from "./Tag";
 import { Badge } from "./Badge";
@@ -68,6 +68,11 @@ export function SpotCard({
   const [h, setH] = useState(false);
   const on = h && !!onClick;
   const badge = hot ? "hot" : essential ? "pick" : undefined;
+  const openFromKeyboard = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (!onClick || (event.key !== "Enter" && event.key !== " ")) return;
+    event.preventDefault();
+    onClick();
+  };
 
   const meta = (
     <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
@@ -92,7 +97,7 @@ export function SpotCard({
 
   const heart = onSave && (
     <span onClick={(e) => e.stopPropagation()}>
-      <IconButton icon="heart" label={saved ? "Remove" : "Guardar"} active={saved} size={layout === "row" ? 34 : 38} onClick={onSave} />
+      <IconButton icon="heart" label={saved ? "Remove" : "Guardar"} active={saved} onClick={onSave} />
     </span>
   );
 
@@ -100,6 +105,10 @@ export function SpotCard({
     return (
       <div
         onClick={onClick}
+        onKeyDown={openFromKeyboard}
+        role={onClick ? "button" : undefined}
+        tabIndex={onClick ? 0 : undefined}
+        aria-label={onClick ? `Ver detalles de ${name}` : undefined}
         onMouseEnter={() => setH(true)}
         onMouseLeave={() => setH(false)}
         style={{
@@ -138,6 +147,10 @@ export function SpotCard({
   return (
     <div
       onClick={onClick}
+      onKeyDown={openFromKeyboard}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-label={onClick ? `Ver detalles de ${name}` : undefined}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
       style={{ position: "relative", display: "flex", flexDirection: "column", gap: 14, cursor: onClick ? "pointer" : "default", textAlign: "left", ...style }}

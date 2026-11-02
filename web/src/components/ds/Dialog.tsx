@@ -1,10 +1,11 @@
-import { useEffect, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 import { IconButton } from "./IconButton";
 
 export interface DialogProps {
   open: boolean;
   onClose?: () => void;
   title?: string;
+  ariaLabel?: string;
   children?: ReactNode;
   footer?: ReactNode;
   variant?: "modal" | "sheet";
@@ -13,14 +14,49 @@ export interface DialogProps {
   style?: CSSProperties;
 }
 
-export function Dialog({ open, onClose, title, children, footer, variant = "modal", width = 520, tone = "leche", style }: DialogProps) {
+export function Dialog({ open, onClose, title, ariaLabel, children, footer, variant = "modal", width = 520, tone = "leche", style }: DialogProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!open) return;
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const dialog = dialogRef.current;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const focusable = () =>
+      Array.from(
+        dialog?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((element) => !element.hasAttribute("hidden") && element.getAttribute("aria-hidden") !== "true");
+
+    requestAnimationFrame(() => (focusable()[0] ?? dialog)?.focus());
     const k = (e: KeyboardEvent) => {
       if (e.key === "Escape" && onClose) onClose();
+      if (e.key !== "Tab" || !dialog) return;
+      const elements = focusable();
+      if (elements.length === 0) {
+        e.preventDefault();
+        dialog.focus();
+        return;
+      }
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener("keydown", k);
-    return () => window.removeEventListener("keydown", k);
+    return () => {
+      window.removeEventListener("keydown", k);
+      document.body.style.overflow = previousOverflow;
+      previouslyFocused?.focus();
+    };
   }, [open, onClose]);
 
   if (!open) return null;
@@ -45,8 +81,11 @@ export function Dialog({ open, onClose, title, children, footer, variant = "moda
       }}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
+        aria-label={title ? undefined : ariaLabel}
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
         style={{
           position: "relative",
@@ -81,7 +120,7 @@ export function Dialog({ open, onClose, title, children, footer, variant = "moda
                 {title}
               </h2>
             )}
-            {onClose && <IconButton icon="x" label="Cerrar" size={38} variant={dark ? "inverse" : "secondary"} onClick={onClose} />}
+            {onClose && <IconButton icon="x" label="Cerrar" variant={dark ? "inverse" : "secondary"} onClick={onClose} />}
           </div>
         )}
         {children}

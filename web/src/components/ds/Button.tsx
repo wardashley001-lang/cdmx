@@ -5,7 +5,7 @@ type Size = "sm" | "md" | "lg";
 type Variant = "primary" | "pink" | "secondary" | "inverse" | "ghost" | "loud";
 
 const SIZES: Record<Size, { h: number; px: number; fs: number; ic: number }> = {
-  sm: { h: 36, px: 16, fs: 11, ic: 14 },
+  sm: { h: 44, px: 16, fs: 11, ic: 14 },
   md: { h: 46, px: 24, fs: 12, ic: 16 },
   lg: { h: 56, px: 32, fs: 13, ic: 18 },
 };

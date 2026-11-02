@@ -1,6 +1,5 @@
 import type { CSSProperties } from "react";
-
-const LUCIDE_VERSION = "0.460.0";
+import { iconAssetUrl } from "../../lib/iconAsset";
 
 export interface IconProps {
   name: string;
@@ -13,7 +12,7 @@ export interface IconProps {
 
 /** Lucide icon rendered as a CSS mask so it inherits `color`. */
 export function Icon({ name, size = 20, color = "currentColor", label, style, className }: IconProps) {
-  const url = `https://unpkg.com/lucide-static@${LUCIDE_VERSION}/icons/${name}.svg`;
+  const url = iconAssetUrl(name);
   const mask = `url(${url}) center/contain no-repeat`;
   return (
     <span

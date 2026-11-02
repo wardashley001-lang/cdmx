@@ -37,7 +37,7 @@ export function Tag({ label, category, icon, selected, size = "md", onClick, cou
         display: "inline-flex",
         alignItems: "center",
         gap: 7,
-        height: sm ? 26 : 34,
+        height: onClick ? 44 : sm ? 26 : 34,
         padding: sm ? "0 11px" : "0 15px",
         borderRadius: "var(--radius-pill)",
         border: `var(--border-hair) solid ${bd}`,

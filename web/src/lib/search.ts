@@ -63,6 +63,7 @@ export function searchPlaces(
   const results = places.filter((p) => {
     if (normalize(p.name).includes(q)) return true;
     if (p.neighborhood && normalize(p.neighborhood).includes(q)) return true;
+    if (p.address && normalize(p.address).includes(q)) return true;
     if (p.vibe && normalize(p.vibe).includes(q)) return true;
     const categoryLabel = categories[p.category]?.label;
     if (categoryLabel && normalize(categoryLabel).includes(q)) return true;

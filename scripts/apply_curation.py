@@ -63,20 +63,29 @@ def main():
             "id": f"{add['category']}-{slug(add['name'])}",
             "name": add["name"],
             "category": add["category"],
-            "mapsUrl": "",
+            "mapsUrl": add.get("mapsUrl", ""),
             "neighborhood": add.get("neighborhood"),
+            "address": add.get("address"),
+            "hours": add.get("hours"),
             "instagram": add.get("instagram"),
             "vibe": add.get("vibe"),
             "lat": None,
             "lng": None,
             "priceTier": None,
             "occasionTags": add.get("occasionTags", []),
-            "sourceFile": "added-in-curation",
+            "sourceFile": add.get("sourceFile", "added-in-curation"),
+            "sources": add.get("sources", []),
+            "unverifiedFields": add.get("unverifiedFields", []),
         }
         places.append(place)
         by_name[norm(add["name"])] = place
 
     # ── per-place fields ──────────────────────────────────────
+    for name, fields in cur.get("placeUpdates", {}).items():
+        place = find(name)
+        for field, value in fields.items():
+            place[field] = value
+
     for name, new_cat in cur["moves"].items():
         find(name)["category"] = new_cat
 
@@ -89,6 +98,8 @@ def main():
 
     for p in places:
         k = norm(p["name"])
+        image_after_badge = k in mich and p["sourceFile"] == "added-in-curation"
+        image = p.pop("image", None) if image_after_badge else None
         p.pop("hot", None); p.pop("essential", None); p.pop("michelin", None)
         if p["category"] not in ordered:
             raise SystemExit(f"{p['name']} is in unknown category {p['category']!r}")
@@ -101,7 +112,10 @@ def main():
             p["essential"] = True
         if cur.get("dropPlaceholderPrices"):
             p["priceTier"] = None
-        p.setdefault("image", None)
+        if image_after_badge:
+            p["image"] = image
+        else:
+            p.setdefault("image", None)
 
     data["meta"] = {"updated": cur["updated"]}
     PLACES.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

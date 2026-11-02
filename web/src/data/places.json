@@ -113,6 +113,7 @@
       "category": "seafood",
       "mapsUrl": "https://www.google.com/maps/place/ABRASAMAR/data=!4m2!3m1!1s0x85d1ff00661a5335:0x6ec1f929f9ce8a33",
       "neighborhood": "Roma Norte",
+      "address": "Mérida 101, Roma Norte, CDMX",
       "instagram": "abrasamarmx",
       "vibe": "Gulf-of-Mexico-style seafood with viral towers under a retractable gravel-floor roof.",
       "lat": null,
@@ -124,6 +125,23 @@
         "good for dinner"
       ],
       "sourceFile": "CDMX_v2.csv",
+      "sources": [
+        {
+          "label": "Official ABRASAMAR site",
+          "checkedOn": "2026-11-02",
+          "url": "https://abrasamar.com/",
+          "note": "The venue-managed site identifies ABRASAMAR at Calle Mérida 101 in Roma Norte. Existing visible copy, imagery and exact coordinates were not changed by this identity update."
+        },
+        {
+          "label": "OpenTable ABRASAMAR restaurant profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.opentable.com.mx/r/abrasamar-ciudad-de-mexico",
+          "note": "The current restaurant profile corroborates the Mérida 101 identity and Roma Norte location. The inherited Google Maps place link was retained; no coordinates were inferred."
+        }
+      ],
+      "unverifiedFields": [
+        "Exact map pin"
+      ],
       "group": "eat",
       "image": null
     },
@@ -210,7 +228,8 @@
       "id": "seafood-ultramarinos-demar",
       "name": "Ultramarinos Demar",
       "category": "seafood",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ultramarinos%20Demar%2C%20M%C3%A9rida%2021%2C%20Roma%20Norte%2C%20CDMX",
+      "address": "Mérida 21, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "ultramarinos.rest",
       "vibe": "Chef Lucho Martínez's fire-driven seafood spot with a diner-meets-bistro look — Michelin Bib Gourmand raw plates, pastas and an open kitchen.",
@@ -222,6 +241,20 @@
         "good for dinner"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Ultramarinos Demar official website",
+          "checkedOn": "2026-11-02",
+          "url": "https://demar.rest/",
+          "note": "The venue-managed site identifies Ultramarinos Demar at Mérida 21 in Roma Norte and matches the inherited phone and Instagram identity. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Michelin Guide Ultramarinos Demar profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/es/es/ciudad-de-mexico/cuauhtemoc_1995126/restaurante/ultramarinos-demar",
+          "note": "Corroborates the Ultramarinos Demar name, Mérida 21 address and Roma Norte location. Existing Michelin, visible copy and editorial state were not changed by this identity update."
+        }
+      ],
       "group": "eat",
       "image": null,
       "michelin": {
@@ -273,6 +306,7 @@
       "category": "bakery",
       "mapsUrl": "https://www.google.com/maps/place/Saint/data=!4m2!3m1!1s0x85d1ffcd3784285d:0xe7ab200d54e4fe35",
       "neighborhood": "Condesa",
+      "address": "Gobernador Benjamín Hill 146, Hipódromo Condesa, CDMX",
       "instagram": "saintpanaderia",
       "vibe": "French-inflected Condesa bakery obsessed with long-fermentation sourdough and buttery viennoiserie — arrive early before its handful of sidewalk tables fill.",
       "lat": null,
@@ -283,6 +317,14 @@
         "good for lunch"
       ],
       "sourceFile": "Bakery.csv",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/saintpanaderia/",
+          "note": "Profile confirms the Condesa address and official handle."
+        }
+      ],
       "group": "coffee",
       "image": null
     },
@@ -447,18 +489,27 @@
       "id": "dessert-amorino",
       "name": "Amorino",
       "category": "dessert",
-      "mapsUrl": "https://www.google.com/maps/place/Amorino/data=!4m2!3m1!1s0x85d1ffeb2a2a11c9:0x2c83f7b4f754c78",
-      "neighborhood": null,
+      "mapsUrl": "https://www.google.com/maps/place/Amorino,+C.+Orizaba+110,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.417939,-99.1594973,17z/data=!4m2!3m1!1s0x85d1ffeb2a2a11c9:0x2c83f7b4f754c78",
+      "neighborhood": "Roma Norte",
+      "address": "Orizaba 110, Roma Norte, CDMX",
       "instagram": "amorinomexico",
       "vibe": "Italian gelato hand-shaped into rose 'flowers' — the photogenic scoop of CDMX.",
-      "lat": null,
-      "lng": null,
+      "lat": 19.417939,
+      "lng": -99.1594973,
       "priceTier": null,
       "occasionTags": [
         "trendy",
         "casual"
       ],
       "sourceFile": "CDMX.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Amorino,+C.+Orizaba+110,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.417939,-99.1594973,17z/data=!4m2!3m1!1s0x85d1ffeb2a2a11c9:0x2c83f7b4f754c78",
+          "note": "Live listing confirms the Orizaba 110 branch and exact coordinates."
+        }
+      ],
       "group": "coffee",
       "image": null
     },
@@ -638,15 +689,24 @@
       "id": "healthy-la-papaya-smoothie-house",
       "name": "La Papaya Smoothie House",
       "category": "healthy",
-      "mapsUrl": "https://www.google.com/maps/place/La+Papaya+Smoothie+House/data=!4m2!3m1!1s0x85d1ff5a5505972d:0x85c92669fe66ef0e",
-      "neighborhood": null,
+      "mapsUrl": "https://www.google.com/maps/place/La+Papaya+Smoothie+House,+%C3%81msterdam+104,+Hip%C3%B3dromo,+Cuauht%C3%A9moc,+06100+Ciudad+de+M%C3%A9xico,+CDMX/@19.4129654,-99.1705904,17z/data=!4m2!3m1!1s0x85d1ff5a5505972d:0x85c92669fe66ef0e",
+      "neighborhood": "Hipódromo",
+      "address": "Ámsterdam 104, Hipódromo, CDMX",
       "instagram": null,
       "vibe": null,
-      "lat": null,
-      "lng": null,
+      "lat": 19.4129654,
+      "lng": -99.1705904,
       "priceTier": null,
       "occasionTags": [],
       "sourceFile": "Smoothie_Juice.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/La+Papaya+Smoothie+House,+%C3%81msterdam+104,+Hip%C3%B3dromo,+Cuauht%C3%A9moc,+06100+Ciudad+de+M%C3%A9xico,+CDMX/@19.4129654,-99.1705904,17z/data=!4m2!3m1!1s0x85d1ff5a5505972d:0x85c92669fe66ef0e",
+          "note": "Live listing confirms Ámsterdam 104 and exact coordinates."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -1449,10 +1509,13 @@
     },
     {
       "id": "wine-natas-wines",
+      "featuredOrder": 1,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Natas Wines",
       "category": "wine",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Natas%20Wines%2C%20Pachuca%2013%2C%20Condesa%2C%20CDMX",
       "neighborhood": "Condesa",
+      "address": "Pachuca 13, Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
       "instagram": "nataswines",
       "vibe": "An intimate Condesa wine-and-vinyl listening bar pouring vibrant French and Mexican natural wines, no food, just street-side people-watching.",
       "lat": null,
@@ -1464,16 +1527,33 @@
         "outdoor"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Official Natas Wines website",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.nataswines.com/home",
+          "note": "Confirms the Natas Wines identity and Calle Pachuca 13, Condesa location. No exact coordinates were inferred."
+        },
+        {
+          "label": "Wine Enthusiast CDMX wine-bar guide",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.wineenthusiast.com/culture/travel/mexico-city-wine/",
+          "note": "The guide, updated 2026-10-13, corroborates Natas and its @nataswines identity as a current Mexico City wine bar."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
     },
     {
       "id": "wine-niv",
+      "featuredOrder": 2,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Niv",
       "category": "wine",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=NIV%20Bar%2C%20Atlixco%20132%2C%20Condesa%2C%20CDMX",
       "neighborhood": "Condesa",
+      "address": "Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX",
       "instagram": "nivbar.mx",
       "vibe": "A candlelit Hipódromo Condesa wine bar pairing small-production French, Italian and Mexican bottles with a French-Mexican tapas menu and vinyl records.",
       "lat": null,
@@ -1486,16 +1566,33 @@
         "outdoor"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Official NIV website",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.nivbar.com/",
+          "note": "Confirms the NIV wine-bar identity in Condesa, CDMX. The site does not expose exact coordinates."
+        },
+        {
+          "label": "NIV restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com.mx/r/niv-ciudad-de-mexico",
+          "note": "Corroborates NIV Bar and its Atlixco 132, Hipódromo Condesa address, and links back to the official NIV website. No exact coordinates were inferred."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
     },
     {
       "id": "wine-oropel",
+      "featuredOrder": 3,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Oropel",
       "category": "wine",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Oropel%2C%20Chihuahua%20182%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
+      "address": "Chihuahua 182, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "instagram": "oropelcdmx",
       "vibe": "Mexico City's first vermutería, a tiny no-menu counter on Chihuahua pouring 20-plus vermouths, natural wine and mezcal shots to a sidewalk crowd.",
       "lat": null,
@@ -1507,16 +1604,33 @@
         "outdoor"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "MexBest Oropel profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mex-best.mx/gastronomia/2026/06/03/donde-comer-beber-cdmx-futbol-fer-pina/",
+          "note": "Corroborates Oropel at Chihuahua 182, Roma Norte and the @oropelcdmx identity. No exact coordinates were inferred."
+        },
+        {
+          "label": "Octavia Casa CDMX drinks guide",
+          "checkedOn": "2026-11-01",
+          "url": "https://guide.octaviacasa.mx/categorias/drinks/",
+          "note": "Lists Oropel Vermouth & Wine at Chihuahua 182, Roma Norte with @oropelcdmx. No exact coordinates were inferred."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
     },
     {
       "id": "wine-berta",
+      "featuredOrder": 4,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Berta",
       "category": "wine",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Berta%2C%20R%C3%ADo%20Hudson%2015%2C%20Cuauht%C3%A9moc%2C%20CDMX",
       "neighborhood": "Cuauhtémoc",
+      "address": "Río Hudson 15, Cuauhtémoc, 06500 Ciudad de México, CDMX",
       "instagram": "bertasinh",
       "vibe": "A close-tabled bistro and organic-wine bar from three women (Eli Varscher, Gaia Lampreabe, Sabrina Crottogini) blending Argentine, Uruguayan and Mexican plates.",
       "lat": null,
@@ -1528,6 +1642,20 @@
         "trendy"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "BERTA official Linktree",
+          "checkedOn": "2026-11-01",
+          "url": "https://linktr.ee/berta.cocina_",
+          "note": "Confirms the BERTA identity and links to its Instagram, reservations and food menu. The page does not expose exact coordinates."
+        },
+        {
+          "label": "Time Out México Berta listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/restaurantes/berta-bistro-rio-hudson",
+          "note": "Corroborates Berta as a bistro in Cuauhtémoc at Río Hudson 15, 06500. No exact coordinates were inferred."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
@@ -1536,15 +1664,24 @@
       "id": "wine-bar-rica",
       "name": "BAR-RICA",
       "category": "wine",
-      "mapsUrl": "https://www.google.com/maps/place/BAR-RICA/data=!4m2!3m1!1s0x85d1ff3669b3eea1:0x4058c4028b9b07ee",
-      "neighborhood": null,
+      "mapsUrl": "https://www.google.com/maps/place/BAR-RICA,+Av.+Tamaulipas+99,+Colonia+Condesa,+Cuauht%C3%A9moc,+06170+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.4107911,-99.1749481,17z/data=!4m2!3m1!1s0x85d1ff3669b3eea1:0x4058c4028b9b07ee",
+      "neighborhood": "Condesa",
+      "address": "Avenida Tamaulipas 99, Condesa, CDMX",
       "instagram": null,
       "vibe": null,
-      "lat": null,
-      "lng": null,
+      "lat": 19.4107911,
+      "lng": -99.1749481,
       "priceTier": null,
       "occasionTags": [],
       "sourceFile": "Vino.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/BAR-RICA,+Av.+Tamaulipas+99,+Colonia+Condesa,+Cuauht%C3%A9moc,+06170+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.4107911,-99.1749481,17z/data=!4m2!3m1!1s0x85d1ff3669b3eea1:0x4058c4028b9b07ee",
+          "note": "Live listing confirms Avenida Tamaulipas 99 and exact coordinates."
+        }
+      ],
       "group": "drinks",
       "image": null
     },
@@ -2352,10 +2489,13 @@
     },
     {
       "id": "bars-less-is-more",
+      "featuredOrder": 5,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Less is More",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Less%20is%20More%2C%20Puebla%20289%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
+      "address": "Puebla 289, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "instagram": "lessismore_mx",
       "vibe": "Author cocktails built on a minimalist, math-driven formula — a nine-drink menu split between a day-drinkery front room and a moodier back bar.",
       "lat": null,
@@ -2366,6 +2506,20 @@
         "lively atmosphere"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Less is More OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com.mx/r/less-is-more-ciudad-de-mexico?lang=en",
+          "note": "Corroborates the Less is More identity, Roma Norte neighborhood and Puebla 289 address. The listing links to the venue's CoverManager page; no exact coordinates were inferred."
+        },
+        {
+          "label": "Shaker Awards Less is More profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://shakerawards.com/less-is-more/",
+          "note": "Corroborates the Less is More name, @lessismore_mx identity and Puebla 289, Roma Norte address. Editorial featured status remains pending Ashley review."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
@@ -2584,10 +2738,13 @@
     },
     {
       "id": "nightlife-bar-amici",
+      "featuredOrder": 6,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Bar Amici",
       "category": "nightlife",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Amici%2C%20Praga%2033%2C%20Ju%C3%A1rez%2C%20CDMX",
       "neighborhood": "Juárez",
+      "address": "Praga 33, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "baramici.cdmx",
       "vibe": "Red-velvet, burlesque-glam lounge from the Piazza Pasticcio team, pouring Italian-inflected classic cocktails with bottle service.",
       "lat": null,
@@ -2598,6 +2755,20 @@
         "lively atmosphere"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Bar Amici OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/bar-amici-ciudad-de-mexico",
+          "note": "Corroborates the Bar Amici identity, @baramici.cdmx account and Praga 33, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "MexBest Bar Amici profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mex-best.mx/gastronomia/2026/07/17/11-nuevos-restaurantes-cdmx/",
+          "note": "Corroborates the Bar Amici name, @baramici.cdmx identity and Praga 33, Juárez address. Editorial featured status remains pending Ashley review."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
@@ -2807,10 +2978,13 @@
     },
     {
       "id": "mexican-fierro",
+      "featuredOrder": 7,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Fierro",
       "category": "mexican",
-      "mapsUrl": "https://www.google.com/maps/place/FIERRO/data=!4m2!3m1!1s0x85d1ffb835b6f331:0xdcbaddf0604931e1",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fierro%20Cantina%2C%20Marsella%2053%2C%20Ju%C3%A1rez%2C%20CDMX",
       "neighborhood": "Juárez",
+      "address": "Marsella 53, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "fierrocdmx",
       "vibe": "Chefs Lucía Cañas and Roberto Almaguer's contemporary neo-cantina channeling northern Mexican fire cooking, carne asada and machaca, with an all-Mexican wine list.",
       "lat": null,
@@ -2822,6 +2996,20 @@
         "trendy"
       ],
       "sourceFile": "Dinner.csv",
+      "sources": [
+        {
+          "label": "Fierro official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://fierrocantina.com/",
+          "note": "Confirms the Fierro neo-cantina identity, @fierrocdmx account and Marsella 53, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "El País Fierro profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://elpais.com/mexico/opinion/2025-07-18/fierro-una-cantina-moderna-con-alma-y-gastronomia-nortena.html",
+          "note": "Corroborates the Fierro restaurant identity and Marsella 53, Juárez address. Editorial featured status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -2911,10 +3099,13 @@
     },
     {
       "id": "mexican-pujolitto",
+      "featuredOrder": 8,
+      "featuredApprovalState": "pending-ashley-review",
       "name": "Pujolitto",
       "category": "contemporary",
-      "mapsUrl": "https://www.google.com/maps/place/Pujol.itto/data=!4m2!3m1!1s0x85d1ffd5f7106a0b:0x40ef94684acda90f",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pujol.itto%2C%20Tokio%20110%20Local%201%2C%20Ju%C3%A1rez%2C%20CDMX",
       "neighborhood": "Juárez",
+      "address": "Tokio 110 Local 1, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "pujol.itto",
       "vibe": "Enrique Olvera's intimate 12-seat bar at Tokio 110 where Japanese technique meets Mexican street-food soul in a ten-course tasting.",
       "lat": null,
@@ -2925,6 +3116,20 @@
         "good for dinner"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Pujol.itto official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://pujolitto.com/",
+          "note": "Confirms the Pujol.itto identity and Tokio 110 Local 1, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "MexBest Pujol.itto profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mex-best.mx/gastronomia/2026/05/22/6-nuevos-restaurantes-cdmx-2026/amp/",
+          "note": "Corroborates the Pujol.itto identity and official @pujol.itto account. Editorial featured status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -3014,6 +3219,7 @@
       "category": "tacos",
       "mapsUrl": "https://www.google.com/maps/place/La+Once+Mil+-+Roma+Norte/data=!4m2!3m1!1s0x85d1ff005adfb7d3:0xd652330b4035e930",
       "neighborhood": "Roma Norte",
+      "address": "Orizaba 83, Roma Norte, CDMX",
       "instagram": "tacoslaoncemil",
       "vibe": "Michelin-starred taquería from chef César de la Parra, no reservations, serving standout wagyu and picanha tacos with a wait list on a whiteboard.",
       "lat": null,
@@ -3025,6 +3231,14 @@
         "good for dinner"
       ],
       "sourceFile": "Tacos.csv",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/tacoslaoncemil/",
+          "note": "Profile lists both CDMX locations: Orizaba 83 and Monte Everest 780."
+        }
+      ],
       "group": "eat",
       "image": null,
       "michelin": {
@@ -3078,6 +3292,7 @@
       "category": "italian",
       "mapsUrl": "https://www.google.com/maps/place/La+Bellezza/data=!4m2!3m1!1s0x85d1ff0c077dbc89:0xc67610e7b4fd4166",
       "neighborhood": "Juárez",
+      "address": "Praga 14, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "labellezza.mexico",
       "vibe": "Big Mamma Group's first Latin American opening: a maximalist Perugian-courtyard trattoria with Neapolitan pizza and chef Mimmo's grandmother's ragù.",
       "lat": null,
@@ -3089,6 +3304,20 @@
         "good for dinner"
       ],
       "sourceFile": "Dinner.csv",
+      "sources": [
+        {
+          "label": "Big Mamma official La Bellezza page",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.bigmammagroup.com/es/restaurantes-italianos/la-bellezza-mexico-ciudad",
+          "note": "Confirms the La Bellezza Mexico identity and Praga 14, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "OpenTable La Bellezza listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com.mx/r/la-bellezza-ciudad-de-mexico",
+          "note": "Corroborates the La Bellezza identity and Praga 14 PB, Juárez address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -3156,8 +3385,9 @@
       "category": "contemporary",
       "mapsUrl": "https://www.google.com/maps/place/Bot%C3%A1nico/data=!4m2!3m1!1s0x85d1ffa6074f148f:0x72687d1fd40d86cd",
       "neighborhood": "Condesa",
+      "address": "Alfonso Reyes 217, Hipódromo Condesa, CDMX",
       "instagram": "botanicomx",
-      "vibe": "Modern bistro fare served around a secret cactus garden and koi pond.",
+      "vibe": "Contemporary cooking in a plant-filled setting in Hipódromo Condesa.",
       "lat": null,
       "lng": null,
       "priceTier": null,
@@ -3166,6 +3396,20 @@
         "romantic"
       ],
       "sourceFile": "Dinner.csv",
+      "sources": [
+        {
+          "label": "MICHELIN Guide live listing",
+          "checkedOn": "2026-10-30",
+          "url": "https://guide.michelin.com/kr/en/ciudad-de-mexico/cuauhtemoc_1995126/restaurant/botanico",
+          "note": "Current listing classifies Botánico as Contemporary and confirms Alfonso Reyes 217."
+        },
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/botanicomx/",
+          "note": "Confirms the official handle; no pond claim is published from this source pass."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -3251,6 +3495,7 @@
       "category": "italian",
       "mapsUrl": "https://www.google.com/maps/place/VICINATO+ristorante/data=!4m2!3m1!1s0x85d1ffe42e5a091f:0x9f814bc4163d9b74",
       "neighborhood": "Roma Norte",
+      "address": "Córdoba 234, Roma Norte, CDMX",
       "instagram": "vicinatomx",
       "vibe": "Small, warm Roma Norte Italian spot built around handmade pasta and artisanal pizzette, with a tight, carefully chosen Italian wine list.",
       "lat": null,
@@ -3261,6 +3506,14 @@
         "good for dinner"
       ],
       "sourceFile": "Italian.csv",
+      "sources": [
+        {
+          "label": "Official website",
+          "checkedOn": "2026-10-30",
+          "url": "https://vicinato.com.mx/",
+          "note": "Site confirms the Roma Norte address and links the official Instagram account."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -3307,8 +3560,9 @@
       "id": "italian-coppola-very-nice",
       "name": "Coppola Very Nice",
       "category": "italian",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Coppola%20Pizza%20Vinyl%20Bar%2C%20Hamburgo%20172%2C%20Ju%C3%A1rez%2C%20CDMX",
       "neighborhood": "Juárez",
+      "address": "Hamburgo 172, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "coppolaverynice",
       "vibe": "Sourdough New York-style pizza, craft cocktails and a vinyl soundtrack in a retro-leaning Juárez pizza-and-bar hangout with a lot of personality.",
       "lat": null,
@@ -3320,6 +3574,20 @@
         "trendy"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Official Coppola website",
+          "checkedOn": "2026-11-01",
+          "url": "https://restaurantecoppola.com/",
+          "note": "The official site confirms the Juárez restaurant identity and links its Cómo llegar action to Google Maps. The address is corroborated by the restaurant-managed OpenTable listing."
+        },
+        {
+          "label": "Restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com.mx/r/coppola-pizza-vynil-bar-ciudad-de-mexico",
+          "note": "Confirms Hamburgo 172, Juárez and the @coppolaverynice identity. No exact coordinates were inferred."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -3341,7 +3609,20 @@
       ],
       "sourceFile": "Pizza.csv",
       "group": "eat",
-      "image": null
+      "image": null,
+      "address": "Chilpancingo 35, Condesa, CDMX",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@tasteofcdmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "Official Instagram profile (indexed live search)",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/bikini_____pizza/",
+          "note": "Profile address matches the existing Bikini Pizza Maps record and catalog identity."
+        }
+      ]
     },
     {
       "id": "italian-hank-s-pizza-choza",
@@ -3442,12 +3723,27 @@
       "id": "japanese-sushi-kyo",
       "name": "Sushi Kyo",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Kyo%20Havre%2077%20Juarez%20CDMX",
+      "address": "Havre 77, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "neighborhood": "Juárez",
       "instagram": "kyosushiya",
       "vibe": "Edomae omakase at a 13-seat counter behind an unmarked door on Havre, led by chef Yoshimasa Aoki with fish flown in from Japan.",
       "lat": null,
       "lng": null,
+      "sources": [
+        {
+          "label": "Restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/kyo-ciudad-de-mexico?lang=es",
+          "note": "Confirms the Sushi Kyo identity, Havre 77 address and Edo Kobayashi website. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Marco Beteta restaurant profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mbmarcobeteta.com/sushi-kyo/",
+          "note": "Published 2026-10-21; independently corroborates the current Sushi Kyo identity and Havre 77, Juárez location."
+        }
+      ],
       "priceTier": null,
       "occasionTags": [
         "trendy",
@@ -3481,8 +3777,9 @@
       "id": "japanese-futari",
       "name": "Futari",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Futari%2C%20Colima%20152%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
+      "address": "Colima 152, Roma Norte, CDMX",
       "instagram": "maison.futari",
       "vibe": "Kappo-style sushi bar in a Roma Norte mansion, à la carte by day and prix-fixe omakase by night from Tokyo- and Kyoto-trained chefs.",
       "lat": null,
@@ -3494,6 +3791,29 @@
         "good for dinner"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.instagram.com/maison.futari/",
+          "note": "Profile confirms the Kappo bar identity and Colima 152 address."
+        },
+        {
+          "label": "Restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com.mx/restaurant/profile/1488055",
+          "note": "Confirms the Futari identity, Colima 152 address and @maison.futari website link. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Food & Travel Mexico opening profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://foodandtravel.mx/sabores/futari-el-restaurante-japones-en-la-roma-con-una-experiencia-de-barra-kappo/",
+          "note": "Dated 2026-07-07; independently corroborates the restaurant identity and Colima 152, Roma Norte location."
+        }
+      ],
+      "unverifiedFields": [
+        "Exact map pin"
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -3504,6 +3824,7 @@
       "category": "japanese",
       "mapsUrl": "https://www.google.com/maps/place/Wan+Wan+Sakaba/data=!4m2!3m1!1s0x85d1ff49d84b782b:0x260fd6263b90d58d",
       "neighborhood": "Juárez",
+      "address": "Londres 209, Juárez, CDMX",
       "instagram": "wanwansakaba",
       "vibe": "Juárez izakaya recreating a Tokyo neighborhood joint, pouring sake alongside ramen and donburi at a bar facing the open kitchen.",
       "lat": null,
@@ -3514,6 +3835,14 @@
         "lively atmosphere"
       ],
       "sourceFile": "Sushi.csv",
+      "sources": [
+        {
+          "label": "Official Instagram account and indexed live listing",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/wanwansakaba/",
+          "note": "Current indexed posts confirm the Londres 209 identity."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -3752,7 +4081,7 @@
       "id": "french-la-belle-epoque",
       "name": "La Belle Epoque",
       "category": "french",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Belle%20Epoque%2C%20Oaxaca%2080%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "labelleepoque.mx",
       "vibe": "French fine-dining newcomer with red walls and a chandelier; chef Max Righi's tarte tatin is the move.",
@@ -3766,13 +4095,31 @@
       ],
       "sourceFile": "Hotbook_July_2025.csv",
       "group": "eat",
-      "image": null
+      "image": null,
+      "address": "Oaxaca 80, Roma Norte, CDMX",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@tasteofcdmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "La Belle Epoque official website",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.labelleepoque.mx/",
+          "note": "Official site confirms Oaxaca 80, Roma Norte."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ]
     },
     {
       "id": "french-au-pied-de-cochon",
       "name": "Au Pied de Cochon",
       "category": "french",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Au%20Pied%20de%20Cochon%2C%20Campos%20El%C3%ADseos%20218%2C%20Polanco%2C%20CDMX",
+      "address": "Campos Elíseos 218, Polanco, Miguel Hidalgo, 11560 Ciudad de México, CDMX",
       "neighborhood": "Polanco",
       "instagram": "aupieddecochonmx",
       "vibe": "The 24-hour Parisian brasserie inside the InterContinental Presidente Mexico City, serving the original 1947 Les Halles onion soup and pork classics since 2000.",
@@ -3784,6 +4131,20 @@
         "lively atmosphere"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "Au Pied de Cochon official website",
+          "checkedOn": "2026-11-02",
+          "url": "https://aupieddecochon.com.mx/contacto/",
+          "note": "The venue-managed contact page identifies Au Pied de Cochon at Campos Elíseos 218 inside Presidente InterContinental Ciudad de México. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "IHG Presidente InterContinental Mexico City dining page",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.ihg.com/intercontinental/hotels/es/es/mexico/mexha/hoteldetail/dining",
+          "note": "The hotel-managed dining page corroborates Au Pied de Cochon as a restaurant inside Presidente InterContinental Mexico City. Visible copy, editorial state and imagery were not changed by this identity update."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -3872,6 +4233,7 @@
       "category": "american",
       "mapsUrl": "https://www.google.com/maps/place/Biggie%E2%80%99s/data=!4m2!3m1!1s0x85d1ff479b25bc3f:0x212f598847b4a9be",
       "neighborhood": "Juárez",
+      "address": "Roma 35, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "biggies.cdmx",
       "vibe": "A Notorious B.I.G.-inspired bistro pouring house IPA and negronis under a hip-hop bodega vibe.",
       "lat": null,
@@ -3882,6 +4244,20 @@
         "lively atmosphere"
       ],
       "sourceFile": "Hotlist.csv",
+      "sources": [
+        {
+          "label": "Time Out México Biggie’s profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/restaurantes/biggies",
+          "note": "Confirms the Biggie’s restaurant identity and Roma 35, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "Saborearte Biggie’s profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.saborearte.com.mx/biggies-en-la-juarez-sabores-de-nueva-york-al-ritmo-del-hip-hop/",
+          "note": "Corroborates the Biggie’s identity, Roma 35 address and @biggies.cdmx account. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -4087,6 +4463,7 @@
       "category": "contemporary",
       "mapsUrl": "https://www.google.com/maps/place/Tosco+Restaurante/data=!4m2!3m1!1s0x85d1ff001e7f1c57:0x11a3e8a9b8432e87",
       "neighborhood": "Juárez",
+      "address": "Londres 49, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "instagram": "toscoooooooo",
       "vibe": "One of the Juárez neighborhood's newest openings, already drawing a loyal after-work crowd.",
       "lat": null,
@@ -4098,6 +4475,20 @@
         "outdoor"
       ],
       "sourceFile": "Hotlist.csv",
+      "sources": [
+        {
+          "label": "Tosco restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/tosco-ciudad-de-mexico",
+          "note": "Confirms Tosco's restaurant identity, @toscoooooooo account and Londres 49 at Nápoles in Juárez. Exact coordinates were not inferred."
+        },
+        {
+          "label": "Marco Beteta new-restaurants profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mbmarcobeteta.com/restaurantes-nuevos-cdmx/",
+          "note": "Corroborates Tosco's identity, @toscoooooooo account and Londres 49, Juárez address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -4127,6 +4518,7 @@
       "category": "japanese",
       "mapsUrl": "https://www.google.com/maps/place/El+Mekong+%E1%9E%91%E1%9E%93%E1%9F%92%E1%9E%9B%E1%9F%81%E1%9E%98%E1%9F%81%E1%9E%82%E1%9E%84%E1%9F%92%E1%9E%82/data=!4m2!3m1!1s0x85d1ff0074baeca7:0xea92db7da3f4c31b",
       "neighborhood": "Condesa",
+      "address": "Avenida Tamaulipas 145, Hipódromo Condesa, CDMX",
       "instagram": "elmekong",
       "vibe": "Cantina-style Southeast Asian spot in Condesa serving Thai, Vietnamese, Khmer and Laotian dishes, with a free bite alongside every drink.",
       "lat": null,
@@ -4138,6 +4530,14 @@
         "good for dinner"
       ],
       "sourceFile": "Asian.csv",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/elmekong/",
+          "note": "Profile confirms the Avenida Tamaulipas 145 address and official handle."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -4164,7 +4564,7 @@
       "id": "dinner-rapsodia",
       "name": "Rapsodia",
       "category": "contemporary",
-      "mapsUrl": "https://www.google.com/maps/place/Rapsodia/data=!4m2!3m1!1s0x85d1ff43cc90de9b:0xc7dad670e7ef2bb9",
+      "mapsUrl": "",
       "neighborhood": null,
       "instagram": null,
       "vibe": null,
@@ -4173,6 +4573,19 @@
       "priceTier": null,
       "occasionTags": [],
       "sourceFile": "CDMX.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Rapsodia,+Av.+Tamaulipas+88,+Hip%C3%B3dromo+Condesa,+Cuauht%C3%A9moc,+06100+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.4108385,-99.1742807,17z/data=!4m2!3m1!1s0x85d1ff43cc90de9b:0xc7dad670e7ef2bb9",
+          "note": "The inherited place ID resolves to a women's clothing store, not a contemporary restaurant; the catalog identity remains unresolved and no pin is published."
+        }
+      ],
+      "unverifiedFields": [
+        "Venue identity and category",
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ],
       "group": "eat",
       "image": null
     },
@@ -4218,15 +4631,24 @@
       "id": "dinner-cochilada",
       "name": "Cochilada",
       "category": "contemporary",
-      "mapsUrl": "",
-      "neighborhood": null,
+      "mapsUrl": "https://www.google.com/maps/place/Cochilada,+R%C3%ADo+Duero+55,+Cuauht%C3%A9moc,+06500+Ciudad+de+M%C3%A9xico,+CDMX/@19.4266636,-99.1733582,17z/data=!4m2!3m1!1s0x85d1ff953fc3b48f:0xcb2ac949613c565d",
+      "neighborhood": "Cuauhtémoc",
+      "address": "Río Duero 55, Cuauhtémoc, CDMX",
       "instagram": null,
       "vibe": null,
-      "lat": null,
-      "lng": null,
+      "lat": 19.4266636,
+      "lng": -99.1733582,
       "priceTier": null,
       "occasionTags": [],
       "sourceFile": "Hotbook_July_2025.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Cochilada,+R%C3%ADo+Duero+55,+Cuauht%C3%A9moc,+06500+Ciudad+de+M%C3%A9xico,+CDMX/@19.4266636,-99.1733582,17z/data=!4m2!3m1!1s0x85d1ff953fc3b48f:0xcb2ac949613c565d",
+          "note": "Live listing confirms Río Duero 55 and exact coordinates."
+        }
+      ],
       "group": "eat",
       "image": null
     },
@@ -4234,7 +4656,8 @@
       "id": "dinner-casa-parral",
       "name": "Casa Parral",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Casa+Parral+Parral+5+Condesa+CDMX",
+      "address": "Parral 5, Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
       "neighborhood": "Condesa",
       "instagram": "casa.parral",
       "vibe": "Hidden café bar and dining suite tucked inside Void's vintage boutique, pairing raw-bar seafood and cheese wheels with craft cocktails by candlelight.",
@@ -4247,6 +4670,20 @@
         "good for dinner"
       ],
       "sourceFile": "New_Places_2026.csv",
+      "sources": [
+        {
+          "label": "MexBest Void profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mex-best.mx/estilo-de-vida/2025/12/09/tiendas-de-diseno-mexicano-en-cdmx-para-tus-regalos/",
+          "note": "Confirms Void's current identity and Parral 5, Condesa address inside Casa Parral. Exact coordinates were not inferred."
+        },
+        {
+          "label": "Food & Pleasure Café Parral profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://foodandpleasure.com/cafeteria-en-la-condesa/",
+          "note": "Corroborates the Parral 5 address and the café/dining operation inside Void. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "drinks",
       "image": null,
       "hot": true
@@ -4434,15 +4871,24 @@
       "id": "stores-animacura",
       "name": "Animacura",
       "category": "stores",
-      "mapsUrl": "https://www.google.com/maps/place/Animacura/data=!4m2!3m1!1s0x85d1fd7ebb715725:0x15d0d954f600c8e",
-      "neighborhood": null,
+      "mapsUrl": "https://www.google.com/maps/place/Animacura,+Chihuahua+121-Loc+Comercial,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX/@19.4175076,-99.1600071,17z/data=!4m2!3m1!1s0x85d1fd7ebb715725:0x15d0d954f600c8e",
+      "neighborhood": "Roma Norte",
+      "address": "Chihuahua 121, Roma Norte, CDMX",
       "instagram": null,
       "vibe": null,
-      "lat": null,
-      "lng": null,
+      "lat": 19.4175076,
+      "lng": -99.1600071,
       "priceTier": null,
       "occasionTags": [],
       "sourceFile": "Incense.csv",
+      "sources": [
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Animacura,+Chihuahua+121-Loc+Comercial,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX/@19.4175076,-99.1600071,17z/data=!4m2!3m1!1s0x85d1fd7ebb715725:0x15d0d954f600c8e",
+          "note": "Live listing confirms Chihuahua 121 and exact coordinates."
+        }
+      ],
       "group": "beyond",
       "image": null
     },
@@ -5065,17 +5511,32 @@
       "id": "tacos-taqueria-los-milanesos",
       "name": "Taquería Los Milanesos",
       "category": "tacos",
-      "mapsUrl": "",
-      "neighborhood": null,
-      "instagram": null,
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Taquer%C3%ADa%20Los%20Milanesos%2C%20Veracruz%20156%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%2001080%2C%20Mexico",
+      "neighborhood": "Álvaro Obregón",
+      "address": "Veracruz 156, Álvaro Obregón, 01080, Mexico",
+      "instagram": "losmilanesostaqueria",
       "vibe": "Cash-only taco stand under an orange awning, piling on breaded pork cutlet.",
-      "lat": null,
-      "lng": null,
+      "lat": 19.3415882,
+      "lng": -99.2052741,
       "priceTier": null,
       "occasionTags": [
         "casual"
       ],
       "sourceFile": "added-in-curation",
+      "sources": [
+        {
+          "label": "MICHELIN Guide: Taquería Los Milanesos",
+          "checkedOn": "2026-10-30",
+          "url": "https://guide.michelin.com/mx/es/ciudad-de-mexico/alvaro-obregon_2003790/restaurante/taqueria-los-milanesos",
+          "note": "Address and exact map coordinates; live page linked its map to 19.3415882,-99.2052741."
+        },
+        {
+          "label": "Food & Travel México: Los Milanesos",
+          "checkedOn": "2026-10-30",
+          "url": "https://foodandtravel.mx/sabores/restaurantes-en-mexico/las-taquerias-de-cdmx-recomendadas-en-la-guia-michelin-parte-2/",
+          "note": "Published Instagram handle; normalized without accent for the URL-safe account name."
+        }
+      ],
       "group": "eat",
       "michelin": {
         "year": 2026,
@@ -5087,8 +5548,9 @@
       "id": "japanese-torobi-by-kazu-kumoto",
       "name": "Torobi by Kazu Kumoto",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Torobi%20by%20Kazu%20Kumoto%2C%20Avenida%20Presidente%20Masaryk%20513%2C%20Polanco%2C%20CDMX",
       "neighborhood": "Polanco",
+      "address": "Avenida Presidente Masaryk 513, Polanco II Sección, Miguel Hidalgo, 11560 Ciudad de México, CDMX",
       "instagram": "torobimx",
       "vibe": "Chef Kazu Kumoto's Polanco spot where each table has its own built-in grill and you cook your own cuts from the best ingredients, at your own pace.",
       "lat": null,
@@ -5099,6 +5561,20 @@
         "good for dinner"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Torobi official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.torobi.com.mx/",
+          "note": "Confirms the Torobi by Kazu Kumoto identity, @torobimx account and Avenida Presidente Masaryk 513, Polanco address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "Marco Beteta Torobi profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mbmarcobeteta.com/lugares/torobi/",
+          "note": "Corroborates the Torobi restaurant identity and Avenida Presidente Masaryk 513, Polanco address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5107,7 +5583,8 @@
       "id": "japanese-max",
       "name": "Max",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=MAX+Hi-Fi+Sushi+Bar+Versalles+80+Juarez+CDMX",
+      "address": "Versalles 80, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "neighborhood": "Juárez",
       "instagram": "max.sushibar",
       "vibe": "A traditional tachinomi-style Japanese standing bar in Juárez for good food and strong drinks -- no chairs, open 5pm to close, Monday to Saturday.",
@@ -5119,6 +5596,20 @@
         "lively atmosphere"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "MAX Hi-Fi official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://maxsushi.bar/",
+          "note": "Confirms the MAX Hi-Fi sushi-bar identity, @max.sushibar account and Versalles 80, Juárez address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "MexBest MAX HiFi Sushi Bar profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://mex-best.mx/gastronomia/2026/04/01/nuevos-restaurantes-cdmx/",
+          "note": "Corroborates the MAX HiFi Sushi Bar identity and Versalles 80, Juárez address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5127,7 +5618,8 @@
       "id": "japanese-itzu-prado-sur",
       "name": "Itzu Prado Sur",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Itzu+Prado+Sur+125+Lomas+de+Chapultepec+CDMX",
+      "address": "Prado Sur 125, Lomas de Chapultepec, Miguel Hidalgo, 11000 Ciudad de México, CDMX",
       "neighborhood": "Las Virreyes",
       "instagram": "itzumx_oficial",
       "vibe": "The Lomas-Virreyes branch of Itzu, serving sushi, ramen, bowls, and a rib-eye sukiyaki alongside its usual Japanese menu.",
@@ -5139,6 +5631,20 @@
         "good for dinner"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Itzu restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/itzu-ciudad-de-mexico?lang=es",
+          "note": "Confirms the Itzu identity and Prado Sur 125, Lomas de Chapultepec address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "Quién Itzu opening report",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.quien.com/espectaculos/2026/03/13/itzu-el-nuevo-restaurante-que-ofrece-la-mejor-experiencia-de-gastronomia-japonesa-contemporanea",
+          "note": "Corroborates the 12 March 2026 opening and Prado Sur 125 address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5147,12 +5653,27 @@
       "id": "japanese-reko-mx",
       "name": "Rekō Mx",
       "category": "japanese",
-      "mapsUrl": "",
-      "neighborhood": "Cuauhtémoc",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Reko%20Paseo%20de%20la%20Reforma%20390%20Juarez%20CDMX",
+      "address": "Paseo de la Reforma 390, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+      "neighborhood": "Juárez",
       "instagram": "rekomx_",
       "vibe": "A new asian-fusion spot on Reforma -- order the tostadas, a lychee martini, and close with the chocolate cake.",
       "lat": null,
       "lng": null,
+      "sources": [
+        {
+          "label": "Alma 390 official venue page",
+          "checkedOn": "2026-11-01",
+          "url": "https://alma390.mx/",
+          "note": "Confirms Rekō as a current venue at Alma 390 on Reforma. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Time Out México restaurant profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/restaurantes/reko",
+          "note": "Published 2026-03-28; independently corroborates the Rekō identity and Reforma 390, Juárez address."
+        }
+      ],
       "priceTier": null,
       "occasionTags": [
         "trendy",
@@ -5167,8 +5688,9 @@
       "id": "japanese-tori",
       "name": "Tori",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tori%2C%20Tem%C3%ADstocles%2061%2C%20Polanco%2C%20CDMX",
       "neighborhood": "Polanco",
+      "address": "Temístocles 61, Polanco IV Sección, Miguel Hidalgo, 11550 Ciudad de México, CDMX",
       "instagram": "tori.japanese",
       "vibe": "Born in Japan, built for Mexico: a Polanco spot for rolls, nigiri, teppanyaki, and oysters.",
       "lat": null,
@@ -5179,6 +5701,20 @@
         "good for dinner"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Tori Tori official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://toritori.com.mx/",
+          "note": "Confirms the current Tori/Tori Tori Temístocles location at Temístocles 61, Polanco. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Food & Wine en Español Tori profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://foodandwineespanol.com/gastronomia/restaurantes/tori-el-clasico-japones-que-se-moderniza/",
+          "note": "Published in 2026; independently corroborates the TORI identity, @tori.japanese account and Temístocles 61, Polanco address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5187,7 +5723,8 @@
       "id": "american-maison-frite",
       "name": "Maison Frite",
       "category": "american",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Maison+Frite+Colima+298+Roma+Norte+CDMX",
+      "address": "Colima 298, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "maisonfrite",
       "vibe": "A Roma Norte spot devoted entirely to double-cooked French fries -- classic, goat cheese, or dressed up with house sauces.",
@@ -5198,6 +5735,20 @@
         "casual"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Maison Frite Uber Eats merchant listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.ubereats.com/mx/store/maison-frite/ZyHFx-CDUBilgvhNi9O60Q",
+          "note": "Confirms the Maison Frite identity and Colima 298, Cuauhtémoc, 06700 address. Exact coordinates were not inferred."
+        },
+        {
+          "label": "The Happening Maison Frite profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://thehappening.com/donde-comer-papas-a-la-francesa-cdmx/",
+          "note": "Corroborates the Maison Frite identity and Colima 298, Roma Norte address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5206,8 +5757,9 @@
       "id": "cafe-cafe-tim",
       "name": "Café Tim",
       "category": "cafe",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Tim%2C%20Dr.%20Atl%2065%2C%20Santa%20Mar%C3%ADa%20la%20Ribera%2C%20CDMX",
       "neighborhood": "Santa María la Ribera",
+      "address": "Dr. Atl 65, Santa María la Ribera, Cuauhtémoc, 06400 Ciudad de México, CDMX",
       "instagram": "cafe_tim__",
       "vibe": "A Santa María la Ribera café with good coffee and cooler-than-average merch, open Monday to Saturday.",
       "lat": null,
@@ -5218,6 +5770,20 @@
         "good for lunch"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "The Happening Café Tim profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://thehappening.com/8-nuevos-lugares-para-ir-por-un-cafecito-en-cdmx/",
+          "note": "Published 2026-09-23; identifies Café Tim at Dr. Atl 65 in Santa María la Ribera and links the @cafe_tim__ account. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "The Happening neighborhood profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://thehappening.com/nuevos-spots-que-no-estan-ni-en-la-roma-ni-en-la-condesa/",
+          "note": "Published 2026-09-10; independently dated coverage corroborates the Café Tim name, Dr. Atl 65 address and Santa María la Ribera location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "coffee",
       "image": null,
       "hot": true
@@ -5226,8 +5792,9 @@
       "id": "japanese-tatsumi",
       "name": "Tatsumi",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tatsumi%2C%20Monte%20L%C3%ADbano%20287%20B%2C%20Lomas%20de%20Chapultepec%2C%20CDMX",
       "neighborhood": "Lomas de Chapultepec",
+      "address": "Monte Líbano 287 B, Lomas de Chapultepec, Miguel Hidalgo, 11000 Ciudad de México, CDMX",
       "instagram": "tatsumi.rest",
       "vibe": "An intimate Lomas de Chapultepec sushi bar built entirely around its counter -- a self-described bridge between Mexico and Japan.",
       "lat": null,
@@ -5238,6 +5805,20 @@
         "romantic"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Tatsumi restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/tatsumi-ciudad-de-mexico?lang=es",
+          "note": "Lists Tatsumi at Monte Líbano 287 B in Lomas de Chapultepec. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "The Happening new sushi openings profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://thehappening.com/6-nuevos-restaurantes-de-sushi-en-cdmx/",
+          "note": "Published 2026-08-13; independently corroborates the Tatsumi name, Monte Líbano 287-B address and Lomas de Chapultepec location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5246,8 +5827,9 @@
       "id": "brunch-siembra-terraza",
       "name": "Siembra Terraza",
       "category": "brunch",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Siembra%20Terraza%2C%20Gobernador%20Jos%C3%A9%20Mar%C3%ADa%20Tornel%2034%2C%20San%20Miguel%20Chapultepec%2C%20CDMX",
       "neighborhood": "San Miguel Chapultepec",
+      "address": "Gobernador José María Tornel 34, San Miguel Chapultepec II Sección, Miguel Hidalgo, 11850 Ciudad de México, CDMX",
       "instagram": "siembra.terraza",
       "vibe": "From the Siembra family, a wide, warm-toned San Miguel Chapultepec terrace for breakfast, tacos, and corn-forward plates, or just drinks.",
       "lat": null,
@@ -5259,6 +5841,20 @@
         "good for lunch"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Siembra Terraza restaurant-managed OpenTable listing",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.opentable.com/r/siembra-terraza-ciudad-de-mexico?lang=es",
+          "note": "Lists Siembra Terraza at Gobernador José María Tornel 34 in San Miguel Chapultepec and links the venue's @siembra.terraza account. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Publimetro México Siembra Terraza profile",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.publimetro.com.mx/plus/2026/08/14/siembra-comedor-restaurante-de-antojos-mexicanos-con-maiz-nixtamalizado/",
+          "note": "Published 2026-08-13; independently corroborates the Siembra Terraza name, Gobernador José María Tornel 34 address and San Miguel Chapultepec location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5267,8 +5863,9 @@
       "id": "japanese-kari-kari",
       "name": "Kari Kari",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kari%20Kari%2C%20Pedregal%2035%2C%20Lomas%20Virreyes%2C%20CDMX",
       "neighborhood": "Las Virreyes",
+      "address": "Pedregal 35, Lomas Virreyes, Miguel Hidalgo, 11000 Ciudad de México, CDMX",
       "instagram": "karikarimx",
       "vibe": "A New-York-style temaki counter in Las Virreyes for fast, high-quality, everyday sushi.",
       "lat": null,
@@ -5279,6 +5876,20 @@
         "good for lunch"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Official Kari Kari site",
+          "checkedOn": "2026-11-02",
+          "url": "https://getkarikari.com/",
+          "note": "Identifies the venue as Kari Kari in Lomas Virreyes and presents it as an operating temaki restaurant. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Marco Beteta new CDMX restaurants profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://mbmarcobeteta.com/restaurantes-nuevos-cdmx/",
+          "note": "Published 2026-10; independently corroborates the Kari Kari name, Pedregal 35 address and Lomas–Virreyes location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5287,8 +5898,9 @@
       "id": "seafood-chalino-chino-coyoacan",
       "name": "Chalino Chino Coyoacán",
       "category": "seafood",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Chalino%20Chino%20Coyoac%C3%A1n%2C%20Berl%C3%ADn%20222%2C%20Del%20Carmen%2C%20CDMX",
       "neighborhood": "Coyoacán",
+      "address": "Berlín 222, Del Carmen, Coyoacán, 04100 Ciudad de México, CDMX",
       "instagram": "chalinochino.mx",
       "vibe": "The Coyoacán branch of the Sinaloa-style seafood spot with Asian touches that keeps expanding across the city.",
       "lat": null,
@@ -5301,14 +5913,29 @@
       "sourceFile": "TheHappening_2026.csv",
       "group": "eat",
       "image": null,
-      "hot": true
+      "hot": true,
+      "sources": [
+        {
+          "type": "official",
+          "url": "https://www.instagram.com/chalinochino.mx/",
+          "checkedAt": "2026-11-02",
+          "claim": "Official venue account identity for Chalino Chino."
+        },
+        {
+          "type": "editorial",
+          "url": "https://thehappening.com/nuevos-spots-que-no-estan-ni-en-la-roma-ni-en-la-condesa/",
+          "checkedAt": "2026-11-02",
+          "claim": "The Happening identifies the Coyoacán location at Berlín 222, Colonia del Carmen."
+        }
+      ]
     },
     {
       "id": "italian-fame-pizza",
       "name": "Fame Pizza",
       "category": "italian",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fame%20Pizza%2C%20Guanajuato%20240%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
+      "address": "Guanajuato 240, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "instagram": "famedehambre",
       "vibe": "CDMX's first Milano-style pizzeria, in Roma Norte -- tall, fried, and heavy on the cheese.",
       "lat": null,
@@ -5319,6 +5946,20 @@
         "trendy"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Time Out México Fame profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/restaurantes/fame",
+          "note": "Published 2026-08-12; identifies Fame at Guanajuato 240 in Roma and describes the Milano-style pizza identity. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "InStyle México new-spots profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://instyle.mx/estilo-de-vida/aburrida-de-lo-tipico-prueba-estos-nuevos-spots-en-cdmx/",
+          "note": "Dated 2026 coverage independently corroborates the Fame Pizza name, Guanajuato 240 address and Roma Norte location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5327,8 +5968,9 @@
       "id": "american-club-sandwich",
       "name": "Club Sándwich",
       "category": "american",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Club%20S%C3%A1ndwich%2C%20Fernando%20Montes%20de%20Oca%20110%2C%20Condesa%2C%20CDMX",
       "neighborhood": "Condesa",
+      "address": "Fernando Montes de Oca 110, Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
       "instagram": "clubsandwich_____",
       "vibe": "An unfussy Condesa sandwich shop open 8am to 10pm daily, doing simple things well.",
       "lat": null,
@@ -5339,6 +5981,20 @@
         "good for lunch"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Marco Beteta opening roundup",
+          "checkedOn": "2026-11-02",
+          "url": "https://mbmarcobeteta.com/restaurantes-nuevos-cdmx/",
+          "note": "The current opening roundup identifies Club Sándwich at Fernando Montes de Oca 110 in Condesa and credits @clubsandwich_____, matching the inherited venue identity. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "The Infatuation Mexico City review",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.theinfatuation.com/mexico-city/reviews/club-sandwich",
+          "note": "The 2026-10-16 review independently lists Club Sandwich at Fernando Montes de Oca 110, Colonia Condesa, Cuauhtémoc, 06140, corroborating the address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5347,8 +6003,9 @@
       "id": "dessert-myka-parque-duraznos",
       "name": "Myka Parque Duraznos",
       "category": "dessert",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=MYKA%20Greek%20Parque%20Duraznos%2C%20Bosque%20de%20Duraznos%2039%2C%20Bosques%20de%20las%20Lomas%2C%20CDMX",
       "neighborhood": "Bosque de las Lomas",
+      "address": "Bosque de Duraznos 39, Bosques de las Lomas, Miguel Hidalgo, 11700 Ciudad de México, CDMX",
       "instagram": "myka_greek.mx",
       "vibe": "A second CDMX location for the Greek frozen yogurt everyone's obsessed with, this one in Bosque de las Lomas.",
       "lat": null,
@@ -5358,6 +6015,20 @@
         "casual"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Official MYKA Greek México Linktree",
+          "checkedOn": "2026-11-02",
+          "url": "https://linktr.ee/Myka_greek.mx",
+          "note": "The official location index lists MYKA Greek - Duraznos among its CDMX branches, confirming the venue identity. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "International Frozen Yogurt Association opening report",
+          "checkedOn": "2026-11-02",
+          "url": "https://internationalfrozenyogurt.com/froyo-activity-in-august/",
+          "note": "The trade report identifies MYKA at Bosque de Duraznos 39 and @myka_greek.mx, corroborating the official location index and inherited branch identity. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "coffee",
       "image": null,
       "hot": true
@@ -5366,8 +6037,9 @@
       "id": "cafe-cafe-cruda",
       "name": "Café Cruda",
       "category": "cafe",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Cruda%2C%20Tabasco%20177%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
+      "address": "Tabasco 177, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "instagram": "cafe_cruda",
       "vibe": "A Roma Norte café built around local, agroecological sourcing -- coffee, natural wine, and bread to go.",
       "lat": null,
@@ -5378,6 +6050,20 @@
         "good for lunch"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "The Happening Café Cruda profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://thehappening.com/8-nuevos-lugares-para-ir-por-un-cafecito-en-cdmx/",
+          "note": "Published 2026-09-23; identifies Café Cruda at Tabasco 177 in Roma Norte and links the @cafe_cruda account. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "InStyle México new-cafés profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://instyle.mx/estilo-de-vida/nuevos-cafes-de-la-cdmx-que-tienes-que-conocer-ya/",
+          "note": "Published 2026-10-01; independently corroborates the Café Cruda name, Tabasco 177 address and Roma Norte location. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "coffee",
       "image": null,
       "hot": true
@@ -5386,8 +6072,9 @@
       "id": "american-taller-de-grassa",
       "name": "Taller de Grassa",
       "category": "american",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20Grassa%2C%20Insurgentes%20Sur%20427%2C%20Hip%C3%B3dromo%2C%20CDMX",
       "neighborhood": "Condesa",
+      "address": "Insurgentes Sur 427, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
       "instagram": "tallerdegrassa",
       "vibe": "The Condesa spot that gave smash burgers a proper home, open Wednesday to Sunday from 2pm.",
       "lat": null,
@@ -5398,6 +6085,20 @@
         "casual"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "InStyle México new-spots profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://instyle.mx/estilo-de-vida/aburrida-de-lo-tipico-prueba-estos-nuevos-spots-en-cdmx/",
+          "note": "Published 2026-08-19; identifies Taller de Grassa inside Not A Gallery at Insurgentes Sur 427 and describes the smash-burger concept. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Marco Beteta openings profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://mbmarcobeteta.com/restaurantes-nuevos-cdmx/",
+          "note": "The current openings profile independently identifies @tallerdegrassa at Insurgentes Sur 427 in Hipódromo and links the venue to the inherited smash-burger concept. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5406,7 +6107,8 @@
       "id": "seafood-payna",
       "name": "Payna",
       "category": "seafood",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Payna%2C%20Medell%C3%ADn%20105%2C%20Roma%20Norte%2C%20CDMX",
+      "address": "Medellín 105, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "paynamx",
       "vibe": "Fresh-forward Roma Norte seafood -- oysters, tacos, tostadas -- from a new Mexico City marisco spot.",
@@ -5418,6 +6120,20 @@
         "good for dinner"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Marco Beteta Payna profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://mbmarcobeteta.com/lugares/payna/",
+          "note": "Identifies Payna as a seafood restaurant at Medellín 105 in Roma Norte and links the venue to the inherited @paynamx identity. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "Jane Novikova Payna venue review",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.janenovikova.com/es/resenas/mexico-city/payna/",
+          "note": "Published 2026-08-28 and updated 2026-09-18; independently corroborates the Payna name, @paynamx account and Medellín 105, Roma Norte address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "eat",
       "image": null,
       "hot": true
@@ -5426,7 +6142,8 @@
       "id": "dessert-crumbl",
       "name": "Crumbl",
       "category": "dessert",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Crumbl+Durango+225+Roma+Norte+CDMX",
+      "address": "Durango 225, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "crumbl.mx",
       "vibe": "The viral pink-box cookie chain's first Mexico City spot, in Roma Norte, with a rotating weekly lineup alongside the classic chocolate chip.",
@@ -5438,12 +6155,316 @@
         "trendy"
       ],
       "sourceFile": "TheHappening_2026.csv",
+      "sources": [
+        {
+          "label": "Crumbl México official website",
+          "checkedOn": "2026-11-01",
+          "url": "https://crumblcookies.mx/",
+          "note": "Confirms Crumbl's current Mexico operation and product identity. Exact coordinates were not inferred."
+        },
+        {
+          "label": "El Financiero Crumbl México opening report",
+          "checkedOn": "2026-11-01",
+          "url": "https://www.elfinanciero.com.mx/food-and-drink/2026/07/28/cuanto-cuestan-las-crumbl-cookies-en-mexico/",
+          "note": "Corroborates the first Mexico City store opening and Durango 225, Roma Norte address. Editorial Hot status remains pending Ashley review."
+        }
+      ],
       "group": "coffee",
       "image": null,
       "hot": true
+    },
+    {
+      "id": "american-cassette",
+      "name": "Cassette",
+      "category": "american",
+      "mapsUrl": "",
+      "neighborhood": "Roma Norte",
+      "address": "Tabasco 156, Roma Norte, CDMX",
+      "hours": null,
+      "instagram": "cassette_cdmx",
+      "vibe": "Burgers, hot dogs and beer in Roma Norte, with a 1990s-rock soundtrack.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [
+        "casual",
+        "lively atmosphere"
+      ],
+      "sourceFile": "Ashley Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@thehappeningmx)",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "@cassette_cdmx and recent indexed Instagram coverage",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/cassette_cdmx/",
+          "note": "Live indexed results confirm Roma Norte and Tabasco 156."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ],
+      "group": "eat",
+      "image": null
+    },
+    {
+      "id": "cafe-ritmo-cafe",
+      "name": "Ritmo Café",
+      "category": "cafe",
+      "mapsUrl": "https://www.google.com/maps/place/Ritmo+Caf%C3%A9,+Medell%C3%ADn+78,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX/@19.4181714,-99.1659266,17z/data=!4m2!3m1!1s0x85d1ff9434f2ae51:0x992303fb322bc28",
+      "neighborhood": "Roma Norte",
+      "address": "Medellín 78, Roma Norte, CDMX",
+      "hours": null,
+      "instagram": "ritmocafe.mx",
+      "vibe": "Café by day and drinks in the evening in Roma Norte.",
+      "lat": 19.4181714,
+      "lng": -99.1659266,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Google Maps saved-list screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's Google Maps saved-list screenshot",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "Official Instagram profile and live reservation listing",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/ritmocafe.mx/",
+          "note": "Current profile and listing confirm Medellín 78 and the official handle."
+        },
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Ritmo+Caf%C3%A9,+Medell%C3%ADn+78,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX/@19.4181714,-99.1659266,17z/data=!4m2!3m1!1s0x85d1ff9434f2ae51:0x992303fb322bc28",
+          "note": "Live listing confirms Medellín 78 and exact coordinates."
+        }
+      ],
+      "group": "coffee",
+      "image": null
+    },
+    {
+      "id": "japanese-ranma",
+      "name": "RANMA",
+      "category": "japanese",
+      "mapsUrl": "https://www.google.com/maps/place/RANMA,+Liverpool+172B,+Cuauhtemoc,+Cuauht%C3%A9moc,+06600+Ciudad+de+M%C3%A9xico,+CDMX/@19.423508,-99.1655156,17z/data=!4m2!3m1!1s0x85d1ff00203eb6e1:0x24735344f7f2f17e",
+      "neighborhood": "Juárez",
+      "address": "Liverpool 172-B, Juárez, CDMX",
+      "hours": null,
+      "instagram": "ranma________",
+      "vibe": "Japanese cold bar and sushi restaurant in Juárez.",
+      "lat": 19.423508,
+      "lng": -99.1655156,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Google Maps saved-list screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's Google Maps saved-list screenshot",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "Official Instagram account and indexed live listings",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/ranma________/",
+          "note": "Multiple current live listings identify RANMA at Liverpool 172-B under this handle; an OpenTable snippet also exposes a conflicting Florencia 72 field, so the Google permalink and pin remain pending direct confirmation."
+        },
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/RANMA,+Liverpool+172B,+Cuauhtemoc,+Cuauht%C3%A9moc,+06600+Ciudad+de+M%C3%A9xico,+CDMX/@19.423508,-99.1655156,17z/data=!4m2!3m1!1s0x85d1ff00203eb6e1:0x24735344f7f2f17e",
+          "note": "Live listing confirms Liverpool 172B and exact coordinates, resolving the prior conflicting indexed field."
+        }
+      ],
+      "group": "eat",
+      "image": null
+    },
+    {
+      "id": "bars-pistilo",
+      "name": "Pistilo",
+      "category": "bars",
+      "mapsUrl": "https://www.google.com/maps/place/Pistilo,+C.+de+Chiapas+208-Loc+1,+Roma+Nte.,+Cuauht%C3%A9moc,+06760+Ciudad+de+M%C3%A9xico,+CDMX/@19.4115949,-99.1660328,17z/data=!4m2!3m1!1s0x85d1ff00253b00e7:0xabeb958ca599802c",
+      "neighborhood": "Roma Norte",
+      "address": "Chiapas 208, Roma Norte, CDMX",
+      "hours": null,
+      "instagram": "pistilomx",
+      "vibe": "Bar focused on Mexican spirits in Roma Norte.",
+      "lat": 19.4115949,
+      "lng": -99.1660328,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Google Maps saved-list screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's Google Maps saved-list screenshot",
+          "checkedOn": "2026-10-30"
+        },
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/pistilomx/",
+          "note": "Profile and current indexed posts confirm the Mexican-spirits concept, Chiapas 208 and official handle."
+        },
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Pistilo,+C.+de+Chiapas+208-Loc+1,+Roma+Nte.,+Cuauht%C3%A9moc,+06760+Ciudad+de+M%C3%A9xico,+CDMX/@19.4115949,-99.1660328,17z/data=!4m2!3m1!1s0x85d1ff00253b00e7:0xabeb958ca599802c",
+          "note": "Live listing confirms Chiapas 208, local 1, and exact coordinates."
+        }
+      ],
+      "group": "drinks",
+      "image": null
+    },
+    {
+      "id": "italian-dr-pizza-condesa",
+      "name": "Dr. Pizza — Condesa",
+      "category": "italian",
+      "mapsUrl": "https://www.google.com/maps/place/Dr.+Pizza,+Pl.+Popocat%C3%A9petl+41,+Hip%C3%B3dromo,+Cuauht%C3%A9moc,+06100+Ciudad+de+M%C3%A9xico,+CDMX/@19.4151893,-99.1679559,17z/data=!4m2!3m1!1s0x85d1ff0178515a0f:0xe736594f719f2747",
+      "neighborhood": "Condesa",
+      "address": "Plaza Popocatépetl 41, Hipódromo Condesa, CDMX",
+      "hours": null,
+      "instagram": "_dr_pizza",
+      "vibe": "Dr. Pizza's Condesa location, serving its Chicago-influenced take on Neapolitan pizza.",
+      "lat": 19.4151893,
+      "lng": -99.1679559,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Google Maps saved-list screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's Google Maps saved-list screenshot",
+          "checkedOn": "2026-10-30",
+          "note": "The screenshot names the multi-location brand without exposing a branch; Condesa is recorded as the provisional CDMX catalog location pending Ashley's confirmation of which saved pin she intended."
+        },
+        {
+          "label": "Official website",
+          "checkedOn": "2026-10-30",
+          "url": "https://drpizza.mx/",
+          "note": "Site confirms the Condesa branch at Plaza Popocatépetl 41 and links the official Instagram account."
+        },
+        {
+          "label": "Google Maps live listing",
+          "checkedOn": "2026-10-31",
+          "url": "https://www.google.com/maps/place/Dr.+Pizza,+Pl.+Popocat%C3%A9petl+41,+Hip%C3%B3dromo,+Cuauht%C3%A9moc,+06100+Ciudad+de+M%C3%A9xico,+CDMX/@19.4151893,-99.1679559,17z/data=!4m2!3m1!1s0x85d1ff0178515a0f:0xe736594f719f2747",
+          "note": "Live listing confirms the provisional Condesa branch at Plaza Popocatépetl 41 and exact coordinates."
+        }
+      ],
+      "unverifiedFields": [
+        "Intended saved-list branch"
+      ],
+      "group": "eat",
+      "image": null
+    },
+    {
+      "id": "italian-lalo-roma-norte",
+      "name": "Lalo",
+      "category": "italian",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lalo%2C%20Zacatecas%20173%2C%20Roma%20Norte%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Zacatecas 173, Roma Norte, CDMX",
+      "hours": "Monday 1–10 PM; Tuesday closed; Wednesday–Saturday 1–10 PM; Sunday 1–6 PM",
+      "instagram": "eatlalo",
+      "vibe": "Italian restaurant in Roma Norte serving fresh pasta and Roman-style pizza.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/eatlalo/",
+          "note": "Profile confirms Zacatecas 173 and the posted weekly hours."
+        },
+        {
+          "label": "Grupo Maximus venue page",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.grupomaximus.com.mx/lalo.html",
+          "note": "The venue-group page identifies Lalo at Zacatecas 173 in Roma Norte. The Google Maps URL is an identity-specific search link; no exact coordinates were inferred."
+        },
+        {
+          "label": "OpenTable Lalo restaurant profile",
+          "checkedOn": "2026-11-02",
+          "url": "https://www.opentable.com.mx/restaurant/profile/1382659",
+          "note": "The current restaurant profile corroborates the Zacatecas 173 identity and the 2026 Italian-inspired concept. Editorial draft, visible copy and imagery were not changed by this identity update."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ],
+      "group": "eat",
+      "image": null
+    },
+    {
+      "id": "mexican-la-once-mil-lomas",
+      "name": "La Once Mil - Lomas de Chapultepec",
+      "category": "tacos",
+      "mapsUrl": "",
+      "neighborhood": "Lomas de Chapultepec",
+      "address": "Monte Everest 780, Lomas de Chapultepec, CDMX",
+      "hours": null,
+      "instagram": "tacoslaoncemil",
+      "vibe": "Lomas de Chapultepec location of La Once Mil.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Official Instagram profile",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/tacoslaoncemil/",
+          "note": "Profile lists Monte Everest 780 and Orizaba 83 as separate CDMX locations."
+        }
+      ],
+      "unverifiedFields": [
+        "One entry versus two location records decision",
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ],
+      "group": "eat",
+      "image": null
+    },
+    {
+      "id": "bars-el-silverio",
+      "name": "El Silverio",
+      "category": "bars",
+      "mapsUrl": "",
+      "neighborhood": "Condesa",
+      "address": "Fernando Montes de Oca 83, Condesa, CDMX",
+      "hours": "Wednesday–Sunday, 1 PM–1 AM",
+      "instagram": "elsilverio.cdmx",
+      "vibe": "Tapas, grilled dishes and vermouth on tap in Condesa.",
+      "lat": null,
+      "lng": null,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Instagram screenshots 2026-10-30",
+      "sources": [
+        {
+          "label": "Ashley's saved Instagram screenshot (@elsilverio.cdmx)",
+          "checkedOn": "2026-10-30",
+          "url": "https://www.instagram.com/elsilverio.cdmx/",
+          "note": "Official profile confirms the address, concept and posted hours."
+        }
+      ],
+      "unverifiedFields": [
+        "Google Maps place-ID permalink",
+        "Exact map pin"
+      ],
+      "group": "drinks",
+      "image": null
     }
   ],
   "meta": {
-    "updated": "September 2026"
+    "updated": "September 2026",
+    "catalogRevisedOn": "2026-10-31",
+    "featuredSourcesCheckedOn": "2026-10-30"
   }
 }

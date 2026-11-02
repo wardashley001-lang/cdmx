@@ -61,7 +61,7 @@ export function Tabs({ items = [], value, onChange, variant = "pill", style }: T
             aria-label={it.label || it.value}
             onClick={() => onChange && onChange(it.value)}
             style={{
-              height: 34,
+              height: 44,
               padding: it.label ? "0 16px" : "0 11px",
               border: 0,
               borderRadius: "var(--radius-pill)",

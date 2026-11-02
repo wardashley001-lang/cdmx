@@ -54,6 +54,7 @@ export function MiLista() {
               price={p.priceTier}
               hot={p.hot}
               essential={p.essential}
+              michelin={p.michelin}
               note={p.vibe}
               image={photoUrl(p)}
               saved

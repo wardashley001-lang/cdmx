@@ -17,6 +17,9 @@ import type { Group, Place } from "../types";
 
 const CDMX_CENTER: [number, number] = [19.4195, -99.165];
 
+type MapCoords = { lat: number; lng: number; approximate: boolean };
+type MapEntry = { place: Place; coords: MapCoords | null };
+
 function useMobile() {
   const [m, setM] = useState(() => window.innerWidth < 760);
   useEffect(() => {
@@ -35,10 +38,10 @@ function FlyToActive({ target }: { target: [number, number] | null }) {
   return null;
 }
 
-function MapControls() {
+function MapControls({ mobile }: { mobile: boolean }) {
   const map = useMap();
   return (
-    <div style={{ position: "absolute", right: 20, top: 20, zIndex: 500, display: "flex", flexDirection: "column", gap: 10 }}>
+    <div style={{ position: "absolute", right: mobile ? 12 : 20, top: mobile ? 150 : 20, zIndex: 500, display: "flex", flexDirection: "column", gap: 10 }}>
       <IconButton icon="locate-fixed" label="Near me" variant="primary" shadow onClick={() => map.flyTo(CDMX_CENTER, 15)} />
       <IconButton icon="plus" label="Zoom in" shadow onClick={() => map.zoomIn()} />
       <IconButton icon="minus" label="Zoom out" shadow onClick={() => map.zoomOut()} />
@@ -57,20 +60,17 @@ export function Mapa() {
   const [spot, setSpot] = useState<Place | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
 
-  const plotted = useMemo(() => {
+  const entries = useMemo<MapEntry[]>(() => {
     const counters: Record<string, number> = {};
-    return DATA.places
-      .map((p) => {
-        const key = p.neighborhood ?? p.id;
-        counters[key] = (counters[key] ?? 0) + 1;
-        const coords = resolveCoords(p, counters[key]);
-        return coords ? { place: p, coords } : null;
-      })
-      .filter((x): x is { place: Place; coords: { lat: number; lng: number; approximate: boolean } } => x !== null);
+    return DATA.places.map((p) => {
+      const key = p.neighborhood ?? p.id;
+      counters[key] = (counters[key] ?? 0) + 1;
+      return { place: p, coords: resolveCoords(p, counters[key]) };
+    });
   }, []);
 
   const ql = query.trim().toLowerCase();
-  const filtered = plotted.filter(({ place }) => {
+  const filtered = entries.filter(({ place }) => {
     if (group && place.group !== group) return false;
     if (!ql) return true;
     const hay = `${place.name} ${place.neighborhood ?? ""} ${place.vibe ?? ""} ${place.category}`.toLowerCase();
@@ -103,12 +103,12 @@ export function Mapa() {
     <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
       <Tag label="All" selected={!group} onClick={() => setGroup(null)} size={mobile ? "sm" : "md"} />
       {GROUP_ORDER.map((g) => (
-        <Tag key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={plotted.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
+        <Tag key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
       ))}
     </div>
   );
 
-  const row = ({ place, coords }: { place: Place; coords: { approximate: boolean } }) => (
+  const row = ({ place, coords }: MapEntry) => (
     <div key={place.id} data-id={place.id} style={{ flex: mobile ? "0 0 86%" : "none", background: mobile && view === "map" ? "var(--leche-50)" : "transparent", borderRadius: 10, boxShadow: mobile && view === "map" ? "var(--shadow-float)" : "none", scrollSnapAlign: "start" }}>
       <SpotCard
         layout="row"
@@ -129,8 +129,10 @@ export function Mapa() {
           else setActiveId(place.id);
         }}
       />
-      {coords.approximate && (
-        <div style={{ marginLeft: 102, marginTop: -2, fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)" }}>colonia aprox.</div>
+      {(!coords || coords.approximate) && (
+        <div style={{ marginLeft: 102, marginTop: -2, fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-3)" }}>
+          {coords ? "colonia aprox." : "sin pin verificado"}
+        </div>
       )}
     </div>
   );
@@ -145,7 +147,7 @@ export function Mapa() {
   const map = (
     <MapContainer center={CDMX_CENTER} zoom={13} zoomControl={false} scrollWheelZoom style={{ position: "absolute", inset: 0, background: "var(--nude-100)" }}>
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {filtered.map(({ place, coords }) => (
+      {filtered.filter((entry): entry is { place: Place; coords: MapCoords } => entry.coords !== null).map(({ place, coords }) => (
         <Marker
           key={place.id}
           position={[coords.lat, coords.lng]}
@@ -154,8 +156,8 @@ export function Mapa() {
           zIndexOffset={place.id === activeId ? 1000 : 0}
         />
       ))}
-      <FlyToActive target={active ? [active.coords.lat, active.coords.lng] : null} />
-      <MapControls />
+      <FlyToActive target={active?.coords ? [active.coords.lat, active.coords.lng] : null} />
+      <MapControls mobile={mobile} />
     </MapContainer>
   );
 
