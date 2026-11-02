@@ -207,6 +207,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -295,6 +301,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ],
       "group": "eat",
@@ -1956,6 +1968,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -2316,6 +2334,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -3824,6 +3848,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, starred restaurants",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and star level confirmed on Michelin's own list."
         }
       ]
     },
@@ -3882,6 +3912,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, starred restaurants",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and star level confirmed on Michelin's own list."
         }
       ]
     },
@@ -3967,6 +4003,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, starred restaurants",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and star level confirmed on Michelin's own list."
         }
       ]
     },
@@ -4109,8 +4151,9 @@
       "group": "eat",
       "image": null,
       "michelin": {
-        "year": 2026,
-        "level": "green-star"
+        "year": 2025,
+        "level": "green-star",
+        "note": "Green Star awarded 2025; 2026 status not confirmed"
       },
       "address": "Antonio Sola 26, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
       "sources": [
@@ -4118,6 +4161,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide article on Baldío (Sept 2025)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/dining-out/baldio-mexico-city-michelin-guide-zero-waste",
+          "note": "Calls Baldío the first Mexico City restaurant to win a Green Star. The 2026 starred-restaurant article does not list Green Stars, so 2026 status is unconfirmed."
         }
       ]
     },
@@ -4178,6 +4227,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -4361,6 +4416,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, starred restaurants",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and star level confirmed on Michelin's own list."
         }
       ],
       "group": "eat",
@@ -5777,6 +5838,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, starred restaurants",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
+          "note": "Name and star level confirmed on Michelin's own list."
         }
       ]
     },
@@ -7225,6 +7292,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7255,6 +7328,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7264,7 +7343,7 @@
       "category": "tacos",
       "mapsUrl": "",
       "neighborhood": "Roma Norte",
-      "instagram": null,
+      "instagram": "la.ochenta.y.nueve",
       "vibe": "Tiny Roma Norte taco nook grilling carne asada and quesabirria to order, on plastic stools with no frills.",
       "lat": 19.42013,
       "lng": -99.158575,
@@ -7285,6 +7364,17 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
+        },
+        {
+          "label": "Handle listed in two independent CDMX guides (northern-style taquerías roundup; Time Out México listing)",
+          "checkedOn": "2026-11-02",
+          "note": "Not checked on Instagram itself (login wall)."
         }
       ]
     },
@@ -7315,6 +7405,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7345,6 +7441,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7375,6 +7477,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7405,6 +7513,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ]
     },
@@ -7436,6 +7550,12 @@
           "checkedOn": "2026-10-30",
           "url": "https://foodandtravel.mx/sabores/restaurantes-en-mexico/las-taquerias-de-cdmx-recomendadas-en-la-guia-michelin-parte-2/",
           "note": "Published Instagram handle; normalized without accent for the URL-safe account name."
+        },
+        {
+          "label": "Michelin Guide Mexico 2026, Bib Gourmand list (Mexico City)",
+          "checkedOn": "2026-11-02",
+          "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/mexico-s-most-affordable-restaurants-in-2026",
+          "note": "Name confirmed on Michelin's own list."
         }
       ],
       "group": "eat",
