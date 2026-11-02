@@ -2,15 +2,15 @@
 
 An interactive Mexico City catalog with Home collections, a searchable and
 filterable map/list, and a saveable **Mi lista**. The current build contains
-283 places. Editorial collections and ordering remain review candidates until
+284 places. Editorial collections and ordering remain review candidates until
 Ashley approves them; the app does not present that pending state as an
 endorsement.
 
-Catalog coverage is intentionally explicit rather than implied: all 283 records
+Catalog coverage is intentionally explicit rather than implied: all 284 records
 have exact map coordinates and a street address taken from their Google Maps
-listing (checked 2026-11-02), 22 lack a direct Google Maps place URL (the
+listing (checked 2026-11-02), 23 lack a direct Google Maps place URL (the
 Cómo llegar button falls back to a name-and-address search), 21 lack an
-Instagram handle, 4 lack a vibe note, and 283 image slots are still empty
+Instagram handle, 4 lack a vibe note, and 284 image slots are still empty
 pending identity, reuse-rights, credit, and approval checks. Prices are not
 currently published.
 
@@ -35,7 +35,7 @@ llegar, Abierto/Cerrado):
 - `src/data/categoryStyle.ts` — maps the 21 real categories onto the design
   system's 6 color/icon buckets (comer/beber/cafe/bailar/tienda/ver)
 
-Three pages: **Home** (hero + Hot ahorita + Michelin + Essentials + Tacos +
+Three pages: **Home** (hero + New & hot + La Güera's Picks + Michelin + Essentials + Tacos +
 mood tags + colonias) → **Mapa** (map, list, search and filters together) →
 **Mi lista** (saved places, persisted to `localStorage`).
 
