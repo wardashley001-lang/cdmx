@@ -127,7 +127,7 @@ export function Footer() {
         <Wordmark size={72} tone="rosa" />
         <div style={{ display: "flex", flexDirection: "column", gap: 6, alignItems: "flex-end" }}>
           <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--nude-300)" }}>
-            HECHO EN LA CDMX · UPDATED EVERY FRIDAY
+            HECHO EN LA CDMX
           </span>
           <span style={{ font: "400 14px var(--font-mono)", color: "var(--rosa-400)" }}>no ads, no sponsored spots, just taste.</span>
         </div>
