@@ -113,15 +113,15 @@ Google place IDs by hand was off by kilometers, so don't.
   del Barrio, Tacos del Valle.
 
 **Agent can do**
-- Closure and new-opening check, place by place, with dated sources. On
-  2026-11-02 an automated Google Maps sweep failed (Google stopped answering
-  after the earlier pin lookups), and a news search found no 2026 list of
-  Mexico City closures. So the catalog is **not** verified for closures. The
-  featured places were all named in Oct-Nov 2026 guides; the Michelin tags were
-  checked on 2026-11-02. Em's address (Ámsterdam 76, Condesa) matches Google;
-  a Wikipedia claim that it moved in October 2026 was not confirmed.
+- Closure and new-opening check. OpenClaw checked the 9 New & hot, 4 Picks and 10
+  added Michelin places on 2026-11-03 from official sites and dated editorial coverage
+  (`la-gueras-guide/deliverables/2026-11-03-closure-opening-check/` in the private
+  repo). All were found open except La Once Mil's Roma Norte branch, which public
+  sources don't confirm (Ashley has visited it; re-check). Those results are in each
+  place's `sources[]`. The rest of the catalog is **not** checked for closures: an
+  automated Google Maps sweep failed on 2026-11-02 and no 2026 closure list exists.
 - Direct Google Maps place URLs for places that only have a name-and-address
-  search link.
+  search link (every record now has at least that fallback link).
 - Add the remaining Michelin-listed places that aren't in the guide yet. Ashley
   said yes on 2026-11-02. 10 are added (Pujol, Esquina Común, Máximo, Expendio de
   Maíz, Raíz, Aleli Rooftop, Jowong, Caracol de Mar, Comedor Jacinta, Molino El
