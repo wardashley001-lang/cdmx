@@ -37,12 +37,12 @@ that browser's `localStorage`).
 - Home order, top to bottom: hero (search); **New & hot** (four tiles, "See all 9");
   **La Güera's Picks** (4, wording approved by Ashley); the "What are you in the
   mood for?" buttons (Eat, Drinks, Coffee & Sweets, Beyond Food, Tacos); colonia
-  tiles; then "More from la güera" (placeholder cards: free starter, itineraries,
-  Instagram) and, when switched on, the email spot. All place discovery comes before
+  tiles; then "More from la güera" (placeholder cards matching OpenClaw's deliverables: free
+  starter, the guide (itineraries and notes; the paid product), Instagram) and, when switched on, the email spot. All place discovery comes before
   the not-yet-live items. No Michelin, Essentials, Tacos or Cafés shelf on Home
   (Ashley, 2026-11-03). El Silverio and Lalo are on both New & hot and Picks at her
   request. The placeholder cards carry no status label (Ashley: wording would have
-  to change at launch); make one a link by setting `href` on its entry in `SOON`
+  to change at launch); make one a link by setting `href` on its entry in `MORE`
   in `Home.tsx` once she approves the destination. The Instagram card links to
   https://www.instagram.com/laguerasguide/ (Ashley asked for it, 2026-11-03). No price
   or live email form on Home until she says so. The Michelin tags, badges and the

@@ -58,22 +58,22 @@ function ShelfHead({ eyebrow, title, blurb, seeAll }: { eyebrow: string; title: 
   );
 }
 
-type SoonCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string };
+type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string };
 
-const SOON: SoonCard[] = [
-  { title: <>Free <i>starter</i></>, blurb: "Four places I'd send you to first, for your phone.", pattern: "var(--pattern-checker)" },
-  { title: <>Itineraries</>, blurb: "Plans for a few days in the city.", pattern: "var(--pattern-gingham)" },
+const MORE: MoreCard[] = [
+  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)" },
+  { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)" },
   { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
 
-function SoonBand() {
+function MoreBand() {
   return (
     <Section style={{ background: "var(--leche-50)", padding: "36px 20px" }}>
       <h2 className="text-[34px] sm:text-[44px]" style={{ margin: "0 0 20px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
         More from <i>la güera</i>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        {SOON.map((c, i) => {
+        {MORE.map((c, i) => {
           const inner = (
             <>
               <div style={{ height: 44, borderRadius: 4, background: c.pattern }} />
@@ -317,7 +317,7 @@ export function Home() {
       </Section>
 
       {/* More from la güera (placeholders until each has a destination) */}
-      <SoonBand />
+      <MoreBand />
 
       <EmailSpot />
 
