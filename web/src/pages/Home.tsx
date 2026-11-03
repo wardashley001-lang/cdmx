@@ -69,9 +69,8 @@ const SOON: SoonCard[] = [
 function SoonBand() {
   return (
     <Section style={{ background: "var(--leche-50)", padding: "36px 20px" }}>
-      <Eyebrow color="var(--rosa-600)">More from la güera</Eyebrow>
-      <h2 className="text-[34px] sm:text-[44px]" style={{ margin: "8px 0 20px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
-        In the <i>works</i>
+      <h2 className="text-[34px] sm:text-[44px]" style={{ margin: "0 0 20px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
+        More from <i>la güera</i>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
         {SOON.map((c, i) => {
@@ -79,10 +78,12 @@ function SoonBand() {
             <>
               <div style={{ height: 44, borderRadius: 4, background: c.pattern }} />
               <div style={{ marginTop: 12, fontFamily: "var(--font-serif)", fontSize: 28, lineHeight: 1, letterSpacing: "-.02em" }}>{c.title}</div>
-              <p style={{ margin: "6px 0 10px", font: "400 15px/1.45 var(--font-sans)", color: "var(--text-2)" }}>{c.blurb}</p>
-              <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".2em", textTransform: "uppercase", color: c.href ? "var(--rosa-600)" : "var(--text-3)" }}>
-                {c.href ? "Open" : "In the works"}
-              </span>
+              <p style={{ margin: "6px 0 2px", font: "400 15px/1.45 var(--font-sans)", color: "var(--text-2)" }}>{c.blurb}</p>
+              {c.href && (
+                <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".2em", textTransform: "uppercase", color: "var(--rosa-600)" }}>
+                  Open
+                </span>
+              )}
             </>
           );
           const box: React.CSSProperties = { display: "block", padding: 16, borderRadius: 8, border: "1px solid var(--line-soft)", background: "var(--leche-0)", textDecoration: "none", color: "inherit" };
@@ -228,7 +229,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* In the works */}
+      {/* More from la güera (placeholders until each has a destination) */}
       <SoonBand />
 
       {/* New & hot */}
