@@ -16,7 +16,7 @@ export function Wordmark({ size = 32, tone = "vino", style }: { size?: number; t
   return (
     <span style={{ position: "relative", display: "inline-block", lineHeight: 1, paddingBottom: size * 0.75, paddingRight: size * 0.35, ...style }}>
       <span style={{ fontFamily: "var(--font-caps)", fontWeight: 800, fontSize: size, letterSpacing: "-.02em", color: t.caps, whiteSpace: "nowrap", lineHeight: 0.9, display: "block" }}>
-        LA GÜERA
+        LA GÜERA’S
       </span>
       <span style={{ position: "absolute", right: 0, top: size * 0.6, fontFamily: "var(--font-script)", fontSize: size * 1.25, lineHeight: 1, color: t.script, whiteSpace: "nowrap", transform: "rotate(-4deg)" }}>
         guide
