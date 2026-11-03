@@ -95,6 +95,19 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
               {saved ? "Guardado" : "Guardar"}
             </Button>
           </div>
+          {spot.gallery && spot.gallery.length > 0 && (
+            <div style={{ display: "flex", gap: 8, overflowX: "auto", marginTop: 18, paddingBottom: 4, scrollbarWidth: "thin" }}>
+              {spot.gallery.map((g) => (
+                <img
+                  key={g}
+                  src={`${import.meta.env.BASE_URL}${g.replace(/^\//, "")}`}
+                  alt={`${spot.name}`}
+                  loading="lazy"
+                  style={{ height: 130, aspectRatio: "4/5", objectFit: "cover", borderRadius: 4, flex: "none" }}
+                />
+              ))}
+            </div>
+          )}
           {spot.occasionTags.length > 0 && (
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 18 }}>
               {spot.occasionTags.map((t) => (

@@ -41,7 +41,7 @@ that browser's `localStorage`).
   are on both New & hot and Picks at Ashley's request.
 - Michelin tags (19 places) were checked against Michelin's 2026 lists on
   2026-11-02. Baldío's Green Star is dated 2025.
-- One place has a photo (El Bar). The other 284 show a pink initial tile.
+- Two places have photos (El Bar; El Silverio, with four more in its detail view). The rest show a pink initial tile. Ashley wants every photo in the app and on Instagram to share one look: use `brand/photo-grade/grade.py` on her originals (ask for original files, not screenshots, when possible).
 - Deploys on every push to `main` that touches `web/**`
   (`.github/workflows/deploy-web.yml`, about one to two minutes).
 

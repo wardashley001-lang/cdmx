@@ -67,6 +67,7 @@ export interface Place {
   /** Path under web/public, e.g. "photos/contramar.jpg". */
   image?: string | null;
   imageCredit?: string;
+  gallery?: string[];
 }
 
 export interface PlacesData {

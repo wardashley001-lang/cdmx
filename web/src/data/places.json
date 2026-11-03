@@ -8596,6 +8596,11 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Ashley's own photos at El Silverio (seafood tower, steak, swan cream puff, clams, chocolate tart)",
+          "checkedOn": "2026-11-03",
+          "note": "Supplied by Ashley (Instagram story screenshots, taken 2026-10-22), approved for the app. Colour-graded with brand/photo-grade/grade.py and cropped to 4:5. The napkin and plates in the photos read el Silverio."
         }
       ],
       "unverifiedFields": [
@@ -8603,14 +8608,21 @@
         "Exact map pin"
       ],
       "group": "drinks",
-      "image": null,
+      "image": "photos/bars-el-silverio.jpg",
       "pick": {
         "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador with the energy of a gastronomic pub, which is exactly the point.",
         "approvedOn": "2026-11-02"
       },
       "hot": true,
       "featuredOrder": 1,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "gallery": [
+        "photos/bars-el-silverio-2.jpg",
+        "photos/bars-el-silverio-3.jpg",
+        "photos/bars-el-silverio-4.jpg",
+        "photos/bars-el-silverio-5.jpg"
+      ],
+      "imageCredit": "Photo: La Güera"
     },
     {
       "id": "wine-astronomic",
