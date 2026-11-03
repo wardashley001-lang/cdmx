@@ -36,8 +36,9 @@ that browser's `localStorage`).
 - Home shelves, four tiles each with a "See all" button to the filtered map:
   **New & hot** (9 on the map, chosen by Ashley), **La Güera's Picks** (4, wording
   approved by Ashley), Best Tacos, Cafés & more, then mood tags and colonias.
-  An "In the works" band (free starter, itineraries, Instagram) sits right under
-  the hero (Ashley: not "coming soon", since OpenClaw is working on them). Its cards are placeholders: make one a link by setting `href` on its entry
+  A "More from la güera" band (free starter, itineraries, Instagram) sits right
+  under the hero. The cards carry no status label on purpose (Ashley: no "coming
+  soon" or "in the works", since the wording would have to change at launch). Its cards are placeholders: make one a link by setting `href` on its entry
   in `SOON` in `Home.tsx` once Ashley approves the destination. No price, email
   form or Instagram handle on Home until she says so.
   Ashley chose not to feature Michelin or Essentials on Home (2026-11-03). The
