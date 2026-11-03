@@ -112,11 +112,14 @@ export function Home() {
       return out;
     };
     const tacos = DATA.places.filter((p) => p.category === "tacos").sort((x, y) => x.name.localeCompare(y.name));
+    // The shelf shows only taquerías from Ashley's own saved lists that have a real description,
+    // not the Michelin additions made during curation. "See all" still opens every taco place on the map.
+    const ownTacos = tacos.filter((p) => p.sourceFile !== "added-in-curation" && (p.vibe?.length ?? 0) > 60);
     const cafes = DATA.places
       .filter((p) => p.group === "coffee")
       .sort((x, y) => Number(!(x.essential || x.hot)) - Number(!(y.essential || y.hot)) || x.name.localeCompare(y.name));
     return {
-      tacoShelf: take(tacos),
+      tacoShelf: take(ownTacos),
       tacoTotal: tacos.length,
       cafeShelf: take(cafes),
       cafeTotal: cafes.length,
