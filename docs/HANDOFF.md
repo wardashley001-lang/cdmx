@@ -31,21 +31,21 @@ that browser's `localStorage`).
 
 ## Current state (2026-11-02)
 
-- 285 places in `web/src/data/places.json`, every one with exact `lat`/`lng` and
-  a street address from its Google Maps listing.
-- Home shelves, four tiles each with a "See all" button to the filtered map:
-  **New & hot** (9 on the map, chosen by Ashley), **La Güera's Picks** (4, wording
-  approved by Ashley), then the "What are you in the mood for?" buttons (Eat, Drinks,
-  Coffee & Sweets, Beyond Food, Tacos) and colonias. No Tacos or Cafés shelf on Home
-  (Ashley, 2026-11-03); their buttons open the filtered map.
-  A "More from la güera" band (free starter, itineraries, Instagram) sits after
-  La Güera's Picks and before the mood buttons (Ashley did not want it first). The cards carry no status label on purpose (Ashley: no "coming
-  soon" or "in the works", since the wording would have to change at launch). Its cards are placeholders: make one a link by setting `href` on its entry
-  in `SOON` in `Home.tsx` once Ashley approves the destination. No price, email
-  form or Instagram handle on Home until she says so.
-  Ashley chose not to feature Michelin or Essentials on Home (2026-11-03). The
-  Michelin tags and badges stay in the data; `/mapa?f=michelin` still filters. A place shows on only one of the later shelves. El Silverio and Lalo
-  are on both New & hot and Picks at Ashley's request.
+- 295 places in `web/src/data/places.json`; 285 have exact `lat`/`lng` and
+  a street address from its Google Maps listing, and 10 Michelin additions have
+  building-level OpenStreetMap pins.
+- Home order, top to bottom: hero (search); **New & hot** (four tiles, "See all 9");
+  **La Güera's Picks** (4, wording approved by Ashley); the "What are you in the
+  mood for?" buttons (Eat, Drinks, Coffee & Sweets, Beyond Food, Tacos); colonia
+  tiles; then "More from la güera" (placeholder cards: free starter, itineraries,
+  Instagram) and, when switched on, the email spot. All place discovery comes before
+  the not-yet-live items. No Michelin, Essentials, Tacos or Cafés shelf on Home
+  (Ashley, 2026-11-03). El Silverio and Lalo are on both New & hot and Picks at her
+  request. The placeholder cards carry no status label (Ashley: wording would have
+  to change at launch); make one a link by setting `href` on its entry in `SOON`
+  in `Home.tsx` once she approves the destination. No price, email form or Instagram
+  handle on Home until she says so. The Michelin tags, badges and the
+  `/mapa?f=michelin` filter remain.
 - Michelin tags (19 places) were checked against Michelin's 2026 lists on
   2026-11-02. Baldío's Green Star is dated 2025.
 - Two places have photos (El Bar; El Silverio, with four more in its detail view). The rest show a pink initial tile. Ashley wants every photo in the app and on Instagram to share one look: use `brand/photo-grade/grade.py` on her originals (ask for original files, not screenshots, when possible).
