@@ -147,8 +147,10 @@ site shows nothing and collects nothing. It posts a plain HTML form to the provi
 form URL. Before switching it on, Ashley must approve: the provider (OpenClaw's
 preflight leaned to Kit's free tier), creating that account, the consent and privacy
 wording (the lines in the component are drafts), the sender name, and what people
-receive (the starter PDF). Then add the URL as a repository variable, pass it to the
-build step in `.github/workflows/deploy-web.yml`, and test on a real iPhone:
+receive (the starter PDF). Then set the form URL as the repository variable `VITE_EMAIL_FORM_ACTION` (GitHub:
+Settings > Secrets and variables > Actions > Variables; the deploy workflow already
+passes it to the build) and re-run the deploy. The Free starter card then scrolls to
+the form. Test on a real iPhone:
 form, confirmation email, PDF, unsubscribe. Don't collect emails any other way.
 
 **Domain (not done)**

@@ -58,10 +58,14 @@ function ShelfHead({ eyebrow, title, blurb, seeAll }: { eyebrow: string; title: 
   );
 }
 
-type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string };
+// Email signup: see EmailSpot below. Hidden until VITE_EMAIL_FORM_ACTION is set at build time.
+const EMAIL_FORM_ACTION = (import.meta.env.VITE_EMAIL_FORM_ACTION as string | undefined) ?? "";
+const EMAIL_SPOT_ID = "email-spot";
+
+type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string; scrollTo?: string };
 
 const MORE: MoreCard[] = [
-  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)" },
+  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", scrollTo: EMAIL_FORM_ACTION ? EMAIL_SPOT_ID : undefined },
   { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)" },
   { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
@@ -87,6 +91,14 @@ function MoreBand() {
             </>
           );
           const box: React.CSSProperties = { display: "block", padding: 16, borderRadius: 8, border: "1px solid var(--line-soft)", background: "var(--leche-0)", textDecoration: "none", color: "inherit" };
+          if (c.scrollTo) {
+            const id = c.scrollTo;
+            return (
+              <button key={i} type="button" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })} style={{ ...box, width: "100%", textAlign: "left", cursor: "pointer", font: "inherit" }}>
+                {inner}
+              </button>
+            );
+          }
           return c.href ? (
             <a key={i} href={c.href} {...(c.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} style={box}>{inner}</a>
           ) : (
@@ -101,13 +113,12 @@ function MoreBand() {
 // Email signup. Hidden until a form endpoint is set at build time (VITE_EMAIL_FORM_ACTION),
 // so nothing appears, and nothing is collected, until Ashley has approved a provider,
 // the consent wording and the delivery path. Wording below is a draft for her approval.
-const EMAIL_FORM_ACTION = (import.meta.env.VITE_EMAIL_FORM_ACTION as string | undefined) ?? "";
 
 function EmailSpot() {
   if (!EMAIL_FORM_ACTION) return null;
   return (
     <Section style={{ background: "var(--rosa-100)", padding: "40px 20px" }}>
-      <div style={{ maxWidth: 560 }}>
+      <div id={EMAIL_SPOT_ID} style={{ maxWidth: 560, scrollMarginTop: 90 }}>
         <h2 className="text-[34px] sm:text-[44px]" style={{ margin: "0 0 12px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
           Get the <i>starter</i>
         </h2>
