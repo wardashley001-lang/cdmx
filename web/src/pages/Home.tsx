@@ -98,6 +98,43 @@ function SoonBand() {
   );
 }
 
+// Email signup. Hidden until a form endpoint is set at build time (VITE_EMAIL_FORM_ACTION),
+// so nothing appears, and nothing is collected, until Ashley has approved a provider,
+// the consent wording and the delivery path. Wording below is a draft for her approval.
+const EMAIL_FORM_ACTION = (import.meta.env.VITE_EMAIL_FORM_ACTION as string | undefined) ?? "";
+
+function EmailSpot() {
+  if (!EMAIL_FORM_ACTION) return null;
+  return (
+    <Section style={{ background: "var(--rosa-100)", padding: "40px 20px" }}>
+      <div style={{ maxWidth: 560 }}>
+        <h2 className="text-[34px] sm:text-[44px]" style={{ margin: "0 0 12px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
+          Get the <i>starter</i>
+        </h2>
+        <p style={{ margin: "0 0 18px", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)" }}>
+          Four places I&apos;d send you to first, in your inbox.
+        </p>
+        <form action={EMAIL_FORM_ACTION} method="post" target="_blank" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          <input
+            type="email"
+            name="email_address"
+            required
+            placeholder="Your email"
+            aria-label="Your email"
+            style={{ flex: "1 1 240px", height: 48, padding: "0 16px", borderRadius: 999, border: "1px solid var(--line-soft)", font: "400 16px var(--font-sans)", background: "var(--leche-0)" }}
+          />
+          <Button type="submit" variant="pink" iconRight="arrow-right">
+            Send it
+          </Button>
+        </form>
+        <p style={{ margin: "12px 0 0", font: "400 13px/1.5 var(--font-mono)", color: "var(--text-3)" }}>
+          I&apos;ll email you the starter. Unsubscribe any time.
+        </p>
+      </div>
+    </Section>
+  );
+}
+
 function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave: (p: Place) => void; onOpen: (p: Place) => void; isSaved: (id: string) => boolean }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-3.5 gap-y-7 sm:gap-8">
@@ -236,6 +273,8 @@ export function Home() {
 
       {/* More from la güera (placeholders until each has a destination) */}
       <SoonBand />
+
+      <EmailSpot />
 
       {/* Mood tags */}
       <section style={{ background: "var(--rosa-200)" }}>
