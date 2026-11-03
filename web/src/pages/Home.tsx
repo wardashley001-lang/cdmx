@@ -10,12 +10,11 @@ import { DATA, noteOf, photoUrl } from "../lib/data";
 import { GROUP_LABEL, GROUP_ORDER } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
-import type { Michelin, Place } from "../types";
+import type { Place } from "../types";
 
 const HOOD_PATTERNS = ["var(--pattern-checker)", "var(--pattern-gingham)", "var(--pattern-storia)", "var(--pattern-carpet)", "var(--pattern-stripes)"];
 
 const SHELF_SIZE = 4;
-const LEVEL_RANK: Record<Michelin["level"], number> = { "two-star": 0, "one-star": 1, "green-star": 2, bib: 3 };
 
 function displayDate(value?: string) {
   if (!value) return "date pending";
@@ -105,25 +104,18 @@ export function Home() {
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
   const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
-  const { michelinShelf, michelinTotal, tacoShelf, tacoTotal, cafeShelf, cafeTotal } = useMemo(() => {
+  const { tacoShelf, tacoTotal, cafeShelf, cafeTotal } = useMemo(() => {
     const shown = new Set([...hotShelf, ...picks].map((p) => p.id));
     const take = (list: Place[]) => {
       const out = list.filter((p) => !shown.has(p.id)).slice(0, SHELF_SIZE);
       out.forEach((p) => shown.add(p.id));
       return out;
     };
-    const michelin = DATA.places
-      .filter((p) => p.michelin)
-      .sort((x, y) => LEVEL_RANK[x.michelin!.level] - LEVEL_RANK[y.michelin!.level] || x.name.localeCompare(y.name));
-    const tacos = DATA.places
-      .filter((p) => p.category === "tacos")
-      .sort((x, y) => Number(!x.michelin) - Number(!y.michelin) || x.name.localeCompare(y.name));
+    const tacos = DATA.places.filter((p) => p.category === "tacos").sort((x, y) => x.name.localeCompare(y.name));
     const cafes = DATA.places
       .filter((p) => p.group === "coffee")
       .sort((x, y) => Number(!(x.essential || x.hot)) - Number(!(y.essential || y.hot)) || x.name.localeCompare(y.name));
     return {
-      michelinShelf: take(michelin),
-      michelinTotal: michelin.length,
       tacoShelf: take(tacos),
       tacoTotal: tacos.length,
       cafeShelf: take(cafes),
@@ -216,18 +208,6 @@ export function Home() {
         <Section style={{ background: "var(--rosa-100)" }}>
           <ShelfHead eyebrow="In my words" title={<>La Güera&apos;s <i>Picks</i></>} blurb="The places I'd send a friend to first." />
           <CardGrid places={picks} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
-        </Section>
-      )}
-
-      {/* Michelin 2026 */}
-      {michelinShelf.length > 0 && (
-        <Section style={{ background: "var(--leche-50)" }}>
-          <ShelfHead
-            eyebrow="Announced May 2026"
-            title={<>The <i>Michelin</i> Guide</>}
-            seeAll={{ label: `See all ${michelinTotal}`, onClick: () => goToMap(undefined, undefined, "michelin") }}
-          />
-          <CardGrid places={michelinShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 

@@ -33,9 +33,11 @@ that browser's `localStorage`).
 
 - 285 places in `web/src/data/places.json`, every one with exact `lat`/`lng` and
   a street address from its Google Maps listing.
-- Home shelf order: **New & hot** (9, chosen by Ashley), **La Güera's Picks**
-  (4, wording approved by Ashley), Michelin, Essentials, Best Tacos, mood tags,
-  colonias. A place shows on only one of the later shelves. El Silverio and Lalo
+- Home shelves, four tiles each with a "See all" button to the filtered map:
+  **New & hot** (9 on the map, chosen by Ashley), **La Güera's Picks** (4, wording
+  approved by Ashley), Best Tacos, Cafés & more, then mood tags and colonias.
+  Ashley chose not to feature Michelin or Essentials on Home (2026-11-03). The
+  Michelin tags and badges stay in the data; `/mapa?f=michelin` still filters. A place shows on only one of the later shelves. El Silverio and Lalo
   are on both New & hot and Picks at Ashley's request.
 - Michelin tags (19 places) were checked against Michelin's 2026 lists on
   2026-11-02. Baldío's Green Star is dated 2025.
