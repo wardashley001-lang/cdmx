@@ -209,9 +209,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* More from la güera (placeholders until each has a destination) */}
-      <SoonBand />
-
       {/* New & hot */}
       {hotShelf.length > 0 && (
         <Section>
@@ -236,6 +233,9 @@ export function Home() {
           <CardGrid places={picks} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
+
+      {/* More from la güera (placeholders until each has a destination) */}
+      <SoonBand />
 
       {/* Mood tags */}
       <section style={{ background: "var(--rosa-200)" }}>
