@@ -38,7 +38,7 @@ llegar, Abierto/Cerrado):
 - `src/data/categoryStyle.ts` — maps the 21 real categories onto the design
   system's 6 color/icon buckets (comer/beber/cafe/bailar/tienda/ver)
 
-Three pages: **Home** (hero + More from la güera + New & hot + La Güera's Picks +
+Three pages: **Home** (hero + New & hot + La Güera's Picks + More from la güera +
 mood tags + colonias) → **Mapa** (map, list, search and filters together) →
 **Mi lista** (saved places, persisted to `localStorage`).
 

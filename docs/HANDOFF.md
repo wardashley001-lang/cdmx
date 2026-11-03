@@ -38,8 +38,8 @@ that browser's `localStorage`).
   approved by Ashley), then the "What are you in the mood for?" buttons (Eat, Drinks,
   Coffee & Sweets, Beyond Food, Tacos) and colonias. No Tacos or Cafés shelf on Home
   (Ashley, 2026-11-03); their buttons open the filtered map.
-  A "More from la güera" band (free starter, itineraries, Instagram) sits right
-  under the hero. The cards carry no status label on purpose (Ashley: no "coming
+  A "More from la güera" band (free starter, itineraries, Instagram) sits after
+  La Güera's Picks and before the mood buttons (Ashley did not want it first). The cards carry no status label on purpose (Ashley: no "coming
   soon" or "in the works", since the wording would have to change at launch). Its cards are placeholders: make one a link by setting `href` on its entry
   in `SOON` in `Home.tsx` once Ashley approves the destination. No price, email
   form or Instagram handle on Home until she says so.
