@@ -144,27 +144,7 @@ export function Home() {
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
   const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
-  const { tacoShelf, tacoTotal, cafeShelf, cafeTotal } = useMemo(() => {
-    const shown = new Set([...hotShelf, ...picks].map((p) => p.id));
-    const take = (list: Place[]) => {
-      const out = list.filter((p) => !shown.has(p.id)).slice(0, SHELF_SIZE);
-      out.forEach((p) => shown.add(p.id));
-      return out;
-    };
-    const tacos = DATA.places.filter((p) => p.category === "tacos").sort((x, y) => x.name.localeCompare(y.name));
-    // The shelf shows only taquerías from Ashley's own saved lists that have a real description,
-    // not the Michelin additions made during curation. "See all" still opens every taco place on the map.
-    const ownTacos = tacos.filter((p) => p.sourceFile !== "added-in-curation" && (p.vibe?.length ?? 0) > 60);
-    const cafes = DATA.places
-      .filter((p) => p.group === "coffee")
-      .sort((x, y) => Number(!(x.essential || x.hot)) - Number(!(y.essential || y.hot)) || x.name.localeCompare(y.name));
-    return {
-      tacoShelf: take(ownTacos),
-      tacoTotal: tacos.length,
-      cafeShelf: take(cafes),
-      cafeTotal: cafes.length,
-    };
-  }, [hotShelf, picks]);
+  const tacoCount = useMemo(() => DATA.places.filter((p) => p.category === "tacos").length, []);
 
   const hoods = useMemo(() => {
     const counts = new Map<string, number>();
@@ -257,22 +237,6 @@ export function Home() {
         </Section>
       )}
 
-      {/* Best tacos */}
-      {tacoShelf.length > 0 && (
-        <Section>
-          <ShelfHead eyebrow="Obsessed" title={<>Best <i>Tacos</i></>} seeAll={{ label: `See all ${tacoTotal}`, onClick: () => goToMap(undefined, undefined, "tacos") }} />
-          <CardGrid places={tacoShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
-        </Section>
-      )}
-
-      {/* Cafés */}
-      {cafeShelf.length > 0 && (
-        <Section style={{ background: "var(--leche-50)" }}>
-          <ShelfHead eyebrow="Coffee & sweets" title={<>Cafés <i>&amp; more</i></>} seeAll={{ label: `See all ${cafeTotal}`, onClick: () => goToMap(undefined, "coffee") }} />
-          <CardGrid places={cafeShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
-        </Section>
-      )}
-
       {/* Mood tags */}
       <section style={{ background: "var(--rosa-200)" }}>
         <div className="flex-col sm:flex-row" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px", display: "flex", gap: 32, alignItems: "center", justifyContent: "space-between" }}>
@@ -289,6 +253,12 @@ export function Home() {
                 style={{ background: "var(--leche-50)", borderColor: "transparent", height: 40, padding: "0 18px" }}
               />
             ))}
+            <Tag
+              label="Tacos"
+              onClick={() => goToMap(undefined, undefined, "tacos")}
+              count={tacoCount}
+              style={{ background: "var(--leche-50)", borderColor: "transparent", height: 40, padding: "0 18px" }}
+            />
           </div>
         </div>
       </section>
