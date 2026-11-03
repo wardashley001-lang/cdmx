@@ -139,6 +139,17 @@ Google place IDs by hand was off by kilometers, so don't.
 - Link-preview image once the final domain is known.
 - Brand assets (Instagram profile picture options) are in `brand/`.
 
+**Email signup spot (built, switched off)**
+`EmailSpot` in `web/src/pages/Home.tsx` ("Get the starter": email field plus a send
+button) renders only when `VITE_EMAIL_FORM_ACTION` is set at build time, so the live
+site shows nothing and collects nothing. It posts a plain HTML form to the provider's
+form URL. Before switching it on, Ashley must approve: the provider (OpenClaw's
+preflight leaned to Kit's free tier), creating that account, the consent and privacy
+wording (the lines in the component are drafts), the sender name, and what people
+receive (the starter PDF). Then add the URL as a repository variable, pass it to the
+build step in `.github/workflows/deploy-web.yml`, and test on a real iPhone:
+form, confirmation email, PDF, unsubscribe. Don't collect emails any other way.
+
 **Domain (not done)**
 `laguerasguide.com` was available on 2026-11-02; nothing is registered. When
 Ashley registers it: set the custom domain in the repo's Pages settings, add the
