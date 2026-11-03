@@ -58,6 +58,45 @@ function ShelfHead({ eyebrow, title, blurb, seeAll }: { eyebrow: string; title: 
   );
 }
 
+type SoonCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string };
+
+const SOON: SoonCard[] = [
+  { title: <>Free <i>starter</i></>, blurb: "Four places I'd send you to first, for your phone.", pattern: "var(--pattern-checker)" },
+  { title: <>Itineraries</>, blurb: "Plans for a few days in the city.", pattern: "var(--pattern-gingham)" },
+  { title: <>On <i>Instagram</i></>, blurb: "Where I'll post what I'm eating.", pattern: "var(--pattern-storia)" },
+];
+
+function SoonBand() {
+  return (
+    <Section style={{ background: "var(--leche-50)" }}>
+      <Eyebrow color="var(--rosa-600)">More from la güera</Eyebrow>
+      <h2 className="text-[40px] sm:text-[56px]" style={{ margin: "10px 0 28px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.95, letterSpacing: "-.02em" }}>
+        Coming <i>soon</i>
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {SOON.map((c, i) => {
+          const inner = (
+            <>
+              <div style={{ height: 96, borderRadius: 4, background: c.pattern }} />
+              <div style={{ marginTop: 16, fontFamily: "var(--font-serif)", fontSize: 32, lineHeight: 1, letterSpacing: "-.02em" }}>{c.title}</div>
+              <p style={{ margin: "10px 0 14px", font: "400 15px/1.5 var(--font-sans)", color: "var(--text-2)" }}>{c.blurb}</p>
+              <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".2em", textTransform: "uppercase", color: c.href ? "var(--rosa-600)" : "var(--text-3)" }}>
+                {c.href ? "Open" : "Coming soon"}
+              </span>
+            </>
+          );
+          const box: React.CSSProperties = { display: "block", padding: 16, borderRadius: 8, border: "1px solid var(--line-soft)", background: "var(--leche-0)", textDecoration: "none", color: "inherit" };
+          return c.href ? (
+            <a key={i} href={c.href} style={box}>{inner}</a>
+          ) : (
+            <div key={i} aria-disabled="true" style={{ ...box, opacity: 0.92 }}>{inner}</div>
+          );
+        })}
+      </div>
+    </Section>
+  );
+}
+
 function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave: (p: Place) => void; onOpen: (p: Place) => void; isSaved: (id: string) => boolean }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-3.5 gap-y-7 sm:gap-8">
@@ -229,6 +268,9 @@ export function Home() {
           <CardGrid places={cafeShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
+
+      {/* Coming soon */}
+      <SoonBand />
 
       {/* Mood tags */}
       <section style={{ background: "var(--rosa-200)" }}>
