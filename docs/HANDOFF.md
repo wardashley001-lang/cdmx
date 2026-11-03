@@ -43,8 +43,9 @@ that browser's `localStorage`).
   (Ashley, 2026-11-03). El Silverio and Lalo are on both New & hot and Picks at her
   request. The placeholder cards carry no status label (Ashley: wording would have
   to change at launch); make one a link by setting `href` on its entry in `SOON`
-  in `Home.tsx` once she approves the destination. No price, email form or Instagram
-  handle on Home until she says so. The Michelin tags, badges and the
+  in `Home.tsx` once she approves the destination. The Instagram card links to
+  https://www.instagram.com/laguerasguide/ (Ashley asked for it, 2026-11-03). No price
+  or live email form on Home until she says so. The Michelin tags, badges and the
   `/mapa?f=michelin` filter remain.
 - Michelin tags (19 places) were checked against Michelin's 2026 lists on
   2026-11-02. Baldío's Green Star is dated 2025.
