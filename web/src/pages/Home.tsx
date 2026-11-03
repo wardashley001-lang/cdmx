@@ -63,7 +63,7 @@ type SoonCard = { title: React.ReactNode; blurb: string; pattern: string; href?:
 const SOON: SoonCard[] = [
   { title: <>Free <i>starter</i></>, blurb: "Four places I'd send you to first, for your phone.", pattern: "var(--pattern-checker)" },
   { title: <>Itineraries</>, blurb: "Plans for a few days in the city.", pattern: "var(--pattern-gingham)" },
-  { title: <>On <i>Instagram</i></>, blurb: "Where I'll post what I'm eating.", pattern: "var(--pattern-storia)" },
+  { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
 
 function SoonBand() {
@@ -88,7 +88,7 @@ function SoonBand() {
           );
           const box: React.CSSProperties = { display: "block", padding: 16, borderRadius: 8, border: "1px solid var(--line-soft)", background: "var(--leche-0)", textDecoration: "none", color: "inherit" };
           return c.href ? (
-            <a key={i} href={c.href} style={box}>{inner}</a>
+            <a key={i} href={c.href} {...(c.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} style={box}>{inner}</a>
           ) : (
             <div key={i} aria-disabled="true" style={{ ...box, opacity: 0.92 }}>{inner}</div>
           );
