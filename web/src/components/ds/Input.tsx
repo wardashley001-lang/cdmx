@@ -55,9 +55,11 @@ export function Input({ value, onChange, placeholder, icon, label, size = "md", 
             type="button"
             aria-label="Clear"
             onClick={onClear}
-            style={{ border: 0, background: "var(--rosa-100)", borderRadius: "50%", width: 24, height: 24, display: "inline-flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--vino-900)" }}
+            style={{ border: 0, background: "transparent", width: 44, height: 44, margin: -10, padding: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "var(--vino-900)", flex: "none" }}
           >
-            <Icon name="x" size={13} />
+            <span style={{ background: "var(--rosa-100)", borderRadius: "50%", width: 24, height: 24, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+              <Icon name="x" size={13} />
+            </span>
           </button>
         ) : null}
       </span>

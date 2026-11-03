@@ -62,6 +62,8 @@ export function Tabs({ items = [], value, onChange, variant = "pill", style }: T
             onClick={() => onChange && onChange(it.value)}
             style={{
               height: 44,
+              minWidth: 44,
+              justifyContent: "center",
               padding: it.label ? "0 16px" : "0 11px",
               border: 0,
               borderRadius: "var(--radius-pill)",

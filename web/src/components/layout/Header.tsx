@@ -19,7 +19,19 @@ export function Header() {
   return (
     <header style={{ position: "sticky", top: 0, zIndex: 40, background: "var(--vino-900)", borderBottom: "1px solid var(--line-on-dark)" }}>
       <div style={{ maxWidth: "var(--container)", margin: "0 auto", height: 68, padding: "0 20px", display: "flex", alignItems: "center", gap: 28 }}>
-        <a onClick={() => navigate("/")} style={{ cursor: "pointer", textDecoration: "none", paddingTop: 4 }}>
+        <a
+          role="link"
+          tabIndex={0}
+          aria-label="La Güera's Guide, home"
+          onClick={() => navigate("/")}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              navigate("/");
+            }
+          }}
+          style={{ cursor: "pointer", textDecoration: "none", paddingTop: 4, minHeight: 44, display: "inline-flex", alignItems: "center" }}
+        >
           <Wordmark size={20} tone="rosa" />
         </a>
         <span style={{ flex: 1 }} />
@@ -90,6 +102,8 @@ export function MobileTabBar() {
           <button
             key={it.path}
             onClick={() => navigate(it.path)}
+            aria-label={it.label}
+            aria-current={on ? "page" : undefined}
             style={{
               flex: 1,
               border: 0,
