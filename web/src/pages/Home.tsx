@@ -14,12 +14,8 @@ import type { Michelin, Place } from "../types";
 
 const HOOD_PATTERNS = ["var(--pattern-checker)", "var(--pattern-gingham)", "var(--pattern-storia)", "var(--pattern-carpet)", "var(--pattern-stripes)"];
 
-const MICHELIN_ORDER: { level: Michelin["level"]; label: string }[] = [
-  { level: "two-star", label: "Two Stars" },
-  { level: "one-star", label: "One Star" },
-  { level: "green-star", label: "Green Star" },
-  { level: "bib", label: "Bib Gourmand" },
-];
+const SHELF_SIZE = 4;
+const LEVEL_RANK: Record<Michelin["level"], number> = { "two-star": 0, "one-star": 1, "green-star": 2, bib: 3 };
 
 function displayDate(value?: string) {
   if (!value) return "date pending";
@@ -41,6 +37,26 @@ function Eyebrow({ children, color }: { children: React.ReactNode; color: string
 
 function Section({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
   return <section style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px", ...style }}>{children}</section>;
+}
+
+function ShelfHead({ eyebrow, title, blurb, seeAll }: { eyebrow: string; title: React.ReactNode; blurb?: string; seeAll?: { label: string; onClick: () => void } }) {
+  return (
+    <div style={{ display: "flex", alignItems: "flex-end", gap: 24, marginBottom: 32, flexWrap: "wrap" }}>
+      <div style={{ maxWidth: 620 }}>
+        <Eyebrow color="var(--rosa-600)">{eyebrow}</Eyebrow>
+        <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
+          {title}
+        </h2>
+        {blurb && <p style={{ margin: "16px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>{blurb}</p>}
+      </div>
+      <span style={{ flex: 1 }} />
+      {seeAll && (
+        <Button variant="ghost" iconRight="arrow-right" onClick={seeAll.onClick}>
+          {seeAll.label}
+        </Button>
+      )}
+    </div>
+  );
 }
 
 function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave: (p: Place) => void; onOpen: (p: Place) => void; isSaved: (id: string) => boolean }) {
@@ -88,19 +104,32 @@ export function Home() {
   );
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
-  const shownAbove = useMemo(() => new Set([...featuredCandidates, ...picks].map((p) => p.id)), [featuredCandidates, picks]);
-  const essentials = useMemo(() => DATA.places.filter((p) => p.essential && !shownAbove.has(p.id)), [shownAbove]);
-  const tacos = useMemo(() => DATA.places.filter((p) => p.category === "tacos" && !shownAbove.has(p.id)).sort((a, b) => a.name.localeCompare(b.name)), [shownAbove]);
-  const michelinByLevel = useMemo(() => {
-    const map = new Map<Michelin["level"], Place[]>();
-    for (const p of DATA.places) {
-      if (!p.michelin || p.category === "tacos" || shownAbove.has(p.id)) continue;
-      const list = map.get(p.michelin.level) ?? [];
-      list.push(p);
-      map.set(p.michelin.level, list);
-    }
-    return map;
-  }, [shownAbove]);
+  const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
+  const { michelinShelf, michelinTotal, tacoShelf, tacoTotal, cafeShelf, cafeTotal } = useMemo(() => {
+    const shown = new Set([...hotShelf, ...picks].map((p) => p.id));
+    const take = (list: Place[]) => {
+      const out = list.filter((p) => !shown.has(p.id)).slice(0, SHELF_SIZE);
+      out.forEach((p) => shown.add(p.id));
+      return out;
+    };
+    const michelin = DATA.places
+      .filter((p) => p.michelin)
+      .sort((x, y) => LEVEL_RANK[x.michelin!.level] - LEVEL_RANK[y.michelin!.level] || x.name.localeCompare(y.name));
+    const tacos = DATA.places
+      .filter((p) => p.category === "tacos")
+      .sort((x, y) => Number(!x.michelin) - Number(!y.michelin) || x.name.localeCompare(y.name));
+    const cafes = DATA.places
+      .filter((p) => p.group === "coffee")
+      .sort((x, y) => Number(!(x.essential || x.hot)) - Number(!(y.essential || y.hot)) || x.name.localeCompare(y.name));
+    return {
+      michelinShelf: take(michelin),
+      michelinTotal: michelin.length,
+      tacoShelf: take(tacos),
+      tacoTotal: tacos.length,
+      cafeShelf: take(cafes),
+      cafeTotal: cafes.length,
+    };
+  }, [hotShelf, picks]);
 
   const hoods = useMemo(() => {
     const counts = new Map<string, number>();
@@ -111,10 +140,11 @@ export function Home() {
     return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
   }, []);
 
-  function goToMap(query?: string, group?: string) {
+  function goToMap(query?: string, group?: string, flag?: string) {
     const params = new URLSearchParams();
     if (query) params.set("q", query);
     if (group) params.set("g", group);
+    if (flag) params.set("f", flag);
     navigate(params.toString() ? `/mapa?${params}` : "/mapa");
   }
 
@@ -165,82 +195,55 @@ export function Home() {
       </section>
 
       {/* New & hot */}
-      {featuredCandidates.length > 0 && (
+      {hotShelf.length > 0 && (
         <Section>
-          <div style={{ display: "flex", alignItems: "flex-end", gap: 24, marginBottom: 32, flexWrap: "wrap" }}>
-            <div style={{ maxWidth: 620 }}>
-              <Eyebrow color="var(--rosa-600)">Sources checked {displayDate(DATA.meta?.featuredSourcesCheckedOn)}</Eyebrow>
-              <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-                New &amp; <i>hot</i>
-              </h2>
-              <p style={{ margin: "16px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
-                {hasPendingFeatured
-                  ? "Recent openings and fresh buzz, in provisional order. Final picks are pending approval; confirm details before you go."
-                  : "New and buzzing right now, picked by me. Sources checked on the date above; confirm details before you go."}
-              </p>
-            </div>
-            <span style={{ flex: 1 }} />
-            <Button variant="ghost" iconRight="arrow-right" onClick={() => goToMap()}>
-              Open the map
-            </Button>
-          </div>
-          <CardGrid places={featuredCandidates} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+          <ShelfHead
+            eyebrow={`Sources checked ${displayDate(DATA.meta?.featuredSourcesCheckedOn)}`}
+            title={<>New &amp; <i>hot</i></>}
+            blurb={
+              hasPendingFeatured
+                ? "Recent openings and fresh buzz, in provisional order. Final picks are pending approval; confirm details before you go."
+                : "New and buzzing right now, picked by me. Sources checked on the date above; confirm details before you go."
+            }
+            seeAll={featuredCandidates.length > hotShelf.length ? { label: `See all ${featuredCandidates.length}`, onClick: () => goToMap(undefined, undefined, "hot") } : undefined}
+          />
+          <CardGrid places={hotShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 
       {/* La Güera's Picks */}
       {picks.length > 0 && (
         <Section style={{ background: "var(--rosa-100)" }}>
-          <Eyebrow color="var(--rosa-600)">In my words</Eyebrow>
-          <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 12px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-            La Güera&apos;s <i>Picks</i>
-          </h2>
-          <p style={{ margin: "0 0 32px", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)", maxWidth: 560 }}>
-            The places I&apos;d send a friend to first.
-          </p>
+          <ShelfHead eyebrow="In my words" title={<>La Güera&apos;s <i>Picks</i></>} blurb="The places I'd send a friend to first." />
           <CardGrid places={picks} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 
       {/* Michelin 2026 */}
-      {michelinByLevel.size > 0 && (
+      {michelinShelf.length > 0 && (
         <Section style={{ background: "var(--leche-50)" }}>
-          <Eyebrow color="var(--rosa-600)">Announced May 2026</Eyebrow>
-          <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 32px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-            The <i>Michelin</i> Guide
-          </h2>
-          <div className="flex flex-col gap-10">
-            {MICHELIN_ORDER.filter((m) => michelinByLevel.has(m.level)).map((m) => (
-              <div key={m.level}>
-                <h3 style={{ marginBottom: 12, fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-3)" }}>
-                  {m.label}
-                </h3>
-                <CardGrid places={michelinByLevel.get(m.level) ?? []} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
-              </div>
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {/* Essentials */}
-      {essentials.length > 0 && (
-        <Section>
-          <Eyebrow color="var(--rosa-600)">Always</Eyebrow>
-          <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 32px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-            The <i>Essentials</i>
-          </h2>
-          <CardGrid places={essentials} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+          <ShelfHead
+            eyebrow="Announced May 2026"
+            title={<>The <i>Michelin</i> Guide</>}
+            seeAll={{ label: `See all ${michelinTotal}`, onClick: () => goToMap(undefined, undefined, "michelin") }}
+          />
+          <CardGrid places={michelinShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 
       {/* Best tacos */}
-      {tacos.length > 0 && (
+      {tacoShelf.length > 0 && (
+        <Section>
+          <ShelfHead eyebrow="Obsessed" title={<>Best <i>Tacos</i></>} seeAll={{ label: `See all ${tacoTotal}`, onClick: () => goToMap(undefined, undefined, "tacos") }} />
+          <CardGrid places={tacoShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+        </Section>
+      )}
+
+      {/* Cafés */}
+      {cafeShelf.length > 0 && (
         <Section style={{ background: "var(--leche-50)" }}>
-          <Eyebrow color="var(--rosa-600)">Obsessed</Eyebrow>
-          <h2 className="text-[48px] sm:text-[72px]" style={{ margin: "10px 0 32px", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.02em" }}>
-            Best <i>Tacos</i>
-          </h2>
-          <CardGrid places={tacos} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
+          <ShelfHead eyebrow="Coffee & sweets" title={<>Cafés <i>&amp; more</i></>} seeAll={{ label: `See all ${cafeTotal}`, onClick: () => goToMap(undefined, "coffee") }} />
+          <CardGrid places={cafeShelf} onSave={onSave} onOpen={setSpot} isSaved={isSaved} />
         </Section>
       )}
 

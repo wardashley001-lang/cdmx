@@ -15,6 +15,8 @@ import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
 import type { Group, Place } from "../types";
 
+const FLAG_LABEL: Record<string, string> = { michelin: "Michelin", hot: "New & hot", tacos: "Tacos" };
+
 const CDMX_CENTER: [number, number] = [19.4195, -99.165];
 
 type MapCoords = { lat: number; lng: number; approximate: boolean };
@@ -56,6 +58,10 @@ export function Mapa() {
   const [searchParams] = useSearchParams();
   const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
   const [group, setGroup] = useState<Group | null>(() => (searchParams.get("g") as Group | null) ?? null);
+  const [flag, setFlag] = useState<string | null>(() => {
+    const f = searchParams.get("f");
+    return f && f in FLAG_LABEL ? f : null;
+  });
   const [view, setView] = useState<"map" | "list">("map");
   const [spot, setSpot] = useState<Place | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -72,6 +78,9 @@ export function Mapa() {
   const ql = query.trim().toLowerCase();
   const filtered = entries.filter(({ place }) => {
     if (group && place.group !== group) return false;
+    if (flag === "michelin" && !place.michelin) return false;
+    if (flag === "hot" && place.featuredOrder == null) return false;
+    if (flag === "tacos" && place.category !== "tacos") return false;
     if (!ql) return true;
     const hay = `${place.name} ${place.neighborhood ?? ""} ${place.vibe ?? ""} ${place.category}`.toLowerCase();
     return hay.includes(ql);
@@ -81,7 +90,7 @@ export function Mapa() {
   useEffect(() => {
     if (!filtered.some((f) => f.place.id === activeId)) setActiveId(filtered[0]?.place.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [group, ql]);
+  }, [group, ql, flag]);
 
   const active = filtered.find((f) => f.place.id === activeId) ?? null;
 
@@ -101,6 +110,7 @@ export function Mapa() {
 
   const filters = (
     <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
+      {flag && <Tag label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
       <Tag label="All" selected={!group} onClick={() => setGroup(null)} size={mobile ? "sm" : "md"} />
       {GROUP_ORDER.map((g) => (
         <Tag key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
