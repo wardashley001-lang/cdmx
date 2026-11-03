@@ -271,11 +271,6 @@ export function Home() {
         </Section>
       )}
 
-      {/* More from la güera (placeholders until each has a destination) */}
-      <SoonBand />
-
-      <EmailSpot />
-
       {/* Mood tags */}
       <section style={{ background: "var(--rosa-200)" }}>
         <div className="flex-col sm:flex-row" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px", display: "flex", gap: 32, alignItems: "center", justifyContent: "space-between" }}>
@@ -320,6 +315,11 @@ export function Home() {
           ))}
         </div>
       </Section>
+
+      {/* More from la güera (placeholders until each has a destination) */}
+      <SoonBand />
+
+      <EmailSpot />
 
       <SpotDetail spot={spot} onClose={() => setSpot(null)} />
     </main>
