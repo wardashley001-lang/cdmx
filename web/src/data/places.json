@@ -1500,7 +1500,7 @@
       "id": "cafe-crissis",
       "name": "Crissis",
       "category": "cafe",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Crissis%2C%20Mayorga%20118-Local%20B%2C%20Lomas%20de%20Chapultepec%2C%20Miguel%20Hidalgo%2C%2011000%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Lomas de Chapultepec",
       "instagram": "crissis.crissis",
       "vibe": "Isabela Romo's Bar San Calisto-inspired hideaway next to her restaurant Issi, coffee and pancakes by day, drinks and hand-eaten bites by night.",
@@ -2037,7 +2037,7 @@
       "id": "wine-fantasma",
       "name": "Fantasma",
       "category": "wine",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fantasma%2C%20C.%20Orizaba%203a%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "fantasmawines",
       "vibe": "A sidewalk natural-wine bar and shop on Orizaba, next door to sister restaurant Fugaz, pouring mostly Mexican bottles by the glass.",
@@ -3336,7 +3336,7 @@
       "id": "bars-ricochet-apero",
       "name": "Ricochet Apero",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ricochet%20Apero%2C%20Av%20Chapultepec%20488%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "ricochet.apero",
       "vibe": "New apero bar channeling 1970s aperitivo culture on Chapultepec—clean, confident, low-key.",
@@ -3363,7 +3363,7 @@
       "id": "bars-la-romana",
       "name": "La Romana",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Romana%2C%20Av%20Oaxaca%2095%2C%20Col.%20Roma%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "laromana.bar",
       "vibe": "Italodisco on the speakers, high-end cocktails with a Mexican twist, nightly till 2am.",
@@ -3430,7 +3430,7 @@
       "id": "bars-varde",
       "name": "Varde",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Varde%2C%20C%C3%B3rdoba%20146%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "varde____",
       "vibe": "A gastro-cocktail bar inside a restored Porfirian mansion on Córdoba, chef Alexis Ayala's short menu paired with a tight, well-executed drink list.",
@@ -4201,7 +4201,7 @@
       "id": "mexican-siembra-taqueria",
       "name": "Siembra Taqueria",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Siembra%20Taqueria%2C%20Av.%20Isaac%20Newton%20256%2C%20Polanco%2C%20Polanco%20V%20Secc%2C%20Miguel%20Hidalgo%2C%2011550%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Polanco",
       "instagram": "siembra.taqueria",
       "vibe": "Chefs Karina Mejía and Israel Montero's Michelin-recommended sidewalk taquería, built on its own in-house nixtamalized tortillería.",
@@ -4280,7 +4280,7 @@
       "id": "mexican-el-sella-bar",
       "name": "El Sella Bar",
       "category": "mexican",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Sella%20Bar%2C%20Dr.%20Balmis%20210%2C%20Doctores%2C%20Cuauht%C3%A9moc%2C%2006720%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Doctores",
       "instagram": "elsellabar",
       "vibe": "A 70-year-old Doctores cantina famous for its bone-in chamorro, cider-braised chorizo and Galician octopus in a lively, no-frills dining room.",
@@ -4422,6 +4422,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/every-michelin-starred-restaurant-in-mexico-for-2026-and-the-year-s-key-trends",
           "note": "Name and star level confirmed on Michelin's own list."
+        },
+        {
+          "label": "Open-status check (unconfirmed): MICHELIN Guide article on La Once Mil",
+          "checkedOn": "2026-11-03",
+          "url": "https://guide.michelin.com/us/en/article/dining-out/best-taqueria-la-once-mil-mexico-michelin-guide",
+          "note": "OpenClaw found no current public source confirming the Roma Norte branch at Orizaba 83: Michelin's coverage places La Once Mil in Lomas de Chapultepec, and the official site says another location is under construction. Ashley has visited the Roma Norte branch herself; re-check before relying on it."
         }
       ],
       "group": "eat",
@@ -4526,6 +4532,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Open-status check: Si te gusta la pizza y la pasta, estos nuevos restaurantes italianos… — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/si-te-gusta-la-pizza-y-la-pasta-estos-nuevos-restaurantes-italianos-en-cdmx-son-para-ti/",
+          "note": "Checked by OpenClaw (source dated 2026-07-21): The article says La Bellezza has served diners since June at Praga 14 and accepts reservations by direct message. Editorial evidence, not a same-day door check."
         }
       ],
       "group": "eat",
@@ -4649,6 +4661,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Open-status check: This Cinematic Mexico City Wedding Featured a Fairy Tale–Inspired Reception Space With a Hidden Nightclub — Vogue",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.vogue.com/slideshow/ela-villarreal-morales-and-andy-mccune-wedding",
+          "note": "Checked by OpenClaw (source dated 2026-10-20): Vogue reports an August 1, 2026 welcome party with food and drinks at Botánico restaurant in Condesa. The article confirms current operation by name and neighborhood but does not print the catalog street address."
         }
       ],
       "group": "eat",
@@ -4929,6 +4947,12 @@
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Open-status check: Probé las nuevas pizzas estilo Nueva York de la Condesa… — Food & Pleasure",
+          "checkedOn": "2026-11-03",
+          "url": "https://foodandpleasure.com/bikini-pizza-en-cdmx/",
+          "note": "Checked by OpenClaw (source dated 2026-09-22): The writer reports a recent visit to the new restaurant and gives Chilpancingo 35. The source labels the neighborhood Hipódromo, Cuauhtémoc, while the catalog says Condesa."
         }
       ],
       "hot": true,
@@ -5114,7 +5138,7 @@
       "id": "japanese-nommo-sushi",
       "name": "Nommo Sushi",
       "category": "japanese",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Nommo%20Sushi%2C%20Puebla%20231%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "nommo.sushi",
       "vibe": "Urban sushi near the Glorieta de los Insurgentes — a calm, casual counter-and-terrace space for hamachi and salmon handrolls without the omakase formality.",
@@ -5582,6 +5606,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Open-status check: La Belle Époque es el nuevo spot en CDMX que te transporta a París — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/la-belle-epoque-restaurante-frances-cdmx/",
+          "note": "Checked by OpenClaw (source dated 2026-08-09): A detailed visit describes the new French restaurant, current menu, and Oaxaca 80 address. Editorial evidence, not a same-day door check."
         }
       ],
       "unverifiedFields": [
@@ -5635,7 +5665,7 @@
       "id": "french-les-moustaches",
       "name": "Les Moustaches",
       "category": "french",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Les%20Moustaches%2C%20R%C3%ADo%20Sena%2088%20Entre%20Paseo%20dela%20Reforma%2C%20C.%20R%C3%ADo%20Lerma%20y%2C%20Cuauht%C3%A9moc%2C%2006500%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Juárez",
       "instagram": "les_moustaches",
       "vibe": "Nearly 50-year-old French institution in a 19th-century mansion, famed for beef Wellington, onion soup, and a flambéed pistachio soufflé.",
@@ -5663,7 +5693,7 @@
       "id": "french-arturo-s",
       "name": "Arturo's",
       "category": "french",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Arturo%27s%2C%20%C3%81msterdam%20225%2C%20Hip%C3%B3dromo%2C%20Cuauht%C3%A9moc%2C%2006100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Hipódromo",
       "instagram": null,
       "vibe": "One of the city's most traditional French restaurants, still doing tableside cart service and flambéed crêpes Suzette.",
@@ -6041,7 +6071,7 @@
       "id": "contemporary-alterna",
       "name": "Alterna",
       "category": "contemporary",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Alterna%2C%20Juan%20de%20la%20Barrera%20112%2C%20Colonia%20Condesa%2C%20Cuauht%C3%A9moc%2C%2006140%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Condesa",
       "instagram": null,
       "vibe": "Chef Cosimo Branca's (ex-Magazzino) intimate new spot — warm wood, international cooking, mood lighting.",
@@ -6108,7 +6138,7 @@
       "id": "contemporary-lina",
       "name": "Lina",
       "category": "contemporary",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lina%2C%20Av.%20Yucat%C3%A1n%20147%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "lina.cdmx",
       "vibe": "Chef Mariana Villegas, alum of Pujol and Cosme, turns seasonal vegetables and seafood into the star of a wood-fire, softly lit dining room.",
@@ -7269,7 +7299,7 @@
       "id": "tacos-el-vilsito",
       "name": "El Vilsito",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Vilsito%2C%20Pet%C3%A9n%20248%20y%2C%20Av.%20Universidad%2C%20Narvarte%20Poniente%2C%20Benito%20Ju%C3%A1rez%2C%2003020%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Narvarte",
       "instagram": null,
       "vibe": "Late-night taquería set inside a working auto shop: trompo-spun al pastor and cheesy gringas under fluorescent lights.",
@@ -7305,7 +7335,7 @@
       "id": "tacos-los-cocuyos",
       "name": "Los Cocuyos",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Los%20Cocuyos%2C%20Sim%C3%B3n%20Bol%C3%ADvar%2059%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Centro Histórico",
       "instagram": null,
       "vibe": "A taquero with a cleaver working a bubbling cauldron of meat since 1980. Order the cabeza or the al pastor.",
@@ -7341,7 +7371,7 @@
       "id": "tacos-la-89",
       "name": "La 89",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%2089%2C%20C.Colima%20134%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": "la.ochenta.y.nueve",
       "vibe": "Tiny Roma Norte taco nook grilling carne asada and quesabirria to order, on plastic stools with no frills.",
@@ -7382,7 +7412,7 @@
       "id": "tacos-los-consentidos-del-barrio",
       "name": "Los Consentidos del Barrio",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Los%20Consentidos%20del%20Barrio%2C%20Manzanas%2027B%2C%20Tlacoquemecatl%20del%20Valle%2C%20Benito%20Ju%C3%A1rez%2C%2003200%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Del Valle",
       "instagram": null,
       "vibe": "Upstairs charcoal grill serving thin-sliced tacos al carbón and a pink-centered arrachera.",
@@ -7418,7 +7448,7 @@
       "id": "tacos-tacos-charly",
       "name": "Tacos Charly",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tacos%20Charly%2C%20Av.%20San%20Fernando%20201%2C%20Toriello%20Guerra%2C%20Tlalpan%2C%2014050%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Tlalpan",
       "instagram": null,
       "vibe": "Cash-only stand in Tlalpan known for confit-simmered suadero and carved al pastor. Get there early.",
@@ -7454,7 +7484,7 @@
       "id": "tacos-tacos-del-valle-roma-norte",
       "name": "Tacos del Valle (Roma Norte)",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tacos%20del%20Valle%20%28Roma%20Norte%29%2C%20Av.%20%C3%81lvaro%20Obreg%C3%B3n%20130%2C%20Roma%20Nte.%20Cuauht%C3%A9moc%2C%20Roma%20Nte.%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%2006700%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": null,
       "vibe": "Retro-diner taquería on Álvaro Obregón spinning pork and beef on the trompo, finished with squeeze-bottle salsas.",
@@ -7490,7 +7520,7 @@
       "id": "tacos-taqueria-el-jarocho",
       "name": "Taquería El Jarocho",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Taquer%C3%ADa%20El%20Jarocho%2C%20Tapachula%2094%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006760%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "instagram": null,
       "vibe": "Three generations deep in Roma Norte, serving guisado tacos out of a former tortillería. The pork flank in morita chile is the one.",
@@ -8288,7 +8318,7 @@
       "id": "american-cassette",
       "name": "Cassette",
       "category": "american",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cassette%2C%20Tabasco%20156%2C%20Roma%20Norte%2C%20CDMX",
       "neighborhood": "Roma Norte",
       "address": "Tabasco 156, Roma Norte, CDMX",
       "hours": null,
@@ -8317,6 +8347,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Open-status check: Nuevos hotspots para conocer en noviembre 2026 — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/nuevos-hotspots-para-conocer-en-noviembre-2026/",
+          "note": "Checked by OpenClaw (source dated 2026-10-30): The November-opening roundup identifies Cassette as a bar serving burgers and sandwiches at Tabasco 156. Editorial evidence, not a same-day door check."
         }
       ],
       "unverifiedFields": [
@@ -8396,6 +8432,12 @@
           "checkedOn": "2026-10-31",
           "url": "https://www.google.com/maps/place/RANMA,+Liverpool+172B,+Cuauhtemoc,+Cuauht%C3%A9moc,+06600+Ciudad+de+M%C3%A9xico,+CDMX/@19.423508,-99.1655156,17z/data=!4m2!3m1!1s0x85d1ff00203eb6e1:0x24735344f7f2f17e",
           "note": "Live listing confirms Liverpool 172B and exact coordinates, resolving the prior conflicting indexed field."
+        },
+        {
+          "label": "Open-status check: Nuevos spots en la Juárez y la Cuauhtémoc que te urge conocer — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/nuevos-spots-en-la-juarez-y-la-cuauhtemoc-que-te-urge-conocer/",
+          "note": "Checked by OpenClaw (source dated 2026-10-05): The article calls RANMA a new opening serving Japanese food at Liverpool 172B. The source formats the unit as 172B; the catalog uses 172-B."
         }
       ],
       "group": "eat",
@@ -8518,6 +8560,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result for this venue (name and address matched)."
+        },
+        {
+          "label": "Open-status check: Restaurantes nuevos para ir por una pasta en CDMX — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/restaurantes-nuevos-para-ir-por-una-pasta-en-cdmx/",
+          "note": "Checked by OpenClaw (source dated 2026-10-25): The current roundup lists Lalo at Zacatecas 173 among recently opened restaurants and advises reserving immediately. Editorial evidence, not a same-day door check."
         }
       ],
       "unverifiedFields": [
@@ -8538,7 +8586,7 @@
       "id": "mexican-la-once-mil-lomas",
       "name": "La Once Mil - Lomas de Chapultepec",
       "category": "tacos",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Once%20Mil%20-%20Lomas%20de%20Chapultepec%2C%20Monte%20Everest%20780%2C%20Lomas%20de%20Chapultepec%2C%20CDMX",
       "neighborhood": "Lomas de Chapultepec",
       "address": "Monte Everest 780, Lomas de Chapultepec, CDMX",
       "hours": null,
@@ -8574,7 +8622,7 @@
       "id": "bars-el-silverio",
       "name": "El Silverio",
       "category": "bars",
-      "mapsUrl": "",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Silverio%2C%20Fernando%20Montes%20de%20Oca%2083%2C%20Condesa%2C%20CDMX",
       "neighborhood": "Condesa",
       "address": "Fernando Montes de Oca 83, Condesa, CDMX",
       "hours": "Wednesday–Sunday, 1 PM–1 AM",
@@ -8601,6 +8649,12 @@
           "label": "Ashley's own photos at El Silverio (seafood tower, steak, swan cream puff, clams, chocolate tart)",
           "checkedOn": "2026-11-03",
           "note": "Supplied by Ashley (Instagram story screenshots, taken 2026-10-22), approved for the app. Colour-graded with brand/photo-grade/grade.py and cropped to 4:5. The napkin and plates in the photos read el Silverio."
+        },
+        {
+          "label": "Open-status check: Nuevos hotspots para conocer en noviembre 2026 — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/nuevos-hotspots-para-conocer-en-noviembre-2026/",
+          "note": "Checked by OpenClaw (source dated 2026-10-30): A recent-opening roundup places the tapas bar and asador at Fernando Montes de Oca 83. Editorial evidence, not a same-day door check."
         }
       ],
       "unverifiedFields": [
@@ -8659,6 +8713,12 @@
           "label": "Google Maps listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates from the Google Maps search result (name and address matched)."
+        },
+        {
+          "label": "Open-status check: Astronomic: un viaje espacial entre vinos, cocteles y comida — Time Out México",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/bares-y-cantinas/astronomic",
+          "note": "Checked by OpenClaw (source dated 2026-10-21): The current review says Juárez is debuting the bar and lists Versalles 57 with opening hours. Editorial evidence, not a same-day door check."
         }
       ],
       "featuredOrder": 4,
@@ -8702,6 +8762,12 @@
           "label": "Photo from El Bar's Instagram (@el_bar_condesa), supplied by Ashley",
           "checkedOn": "2026-11-02",
           "note": "Ashley directed use of the venue's Instagram photos. Venue/photographer permission not separately confirmed; credit shown on the place card."
+        },
+        {
+          "label": "Open-status check: ¿Quieres conocer nuevos restaurantes? Aquí están los hotspots de octubre 2026 — The Happening",
+          "checkedOn": "2026-11-03",
+          "url": "https://thehappening.com/quieres-conocer-nuevos-restaurantes-aqui-estan-los-hotspots-de-octubre-2026/",
+          "note": "Checked by OpenClaw (source dated updated 2026-10-06): The current roundup lists El Bar at Alfonso Reyes 203 with Wednesday–Saturday service from 6 p.m. Editorial evidence, not a same-day door check."
         }
       ],
       "imageCredit": "Photo: El Bar (@el_bar_condesa)"
@@ -8746,6 +8812,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap listing for Pujol on Calle Alfredo Tennyson. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Official English home page — Pujol",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.pujol.com.mx/en",
+          "note": "Checked by OpenClaw (source dated not shown): The live official page offers reservations and prints Tennyson 133, Polanco IV Sección, CP 11550. The page also shows Calle Tokio 110 for a related concept; Tennyson 133 is explicitly present."
         }
       ],
       "unverifiedFields": [
@@ -8794,6 +8866,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (86, Calle Fernando Montes de Oca). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Esquina Común: Uncommon Meals and High Creativity — Culinary Backstreets",
+          "checkedOn": "2026-11-03",
+          "url": "https://culinarybackstreets.com/stories/mexico-city/esquina-comun-uncommon-meals-and-high-creativity",
+          "note": "Checked by OpenClaw (source dated 2026-03-05): The article describes a recent meal at the Condesa terrace and prints Fernando Montes de Oca 86 with Thursday–Sunday hours. Editorial evidence, not a same-day door check."
         }
       ],
       "unverifiedFields": [
@@ -8841,6 +8919,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (65 Bis, Avenida Álvaro Obregón). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Restaurante Máximo — official site",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.maximobistrot.com.mx/",
+          "note": "Checked by OpenClaw (source dated not shown): The official page prints the exact address and current Monday–Saturday service hours. The official page is undated but was live when checked."
         }
       ],
       "unverifiedFields": [
@@ -8888,6 +8972,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (84, Avenida Yucatán). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: In Mexico City for Zona Maco? Here’s Where to Eat (and Drink), According to the City’s Chefs — CULTURED",
+          "checkedOn": "2026-11-03",
+          "url": "https://culturedmag.com/article/2026/02/03/food-mexico-chefs-best-restaurants-zona-maco/",
+          "note": "Checked by OpenClaw (source dated 2026-02-03): Chef Tyler Henry recommends Expendio de Maíz for breakfast and says he visits on most days. The article confirms operation by name but does not print the catalog street address. The venue-like domain currently resolves to unrelated content and was not used."
         }
       ],
       "unverifiedFields": [
@@ -8935,6 +9025,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap listing for Raíz at 331, Calle Schiller. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Raíz, el restaurante que lleva 10 años apostando por la cocina mexicana y las mesas llenas — El Economista",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.eleconomista.com.mx/bistronomie/raiz-arte-llenar-mesas-10-anos-polanco-20261021-839583.html",
+          "note": "Checked by OpenClaw (source dated 2026-10-21): The current profile reports roughly 18 staff and the founders’ continuing presence in the Polanco operation. The article identifies Polanco but does not print Schiller 331."
         }
       ],
       "unverifiedFields": [
@@ -8982,6 +9078,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (141, Calle Sinaloa). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Guía MICHELIN México 2026: las mejores mesas a precios razonables — MICHELIN Guide",
+          "checkedOn": "2026-11-03",
+          "url": "https://guide.michelin.com/mx/es/articulo/michelin-guide-ceremony/Gu%C3%ADa%20MICHELIN%20M%C3%A9xico%202026%3A%20las%20mejores%20mesas%20a%20precios%20razonables",
+          "note": "Checked by OpenClaw (source dated 2026-05-20): Aleli Rooftop appears in the 2026 Mexico City Bib Gourmand selection; its linked live MICHELIN page gives Sinaloa 141, hours, and booking. No address conflict found."
         }
       ],
       "unverifiedFields": [
@@ -9029,6 +9131,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (51, Calle Pachuca). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: COMIDA | Jowong — official site",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.jowong.mx/menu?menu=served-daily-between-12pm---5pm",
+          "note": "Checked by OpenClaw (source dated not shown): The official site shows reservations, priced menus, current service hours, and embedded metadata for Calle Pachuca 51. The official page is undated but was live when checked."
         }
       ],
       "unverifiedFields": [
@@ -9076,6 +9184,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap listing for Caracol de Mar at 340, Calle Campeche. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: El mar en la ciudad: tres restaurantes para comer mariscos de altura — ELLE México",
+          "checkedOn": "2026-11-03",
+          "url": "https://elle.mx/estilo-de-vida/2026/09/21/el-mar-en-la-ciudad-tres-restaurantes-para-comer-mariscos-de-altura",
+          "note": "Checked by OpenClaw (source dated 2026-09-21): The current feature describes the menu and room, then gives Campeche 340. ELLE labels the neighborhood Condesa, while the catalog labels it Hipódromo. Older coverage refers to the prior Centro Histórico location."
         }
       ],
       "unverifiedFields": [
@@ -9123,6 +9237,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap listing for Comedor Jacinta at 40, Calle Virgilio. Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: Restaurantes para cenar delicioso en la CDMX — Food & Pleasure",
+          "checkedOn": "2026-11-03",
+          "url": "https://foodandpleasure.com/restaurantes-para-cenar-en-la-cdmx/",
+          "note": "Checked by OpenClaw (source dated 2026-03-16): The current dining recommendation names Comedor Jacinta and gives Virgilio 40, Polanco. A 2025 article also places Vía Virgilio at Virgilio 40, suggesting shared premises or stale data; it does not prove closure or movement."
         }
       ],
       "unverifiedFields": [
@@ -9170,6 +9290,12 @@
           "checkedOn": "2026-11-02",
           "url": "https://www.openstreetmap.org",
           "note": "Pin: OpenStreetMap address match on the building number (146, Calle General Benjamín Hill). Building-level; not taken from Google Maps. Compare with Google Maps when possible."
+        },
+        {
+          "label": "Open-status check: La Guía Michelin a domicilio: así está cambiando nuestra forma de comer — GQ México y Latinoamérica",
+          "checkedOn": "2026-11-03",
+          "url": "https://www.gq.com.mx/articulo/guia-michelin-restaurantes-a-domicilio",
+          "note": "Checked by OpenClaw (source dated 2026-08-28): GQ identifies Molino El Pujol as a current CDMX Bib Gourmand available through Rappi, subject to location and hours. The article confirms operation by name but does not print Benjamín Hill 146."
         }
       ],
       "unverifiedFields": [
