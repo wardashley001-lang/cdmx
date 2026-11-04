@@ -8585,14 +8585,20 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/italian-lalo-roma-norte.jpg",
       "pick": {
         "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel, and I'm ordering the prosciutto before I even sit down. Save room for the tiramisu.",
         "approvedOn": "2026-11-02"
       },
       "hot": true,
       "featuredOrder": 2,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: La Güera",
+      "gallery": [
+        "photos/italian-lalo-roma-norte-2.jpg",
+        "photos/italian-lalo-roma-norte-3.jpg",
+        "photos/italian-lalo-roma-norte-4.jpg"
+      ]
     },
     {
       "id": "mexican-la-once-mil-lomas",
