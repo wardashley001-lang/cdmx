@@ -37,6 +37,8 @@ jobs:
           # Public form URL from the email service. Unset = the email signup section stays hidden.
           # Set it under Settings > Secrets and variables > Actions > Variables.
           VITE_EMAIL_FORM_ACTION: ${{ vars.VITE_EMAIL_FORM_ACTION }}
+          # Link to buy the full guide. Unset = the "Get the guide" spots stay hidden. Same place as above.
+          VITE_GUIDE_URL: ${{ vars.VITE_GUIDE_URL }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

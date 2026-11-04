@@ -1,3 +1,4 @@
+import { GUIDE_URL } from "../lib/guide";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../components/ds/Input";
@@ -66,7 +67,7 @@ type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?:
 
 const MORE: MoreCard[] = [
   { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", scrollTo: EMAIL_FORM_ACTION ? EMAIL_SPOT_ID : undefined },
-  { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)" },
+  { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)", href: GUIDE_URL || undefined },
   { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
 
@@ -85,7 +86,7 @@ function MoreBand() {
               <p style={{ margin: "6px 0 2px", font: "400 15px/1.45 var(--font-sans)", color: "var(--text-2)" }}>{c.blurb}</p>
               {c.href && (
                 <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".2em", textTransform: "uppercase", color: "var(--rosa-600)" }}>
-                  Open
+                  {c.href === GUIDE_URL ? "Get the guide" : "Open"}
                 </span>
               )}
             </>
