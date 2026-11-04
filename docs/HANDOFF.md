@@ -22,10 +22,12 @@ that browser's `localStorage`).
    live, dated source recorded in the place's `sources[]`. The first-person
    "la güera" voice appears only on text Ashley approved (the `pick` field).
    See `VOICE.md`.
-3. **Photos:** only photos Ashley supplies or approves. Record where each came
-   from and a credit line (`imageCredit`). The catalog check fails if a photo
-   has no credit. Do not scrape Instagram; it blocks logged-out access, and
-   Ashley's own account is hers.
+3. **Photos:** only photos Ashley supplies (her own, or ones she pulls from a
+   venue's Instagram and sends, as with El Bar). She decided on 2026-11-04 that
+   no written venue permission is needed; use them with a credit line
+   (`imageCredit`, e.g. "Photo: La Güera"). The catalog check fails if a photo
+   has no credit. Agents must not scrape Instagram or save venue images
+   themselves; it blocks logged-out access, and Ashley's own account is hers.
 4. **Keep private material out of this repo:** interview records, voice notes,
    financial or legal details, internal tool paths.
 
@@ -49,7 +51,7 @@ that browser's `localStorage`).
   `/mapa?f=michelin` filter remain.
 - Michelin tags (19 places) were checked against Michelin's 2026 lists on
   2026-11-02. Baldío's Green Star is dated 2025.
-- Two places have photos (El Bar; El Silverio, with four more in its detail view). The rest show a pink initial tile. Ashley wants every photo in the app and on Instagram to share one look: use `brand/photo-grade/grade.py` on her originals (ask for original files, not screenshots, when possible).
+- Four places have photos (El Bar; El Silverio, Botánico and ARDA, each with more in its detail view). The rest show a pink initial tile. Ashley wants every photo in the app and on Instagram to share one look: use `brand/photo-grade/grade.py` on her originals (ask for original files, not screenshots, when possible).
 - Deploys on every push to `main` that touches `web/**`
   (`.github/workflows/deploy-web.yml`, about one to two minutes).
 
@@ -100,8 +102,8 @@ Google place IDs by hand was off by kilometers, so don't.
 ## Open work
 
 **Needs Ashley**
-- Photos for the 13 featured places (send screenshots; credit each venue).
-  Ideally she also asks each venue for permission.
+- Photos for the other featured places (send screenshots or originals; credit
+  each venue). No permission requests needed (Ashley, 2026-11-04).
 - Test on a real phone: map, saving to Mi lista, "Cómo llegar". Saved places
   do not sync and do not import into Google or Apple Maps. A promise of a
   phone-saveable list needs a real build and test first.
