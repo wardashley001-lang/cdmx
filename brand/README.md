@@ -1,6 +1,6 @@
 # Brand assets
 
-**Start with `BRAND_GUIDE.pdf`** (source: `BRAND_GUIDE.html`): the one-stop brand guide covering the name, logo, color, type, photos, voice and Instagram. Items marked "Ashley to confirm" in it are my reading of how the app uses things, not rules she set.
+**Brand kit (logos, colors, fonts, profile pictures) is in `kit/`** with its own README, including Canva setup steps. **Then read `BRAND_GUIDE.pdf`** (source: `BRAND_GUIDE.html`): the one-stop brand guide covering the name, logo, color, type, photos, voice and Instagram. Items marked "Ashley to confirm" in it are my reading of how the app uses things, not rules she set.
 
 ## Wordmark
 
