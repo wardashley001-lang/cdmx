@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Input } from "../components/ds/Input";
@@ -56,6 +56,7 @@ export function Mapa() {
   const { saved, toggle } = useSaved();
   const showToast = useToast();
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
   const [group, setGroup] = useState<Group | null>(() => (searchParams.get("g") as Group | null) ?? null);
   const [flag, setFlag] = useState<string | null>(() => {
@@ -65,6 +66,13 @@ export function Mapa() {
   const [view, setView] = useState<"map" | "list">("map");
   const [spot, setSpot] = useState<Place | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
+
+  // Arriving from the header search button: put the cursor in the search box.
+  useEffect(() => {
+    if ((location.state as { focusSearch?: boolean } | null)?.focusSearch) {
+      document.querySelector<HTMLInputElement>('input[aria-label="Search places"]')?.focus();
+    }
+  }, [location.state, mobile]);
 
   const entries = useMemo<MapEntry[]>(() => {
     const counters: Record<string, number> = {};
@@ -173,7 +181,7 @@ export function Mapa() {
 
   if (mobile) {
     return (
-      <main style={{ position: "relative", height: "calc(100vh - 68px)", overflow: "hidden", isolation: "isolate" }}>
+      <main className="map-shell" style={{ position: "relative", overflow: "hidden", isolation: "isolate" }}>
         {view === "map" ? map : (
           <div style={{ position: "absolute", inset: 0, overflowY: "auto", padding: "128px 10px 100px", display: "flex", flexDirection: "column", gap: 4, background: "var(--leche-100)" }} ref={listRef}>
             {filtered.length ? filtered.map(row) : empty}
@@ -197,7 +205,7 @@ export function Mapa() {
   }
 
   return (
-    <main style={{ display: "grid", gridTemplateColumns: "440px 1fr", height: "calc(100vh - 68px)" }}>
+    <main className="map-shell" style={{ display: "grid", gridTemplateColumns: "440px 1fr" }}>
       <aside style={{ display: "flex", flexDirection: "column", borderRight: "1px solid var(--line-soft)", background: "var(--leche-100)", minHeight: 0 }}>
         <div style={{ padding: "20px 20px 12px", display: "flex", flexDirection: "column", gap: 12, borderBottom: "1px solid var(--line-soft)" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
