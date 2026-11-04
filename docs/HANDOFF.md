@@ -115,13 +115,8 @@ Google place IDs by hand was off by kilometers, so don't.
   del Barrio, Tacos del Valle.
 
 **Agent can do**
-- Closure and new-opening check. OpenClaw checked the 9 New & hot, 4 Picks and 10
-  added Michelin places on 2026-11-03 from official sites and dated editorial coverage
-  (`la-gueras-guide/deliverables/2026-11-03-closure-opening-check/` in the private
-  repo). All were found open except La Once Mil's Roma Norte branch, which public
-  sources don't confirm (Ashley has visited it; re-check). Those results are in each
-  place's `sources[]`. The rest of the catalog is **not** checked for closures: an
-  automated Google Maps sweep failed on 2026-11-02 and no 2026 closure list exists.
+- Closure checks beyond the featured places, Picks and Michelin additions: Ashley
+  dropped them (2026-11-04). Don't run them.
 - Direct Google Maps place URLs for places that only have a name-and-address
   search link (every record now has at least that fallback link).
 - Add the remaining Michelin-listed places that aren't in the guide yet. Ashley
