@@ -11,16 +11,18 @@ export interface TagProps {
   onClick?: () => void;
   count?: number;
   dark?: boolean;
+  /** Opaque background when not selected, for use over the map. */
+  solid?: boolean;
   style?: CSSProperties;
 }
 
-export function Tag({ label, category, icon, selected, size = "md", onClick, count, dark, style }: TagProps) {
+export function Tag({ label, category, icon, selected, size = "md", onClick, count, dark, solid, style }: TagProps) {
   const [h, setH] = useState(false);
   const cat = category ? CATEGORY_STYLE[category] : null;
   const c = cat ? BUCKET_STYLE[cat.bucket] : null;
   const text = label ?? cat?.label ?? "";
   const base = dark ? "var(--rosa-200)" : "var(--vino-900)";
-  const bg = selected ? (c ? c.bg : base) : h && onClick ? (dark ? "rgba(247,202,216,.12)" : "var(--rosa-100)") : "transparent";
+  const bg = selected ? (c ? c.bg : base) : h && onClick ? (dark ? "rgba(247,202,216,.12)" : "var(--rosa-100)") : solid ? "var(--leche-50)" : "transparent";
   const fg = selected ? (c ? c.fg : dark ? "var(--vino-900)" : "var(--rosa-200)") : base;
   const bd = selected ? (c ? c.bg : base) : dark ? "var(--line-on-dark)" : "var(--line-soft)";
   const sm = size === "sm";
