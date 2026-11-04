@@ -4,6 +4,8 @@ import { Button } from "../components/ds/Button";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, photoUrl } from "../lib/data";
 import { useSaved } from "../lib/useSaved";
+import { GUIDE_URL } from "../lib/guide";
+import { canNativeShare, copyText, listText } from "../lib/shareList";
 import { useToast } from "../lib/ToastProvider";
 import type { Place } from "../types";
 
@@ -19,6 +21,19 @@ export function MiLista() {
     showToast(wasSaved ? "Removed. Their loss." : "Saved. Good taste.", wasSaved ? "heart-off" : "heart");
   }
 
+  async function onShare() {
+    try {
+      await navigator.share({ title: "My Mexico City list", text: listText(list) });
+    } catch {
+      // Closing the share sheet counts as an error; nothing to do.
+    }
+  }
+
+  async function onCopy() {
+    const ok = await copyText(listText(list));
+    showToast(ok ? "Copied. Paste it anywhere." : "Couldn't copy. Try the share button.", ok ? "copy" : "x");
+  }
+
   return (
     <main style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px 120px", minHeight: "70vh" }}>
       <div style={{ position: "relative", marginBottom: 48 }}>
@@ -32,6 +47,19 @@ export function MiLista() {
           the good ones
         </div>
       </div>
+
+      {list.length > 0 && (
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", margin: "-16px 0 32px" }}>
+          {canNativeShare() && (
+            <Button variant="pink" size="sm" icon="share-2" onClick={onShare}>
+              Share my list
+            </Button>
+          )}
+          <Button variant={canNativeShare() ? "secondary" : "pink"} size="sm" icon="copy" onClick={onCopy}>
+            Copy my list
+          </Button>
+        </div>
+      )}
 
       {list.length === 0 ? (
         <div style={{ background: "var(--vino-800)", borderRadius: 4, padding: 56, textAlign: "center", color: "var(--rosa-200)" }}>
@@ -63,6 +91,18 @@ export function MiLista() {
             />
           ))}
         </div>
+      )}
+
+      {GUIDE_URL && list.length > 0 && (
+        <section style={{ marginTop: 56, background: "var(--vino-800)", borderRadius: 4, padding: "32px 24px", color: "var(--rosa-200)" }}>
+          <div style={{ font: "italic 400 34px/1 var(--font-serif)" }}>Want the whole guide?</div>
+          <p style={{ font: "400 15px/1.5 var(--font-sans)", color: "var(--nude-300)", margin: "12px 0 20px", maxWidth: 460 }}>
+            Itineraries and my notes, all in one place.
+          </p>
+          <Button variant="pink" iconRight="arrow-right" href={GUIDE_URL} target="_blank" rel="noopener noreferrer">
+            Get the guide
+          </Button>
+        </section>
       )}
 
       <SpotDetail spot={spot} onClose={() => setSpot(null)} />
