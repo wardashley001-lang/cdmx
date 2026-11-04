@@ -7,6 +7,7 @@ export interface InputProps {
   placeholder?: string;
   icon?: string;
   label?: string;
+  ariaLabel?: string;
   size?: "sm" | "md" | "lg";
   onClear?: () => void;
   type?: string;
@@ -15,9 +16,9 @@ export interface InputProps {
   onBlur?: () => void;
 }
 
-export function Input({ value, onChange, placeholder, icon, label, size = "md", onClear, type = "text", style, ...rest }: InputProps) {
+export function Input({ value, onChange, placeholder, icon, label, ariaLabel, size = "md", onClear, type = "text", style, ...rest }: InputProps) {
   const [focus, setFocus] = useState(false);
-  const h = size === "lg" ? 58 : size === "sm" ? 40 : 48;
+  const h = size === "lg" ? 58 : size === "sm" ? 44 : 48;
   return (
     <label style={{ display: "flex", flexDirection: "column", gap: 8, ...style }}>
       {label && (
@@ -42,6 +43,7 @@ export function Input({ value, onChange, placeholder, icon, label, size = "md", 
         {icon && <Icon name={icon} size={17} color="var(--vino-700)" />}
         <input
           type={type}
+          aria-label={ariaLabel ?? label ?? placeholder}
           value={value}
           placeholder={placeholder}
           onChange={(e) => onChange && onChange(e.target.value)}

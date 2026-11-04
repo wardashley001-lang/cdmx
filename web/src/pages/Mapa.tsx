@@ -181,7 +181,7 @@ export function Mapa() {
         )}
         <div style={{ position: "absolute", left: 12, right: 12, top: 12, zIndex: 500, display: "flex", flexDirection: "column", gap: 8 }}>
           <div style={{ display: "flex", gap: 8 }}>
-            <Input icon="search" size="sm" placeholder="Search a spot…" value={query} onChange={setQuery} onClear={() => setQuery("")} style={{ flex: 1 }} />
+            <Input icon="search" size="sm" ariaLabel="Search places" placeholder="Search a spot…" value={query} onChange={setQuery} onClear={() => setQuery("")} style={{ flex: 1, minWidth: 0 }} />
             <Tabs value={view} onChange={(v) => setView(v as "map" | "list")} items={[{ value: "map", icon: "map" }, { value: "list", icon: "list" }]} style={{ padding: 2 }} />
           </div>
           {filters}
