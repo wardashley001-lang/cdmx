@@ -110,10 +110,10 @@ export function Mapa() {
 
   const filters = (
     <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
-      {flag && <Tag label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
-      <Tag label="All" selected={!group} onClick={() => setGroup(null)} size={mobile ? "sm" : "md"} />
+      {flag && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
+      <Tag solid label="All" selected={!group} onClick={() => setGroup(null)} size={mobile ? "sm" : "md"} />
       {GROUP_ORDER.map((g) => (
-        <Tag key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
+        <Tag solid key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
       ))}
     </div>
   );
