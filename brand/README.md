@@ -1,5 +1,7 @@
 # Brand assets
 
+**Start with `BRAND_GUIDE.pdf`** (source: `BRAND_GUIDE.html`): the one-stop brand guide covering the name, logo, color, type, photos, voice and Instagram. Items marked "Ashley to confirm" in it are my reading of how the app uses things, not rules she set.
+
 ## Wordmark
 
 The logo is **LA GÜERA’S** in wide caps with **guide** in script underneath, right-aligned (decided with Ashley, 2026-11-03). The full name is always "La Güera's Guide". Live in `web/src/components/ds/Wordmark.tsx`. Use the typographic apostrophe (’) in the caps. In the script font the apostrophe looks detached, so don't set "güera's" in script; keep the possessive in the caps line.
