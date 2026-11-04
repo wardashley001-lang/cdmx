@@ -138,7 +138,7 @@ export function Footer() {
   return (
     <footer style={{ background: "var(--vino-900)", color: "var(--rosa-200)", padding: "72px 20px calc(112px + env(safe-area-inset-bottom, 0px))" }}>
       <div style={{ maxWidth: "var(--container)", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 32, alignItems: "flex-end", justifyContent: "space-between" }}>
-        <Wordmark size={72} tone="rosa" />
+        <Wordmark size={typeof window !== "undefined" && window.innerWidth < 480 ? 56 : 72} tone="rosa" />
         <div style={{ display: "flex", flexDirection: "column", gap: 6, alignItems: "flex-end" }}>
           <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--nude-300)" }}>
             HECHO EN LA CDMX

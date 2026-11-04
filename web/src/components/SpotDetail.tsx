@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Dialog } from "./ds/Dialog";
 import { Badge } from "./ds/Badge";
 import { Button } from "./ds/Button";
@@ -15,7 +16,20 @@ const MICHELIN_LABEL: Record<Michelin["level"], string> = {
   "green-star": "Michelin · Green Star",
 };
 
-export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onClose: () => void; mobile?: boolean }) {
+// Same breakpoint rule Mapa.tsx uses.
+function useIsPhone() {
+  const [m, setM] = useState(() => window.innerWidth < 760);
+  useEffect(() => {
+    const r = () => setM(window.innerWidth < 760);
+    window.addEventListener("resize", r);
+    return () => window.removeEventListener("resize", r);
+  }, []);
+  return m;
+}
+
+export function SpotDetail({ spot, onClose, mobile: mobileProp }: { spot: Place | null; onClose: () => void; mobile?: boolean }) {
+  const phone = useIsPhone();
+  const mobile = mobileProp ?? phone;
   const { isSaved, toggle } = useSaved();
   const showToast = useToast();
   if (!spot) return null;
@@ -34,7 +48,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
 
   return (
     <Dialog open onClose={onClose} ariaLabel={spot.name} variant={mobile ? "sheet" : "modal"} width={600} style={{ padding: mobile ? "10px 20px 28px" : 0 }}>
-      <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "220px 1fr" }}>
+      <div style={{ display: "grid", gridTemplateColumns: mobile ? "minmax(0,1fr)" : "220px minmax(0,1fr)" }}>
         <div
           style={{
             position: "relative",
@@ -52,7 +66,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
             </span>
           )}
         </div>
-        <div style={{ padding: mobile ? "20px 0 0" : "32px 32px 28px" }}>
+        <div style={{ minWidth: 0, padding: mobile ? "20px 0 0" : "32px 32px 28px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
             {spot.neighborhood && (
               <span style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".2em", color: "var(--text-2)" }}>
@@ -96,7 +110,7 @@ export function SpotDetail({ spot, onClose, mobile }: { spot: Place | null; onCl
             </Button>
           </div>
           {spot.gallery && spot.gallery.length > 0 && (
-            <div style={{ display: "flex", gap: 8, overflowX: "auto", marginTop: 18, paddingBottom: 4, scrollbarWidth: "thin" }}>
+            <div style={{ display: "flex", gap: 8, overflowX: "auto", minWidth: 0, marginTop: 18, paddingBottom: 4, scrollbarWidth: "thin" }}>
               {spot.gallery.map((g) => (
                 <img
                   key={g}
