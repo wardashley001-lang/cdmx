@@ -75,7 +75,21 @@ export function Header() {
           </Button>
         </span>
         <span className="sm:hidden">
-          <IconButton icon="search" label="Search" variant="inverse" onClick={() => navigate("/mapa")} />
+          <IconButton
+            icon="search"
+            label="Search"
+            variant="inverse"
+            onClick={() => {
+              // Already on the map: focus its search box inside the tap so the phone keyboard opens.
+              const box = document.querySelector<HTMLInputElement>('input[aria-label="Search places"]');
+              if (box) {
+                box.focus();
+                box.scrollIntoView({ block: "nearest" });
+              } else {
+                navigate("/mapa", { state: { focusSearch: true } });
+              }
+            }}
+          />
         </span>
       </div>
     </header>

@@ -22,3 +22,10 @@
 @font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/InstrumentSans-400.woff2") format("woff2");}
 @font-face{font-family:"Mrs Saint Delafield";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/MrsSaintDelafield-400.woff2") format("woff2");}
 @font-face{font-family:"Syne";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/Syne-600.woff2") format("woff2");}
+
+/* Map page height. 100vh on iPhone Safari is taller than the visible screen, which let the page scroll
+   and pushed the search bar and filters behind the header. dvh follows the visible area. */
+.map-shell {
+  height: calc(100vh - 69px);
+  height: calc(100dvh - 69px);
+}
