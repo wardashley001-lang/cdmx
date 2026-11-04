@@ -4670,11 +4670,18 @@
         }
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/italian-bot-nico.jpg",
       "pick": {
         "text": "Dinner in a botanical garden, basically: an old Condesa mansion's courtyard, cacti everywhere. The tuna tostada is my favorite, the burger is amazing, and honestly so is everything else.",
         "approvedOn": "2026-11-02"
-      }
+      },
+      "imageCredit": "Photo: La Güera",
+      "gallery": [
+        "photos/italian-bot-nico-2.jpg",
+        "photos/italian-bot-nico-3.jpg",
+        "photos/italian-bot-nico-4.jpg",
+        "photos/italian-bot-nico-5.jpg"
+      ]
     },
     {
       "id": "italian-babero",
@@ -5894,7 +5901,7 @@
       ],
       "sourceFile": "CDMX.csv",
       "group": "eat",
-      "image": null,
+      "image": "photos/contemporary-arda.jpg",
       "address": "San Luis 155, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX",
       "sources": [
         {
@@ -5902,6 +5909,11 @@
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
         }
+      ],
+      "imageCredit": "Photo: La Güera",
+      "gallery": [
+        "photos/contemporary-arda-2.jpg",
+        "photos/contemporary-arda-3.jpg"
       ]
     },
     {
