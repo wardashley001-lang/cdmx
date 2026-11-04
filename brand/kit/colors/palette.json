@@ -1,0 +1,86 @@
+{
+  "core": [
+    {
+      "name": "Vino 900",
+      "hex": "#2A0710",
+      "use": "text, deepest dark"
+    },
+    {
+      "name": "Vino 800",
+      "hex": "#4A0B18",
+      "use": "dark pages and backgrounds"
+    },
+    {
+      "name": "Rosa 500",
+      "hex": "#E0368C",
+      "use": "accent, script, buttons (large only)"
+    },
+    {
+      "name": "Rosa 200",
+      "hex": "#F7CAD8",
+      "use": "text on dark, soft pink background"
+    },
+    {
+      "name": "Leche 50",
+      "hex": "#FFF8F7",
+      "use": "cards"
+    },
+    {
+      "name": "Leche 100",
+      "hex": "#FBEFF0",
+      "use": "page background"
+    }
+  ],
+  "support": [
+    {
+      "name": "Vino 700",
+      "hex": "#5E1122",
+      "use": "secondary text"
+    },
+    {
+      "name": "Vino 600",
+      "hex": "#7A1A2E",
+      "use": "Beyond pins"
+    },
+    {
+      "name": "Rosa 600",
+      "hex": "#C81F72",
+      "use": "hover"
+    },
+    {
+      "name": "Rosa 400",
+      "hex": "#EE7FB4",
+      "use": "focus ring"
+    },
+    {
+      "name": "Rosa 300",
+      "hex": "#F4A9C8",
+      "use": "script on dark"
+    },
+    {
+      "name": "Rosa 100",
+      "hex": "#FBE4EA",
+      "use": "light pink"
+    },
+    {
+      "name": "Nude 300",
+      "hex": "#DDB9A6",
+      "use": "quiet text on dark"
+    },
+    {
+      "name": "Tomate 500",
+      "hex": "#D7372B",
+      "use": "Eat pins"
+    },
+    {
+      "name": "Olivo 500",
+      "hex": "#8E8A2B",
+      "use": "Coffee pins"
+    },
+    {
+      "name": "Cielo 500",
+      "hex": "#6F93C9",
+      "use": "Beyond pins"
+    }
+  ]
+}
