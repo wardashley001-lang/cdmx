@@ -4,7 +4,7 @@ Last updated 2026-11-02. This file is public, so it holds no private details.
 Private planning for the paid guide, the storefront and Instagram stays in the
 private OpenClaw repo, not here.
 
-Live site: https://wardashley001-lang.github.io/cdmx/
+Live site: https://laguerasguide.com (custom domain on GitHub Pages; DNS on Cloudflare)
 Repo: `wardashley001-lang/cdmx` (the app lives in `web/`).
 
 ## What this is
