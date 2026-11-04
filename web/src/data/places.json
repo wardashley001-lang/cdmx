@@ -4431,7 +4431,7 @@
         }
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/mexican-la-once-mil-roma-norte.jpg",
       "michelin": {
         "year": 2026,
         "level": "one-star",
@@ -4441,7 +4441,11 @@
       "pick": {
         "text": "My favorite tacos. The room is fun, they hand you a beer when you walk in, and the Lomas original just earned a Michelin star. No reservations, so expect a line.",
         "approvedOn": "2026-11-02"
-      }
+      },
+      "imageCredit": "Photo: La Güera",
+      "gallery": [
+        "photos/mexican-la-once-mil-roma-norte-interior.jpg"
+      ]
     },
     {
       "id": "mexican-taquer-a-orinoco",
@@ -4541,10 +4545,11 @@
         }
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/italian-la-bellezza.jpg",
       "hot": true,
       "featuredOrder": 6,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: Sourced"
     },
     {
       "id": "italian-barolo",
@@ -4967,7 +4972,8 @@
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Bikini Pizza",
       "gallery": [
-        "photos/italian-bikini-pizza-2.jpg"
+        "photos/italian-bikini-pizza-2.jpg",
+        "photos/italian-bikini-pizza-instagram.jpg"
       ]
     },
     {
@@ -5600,7 +5606,7 @@
       ],
       "sourceFile": "Hotbook_July_2025.csv",
       "group": "eat",
-      "image": null,
+      "image": "photos/french-la-belle-epoque.jpg",
       "address": "Oaxaca 80, Roma Norte, CDMX",
       "sources": [
         {
@@ -5631,7 +5637,8 @@
       ],
       "hot": true,
       "featuredOrder": 5,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: Sourced"
     },
     {
       "id": "french-au-pied-de-cochon",
@@ -8376,10 +8383,11 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/american-cassette.jpg",
       "hot": true,
       "featuredOrder": 7,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: Sourced"
     },
     {
       "id": "cafe-ritmo-cafe",
@@ -8717,7 +8725,7 @@
       ],
       "sourceFile": "ashley-2026-11-02",
       "group": "drinks",
-      "image": null,
+      "image": "photos/wine-astronomic.jpg",
       "hot": true,
       "sources": [
         {
@@ -8744,7 +8752,8 @@
         }
       ],
       "featuredOrder": 4,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: Sourced"
     },
     {
       "id": "bars-el-bar-condesa",
@@ -8792,7 +8801,10 @@
           "note": "Checked by OpenClaw (source dated updated 2026-10-06): The current roundup lists El Bar at Alfonso Reyes 203 with Wednesday–Saturday service from 6 p.m. Editorial evidence, not a same-day door check."
         }
       ],
-      "imageCredit": "Photo: El Bar (@el_bar_condesa)"
+      "imageCredit": "Photo: El Bar (@el_bar_condesa)",
+      "gallery": [
+        "photos/bars-el-bar-condesa-instagram.jpg"
+      ]
     },
     {
       "id": "contemporary-pujol",
