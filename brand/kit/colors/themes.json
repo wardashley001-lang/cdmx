@@ -1,0 +1,64 @@
+{
+  "themes": {
+    "leche-light": {
+      "use": "Default: app, website, PDFs",
+      "page": "#FBEFF0",
+      "card": "#FFF8F7",
+      "text": "#2A0710",
+      "text-secondary": "#5E1122",
+      "text-quiet": "#6A4750",
+      "line": "#2A0710",
+      "line-soft": "#D8BFC4",
+      "accent": "#E0368C (large only)",
+      "button-bg": "#4A0B18",
+      "button-text": "#F7CAD8",
+      "button-hover-bg": "#E0368C"
+    },
+    "vino-dark": {
+      "use": "Footer, Instagram stories and covers, night posts",
+      "page": "#4A0B18",
+      "deep": "#2A0710",
+      "text": "#F7CAD8",
+      "text-quiet": "#DDB9A6",
+      "line": "rgba(247,202,216,.35)",
+      "accent": "#E0368C",
+      "script": "#F4A9C8",
+      "button": "outlined #F7CAD8 (inverse)",
+      "button-hover-bg": "#F7CAD8",
+      "button-hover-text": "#2A0710"
+    },
+    "rosa-pink": {
+      "use": "Voice pages, highlights, loud moments",
+      "page": "#F7CAD8",
+      "panel": "#FBE4EA",
+      "text": "#2A0710",
+      "text-secondary": "#5E1122",
+      "accent": "#4A0B18 (or white script)",
+      "button-bg": "#E0368C",
+      "button-text": "#2A0710",
+      "button-hover-bg": "#4A0B18",
+      "button-hover-text": "#F7CAD8"
+    }
+  },
+  "map_and_status_colors": {
+    "eat": "#D7372B",
+    "drinks": "#E0368C",
+    "coffee-and-sweets": "#8E8A2B",
+    "nightlife": "#6F93C9",
+    "shops-and-beauty": "#B98772",
+    "sights-and-day-trips": "#7A1A2E",
+    "badge-hot": "#D7372B",
+    "badge-nuevo": "#A9C3E8",
+    "badge-pick": "#E0368C",
+    "status-open": "#6E6A1F",
+    "status-closed": "#B32A1F"
+  },
+  "readable_pairs_contrast": {
+    "#2A0710 on #FBEFF0": 16.5,
+    "#F7CAD8 on #4A0B18": 10.6,
+    "#DDB9A6 on #4A0B18": 8.6,
+    "#2A0710 on #F7CAD8": 12.7,
+    "#2A0710 on #E0368C": 4.5,
+    "#FFFFFF on #E0368C (large text only)": 4.1
+  }
+}
