@@ -56,21 +56,17 @@ npm run dev
 
 ## Data & curation
 
-`src/data/places.json` is generated from the categorization pipeline in the
-repo root, then enriched and curated:
+`src/data/places.json` was first generated from the categorization pipeline in
+the repo root (`categorize_places.py`, `scripts/build_site_data.py`,
+`scripts/merge_enrichment.py`, `scripts/apply_curation.py`,
+`scripts/attach_photos.py`, `curation.json`).
 
-```bash
-# from the repo root
-python categorize_places.py data/*.csv --output-dir output
-python scripts/build_site_data.py      # regenerate places.json from output/*.json
-python scripts/merge_enrichment.py     # merge in researched enrichment fields
-python scripts/apply_curation.py       # apply curation.json (Hot/Michelin/Essentials/Tacos, category moves)
-python scripts/attach_photos.py        # after adding files to web/public/photos/
-```
-
-What's Hot, Essential, or Michelin-listed, and which category each place
-belongs in, lives in `curation.json` at the repo root — see
-`CURATION_NOTES.md` for what to double-check.
+**Do not re-run that pipeline.** It no longer matches `places.json`: pins,
+addresses, picks, featured order, sources and photos were added directly to the
+JSON, and running the pipeline would overwrite that work. Edit `places.json` by
+hand or with a small script, then run `npm run qa:data`. `docs/HANDOFF.md` has
+the data model and the rules for editing it. `CURATION_NOTES.md` is a record of
+the original curation pass, not a current to-do list.
 
 `npm run qa:data` is the repeatable catalog gate. It checks unique IDs,
 required fields, the explicit pending featured-review order, coordinate and
