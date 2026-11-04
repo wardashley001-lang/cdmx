@@ -4937,7 +4937,7 @@
       ],
       "sourceFile": "Pizza.csv",
       "group": "eat",
-      "image": null,
+      "image": "photos/italian-bikini-pizza.jpg",
       "address": "Chilpancingo 35, Condesa, CDMX",
       "sources": [
         {
@@ -4964,7 +4964,11 @@
       ],
       "hot": true,
       "featuredOrder": 3,
-      "featuredApprovalState": "approved"
+      "featuredApprovalState": "approved",
+      "imageCredit": "Photo: Bikini Pizza",
+      "gallery": [
+        "photos/italian-bikini-pizza-2.jpg"
+      ]
     },
     {
       "id": "italian-hank-s-pizza-choza",

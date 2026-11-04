@@ -4,7 +4,6 @@ Photos Ashley supplies, credited "Photo: La Güera" (no venue permission needed;
 
 ## Homepage places first (New & hot and Picks)
 
-- [ ] **Bikini Pizza** (Condesa) · IG @bikini_____pizza
 - [ ] **Astronomic** (Juárez) · IG @astronomic___
 - [ ] **La Belle Epoque** (Roma Norte) · IG @labelleepoque.mx
 - [ ] **La Bellezza** (Juárez) · IG @labellezza.mexico
@@ -12,7 +11,7 @@ Photos Ashley supplies, credited "Photo: La Güera" (no venue permission needed;
 - [ ] **RANMA** (Juárez) · IG @ranma________
 - [ ] **La Once Mil - Roma Norte** (Roma Norte) · IG @tacoslaoncemil
 
-Already done: El Bar, El Silverio, Botánico, ARDA, Lalo.
+Already done: El Bar, El Silverio, Botánico, ARDA, Lalo, Bikini Pizza (2; more welcome).
 
 ## Everyone else (283 places)
 
