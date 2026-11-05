@@ -32,6 +32,7 @@ export interface ButtonProps {
   href?: string;
   target?: string;
   rel?: string;
+  download?: string;
   style?: CSSProperties;
 }
 

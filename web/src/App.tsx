@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { lazy, Suspense } from "react";
 import { MiLista } from "./pages/MiLista";
 import { Starter } from "./pages/Starter";
+import { StarterThanks } from "./pages/StarterThanks";
 const Mapa = lazy(() => import("./pages/Mapa").then((m) => ({ default: m.Mapa })));
 import { ToastProvider } from "./lib/ToastProvider";
 import { SavedProvider } from "./lib/useSaved";
@@ -21,12 +22,14 @@ function App() {
                 <Route path="/mapa" element={<Suspense fallback={null}><Mapa /></Suspense>} />
                 <Route path="/mi-lista" element={<MiLista />} />
                 <Route path="/starter" element={<Starter />} />
+                <Route path="/your-starter" element={<StarterThanks />} />
               </Routes>
             </main>
             <Routes>
               <Route path="/" element={<Footer />} />
               <Route path="/mi-lista" element={<Footer />} />
               <Route path="/starter" element={<Footer />} />
+              <Route path="/your-starter" element={<Footer />} />
             </Routes>
             <MobileTabBar />
           </div>
