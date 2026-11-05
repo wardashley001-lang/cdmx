@@ -4,6 +4,7 @@ import { Button } from "../ds/Button";
 import { IconButton } from "../ds/IconButton";
 import { Icon } from "../ds/Icon";
 import { useSaved } from "../../lib/useSaved";
+import { PRIVACY_READY } from "../../lib/privacy";
 
 const NAV: { path: string; label: string }[] = [
   { path: "/", label: "Home" },
@@ -158,6 +159,11 @@ export function Footer() {
             HECHO EN LA CDMX
           </span>
           <span style={{ font: "400 14px var(--font-mono)", color: "var(--rosa-400)" }}>no ads, no sponsored spots, just taste.</span>
+          {PRIVACY_READY && (
+            <a href="#/privacy" style={{ font: "400 14px var(--font-mono)", color: "var(--nude-300)", textDecoration: "underline" }}>
+              privacy
+            </a>
+          )}
         </div>
       </div>
     </footer>

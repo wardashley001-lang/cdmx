@@ -19,7 +19,12 @@ export function EmailForm({ note = "I'll email you the starter. Unsubscribe any 
           Send it
         </Button>
       </form>
-      <p style={{ margin: "12px 0 0", font: "400 13px/1.5 var(--font-mono)", color: noteColor }}>{note}</p>
+      <p style={{ margin: "12px 0 0", font: "400 13px/1.5 var(--font-mono)", color: noteColor }}>
+        {note}{" "}
+        <a href="#/privacy" style={{ color: "inherit", textDecoration: "underline" }}>
+          Privacy
+        </a>
+      </p>
     </>
   );
 }
