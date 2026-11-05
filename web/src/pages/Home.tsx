@@ -283,53 +283,59 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div
-            className="hidden sm:block"
-            style={{ justifySelf: "end", width: "min(100%,460px)", border: "1px solid rgba(247,202,216,.35)", borderRadius: 28, position: "relative", background: "rgba(247,202,216,.04)" }}
-          >
-            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -52, right: -2, width: 104, height: 104, fontSize: 21, boxShadow: "0 10px 24px rgba(0,0,0,.35)" }} />
-            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: -44, right: 70, width: 84, height: 84, fontSize: 24, boxShadow: "0 10px 24px rgba(0,0,0,.35)" }} />
-            <Badge variant="ink" shape="stamp" tilt={-6} style={{ position: "absolute", bottom: -36, left: -30, width: 78, height: 78, fontSize: 24, border: "1px solid rgba(247,202,216,.3)", boxShadow: "0 10px 24px rgba(0,0,0,.35)" }}>New</Badge>
-            <StickerPin color="var(--rosa-500)" style={{ position: "absolute", top: -34, left: 40, transform: "rotate(-8deg)" }} />
-            <StickerPin color="#8b9035" style={{ position: "absolute", bottom: -46, left: 62, transform: "rotate(6deg)" }} />
-            <StickerPin color="var(--tomate-500)" style={{ position: "absolute", bottom: -58, right: 4, transform: "rotate(10deg)" }} />
-            <div style={{ padding: "26px 32px 30px" }}>
-            <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-500)", marginBottom: 16 }}>
-              {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
-            </div>
-            <div style={{ fontFamily: "var(--font-serif)", fontSize: 60, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
-              {EMAIL_FORM_ACTION ? (
-                <>
-                  Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
-                </>
-              ) : (
-                <>
-                  Start with the <i style={{ color: "var(--rosa-500)" }}>map.</i>
-                </>
-              )}
-            </div>
-            <p style={{ margin: "14px 0 0", font: "400 15px/1.5 var(--font-sans)", color: "var(--nude-300)" }}>
-              {EMAIL_FORM_ACTION ? "My favorite spots in Mexico City: where to eat, drink and go out, all on your phone." : "My favorite spots in Mexico City: where to eat, drink and go out."}
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 22 }}>
-              <Button variant="inverse" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
-                {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
-              </Button>
-              {GUIDE_URL && (
-                <Button variant="inverse" size="lg" fullWidth href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
-                  Get the full guide
+          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,420px)", position: "relative", padding: "44px 0 56px", marginRight: 10 }}>
+            <div
+              style={{
+                position: "relative",
+                background: "var(--leche-0)",
+                borderRadius: 22,
+                padding: "30px 32px 32px",
+                transform: "rotate(-1.5deg)",
+                boxShadow: "0 24px 48px rgba(0,0,0,.4)",
+              }}
+            >
+              <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-600, var(--rosa-500))", marginBottom: 14 }}>
+                {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
+              </div>
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: 56, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--vino-900)" }}>
+                {EMAIL_FORM_ACTION ? (
+                  <>
+                    Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
+                  </>
+                ) : (
+                  <>
+                    Start with the <i style={{ color: "var(--rosa-500)" }}>map.</i>
+                  </>
+                )}
+              </div>
+              <p style={{ margin: "14px 0 0", font: "400 15px/1.5 var(--font-sans)", color: "var(--vino-700, var(--vino-900))" }}>
+                {EMAIL_FORM_ACTION ? "My favorite spots in Mexico City: where to eat, drink and go out, all on your phone." : "My favorite spots in Mexico City: where to eat, drink and go out."}
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 20 }}>
+                <Button variant="secondary" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
+                  {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
                 </Button>
-              )}
+                {GUIDE_URL && (
+                  <Button variant="secondary" size="lg" fullWidth href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
+                    Get the full guide
+                  </Button>
+                )}
+              </div>
             </div>
+            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -4, right: -26, width: 104, height: 104, fontSize: 21, boxShadow: "0 10px 24px rgba(0,0,0,.4)" }} />
+            <StickerPin color="var(--rosa-500)" style={{ position: "absolute", top: 8, right: 82, transform: "rotate(-10deg)" }} />
+            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: 4, left: -30, width: 84, height: 84, fontSize: 24, boxShadow: "0 10px 24px rgba(0,0,0,.4)" }} />
+            <StickerPin color="#8b9035" style={{ position: "absolute", bottom: 0, left: 44, transform: "rotate(6deg)" }} />
+            <Badge variant="ink" shape="stamp" tilt={-6} style={{ position: "absolute", bottom: 14, left: 78, width: 74, height: 74, fontSize: 22, border: "1px solid rgba(247,202,216,.3)", boxShadow: "0 10px 24px rgba(0,0,0,.4)" }}>New</Badge>
+            <StickerPin color="var(--tomate-500)" style={{ position: "absolute", bottom: 6, right: 40, transform: "rotate(10deg)" }} />
             <a
               href="https://www.instagram.com/laguerasguide/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "inline-block", marginTop: 20, font: "400 13px var(--font-mono)", color: "var(--nude-300)", textDecoration: "underline" }}
+              style={{ position: "absolute", bottom: 14, right: 90, font: "400 13px var(--font-mono)", color: "var(--nude-300)", textDecoration: "underline" }}
             >
               Follow @laguerasguide
             </a>
-            </div>
           </div>
         </div>
       </section>
