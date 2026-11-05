@@ -3,7 +3,7 @@
 This is the public repo for laguerasguide.com (the app is in `web/`). Claude Code sessions start with no memory, so this file and `docs/HANDOFF.md` are the memory. This file is public: keep private details out of it.
 
 ## Before you start
-1. Read `docs/HANDOFF.md` (what is built, how it deploys, what is gated) and `VOICE.md`.
+1. Read the shared board first (below). Read `docs/HANDOFF.md` (what is built, how it deploys, what is gated) and `VOICE.md` only when the task touches the site code or place copy; skip them for small or non-site tasks.
 2. The shared board for Ashley, OpenClaw (her other agent) and Claude Code is `la-gueras-guide/COORDINATION.md` in the private repo `wardashley001-lang/OpenClawBabygirl`. If that repo is attached to the session, read it first and update it before you finish (Now / Next / Waiting on Ashley, Handoffs, Decisions, Log). If it is not attached, attach it.
 
 ## Rules
