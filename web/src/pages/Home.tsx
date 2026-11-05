@@ -244,7 +244,7 @@ export function Home() {
       <section style={{ background: "var(--vino-800)", overflow: "hidden" }}>
         <div className="grid-cols-1 sm:[grid-template-columns:1.15fr_.85fr]" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "48px 20px 64px", display: "grid", gap: 40, alignItems: "center" }}>
           <div style={{ position: "relative" }}>
-            <Eyebrow color="var(--rosa-400)">Mexico City · the hot list</Eyebrow>
+            <Eyebrow color="var(--rosa-400)">Mexico City · where to eat, drink &amp; dance</Eyebrow>
             <div style={{ position: "relative" }}>
               <h1 className="text-[64px] sm:text-[clamp(84px,9vw,132px)]" style={{ margin: "18px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
                 Comer,
@@ -292,7 +292,10 @@ export function Home() {
                 </>
               )}
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 28 }}>
+            <p style={{ margin: "14px 0 0", font: "400 15px/1.5 var(--font-sans)", color: "var(--nude-300)" }}>
+              {EMAIL_FORM_ACTION ? "My favorite spots in Mexico City: where to eat, drink and go out, all on your phone." : "My favorite spots in Mexico City: where to eat, drink and go out."}
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 22 }}>
               <Button variant="inverse" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
                 {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
               </Button>
