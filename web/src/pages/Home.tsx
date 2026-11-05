@@ -1,4 +1,6 @@
 import { GUIDE_URL } from "../lib/guide";
+import { EMAIL_FORM_ACTION } from "../lib/email";
+import { EmailForm } from "../components/EmailForm";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../components/ds/Input";
@@ -60,7 +62,6 @@ function ShelfHead({ eyebrow, title, blurb, seeAll }: { eyebrow: string; title: 
 }
 
 // Email signup: see EmailSpot below. Hidden until VITE_EMAIL_FORM_ACTION is set at build time.
-const EMAIL_FORM_ACTION = (import.meta.env.VITE_EMAIL_FORM_ACTION as string | undefined) ?? "";
 const EMAIL_SPOT_ID = "email-spot";
 
 type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string; scrollTo?: string };
@@ -126,22 +127,7 @@ function EmailSpot() {
         <p style={{ margin: "0 0 18px", font: "400 16px/1.5 var(--font-sans)", color: "var(--text-2)" }}>
           Four places I&apos;d send you to first, in your inbox.
         </p>
-        <form action={EMAIL_FORM_ACTION} method="post" target="_blank" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <input
-            type="email"
-            name="email_address"
-            required
-            placeholder="Your email"
-            aria-label="Your email"
-            style={{ flex: "1 1 240px", height: 48, padding: "0 16px", borderRadius: 999, border: "1px solid var(--line-soft)", font: "400 16px var(--font-sans)", background: "var(--leche-0)" }}
-          />
-          <Button type="submit" variant="pink" iconRight="arrow-right">
-            Send it
-          </Button>
-        </form>
-        <p style={{ margin: "12px 0 0", font: "400 13px/1.5 var(--font-mono)", color: "var(--text-3)" }}>
-          I&apos;ll email you the starter. Unsubscribe any time.
-        </p>
+        <EmailForm />
       </div>
     </Section>
   );
