@@ -76,7 +76,7 @@ const MORE: MoreCard[] = [
 // Slim row of links under the hero. Each link only appears when it has a real destination.
 function QuickLinks() {
   const links: { label: string; href: string; primary?: boolean; external?: boolean }[] = [];
-  if (EMAIL_FORM_ACTION) links.push({ label: "Free starter", href: "#/starter", primary: true });
+  if (EMAIL_FORM_ACTION) links.push({ label: "Starter guide", href: "#/starter", primary: true });
   if (GUIDE_URL) links.push({ label: "Get the guide", href: GUIDE_URL, external: true });
   links.push({ label: "Instagram", href: "https://www.instagram.com/laguerasguide/", external: true });
   const pill = (primary?: boolean): React.CSSProperties => ({
@@ -295,12 +295,12 @@ export function Home() {
               }}
             >
               <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-600, var(--rosa-500))", marginBottom: 14 }}>
-                {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
+                {EMAIL_FORM_ACTION ? "Mexico City · for your phone" : "Start here"}
               </div>
               <div style={{ fontFamily: "var(--font-serif)", fontSize: 56, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--vino-900)" }}>
                 {EMAIL_FORM_ACTION ? (
                   <>
-                    Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
+                    Get my <i style={{ color: "var(--rosa-500)" }}>starter guide.</i>
                   </>
                 ) : (
                   <>
@@ -313,7 +313,7 @@ export function Home() {
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 20 }}>
                 <Button variant="secondary" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
-                  {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
+                  {EMAIL_FORM_ACTION ? "Download the starter guide" : "Open the map"}
                 </Button>
                 {GUIDE_URL && (
                   <Button variant="secondary" size="lg" fullWidth href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
