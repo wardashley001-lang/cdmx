@@ -273,8 +273,27 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div className="hidden sm:block" aria-hidden="true" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-checker)" }} />
+          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
+            <div aria-hidden="true" style={{ position: "relative", aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-checker)", overflow: "hidden" }}>
+              {EMAIL_FORM_ACTION && (
+                <>
+                  <img src={`${import.meta.env.BASE_URL}starter-lalo.jpg`} alt="" style={{ position: "absolute", right: "9%", top: "26%", width: "47%", borderRadius: 4, boxShadow: "0 16px 36px rgba(0,0,0,.45)", transform: "rotate(7deg)" }} />
+                  <img src={`${import.meta.env.BASE_URL}starter-cover.jpg`} alt="" style={{ position: "absolute", left: "9%", top: "20%", width: "47%", borderRadius: 4, boxShadow: "0 16px 36px rgba(0,0,0,.5)", transform: "rotate(-6deg)" }} />
+                </>
+              )}
+            </div>
+            {EMAIL_FORM_ACTION && (
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", marginTop: -28, position: "relative" }}>
+                <Button variant="pink" href="#/starter" iconRight="arrow-right">
+                  Get the free starter
+                </Button>
+                {GUIDE_URL && (
+                  <Button variant="inverse" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
+                    Get the full guide
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
