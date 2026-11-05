@@ -98,7 +98,7 @@ function QuickLinks() {
     flex: "none",
   });
   return (
-    <section style={{ background: "var(--leche-50)", borderBottom: "1px solid var(--line-soft)" }}>
+    <section className="sm:hidden" style={{ background: "var(--leche-50)", borderBottom: "1px solid var(--line-soft)" }}>
       <div style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "14px 20px", display: "flex", gap: 10, alignItems: "center", overflowX: "auto", scrollbarWidth: "none" }}>
         <span className="hidden sm:inline" style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--text-3)", flex: "none", marginRight: 4 }}>MORE FROM LA GÜERA</span>
         {links.map((l) => (
@@ -274,26 +274,40 @@ export function Home() {
             </form>
           </div>
           <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
-            <div aria-hidden="true" style={{ position: "relative", aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-checker)", overflow: "hidden" }}>
-              {EMAIL_FORM_ACTION && (
-                <>
-                  <img src={`${import.meta.env.BASE_URL}starter-lalo.jpg`} alt="" style={{ position: "absolute", right: "9%", top: "26%", width: "47%", borderRadius: 4, boxShadow: "0 16px 36px rgba(0,0,0,.45)", transform: "rotate(7deg)" }} />
-                  <img src={`${import.meta.env.BASE_URL}starter-cover.jpg`} alt="" style={{ position: "absolute", left: "9%", top: "20%", width: "47%", borderRadius: 4, boxShadow: "0 16px 36px rgba(0,0,0,.5)", transform: "rotate(-6deg)" }} />
-                </>
-              )}
-            </div>
-            {EMAIL_FORM_ACTION && (
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", marginTop: -28, position: "relative" }}>
-                <Button variant="pink" href="#/starter" iconRight="arrow-right">
-                  Get the free starter
-                </Button>
+            <div style={{ position: "relative", background: "var(--rosa-200)", borderRadius: 6, padding: "36px 36px 40px", color: "var(--vino-900)", overflow: "hidden" }}>
+              <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em" }}>LA GÜERA&apos;S GUIDE</div>
+              <div style={{ height: 1, background: "var(--vino-900)", opacity: 0.35, margin: "14px 0 44px" }} />
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: 76, lineHeight: 0.95, letterSpacing: "-.03em" }}>
+                Thank me <i style={{ color: "var(--rosa-500)" }}>later.</i>
+              </div>
+              <div style={{ font: "400 52px/1 var(--font-script)", color: "var(--rosa-500)", transform: "rotate(-4deg)", transformOrigin: "left", margin: "18px 0 36px" }}>xo, la güera</div>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", position: "relative", zIndex: 1 }}>
+                {EMAIL_FORM_ACTION && (
+                  <Button variant="primary" href="#/starter" iconRight="arrow-right">
+                    Get the free starter
+                  </Button>
+                )}
                 {GUIDE_URL && (
-                  <Button variant="inverse" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
+                  <Button variant="secondary" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
                     Get the full guide
                   </Button>
                 )}
+                {!EMAIL_FORM_ACTION && !GUIDE_URL && (
+                  <Button variant="primary" href="#/mapa" iconRight="arrow-right">
+                    Open the map
+                  </Button>
+                )}
               </div>
-            )}
+              <a
+                href="https://www.instagram.com/laguerasguide/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-block", marginTop: 18, font: "400 13px var(--font-mono)", color: "var(--vino-900)", textDecoration: "underline", position: "relative", zIndex: 1 }}
+              >
+                Follow @laguerasguide
+              </a>
+              <div aria-hidden="true" style={{ position: "absolute", right: 0, bottom: 0, width: 96, height: 96, background: "var(--pattern-checker)" }} />
+            </div>
           </div>
         </div>
       </section>
