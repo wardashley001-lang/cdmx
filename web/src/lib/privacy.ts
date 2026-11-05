@@ -6,7 +6,7 @@ export const PRIVACY = {
   /** Operating country, e.g. "United States" or "Mexico". */
   country: "Mexico",
   /** Where people send privacy or unsubscribe questions. */
-  contactEmail: "contact.ashward@gmail.com",
+  contactEmail: "hello@laguerasguide.com",
   /** Last updated date as shown on the page, e.g. "November 5, 2026". */
   updated: "November 5, 2026",
 };
