@@ -5,8 +5,9 @@ import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../components/ds/Input";
 import { Button } from "../components/ds/Button";
-import { Tag } from "../components/ds/Tag";
 import { Badge } from "../components/ds/Badge";
+import { Tag } from "../components/ds/Tag";
+import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, photoUrl } from "../lib/data";
@@ -67,10 +68,50 @@ const EMAIL_SPOT_ID = "email-spot";
 type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string; scrollTo?: string };
 
 const MORE: MoreCard[] = [
-  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", scrollTo: EMAIL_FORM_ACTION ? EMAIL_SPOT_ID : undefined },
+  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", href: EMAIL_FORM_ACTION ? "#/starter" : undefined },
   { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)", href: GUIDE_URL || undefined },
   { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
+
+// Slim row of links under the hero. Each link only appears when it has a real destination.
+function QuickLinks() {
+  const links: { label: string; href: string; primary?: boolean; external?: boolean }[] = [];
+  if (EMAIL_FORM_ACTION) links.push({ label: "Free starter", href: "#/starter", primary: true });
+  if (GUIDE_URL) links.push({ label: "Get the guide", href: GUIDE_URL, external: true });
+  links.push({ label: "Instagram", href: "https://www.instagram.com/laguerasguide/", external: true });
+  const pill = (primary?: boolean): React.CSSProperties => ({
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+    height: 44,
+    padding: "0 18px",
+    borderRadius: 999,
+    border: `1px solid ${primary ? "var(--rosa-500)" : "var(--line-soft)"}`,
+    background: primary ? "var(--rosa-500)" : "var(--leche-0)",
+    color: "var(--vino-900)",
+    fontFamily: "var(--font-caps)",
+    fontWeight: 700,
+    fontSize: 10.5,
+    letterSpacing: ".16em",
+    textTransform: "uppercase",
+    textDecoration: "none",
+    whiteSpace: "nowrap",
+    flex: "none",
+  });
+  return (
+    <section className="sm:hidden" style={{ background: "var(--leche-50)", borderBottom: "1px solid var(--line-soft)" }}>
+      <div style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "14px 20px", display: "flex", gap: 10, alignItems: "center", overflowX: "auto", scrollbarWidth: "none" }}>
+        <span className="hidden sm:inline" style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--text-3)", flex: "none", marginRight: 4 }}>MORE FROM LA GÜERA</span>
+        {links.map((l) => (
+          <a key={l.label} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} style={pill(l.primary)}>
+            {l.label}
+            <Icon name="arrow-right" size={13} />
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function MoreBand() {
   return (
@@ -157,6 +198,15 @@ function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave
   );
 }
 
+function StickerPin({ color, style }: { color: string; style?: React.CSSProperties }) {
+  return (
+    <svg aria-hidden width="34" height="44" viewBox="0 0 34 44" style={{ filter: "drop-shadow(0 6px 8px rgba(0,0,0,.35))", ...style }}>
+      <path d="M17 2C8.7 2 2 8.5 2 16.6 2 27 17 42 17 42s15-15 15-25.4C32 8.5 25.3 2 17 2z" fill={color} stroke="#fff6f4" strokeWidth="2.5" />
+      <circle cx="17" cy="16" r="5.5" fill="#fff6f4" />
+    </svg>
+  );
+}
+
 export function Home() {
   const navigate = useNavigate();
   const { saved, toggle, isSaved } = useSaved();
@@ -204,7 +254,7 @@ export function Home() {
       <section style={{ background: "var(--vino-800)", overflow: "hidden" }}>
         <div className="grid-cols-1 sm:[grid-template-columns:1.15fr_.85fr]" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "48px 20px 64px", display: "grid", gap: 40, alignItems: "center" }}>
           <div style={{ position: "relative" }}>
-            <Eyebrow color="var(--rosa-400)">Mexico City · the hot list</Eyebrow>
+            <Eyebrow color="var(--rosa-400)">Mexico City · where to eat, drink &amp; dance</Eyebrow>
             <div style={{ position: "relative" }}>
               <h1 className="text-[64px] sm:text-[clamp(84px,9vw,132px)]" style={{ margin: "18px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.9, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
                 Comer,
@@ -233,16 +283,64 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div className="hidden sm:block" style={{ position: "relative", justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-storia)", overflow: "hidden", display: "flex", alignItems: "flex-end", padding: 18 }}>
-              <span style={{ font: "400 12px var(--font-mono)", color: "var(--vino-900)", background: "var(--leche-50)", padding: "4px 8px", borderRadius: 2 }}>
-                {DATA.places.length} spots · catalog revised {displayDate(DATA.meta?.catalogRevisedOn)}
-              </span>
+          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,420px)", position: "relative", padding: "44px 0 56px", marginRight: 10 }}>
+            <div
+              style={{
+                position: "relative",
+                background: "var(--leche-0)",
+                borderRadius: 22,
+                padding: "30px 32px 32px",
+                transform: "rotate(-1.5deg)",
+                boxShadow: "0 24px 48px rgba(0,0,0,.4)",
+              }}
+            >
+              <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-600, var(--rosa-500))", marginBottom: 14 }}>
+                {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
+              </div>
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: 56, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--vino-900)" }}>
+                {EMAIL_FORM_ACTION ? (
+                  <>
+                    Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
+                  </>
+                ) : (
+                  <>
+                    Start with the <i style={{ color: "var(--rosa-500)" }}>map.</i>
+                  </>
+                )}
+              </div>
+              <p style={{ margin: "14px 0 0", font: "400 15px/1.5 var(--font-sans)", color: "var(--vino-700, var(--vino-900))" }}>
+                {EMAIL_FORM_ACTION ? "My favorite spots in Mexico City: where to eat, drink and go out, all on your phone." : "My favorite spots in Mexico City: where to eat, drink and go out."}
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 20 }}>
+                <Button variant="secondary" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
+                  {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
+                </Button>
+                {GUIDE_URL && (
+                  <Button variant="secondary" size="lg" fullWidth href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
+                    Get the full guide
+                  </Button>
+                )}
+              </div>
             </div>
-            <Badge variant="pick" shape="stamp" style={{ position: "absolute", top: 40, right: -10, width: 90, height: 90, fontSize: 16 }} />
+            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -4, right: -26, width: 104, height: 104, fontSize: 21, boxShadow: "0 10px 24px rgba(0,0,0,.4)" }} />
+            <StickerPin color="var(--rosa-500)" style={{ position: "absolute", top: 8, right: 82, transform: "rotate(-10deg)" }} />
+            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: 4, left: -30, width: 84, height: 84, fontSize: 24, boxShadow: "0 10px 24px rgba(0,0,0,.4)" }} />
+            <StickerPin color="#8b9035" style={{ position: "absolute", bottom: 0, left: 44, transform: "rotate(6deg)" }} />
+            <Badge variant="ink" shape="stamp" tilt={-6} style={{ position: "absolute", bottom: 14, left: 78, width: 74, height: 74, fontSize: 22, border: "1px solid rgba(247,202,216,.3)", boxShadow: "0 10px 24px rgba(0,0,0,.4)" }}>New</Badge>
+            <StickerPin color="var(--tomate-500)" style={{ position: "absolute", bottom: 6, right: 40, transform: "rotate(10deg)" }} />
+            <a
+              href="https://www.instagram.com/laguerasguide/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ position: "absolute", bottom: 14, right: 90, font: "400 13px var(--font-mono)", color: "var(--nude-300)", textDecoration: "underline" }}
+            >
+              Follow @laguerasguide
+            </a>
           </div>
         </div>
       </section>
+
+      <QuickLinks />
 
       {/* New & hot */}
       {hotShelf.length > 0 && (
