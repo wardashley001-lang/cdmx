@@ -238,12 +238,6 @@ export function Home() {
     navigate(params.toString() ? `/mapa?${params}` : "/mapa");
   }
 
-  // Hero side list: only links that have a real destination.
-  const heroLinks: { id: string; title: React.ReactNode; blurb: string; href: string; external?: boolean }[] = [];
-  if (EMAIL_FORM_ACTION) heroLinks.push({ id: "starter", title: <>Free <i style={{ color: "var(--rosa-500)" }}>starter</i></>, blurb: "My picks and what's new, for your phone.", href: "#/starter" });
-  if (GUIDE_URL) heroLinks.push({ id: "guide", title: <>The <i style={{ color: "var(--rosa-500)" }}>guide</i></>, blurb: "Itineraries and my notes, all in one place.", href: GUIDE_URL, external: true });
-  heroLinks.push({ id: "ig", title: <>On <i style={{ color: "var(--rosa-500)" }}>Instagram</i></>, blurb: "Follow along at @laguerasguide.", href: "https://www.instagram.com/laguerasguide/", external: true });
-
   return (
     <main>
       {/* Hero */}
@@ -279,24 +273,37 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <nav className="hidden sm:block" aria-label="More from la güera" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--rosa-400)", marginBottom: 14 }}>MORE FROM LA GÜERA</div>
-            {heroLinks.map((l) => (
-              <a
-                key={l.id}
-                href={l.href}
-                {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, padding: "22px 0", borderTop: "1px solid rgba(247,202,216,.28)", textDecoration: "none", color: "var(--rosa-200)" }}
-              >
-                <span>
-                  <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: 44, lineHeight: 1, letterSpacing: "-.02em" }}>{l.title}</span>
-                  <span style={{ display: "block", marginTop: 8, font: "400 14px/1.4 var(--font-sans)", color: "var(--nude-300)" }}>{l.blurb}</span>
-                </span>
-                <Icon name="arrow-right" size={26} color="var(--rosa-500)" />
-              </a>
-            ))}
-            <div style={{ borderTop: "1px solid rgba(247,202,216,.28)" }} />
-          </nav>
+          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: 68, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
+              {EMAIL_FORM_ACTION ? (
+                <>
+                  Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
+                </>
+              ) : (
+                <>
+                  Start with the <i style={{ color: "var(--rosa-500)" }}>map.</i>
+                </>
+              )}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 28 }}>
+              <Button variant="inverse" size="lg" fullWidth href={EMAIL_FORM_ACTION ? "#/starter" : "#/mapa"} iconRight="arrow-right">
+                {EMAIL_FORM_ACTION ? "Get the starter" : "Open the map"}
+              </Button>
+              {GUIDE_URL && (
+                <Button variant="inverse" size="lg" fullWidth href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
+                  Get the full guide
+                </Button>
+              )}
+            </div>
+            <a
+              href="https://www.instagram.com/laguerasguide/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-block", marginTop: 20, font: "400 13px var(--font-mono)", color: "var(--nude-300)", textDecoration: "underline" }}
+            >
+              Follow @laguerasguide
+            </a>
+          </div>
         </div>
       </section>
 
