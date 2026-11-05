@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../components/ds/Input";
 import { Button } from "../components/ds/Button";
+import { Badge } from "../components/ds/Badge";
 import { Tag } from "../components/ds/Tag";
 import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
@@ -275,8 +276,10 @@ export function Home() {
           </div>
           <div
             className="hidden sm:block"
-            style={{ justifySelf: "end", width: "min(100%,460px)", border: "1px solid rgba(247,202,216,.35)", borderRadius: 28, overflow: "hidden", background: "rgba(247,202,216,.04)" }}
+            style={{ justifySelf: "end", width: "min(100%,460px)", border: "1px solid rgba(247,202,216,.35)", borderRadius: 28, position: "relative", background: "rgba(247,202,216,.04)" }}
           >
+            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -34, right: -6 }} />
+            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: -30, left: -22, width: 64, height: 64 }} />
             <div style={{ padding: "26px 32px 30px" }}>
             <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-500)", marginBottom: 16 }}>
               {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
