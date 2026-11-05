@@ -273,8 +273,15 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ fontFamily: "var(--font-serif)", fontSize: 68, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
+          <div
+            className="hidden sm:block"
+            style={{ justifySelf: "end", width: "min(100%,460px)", border: "1px solid rgba(247,202,216,.35)", borderRadius: 28, overflow: "hidden", background: "rgba(247,202,216,.04)" }}
+          >
+            <div style={{ padding: "26px 32px 30px" }}>
+            <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-500)", marginBottom: 16 }}>
+              {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
+            </div>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: 60, lineHeight: 0.98, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
               {EMAIL_FORM_ACTION ? (
                 <>
                   Start with the free <i style={{ color: "var(--rosa-500)" }}>starter.</i>
@@ -303,6 +310,7 @@ export function Home() {
             >
               Follow @laguerasguide
             </a>
+            </div>
           </div>
         </div>
       </section>
