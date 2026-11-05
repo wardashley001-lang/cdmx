@@ -186,3 +186,10 @@ free/paid boundary. `docs/OFFER_BLUEPRINT.md` has the earlier offer sketch.
 3. Kit emails the confirmation (custom HTML in Kit, images in `web/public/email/`). Visitor taps confirm.
 4. Kit redirects to `/#/your-starter` (Form Settings > Confirmation email > URL: `https://laguerasguide.com/#/your-starter`), where the PDF downloads.
 All of this stays hidden until `VITE_EMAIL_FORM_ACTION` is set and the privacy page is live.
+
+## Privacy page and signup gate (2026-11-05)
+
+- `/#/privacy` is built from `web/src/lib/privacy.ts` (name, country, contact email, updated date). Ashley chose **not** to publish a mailing address; do not add one. Update the date there whenever the page text changes.
+- The signup (Home box, `/#/starter`) only renders when `PRIVACY_READY` is true, so nothing collects an email unless the privacy page exists. The Kit form address is a constant in `web/src/lib/email.ts` (public, not a secret; `VITE_EMAIL_FORM_ACTION` overrides it).
+- Emails need a physical address in the footer. Kit's shared address is used; that is a Kit setting, not part of this site.
+- The page text is a plain-language draft built from OpenClaw's `PRIVACY_CONSENT_TERMS_DRAFT.md`. It is not legal advice. Open question for Ashley: Mexican privacy law (LFPDPPP) may expect a privacy notice to name the controller's address; get a professional's view before promoting the list widely.

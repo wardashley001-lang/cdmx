@@ -6,6 +6,7 @@ import { MiLista } from "./pages/MiLista";
 import { Starter } from "./pages/Starter";
 import { StarterThanks } from "./pages/StarterThanks";
 import { CheckEmail } from "./pages/CheckEmail";
+import { Privacy } from "./pages/Privacy";
 const Mapa = lazy(() => import("./pages/Mapa").then((m) => ({ default: m.Mapa })));
 import { ToastProvider } from "./lib/ToastProvider";
 import { SavedProvider } from "./lib/useSaved";
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/starter" element={<Starter />} />
                 <Route path="/your-starter" element={<StarterThanks />} />
                 <Route path="/check-your-email" element={<CheckEmail />} />
+                <Route path="/privacy" element={<Privacy />} />
               </Routes>
             </main>
             <Routes>
@@ -33,6 +35,7 @@ function App() {
               <Route path="/starter" element={<Footer />} />
               <Route path="/your-starter" element={<Footer />} />
               <Route path="/check-your-email" element={<Footer />} />
+              <Route path="/privacy" element={<Footer />} />
             </Routes>
             <MobileTabBar />
           </div>
