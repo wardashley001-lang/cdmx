@@ -1,12 +1,12 @@
 import { Button } from "./ds/Button";
 import { EMAIL_FORM_ACTION } from "../lib/email";
 
-/** The signup form itself. Posts straight to the email service; opens its confirmation in a new tab. */
+/** The signup form itself. Posts straight to the email service, which redirects back to /check-your-email (set in the Kit form's General settings). */
 export function EmailForm({ note = "I'll email you the starter. Unsubscribe any time.", noteColor = "var(--text-3)" }: { note?: string; noteColor?: string }) {
   if (!EMAIL_FORM_ACTION) return null;
   return (
     <>
-      <form action={EMAIL_FORM_ACTION} method="post" target="_blank" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+      <form action={EMAIL_FORM_ACTION} method="post" style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
         <input
           type="email"
           name="email_address"

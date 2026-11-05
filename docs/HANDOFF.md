@@ -178,3 +178,11 @@ free/paid boundary. `docs/OFFER_BLUEPRINT.md` has the earlier offer sketch.
 ## Email images (2026-11-05)
 
 `web/public/email/` holds the images used in Kit's confirmation email (header banner, checker strip, "xo, la güera" signature). Emails load images by absolute URL (`https://laguerasguide.com/email/...`), so do not rename or move these files without updating the email in Kit.
+
+## Signup flow (2026-11-05)
+
+1. `/#/starter` or the Home box: visitor types their email (form posts to Kit, same tab).
+2. Kit redirects to `/#/check-your-email` (Kit form > Form Settings > General > "Redirect to an external page": `https://laguerasguide.com/#/check-your-email`). Not linked, noindex.
+3. Kit emails the confirmation (custom HTML in Kit, images in `web/public/email/`). Visitor taps confirm.
+4. Kit redirects to `/#/your-starter` (Form Settings > Confirmation email > URL: `https://laguerasguide.com/#/your-starter`), where the PDF downloads.
+All of this stays hidden until `VITE_EMAIL_FORM_ACTION` is set and the privacy page is live.
