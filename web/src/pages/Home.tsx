@@ -238,6 +238,12 @@ export function Home() {
     navigate(params.toString() ? `/mapa?${params}` : "/mapa");
   }
 
+  // Hero side list: only links that have a real destination.
+  const heroLinks: { id: string; title: React.ReactNode; blurb: string; href: string; external?: boolean }[] = [];
+  if (EMAIL_FORM_ACTION) heroLinks.push({ id: "starter", title: <>Free <i style={{ color: "var(--rosa-500)" }}>starter</i></>, blurb: "My picks and what's new, for your phone.", href: "#/starter" });
+  if (GUIDE_URL) heroLinks.push({ id: "guide", title: <>The <i style={{ color: "var(--rosa-500)" }}>guide</i></>, blurb: "Itineraries and my notes, all in one place.", href: GUIDE_URL, external: true });
+  heroLinks.push({ id: "ig", title: <>On <i style={{ color: "var(--rosa-500)" }}>Instagram</i></>, blurb: "Follow along at @laguerasguide.", href: "https://www.instagram.com/laguerasguide/", external: true });
+
   return (
     <main>
       {/* Hero */}
@@ -273,42 +279,24 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div className="hidden sm:block" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ position: "relative", background: "var(--rosa-200)", borderRadius: 6, padding: "36px 36px 40px", color: "var(--vino-900)", overflow: "hidden" }}>
-              <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em" }}>LA GÜERA&apos;S GUIDE</div>
-              <div style={{ height: 1, background: "var(--vino-900)", opacity: 0.35, margin: "14px 0 44px" }} />
-              <div style={{ fontFamily: "var(--font-serif)", fontSize: 76, lineHeight: 0.95, letterSpacing: "-.03em" }}>
-                Thank me <i style={{ color: "var(--rosa-500)" }}>later.</i>
-              </div>
-              <div style={{ font: "400 52px/1 var(--font-script)", color: "var(--rosa-500)", transform: "rotate(-4deg)", transformOrigin: "left", margin: "18px 0 36px" }}>xo, la güera</div>
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", position: "relative", zIndex: 1 }}>
-                {EMAIL_FORM_ACTION && (
-                  <Button variant="primary" href="#/starter" iconRight="arrow-right">
-                    Get the free starter
-                  </Button>
-                )}
-                {GUIDE_URL && (
-                  <Button variant="secondary" href={GUIDE_URL} target="_blank" rel="noopener noreferrer" iconRight="arrow-right">
-                    Get the full guide
-                  </Button>
-                )}
-                {!EMAIL_FORM_ACTION && !GUIDE_URL && (
-                  <Button variant="primary" href="#/mapa" iconRight="arrow-right">
-                    Open the map
-                  </Button>
-                )}
-              </div>
+          <nav className="hidden sm:block" aria-label="More from la güera" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
+            <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--rosa-400)", marginBottom: 14 }}>MORE FROM LA GÜERA</div>
+            {heroLinks.map((l) => (
               <a
-                href="https://www.instagram.com/laguerasguide/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ display: "inline-block", marginTop: 18, font: "400 13px var(--font-mono)", color: "var(--vino-900)", textDecoration: "underline", position: "relative", zIndex: 1 }}
+                key={l.id}
+                href={l.href}
+                {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, padding: "22px 0", borderTop: "1px solid rgba(247,202,216,.28)", textDecoration: "none", color: "var(--rosa-200)" }}
               >
-                Follow @laguerasguide
+                <span>
+                  <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: 44, lineHeight: 1, letterSpacing: "-.02em" }}>{l.title}</span>
+                  <span style={{ display: "block", marginTop: 8, font: "400 14px/1.4 var(--font-sans)", color: "var(--nude-300)" }}>{l.blurb}</span>
+                </span>
+                <Icon name="arrow-right" size={26} color="var(--rosa-500)" />
               </a>
-              <div aria-hidden="true" style={{ position: "absolute", right: 0, bottom: 0, width: 96, height: 96, background: "var(--pattern-checker)" }} />
-            </div>
-          </div>
+            ))}
+            <div style={{ borderTop: "1px solid rgba(247,202,216,.28)" }} />
+          </nav>
         </div>
       </section>
 
