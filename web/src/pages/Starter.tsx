@@ -4,7 +4,7 @@ import { EMAIL_FORM_ACTION } from "../lib/email";
 
 const page = (n: string) => `${import.meta.env.BASE_URL}${n}`;
 
-/** Branded landing page for the free starter. Only exists once the email form endpoint is set. */
+/** Branded landing page for the starter guide. Only exists once the email form endpoint is set. */
 export function Starter() {
   if (!EMAIL_FORM_ACTION) return <Navigate to="/" replace />;
   return (
@@ -12,7 +12,7 @@ export function Starter() {
       <div style={{ height: 14, background: "var(--pattern-checker)" }} aria-hidden="true" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 items-center" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "48px 20px 64px" }}>
         <div>
-          <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--rosa-400)" }}>FREE · FOR YOUR PHONE</div>
+          <div style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--rosa-400)" }}>STARTER GUIDE · FOR YOUR PHONE</div>
           <h1 className="text-[56px] sm:text-[88px]" style={{ margin: "12px 0 0", fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 0.92, letterSpacing: "-.03em", color: "var(--rosa-200)" }}>
             The Mexico City <i style={{ color: "var(--rosa-500)" }}>starter.</i>
           </h1>

@@ -18,7 +18,7 @@ export function Privacy() {
 
       <h2 style={h2}>What I collect</h2>
       <p style={p}>
-        <b>If you sign up for the free starter:</b> your email address, and whatever your email service records about the emails (for example whether they were delivered, opened, or clicked, and when you confirm or unsubscribe).
+        <b>If you sign up for the starter guide:</b> your email address, and whatever your email service records about the emails (for example whether they were delivered, opened, or clicked, and when you confirm or unsubscribe).
       </p>
       <p style={p}>
         <b>Your saved places (Mi lista):</b> these stay in your own browser. I never receive them. The &ldquo;Share&rdquo; and &ldquo;Copy&rdquo; buttons only work on your device.
