@@ -198,6 +198,15 @@ function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave
   );
 }
 
+function StickerPin({ color, style }: { color: string; style?: React.CSSProperties }) {
+  return (
+    <svg aria-hidden width="34" height="44" viewBox="0 0 34 44" style={{ filter: "drop-shadow(0 6px 8px rgba(0,0,0,.35))", ...style }}>
+      <path d="M17 2C8.7 2 2 8.5 2 16.6 2 27 17 42 17 42s15-15 15-25.4C32 8.5 25.3 2 17 2z" fill={color} stroke="#fff6f4" strokeWidth="2.5" />
+      <circle cx="17" cy="16" r="5.5" fill="#fff6f4" />
+    </svg>
+  );
+}
+
 export function Home() {
   const navigate = useNavigate();
   const { saved, toggle, isSaved } = useSaved();
@@ -278,8 +287,12 @@ export function Home() {
             className="hidden sm:block"
             style={{ justifySelf: "end", width: "min(100%,460px)", border: "1px solid rgba(247,202,216,.35)", borderRadius: 28, position: "relative", background: "rgba(247,202,216,.04)" }}
           >
-            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -34, right: -6 }} />
-            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: -30, left: -22, width: 64, height: 64 }} />
+            <Badge variant="pick" shape="stamp" tilt={-10} style={{ position: "absolute", top: -52, right: -2, width: 104, height: 104, fontSize: 21, boxShadow: "0 10px 24px rgba(0,0,0,.35)" }} />
+            <Badge variant="hot" shape="stamp" tilt={8} style={{ position: "absolute", bottom: -44, right: 70, width: 84, height: 84, fontSize: 24, boxShadow: "0 10px 24px rgba(0,0,0,.35)" }} />
+            <Badge variant="ink" shape="stamp" tilt={-6} style={{ position: "absolute", bottom: -36, left: -30, width: 78, height: 78, fontSize: 24, border: "1px solid rgba(247,202,216,.3)", boxShadow: "0 10px 24px rgba(0,0,0,.35)" }}>New</Badge>
+            <StickerPin color="var(--rosa-500)" style={{ position: "absolute", top: -34, left: 40, transform: "rotate(-8deg)" }} />
+            <StickerPin color="#8b9035" style={{ position: "absolute", bottom: -46, left: 62, transform: "rotate(6deg)" }} />
+            <StickerPin color="var(--tomate-500)" style={{ position: "absolute", bottom: -58, right: 4, transform: "rotate(10deg)" }} />
             <div style={{ padding: "26px 32px 30px" }}>
             <div style={{ font: "600 11px var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", color: "var(--rosa-500)", marginBottom: 16 }}>
               {EMAIL_FORM_ACTION ? "Free · for your phone" : "Start here"}
