@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "../components/ds/Input";
 import { Button } from "../components/ds/Button";
 import { Tag } from "../components/ds/Tag";
-import { Badge } from "../components/ds/Badge";
+import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, photoUrl } from "../lib/data";
@@ -67,10 +67,50 @@ const EMAIL_SPOT_ID = "email-spot";
 type MoreCard = { title: React.ReactNode; blurb: string; pattern: string; href?: string; scrollTo?: string };
 
 const MORE: MoreCard[] = [
-  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", scrollTo: EMAIL_FORM_ACTION ? EMAIL_SPOT_ID : undefined },
+  { title: <>Free <i>starter</i></>, blurb: "My picks and what's new, for your phone.", pattern: "var(--pattern-checker)", href: EMAIL_FORM_ACTION ? "#/starter" : undefined },
   { title: <>The <i>guide</i></>, blurb: "Itineraries and my notes, all in one place.", pattern: "var(--pattern-gingham)", href: GUIDE_URL || undefined },
   { title: <>On <i>Instagram</i></>, blurb: "Follow along at @laguerasguide.", pattern: "var(--pattern-storia)", href: "https://www.instagram.com/laguerasguide/" },
 ];
+
+// Slim row of links under the hero. Each link only appears when it has a real destination.
+function QuickLinks() {
+  const links: { label: string; href: string; primary?: boolean; external?: boolean }[] = [];
+  if (EMAIL_FORM_ACTION) links.push({ label: "Free starter", href: "#/starter", primary: true });
+  if (GUIDE_URL) links.push({ label: "Get the guide", href: GUIDE_URL, external: true });
+  links.push({ label: "Instagram", href: "https://www.instagram.com/laguerasguide/", external: true });
+  const pill = (primary?: boolean): React.CSSProperties => ({
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+    height: 44,
+    padding: "0 18px",
+    borderRadius: 999,
+    border: `1px solid ${primary ? "var(--rosa-500)" : "var(--line-soft)"}`,
+    background: primary ? "var(--rosa-500)" : "var(--leche-0)",
+    color: "var(--vino-900)",
+    fontFamily: "var(--font-caps)",
+    fontWeight: 700,
+    fontSize: 10.5,
+    letterSpacing: ".16em",
+    textTransform: "uppercase",
+    textDecoration: "none",
+    whiteSpace: "nowrap",
+    flex: "none",
+  });
+  return (
+    <section style={{ background: "var(--leche-50)", borderBottom: "1px solid var(--line-soft)" }}>
+      <div style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "14px 20px", display: "flex", gap: 10, alignItems: "center", overflowX: "auto", scrollbarWidth: "none" }}>
+        <span className="hidden sm:inline" style={{ fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".24em", color: "var(--text-3)", flex: "none", marginRight: 4 }}>MORE FROM LA GÜERA</span>
+        {links.map((l) => (
+          <a key={l.label} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} style={pill(l.primary)}>
+            {l.label}
+            <Icon name="arrow-right" size={13} />
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 function MoreBand() {
   return (
@@ -233,16 +273,13 @@ export function Home() {
               </Button>
             </form>
           </div>
-          <div className="hidden sm:block" style={{ position: "relative", justifySelf: "end", width: "min(100%,440px)" }}>
-            <div style={{ aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-storia)", overflow: "hidden", display: "flex", alignItems: "flex-end", padding: 18 }}>
-              <span style={{ font: "400 12px var(--font-mono)", color: "var(--vino-900)", background: "var(--leche-50)", padding: "4px 8px", borderRadius: 2 }}>
-                {DATA.places.length} spots · catalog revised {displayDate(DATA.meta?.catalogRevisedOn)}
-              </span>
-            </div>
-            <Badge variant="pick" shape="stamp" style={{ position: "absolute", top: 40, right: -10, width: 90, height: 90, fontSize: 16 }} />
+          <div className="hidden sm:block" aria-hidden="true" style={{ justifySelf: "end", width: "min(100%,440px)" }}>
+            <div style={{ aspectRatio: "4/5", borderRadius: "var(--radius-arch)", background: "var(--pattern-checker)" }} />
           </div>
         </div>
       </section>
+
+      <QuickLinks />
 
       {/* New & hot */}
       {hotShelf.length > 0 && (
