@@ -172,7 +172,7 @@ free/paid boundary. `docs/OFFER_BLUEPRINT.md` has the earlier offer sketch.
 ## Starter download page (2026-11-05)
 
 - `/#/your-starter` is where people land after confirming their email in Kit (set Kit's "After confirming redirect to" to `https://laguerasguide.com/#/your-starter`). It is not linked from the site and carries a `noindex` tag. The PDF is a normal file at `web/public/la-gueras-guide-mexico-city-starter.pdf`, so anyone with the link can download it.
-- To update the starter, replace that PDF file (keep the name) and the two preview images `web/public/starter-cover.jpg` and `starter-lalo.jpg` if the pages changed. Source: the private OpenClaw repo, `la-gueras-guide/deliverables/2026-11-04-free-starter-v4/`.
+- To update the starter, replace that PDF file (keep the name) and the two preview images `web/public/starter-cover.jpg` and `starter-silverio.jpg` if the pages changed. Source: the private OpenClaw repo, `la-gueras-guide/deliverables/2026-11-06-free-starter-v5/`.
 - `/#/starter` is the signup landing page; it stays hidden until `VITE_EMAIL_FORM_ACTION` is set.
 
 ## Email images (2026-11-05)
