@@ -68,6 +68,8 @@ export interface Place {
   image?: string | null;
   imageCredit?: string;
   gallery?: string[];
+  /** Reservation link (OpenTable, CoverManager, etc.). Shows a "Book a table" button. */
+  reserveUrl?: string;
 }
 
 export interface PlacesData {

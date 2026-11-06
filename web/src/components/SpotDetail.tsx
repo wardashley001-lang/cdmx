@@ -100,6 +100,11 @@ export function SpotDetail({ spot, onClose, mobile: mobileProp }: { spot: Place 
             <Button icon="navigation" href={gmaps} target="_blank" rel="noopener" style={{ flex: mobile ? 1 : "none" }}>
               Cómo llegar
             </Button>
+            {spot.reserveUrl && (
+              <Button variant="pink" icon="calendar-check" href={spot.reserveUrl} target="_blank" rel="noopener" style={{ flex: mobile ? 1 : "none" }}>
+                Book a table
+              </Button>
+            )}
             {spot.instagram && (
               <Button variant="secondary" icon="instagram" href={instagramUrl(spot.instagram)} target="_blank" rel="noopener" style={{ flex: mobile ? 1 : "none" }}>
                 Instagram
