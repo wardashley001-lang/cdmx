@@ -81,6 +81,7 @@ export function MiLista() {
               category={p.category}
               price={p.priceTier}
               hot={p.hot}
+              fresh={p.isNew}
               pick={!!p.pick}
               michelin={p.michelin}
               note={noteOf(p)}

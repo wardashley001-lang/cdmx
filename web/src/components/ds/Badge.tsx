@@ -4,7 +4,7 @@ type Variant = "hot" | "new" | "pick" | "open" | "closed" | "neutral" | "ink";
 
 const V: Record<Variant, { bg: string; fg: string; t: string }> = {
   hot: { bg: "var(--tomate-500)", fg: "var(--leche-0)", t: "Hot" },
-  new: { bg: "var(--cielo-300)", fg: "var(--vino-900)", t: "Nuevo" },
+  new: { bg: "var(--cielo-300)", fg: "var(--vino-900)", t: "New" },
   pick: { bg: "var(--rosa-500)", fg: "var(--vino-900)", t: "Güera's pick" },
   open: { bg: "transparent", fg: "var(--status-open)", t: "Abierto" },
   closed: { bg: "transparent", fg: "var(--status-closed)", t: "Cerrado" },
@@ -49,7 +49,7 @@ export function Badge({ children, variant = "neutral", shape = "pill", tilt, sty
       >
         <span>
           {txt}
-          {variant === "hot" || variant === "pick" ? (
+          {variant === "hot" || variant === "pick" || variant === "new" ? (
             <span style={{ display: "block", fontStyle: "normal", fontSize: 10, marginTop: 2 }}>✦</span>
           ) : null}
         </span>

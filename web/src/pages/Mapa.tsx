@@ -123,9 +123,10 @@ export function Mapa() {
 
   const filters = (
     <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
-      {flag && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
+      {flag && flag !== "hot" && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
       {cat && <Tag solid label={`${CATEGORY_STYLE[cat].label} ✕`} selected onClick={() => setCat(null)} size={mobile ? "sm" : "md"} />}
       <Tag solid label="All" selected={!group && !cat && !flag} onClick={() => { setGroup(null); setCat(null); setFlag(null); }} size={mobile ? "sm" : "md"} />
+      <Tag solid label="New & hot" selected={flag === "hot"} onClick={() => setFlag(flag === "hot" ? null : "hot")} count={entries.filter((p) => p.place.featuredOrder != null).length} size={mobile ? "sm" : "md"} />
       {GROUP_ORDER.map((g) => (
         <Tag solid key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
       ))}
@@ -141,6 +142,7 @@ export function Mapa() {
         category={place.category}
         price={place.priceTier}
         hot={place.hot}
+        fresh={place.isNew}
         pick={!!place.pick}
         michelin={place.michelin}
         note={noteOf(place)}

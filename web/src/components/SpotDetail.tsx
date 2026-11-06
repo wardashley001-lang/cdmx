@@ -39,7 +39,7 @@ export function SpotDetail({ spot, onClose, mobile: mobileProp }: { spot: Place 
   const saved = isSaved(spot.id);
   const gmaps = spot.mapsUrl || mapsSearchUrl(spot.name, spot.address);
   const photo = photoUrl(spot);
-  const badge = spot.pick ? "pick" : spot.hot ? "hot" : undefined;
+  const badge = spot.pick ? "pick" : spot.isNew ? "new" : spot.hot ? "hot" : undefined;
 
   function onToggle() {
     toggle(spot!.id);
