@@ -172,7 +172,9 @@ free/paid boundary. `docs/OFFER_BLUEPRINT.md` has the earlier offer sketch.
 ## Starter download page (2026-11-05)
 
 - `/#/your-starter` is where people land after confirming their email in Kit (set Kit's "After confirming redirect to" to `https://laguerasguide.com/#/your-starter`). It is not linked from the site and carries a `noindex` tag. The PDF is a normal file at `web/public/la-gueras-guide-mexico-city-starter.pdf`, so anyone with the link can download it.
-- To update the starter, replace that PDF file (keep the name) and the two preview images `web/public/starter-cover.jpg` and `starter-silverio.jpg` if the pages changed. Source: the private OpenClaw repo, `la-gueras-guide/deliverables/2026-11-06-free-starter-v5/`.
+- To update the starter, replace that PDF file (keep the name) and the two preview images `web/public/starter-cover.jpg` and `starter-silverio.jpg` if the pages changed. Source: the private OpenClaw repo, `la-gueras-guide/deliverables/2026-11-06-free-starter-v6/` (the only starter version kept; older ones were deleted 2026-11-06).
+- **Starter v6 (2026-11-06):** El Silverio's page uses Ashley's unedited seafood-tower original (no filter). Each of the four pick pages has a small tappable map card (pink pin, opens Google Maps directions) in the photo's top-right corner, with the required "© OpenStreetMap contributors" credit. Lalo's and El Silverio's pins are approximate (their coordinates are flagged unverified in `places.json`). The signup and download pages show the El Silverio page (`starter-silverio.jpg`) as the second phone card.
+- Ashley decided 2026-11-06: no edited photos (no filter); see `brand/README.md`.
 - `/#/starter` is the signup landing page; it stays hidden until `VITE_EMAIL_FORM_ACTION` is set.
 
 ## Email images (2026-11-05)
