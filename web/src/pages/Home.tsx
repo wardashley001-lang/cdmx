@@ -227,7 +227,12 @@ export function Home() {
     []
   );
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
-  const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
+  const picks = useMemo(() => {
+    // Ashley's order: El Silverio first, then Botánico, Lalo, La Once Mil last.
+    const ORDER = ["bars-el-silverio", "italian-bot-nico", "italian-lalo-roma-norte", "mexican-la-once-mil-roma-norte"];
+    const rank = (id: string) => (ORDER.indexOf(id) === -1 ? ORDER.length : ORDER.indexOf(id));
+    return DATA.places.filter((p) => p.pick).sort((a, b) => rank(a.id) - rank(b.id));
+  }, []);
   const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
 
   const hoods = useMemo(() => {
