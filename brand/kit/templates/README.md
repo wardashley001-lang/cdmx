@@ -11,3 +11,7 @@ Built from the brand guide (themes, fonts, patterns). Sources: `templates.html` 
 
 `-bg.png` has no text, so add your own text on top. `-preview.png` shows the intended layout with sample text. The 9:16 safe area and the story size are Instagram conventions, not Ashley's rules.
 In Canva: the same files are in the La Güera's Guide folder, as designs with editable text. Set fonts from the Brand Kit (Bodoni Moda headlines, Syne caps labels, Mrs Saint Delafield script).
+
+## Carousel set (10 slides, 1080×1350)
+
+`carousel-set/carousel-set.html` is the source; `carousel-set.pdf` is what gets imported into Canva (text stays editable, photo spots are swappable images); `preview-01.png` to `preview-10.png` are previews. Slides: 1 cover (photo + wine panel), 2 cover (arch on checker), 3 full photo with label, 4 photo with caption, 5 two photos, 6 what to order, 7 quote, 8 numbered list, 9 save + map, 10 starter guide promo. Photos go in as shot, no filter. Rebuild with `NODE_PATH=$(npm root -g) node brand/kit/templates/carousel-set/build.js`.
