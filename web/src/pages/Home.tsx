@@ -11,7 +11,7 @@ import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, photoUrl } from "../lib/data";
-import { GROUP_LABEL, GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
+import { GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
 import type { Place } from "../types";
@@ -374,39 +374,22 @@ export function Home() {
             What are you <i style={{ color: "var(--rosa-600)" }}>in the mood</i> for?
           </h2>
           <p style={{ margin: "14px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--vino-800)", maxWidth: 520 }}>Tap one to see every spot on the map.</p>
-          <div className="grid-cols-1 sm:[grid-template-columns:repeat(2,1fr)]" style={{ display: "grid", gap: "28px 48px", marginTop: 32 }}>
-            {GROUP_ORDER.map((g) => {
-              const cats = Object.entries(CATEGORY_STYLE)
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 28, maxWidth: 1000 }}>
+            {GROUP_ORDER.flatMap((g) =>
+              Object.entries(CATEGORY_STYLE)
                 .filter(([, c]) => c.group === g)
                 .map(([key]) => ({ key, count: DATA.places.filter((p) => p.category === key).length }))
                 .filter((c) => c.count > 0)
-                .sort((x, y) => y.count - x.count);
-              return (
-                <div key={g}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                    <button
-                      type="button"
-                      onClick={() => goToMap(undefined, g)}
-                      style={{ border: 0, background: "none", padding: 0, cursor: "pointer", font: "italic 400 26px/1 var(--font-serif)", color: "var(--vino-900)" }}
-                    >
-                      {GROUP_LABEL[g]}
-                    </button>
-                    <span style={{ flex: 1, height: 1, background: "rgba(74,14,26,.2)" }} />
-                  </div>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    {cats.map((c) => (
-                      <Tag
-                        key={c.key}
-                        category={c.key}
-                        onClick={() => goToMap(undefined, undefined, undefined, c.key)}
-                        count={c.count}
-                        style={{ background: "var(--leche-50)", borderColor: "transparent", height: 44, padding: "0 16px" }}
-                      />
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+                .sort((x, y) => y.count - x.count),
+            ).map((c) => (
+              <Tag
+                key={c.key}
+                category={c.key}
+                onClick={() => goToMap(undefined, undefined, undefined, c.key)}
+                count={c.count}
+                style={{ background: "var(--leche-50)", borderColor: "transparent", height: 44, padding: "0 16px" }}
+              />
+            ))}
           </div>
         </div>
       </section>
