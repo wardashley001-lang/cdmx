@@ -70,6 +70,8 @@ export interface Place {
   gallery?: string[];
   /** Reservation link (OpenTable, CoverManager, etc.). Shows a "Book a table" button. */
   reserveUrl?: string;
+  /** Short "best of the city" callout shown above her pick, e.g. "Best tacos". */
+  bestOf?: string;
 }
 
 export interface PlacesData {

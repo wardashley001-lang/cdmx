@@ -4389,6 +4389,7 @@
     },
     {
       "id": "mexican-la-once-mil-roma-norte",
+      "bestOf": "Best tacos",
       "name": "La Once Mil - Roma Norte",
       "category": "tacos",
       "mapsUrl": "https://www.google.com/maps/place/La+Once+Mil+-+Roma+Norte/data=!4m2!3m1!1s0x85d1ff005adfb7d3:0xd652330b4035e930",
@@ -4634,6 +4635,7 @@
     },
     {
       "id": "italian-bot-nico",
+      "bestOf": "Best tuna tostada",
       "reserveUrl": "https://www.opentable.com.mx/r/botanico-ciudad-de-mexico",
       "name": "Botánico",
       "category": "contemporary",
@@ -8549,6 +8551,7 @@
     },
     {
       "id": "italian-lalo-roma-norte",
+      "bestOf": "Best tiramisu",
       "reserveUrl": "https://www.opentable.com.mx/r/lalo-ciudad-de-mexico",
       "name": "Lalo",
       "category": "italian",
@@ -8652,6 +8655,7 @@
     },
     {
       "id": "bars-el-silverio",
+      "bestOf": "Best steak",
       "reserveUrl": "https://www.covermanager.com/reservation/module_restaurant/restaurante-el-siverio",
       "name": "El Silverio",
       "category": "bars",
