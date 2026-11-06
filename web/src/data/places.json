@@ -4431,7 +4431,7 @@
         }
       ],
       "group": "eat",
-      "image": "photos/mexican-la-once-mil-roma-norte.jpg",
+      "image": "photos/mexican-la-once-mil-roma-norte-original.jpg",
       "michelin": {
         "year": 2026,
         "level": "one-star",
@@ -4675,7 +4675,7 @@
         }
       ],
       "group": "eat",
-      "image": "photos/italian-bot-nico.jpg",
+      "image": "photos/italian-bot-nico-original.jpg",
       "pick": {
         "text": "Dinner in a botanical garden, basically: an old Condesa mansion's courtyard, cacti everywhere. The tuna tostada is my favorite, the burger is amazing, and honestly so is everything else.",
         "approvedOn": "2026-11-02"
@@ -8597,7 +8597,7 @@
         "Exact map pin"
       ],
       "group": "eat",
-      "image": "photos/italian-lalo-roma-norte.jpg",
+      "image": "photos/italian-lalo-roma-norte-original.jpg",
       "pick": {
         "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel, and I'm ordering the prosciutto before I even sit down. Save room for the tiramisu.",
         "approvedOn": "2026-11-02"
@@ -8678,7 +8678,7 @@
         {
           "label": "Ashley's own photos at El Silverio (seafood tower, steak, swan cream puff, clams, chocolate tart)",
           "checkedOn": "2026-11-03",
-          "note": "Supplied by Ashley (Instagram story screenshots, taken 2026-10-22), approved for the app. Colour-graded with brand/photo-grade/grade.py and cropped to 4:5. The napkin and plates in the photos read el Silverio."
+          "note": "Supplied by Ashley (Instagram story screenshots, taken 2026-10-22), approved for the app. Lead photo (2026-11-06) is her unedited original, cropped 4:5, no filter. The napkin and plates in the photos read el Silverio."
         },
         {
           "label": "Open-status check: Nuevos hotspots para conocer en noviembre 2026 — The Happening",
@@ -8692,7 +8692,7 @@
         "Exact map pin"
       ],
       "group": "drinks",
-      "image": "photos/bars-el-silverio.jpg",
+      "image": "photos/bars-el-silverio-original.jpg",
       "pick": {
         "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador with the energy of a gastronomic pub, which is exactly the point.",
         "approvedOn": "2026-11-02"
