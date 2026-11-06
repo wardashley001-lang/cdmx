@@ -1,5 +1,7 @@
 # Brand assets
 
+**Current version: brand guide v2 (14 pages, 2026-11-04).** There is only one current guide. `BRAND_GUIDE.pdf` here is the official copy, with `BRAND_GUIDE.html` as its source. `kit/BRAND_GUIDE.pdf` is an identical copy for the kit download, and `kit/guide-pages/` has the same 14 pages as images. Older brand branches (9-page guide, early kit, templates) were all merged into `main` and are superseded by this version; nothing from them is missing here.
+
 **Brand kit (logos, colors, fonts, profile pictures) is in `kit/`** with its own README, including Canva setup steps. **Then read `BRAND_GUIDE.pdf`** (source: `BRAND_GUIDE.html`): the one-stop brand guide covering the name, logo, color, type, photos, voice and Instagram. Items marked "Ashley to confirm" in it are my reading of how the app uses things, not rules she set.
 
 ## Wordmark
