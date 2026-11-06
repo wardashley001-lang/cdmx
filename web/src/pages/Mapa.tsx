@@ -8,7 +8,7 @@ import { Tabs } from "../components/ds/Tabs";
 import { IconButton } from "../components/ds/IconButton";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
-import { DATA, noteOf, resolveCoords, photoUrl } from "../lib/data";
+import { DATA, noteOf, resolveCoords, photoUrl, mapListRank } from "../lib/data";
 import { pinIcon } from "../lib/leafletPin";
 import { GROUP_LABEL, GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
@@ -88,7 +88,8 @@ export function Mapa() {
   }, []);
 
   const ql = query.trim().toLowerCase();
-  const filtered = entries.filter(({ place }) => {
+  const filtered = entries
+    .filter(({ place }) => {
     if (group && place.group !== group) return false;
     if (flag === "michelin" && !place.michelin) return false;
     if (flag === "hot" && place.featuredOrder == null) return false;
@@ -97,7 +98,8 @@ export function Mapa() {
     if (!ql) return true;
     const hay = `${place.name} ${place.neighborhood ?? ""} ${place.vibe ?? ""} ${place.category}`.toLowerCase();
     return hay.includes(ql);
-  });
+    })
+    .sort((a, b) => mapListRank(a.place) - mapListRank(b.place));
 
   const [activeId, setActiveId] = useState<string | undefined>(filtered[0]?.place.id);
   useEffect(() => {

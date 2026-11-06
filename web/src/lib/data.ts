@@ -74,3 +74,17 @@ export function sectionOf(place: Place): SectionId {
 export function noteOf(place: Place): string | null {
   return place.pick?.text ?? place.vibe;
 }
+
+/** Ashley's order for La Güera's Picks (also used for the map list). */
+export const PICK_ORDER = ["bars-el-silverio", "italian-bot-nico", "italian-lalo-roma-norte", "mexican-la-once-mil-roma-norte"];
+
+/** Map list order: picks first, then New & hot, then other places with photos, then the rest (stable). */
+export function mapListRank(p: { id: string; pick?: unknown; featuredOrder?: number | null; image?: string | null }): number {
+  if (p.pick) {
+    const i = PICK_ORDER.indexOf(p.id);
+    return i === -1 ? PICK_ORDER.length : i;
+  }
+  if (p.featuredOrder != null) return 100 + p.featuredOrder;
+  if (p.image) return 500;
+  return 1000;
+}

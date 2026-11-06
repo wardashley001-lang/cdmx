@@ -10,7 +10,7 @@ import { Tag } from "../components/ds/Tag";
 import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
-import { DATA, noteOf, photoUrl } from "../lib/data";
+import { DATA, noteOf, photoUrl, PICK_ORDER } from "../lib/data";
 import { GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
@@ -230,8 +230,7 @@ export function Home() {
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const picks = useMemo(() => {
     // Ashley's order: El Silverio first, then Botánico, Lalo, La Once Mil last.
-    const ORDER = ["bars-el-silverio", "italian-bot-nico", "italian-lalo-roma-norte", "mexican-la-once-mil-roma-norte"];
-    const rank = (id: string) => (ORDER.indexOf(id) === -1 ? ORDER.length : ORDER.indexOf(id));
+    const rank = (id: string) => (PICK_ORDER.indexOf(id) === -1 ? PICK_ORDER.length : PICK_ORDER.indexOf(id));
     return DATA.places.filter((p) => p.pick).sort((a, b) => rank(a.id) - rank(b.id));
   }, []);
   const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
