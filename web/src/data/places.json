@@ -4634,6 +4634,7 @@
     },
     {
       "id": "italian-bot-nico",
+      "reserveUrl": "https://www.opentable.com.mx/r/botanico-ciudad-de-mexico",
       "name": "Botánico",
       "category": "contemporary",
       "mapsUrl": "https://www.google.com/maps/place/Bot%C3%A1nico/data=!4m2!3m1!1s0x85d1ffa6074f148f:0x72687d1fd40d86cd",
@@ -8548,6 +8549,7 @@
     },
     {
       "id": "italian-lalo-roma-norte",
+      "reserveUrl": "https://www.opentable.com.mx/r/lalo-ciudad-de-mexico",
       "name": "Lalo",
       "category": "italian",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lalo%2C%20Zacatecas%20173%2C%20Roma%20Norte%2C%20CDMX",
@@ -8650,6 +8652,7 @@
     },
     {
       "id": "bars-el-silverio",
+      "reserveUrl": "https://www.covermanager.com/reservation/module_restaurant/restaurante-el-siverio",
       "name": "El Silverio",
       "category": "bars",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Silverio%2C%20Fernando%20Montes%20de%20Oca%2083%2C%20Condesa%2C%20CDMX",
