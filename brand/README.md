@@ -15,12 +15,6 @@ The logo is **LA GÜERA’S** in wide caps with **guide** in script underneath, 
 
 Not yet chosen or uploaded. Setting the picture is Ashley's call.
 
-## Photo grade (`photo-grade/`)
+## Photos: no filter (`photo-grade/` is retired)
 
-`grade.py` gives every photo the same look (warm, slightly contrasty, deeper
-shadows, a touch more color, fine film grain, a light vignette) and crops to 4:5
-at 1080×1350, the size used by both the app cards and Instagram posts. Run it on
-photos Ashley supplies or approves, then record the source and a credit line in
-`places.json`. Usage is in the script header. The first set was El Silverio's five
-photos (2026-11-03). If Ashley wants the look warmer, cooler, more or less grainy,
-change the numbers at the top of `grade()` and re-run on the originals.
+Ashley does not want edited photos (decided 2026-11-06). Photos go in the app and on Instagram as she shot them: no color grade, no film grain, no vignette. The only edit is cropping to 4:5 (1080×1350) so cards and posts line up. `photo-grade/grade.py` is kept for history only; do not run it on new photos. Photos already on the site that were graded before this decision should be replaced with her originals when she sends them (see `docs/PHOTO_TODO.md`).
