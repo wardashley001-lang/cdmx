@@ -310,3 +310,5 @@ Already done: El Bar, El Silverio, Botánico, ARDA, Lalo, Bikini Pizza (2; more 
 - [ ] **Youth for us Condesa [Recovery] + Hydrafacial** (Condesa) · IG @youthforusmx
 - [ ] **ZII ROPA** (Roma Norte) · IG @ziiropa
 - [ ] **Zoco Fresh Roma Tienda orgánica** (Roma Norte) · IG @zocofreshmx
+
+**Update 2026-11-06:** Ashley does not want edited photos (no color grade, grain or vignette). Photos graded before this decision (El Silverio's five, and Botánico and ARDA, which came from graded versions) should be swapped for her unedited originals when she sends them. Only crop to 4:5.

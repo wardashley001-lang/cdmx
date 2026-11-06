@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""La Güera's Guide photo grade: one look for every photo in the app and on Instagram.
+"""RETIRED 2026-11-06: Ashley does not want edited photos. Do not run this on new photos.
+
+La Güera's Guide photo grade: one look for every photo in the app and on Instagram.
 
 The look: warm, slightly contrasty, deeper shadows, a touch more color, fine film
 grain and a very light vignette (flash-on-film, like Ashley's film shots).
