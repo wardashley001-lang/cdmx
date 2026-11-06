@@ -8471,7 +8471,8 @@
         }
       ],
       "group": "eat",
-      "image": null,
+      "image": "photos/japanese-ranma.jpg",
+      "imageCredit": "Photo: Ranma",
       "hot": true,
       "featuredOrder": 9,
       "featuredApprovalState": "approved"
