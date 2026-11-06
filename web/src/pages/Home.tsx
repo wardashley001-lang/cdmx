@@ -11,7 +11,7 @@ import { Icon } from "../components/ds/Icon";
 import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, photoUrl } from "../lib/data";
-import { GROUP_LABEL, GROUP_ORDER } from "../data/categoryStyle";
+import { GROUP_LABEL, GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
 import type { Place } from "../types";
@@ -229,7 +229,6 @@ export function Home() {
   const hasPendingFeatured = featuredCandidates.some((p) => p.featuredApprovalState === "pending-ashley-review");
   const picks = useMemo(() => DATA.places.filter((p) => p.pick), []);
   const hotShelf = featuredCandidates.slice(0, SHELF_SIZE);
-  const tacoCount = useMemo(() => DATA.places.filter((p) => p.category === "tacos").length, []);
 
   const hoods = useMemo(() => {
     const counts = new Map<string, number>();
@@ -240,8 +239,9 @@ export function Home() {
     return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
   }, []);
 
-  function goToMap(query?: string, group?: string, flag?: string) {
+  function goToMap(query?: string, group?: string, flag?: string, category?: string) {
     const params = new URLSearchParams();
+    if (category) params.set("c", category);
     if (query) params.set("q", query);
     if (group) params.set("g", group);
     if (flag) params.set("f", flag);
@@ -367,28 +367,46 @@ export function Home() {
         </Section>
       )}
 
-      {/* Mood tags */}
+      {/* Mood tags: every kind of place on the map, one button each */}
       <section style={{ background: "var(--rosa-200)" }}>
-        <div className="flex-col sm:flex-row" style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px", display: "flex", gap: 32, alignItems: "center", justifyContent: "space-between" }}>
-          <h2 className="text-[38px] sm:text-[52px]" style={{ margin: 0, fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 1, letterSpacing: "-.02em", maxWidth: 520 }}>
+        <div style={{ maxWidth: "var(--container)", margin: "0 auto", padding: "56px 20px" }}>
+          <h2 className="text-[38px] sm:text-[52px]" style={{ margin: 0, fontFamily: "var(--font-serif)", fontWeight: 400, lineHeight: 1, letterSpacing: "-.02em", maxWidth: 620 }}>
             What are you <i style={{ color: "var(--rosa-600)" }}>in the mood</i> for?
           </h2>
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", maxWidth: 520 }}>
-            {GROUP_ORDER.map((g) => (
-              <Tag
-                key={g}
-                label={GROUP_LABEL[g]}
-                onClick={() => goToMap(undefined, g)}
-                count={DATA.places.filter((p) => p.group === g).length}
-                style={{ background: "var(--leche-50)", borderColor: "transparent", height: 40, padding: "0 18px" }}
-              />
-            ))}
-            <Tag
-              label="Tacos"
-              onClick={() => goToMap(undefined, undefined, "tacos")}
-              count={tacoCount}
-              style={{ background: "var(--leche-50)", borderColor: "transparent", height: 40, padding: "0 18px" }}
-            />
+          <p style={{ margin: "14px 0 0", font: "400 16px/1.5 var(--font-sans)", color: "var(--vino-800)", maxWidth: 520 }}>Tap one to see every spot on the map.</p>
+          <div className="grid-cols-1 sm:[grid-template-columns:repeat(2,1fr)]" style={{ display: "grid", gap: "28px 48px", marginTop: 32 }}>
+            {GROUP_ORDER.map((g) => {
+              const cats = Object.entries(CATEGORY_STYLE)
+                .filter(([, c]) => c.group === g)
+                .map(([key]) => ({ key, count: DATA.places.filter((p) => p.category === key).length }))
+                .filter((c) => c.count > 0)
+                .sort((x, y) => y.count - x.count);
+              return (
+                <div key={g}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                    <button
+                      type="button"
+                      onClick={() => goToMap(undefined, g)}
+                      style={{ border: 0, background: "none", padding: 0, cursor: "pointer", font: "italic 400 26px/1 var(--font-serif)", color: "var(--vino-900)" }}
+                    >
+                      {GROUP_LABEL[g]}
+                    </button>
+                    <span style={{ flex: 1, height: 1, background: "rgba(74,14,26,.2)" }} />
+                  </div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    {cats.map((c) => (
+                      <Tag
+                        key={c.key}
+                        category={c.key}
+                        onClick={() => goToMap(undefined, undefined, undefined, c.key)}
+                        count={c.count}
+                        style={{ background: "var(--leche-50)", borderColor: "transparent", height: 44, padding: "0 16px" }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

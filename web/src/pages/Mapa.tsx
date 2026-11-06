@@ -10,7 +10,7 @@ import { SpotCard } from "../components/ds/SpotCard";
 import { SpotDetail } from "../components/SpotDetail";
 import { DATA, noteOf, resolveCoords, photoUrl } from "../lib/data";
 import { pinIcon } from "../lib/leafletPin";
-import { GROUP_LABEL, GROUP_ORDER } from "../data/categoryStyle";
+import { GROUP_LABEL, GROUP_ORDER, CATEGORY_STYLE } from "../data/categoryStyle";
 import { useSaved } from "../lib/useSaved";
 import { useToast } from "../lib/ToastProvider";
 import type { Group, Place } from "../types";
@@ -63,6 +63,10 @@ export function Mapa() {
     const f = searchParams.get("f");
     return f && f in FLAG_LABEL ? f : null;
   });
+  const [cat, setCat] = useState<string | null>(() => {
+    const c = searchParams.get("c");
+    return c && c in CATEGORY_STYLE ? c : null;
+  });
   const [view, setView] = useState<"map" | "list">("map");
   const [spot, setSpot] = useState<Place | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -89,6 +93,7 @@ export function Mapa() {
     if (flag === "michelin" && !place.michelin) return false;
     if (flag === "hot" && place.featuredOrder == null) return false;
     if (flag === "tacos" && place.category !== "tacos") return false;
+    if (cat && place.category !== cat) return false;
     if (!ql) return true;
     const hay = `${place.name} ${place.neighborhood ?? ""} ${place.vibe ?? ""} ${place.category}`.toLowerCase();
     return hay.includes(ql);
@@ -98,7 +103,7 @@ export function Mapa() {
   useEffect(() => {
     if (!filtered.some((f) => f.place.id === activeId)) setActiveId(filtered[0]?.place.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [group, ql, flag]);
+  }, [group, ql, flag, cat]);
 
   const active = filtered.find((f) => f.place.id === activeId) ?? null;
 
@@ -119,7 +124,8 @@ export function Mapa() {
   const filters = (
     <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
       {flag && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
-      <Tag solid label="All" selected={!group} onClick={() => setGroup(null)} size={mobile ? "sm" : "md"} />
+      {cat && <Tag solid label={`${CATEGORY_STYLE[cat].label} ✕`} selected onClick={() => setCat(null)} size={mobile ? "sm" : "md"} />}
+      <Tag solid label="All" selected={!group && !cat && !flag} onClick={() => { setGroup(null); setCat(null); setFlag(null); }} size={mobile ? "sm" : "md"} />
       {GROUP_ORDER.map((g) => (
         <Tag solid key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
       ))}
