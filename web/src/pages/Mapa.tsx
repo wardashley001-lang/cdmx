@@ -121,15 +121,41 @@ export function Mapa() {
     showToast(wasSaved ? "Removed. Their loss." : "Saved. Good taste.", wasSaved ? "heart-off" : "heart");
   }
 
+  // Category buttons for the chosen group (or the group of a chosen category).
+  const catGroup: Group | null = group ?? (cat ? CATEGORY_STYLE[cat]?.group ?? null : null);
+  const groupCats = catGroup
+    ? Object.entries(CATEGORY_STYLE)
+        .filter(([, c]) => c.group === catGroup)
+        .map(([key]) => ({ key, count: entries.filter((e) => e.place.category === key).length }))
+        .filter((c) => c.count > 0)
+        .sort((a, b) => b.count - a.count)
+    : [];
+
   const filters = (
-    <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
-      {flag && flag !== "hot" && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
-      {cat && <Tag solid label={`${CATEGORY_STYLE[cat].label} ✕`} selected onClick={() => setCat(null)} size={mobile ? "sm" : "md"} />}
-      <Tag solid label="All" selected={!group && !cat && !flag} onClick={() => { setGroup(null); setCat(null); setFlag(null); }} size={mobile ? "sm" : "md"} />
-      <Tag solid label="New & hot" selected={flag === "hot"} onClick={() => setFlag(flag === "hot" ? null : "hot")} count={entries.filter((p) => p.place.featuredOrder != null).length} size={mobile ? "sm" : "md"} />
-      {GROUP_ORDER.map((g) => (
-        <Tag solid key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => setGroup(group === g ? null : g)} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
-      ))}
+    <div style={{ display: "flex", flexDirection: "column", gap: 8, minWidth: 0 }}>
+      <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
+        {flag && flag !== "hot" && <Tag solid label={`${FLAG_LABEL[flag]} ✕`} selected onClick={() => setFlag(null)} size={mobile ? "sm" : "md"} />}
+        <Tag solid label="All" selected={!group && !cat && !flag} onClick={() => { setGroup(null); setCat(null); setFlag(null); }} size={mobile ? "sm" : "md"} />
+        <Tag solid label="New & hot" selected={flag === "hot"} onClick={() => setFlag(flag === "hot" ? null : "hot")} count={entries.filter((p) => p.place.featuredOrder != null).length} size={mobile ? "sm" : "md"} />
+        {GROUP_ORDER.map((g) => (
+          <Tag solid key={g} label={GROUP_LABEL[g]} selected={group === g} onClick={() => { setCat(null); setGroup(group === g ? null : g); }} count={entries.filter((p) => p.place.group === g).length} size={mobile ? "sm" : "md"} />
+        ))}
+      </div>
+      {groupCats.length > 0 && (
+        <div style={{ display: "flex", gap: 8, overflowX: "auto", padding: "2px 2px 6px", scrollbarWidth: "none" }}>
+          {groupCats.map((c) => (
+            <Tag
+              key={c.key}
+              solid
+              category={c.key}
+              selected={cat === c.key}
+              onClick={() => setCat(cat === c.key ? null : c.key)}
+              count={c.count}
+              size="sm"
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 
