@@ -4439,8 +4439,8 @@
         "note": "Michelin's star is for the Lomas location"
       },
       "pick": {
-        "text": "My favorite tacos. The room is fun, they hand you a beer when you walk in, and the Lomas original just earned a Michelin star. No reservations, so expect a line.",
-        "approvedOn": "2026-11-02"
+        "text": "My favorite tacos. They hand you a beer when you walk in, the room is a party, and the Lomas original just earned a Michelin star. No reservations. Expect a line, wait anyway.",
+        "approvedOn": "2026-11-06"
       },
       "imageCredit": "Photo: La Güera",
       "gallery": [
@@ -4677,8 +4677,8 @@
       "group": "eat",
       "image": "photos/italian-bot-nico-original.jpg",
       "pick": {
-        "text": "Dinner in a botanical garden, basically: an old Condesa mansion's courtyard, cacti everywhere. The tuna tostada is my favorite, the burger is amazing, and honestly so is everything else.",
-        "approvedOn": "2026-11-02"
+        "text": "Dinner in a garden, basically: an old Condesa mansion's courtyard, cacti everywhere. Start with the tuna tostada, then the burger. Honestly, everything here is good.",
+        "approvedOn": "2026-11-06"
       },
       "imageCredit": "Photo: La Güera",
       "gallery": [
@@ -8599,8 +8599,8 @@
       "group": "eat",
       "image": "photos/italian-lalo-roma-norte-original.jpg",
       "pick": {
-        "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel, and I'm ordering the prosciutto before I even sit down. Save room for the tiramisu.",
-        "approvedOn": "2026-11-02"
+        "text": "By far my favorite Italian in town. Eduardo García turned his Roma brunch staple into a fresh-pasta room with an old-school feel. Get the pasta, save room for the tiramisu.",
+        "approvedOn": "2026-11-06"
       },
       "hot": true,
       "featuredOrder": 2,
@@ -8694,8 +8694,8 @@
       "group": "drinks",
       "image": "photos/bars-el-silverio-original.jpg",
       "pick": {
-        "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador with the energy of a gastronomic pub, which is exactly the point.",
-        "approvedOn": "2026-11-02"
+        "text": "Amazing seafood and the biggest steak I've seen in Mexico City. A Condesa tapas bar and asador that runs like a gastronomic pub, which is exactly the point.",
+        "approvedOn": "2026-11-06"
       },
       "hot": true,
       "featuredOrder": 1,
