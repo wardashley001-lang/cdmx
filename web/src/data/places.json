@@ -4930,6 +4930,7 @@
     },
     {
       "id": "italian-bikini-pizza",
+      "isNew": true,
       "name": "Bikini Pizza",
       "category": "italian",
       "mapsUrl": "https://www.google.com/maps/place/Bikini+Pizza/data=!4m2!3m1!1s0x85d1ff612382bf81:0x50f2e990ddd7ed10",
@@ -5593,6 +5594,7 @@
     },
     {
       "id": "french-la-belle-epoque",
+      "isNew": true,
       "name": "La Belle Epoque",
       "category": "french",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Belle%20Epoque%2C%20Oaxaca%2080%2C%20Roma%20Norte%2C%20CDMX",
@@ -8342,6 +8344,7 @@
     },
     {
       "id": "american-cassette",
+      "isNew": true,
       "name": "Cassette",
       "category": "american",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cassette%2C%20Tabasco%20156%2C%20Roma%20Norte%2C%20CDMX",
@@ -8717,6 +8720,7 @@
     },
     {
       "id": "wine-astronomic",
+      "isNew": true,
       "name": "Astronomic",
       "category": "wine",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Astronomic%2C%20Versalles%2057%2C%20Ju%C3%A1rez%2C%20CDMX",
@@ -8767,6 +8771,7 @@
     },
     {
       "id": "bars-el-bar-condesa",
+      "isNew": true,
       "name": "El Bar",
       "category": "bars",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Bar%2C%20Alfonso%20Reyes%20203%2C%20Hip%C3%B3dromo%2C%20CDMX",

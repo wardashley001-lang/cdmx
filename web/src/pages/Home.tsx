@@ -185,6 +185,7 @@ function CardGrid({ places, onSave, onOpen, isSaved }: { places: Place[]; onSave
           category={p.category}
           price={p.priceTier}
           hot={p.hot}
+          fresh={p.isNew}
           pick={!!p.pick}
           michelin={p.michelin}
           note={noteOf(p)}
