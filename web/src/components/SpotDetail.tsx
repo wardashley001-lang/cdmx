@@ -87,6 +87,18 @@ export function SpotDetail({ spot, onClose, mobile: mobileProp }: { spot: Place 
           )}
           {spot.pick ? (
             <>
+              {spot.bestOf && (
+                <div
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: 8, margin: "0 0 14px", padding: "7px 14px",
+                    borderRadius: 999, background: "var(--rosa-500)", color: "#fff",
+                    fontFamily: "var(--font-caps)", fontWeight: 700, fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase",
+                  }}
+                >
+                  <Icon name="sparkle" size={11} />
+                  La Güera&rsquo;s pick · {spot.bestOf}
+                </div>
+              )}
               <p style={{ margin: 0, font: "italic 400 19px/1.4 var(--font-serif)", color: "var(--vino-700)" }}>&ldquo;{spot.pick.text}&rdquo;</p>
               <div style={{ font: "400 30px/1 var(--font-script)", color: "var(--rosa-500)", margin: "6px 0 0 60%", transform: "rotate(-4deg)" }}>la güera</div>
             </>
