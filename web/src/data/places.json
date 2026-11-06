@@ -4548,7 +4548,7 @@
       "group": "eat",
       "image": "photos/italian-la-bellezza.jpg",
       "hot": true,
-      "featuredOrder": 6,
+      "featuredOrder": 7,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Sourced"
     },
@@ -4971,7 +4971,7 @@
         }
       ],
       "hot": true,
-      "featuredOrder": 3,
+      "featuredOrder": 1,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Bikini Pizza",
       "gallery": [
@@ -5639,7 +5639,7 @@
         "Exact map pin"
       ],
       "hot": true,
-      "featuredOrder": 5,
+      "featuredOrder": 3,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Sourced"
     },
@@ -8388,7 +8388,7 @@
       "group": "eat",
       "image": "photos/american-cassette.jpg",
       "hot": true,
-      "featuredOrder": 7,
+      "featuredOrder": 8,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Sourced"
     },
@@ -8470,7 +8470,7 @@
       "group": "eat",
       "image": null,
       "hot": true,
-      "featuredOrder": 8,
+      "featuredOrder": 9,
       "featuredApprovalState": "approved"
     },
     {
@@ -8608,7 +8608,7 @@
         "approvedOn": "2026-11-06"
       },
       "hot": true,
-      "featuredOrder": 2,
+      "featuredOrder": 6,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: La Güera",
       "gallery": [
@@ -8705,7 +8705,7 @@
         "approvedOn": "2026-11-06"
       },
       "hot": true,
-      "featuredOrder": 1,
+      "featuredOrder": 5,
       "featuredApprovalState": "approved",
       "gallery": [
         "photos/bars-el-silverio-2.jpg",
@@ -8732,7 +8732,7 @@
       ],
       "sourceFile": "ashley-2026-11-02",
       "group": "drinks",
-      "image": "photos/wine-astronomic.jpg",
+      "image": "photos/wine-astronomic-original.jpg",
       "hot": true,
       "sources": [
         {
@@ -8760,7 +8760,10 @@
       ],
       "featuredOrder": 4,
       "featuredApprovalState": "approved",
-      "imageCredit": "Photo: Sourced"
+      "imageCredit": "Photo: Astronomic",
+      "gallery": [
+        "photos/wine-astronomic.jpg"
+      ]
     },
     {
       "id": "bars-el-bar-condesa",
@@ -8779,7 +8782,7 @@
       "group": "drinks",
       "image": "photos/bars-el-bar-condesa.webp",
       "hot": true,
-      "featuredOrder": 9,
+      "featuredOrder": 2,
       "featuredApprovalState": "approved",
       "sources": [
         {
