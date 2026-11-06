@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>La Güera's Guide: carousel templates</title>
+<style>
+@page{size:1080px 1350px;margin:0}
+:root{--wine:#4A0B18;--deep:#2A0710;--pink:#E0368C;--rosa:#F7CAD8;--cream:#FFF8F7;--nude:#DDB9A6}
+*{margin:0;box-sizing:border-box}
+body{background:#777}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;page-break-after:always;font-family:"DM Sans"}
+.s:last-child{page-break-after:auto}
+.wine{background:var(--wine);color:var(--rosa)}
+.pinkbg{background:var(--rosa);color:var(--deep)}
+.creamb{background:var(--cream);color:var(--deep)}
+.chk{background-image:url(https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/patterns/checker-subtle-on-wine.png);background-size:180px 180px}
+.chkp{background-image:url(https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/patterns/checker-subtle-on-pink.png);background-size:180px 180px}
+img.ph{display:block;object-fit:cover;position:absolute}
+.logo{position:absolute;height:54px}
+.eyebrow{font:700 24px "Syne";letter-spacing:.26em;text-transform:uppercase;color:var(--pink)}
+.big{font:400 150px/.92 "Playfair Display";}
+.big i,.h i,.q i{font-style:italic;color:var(--pink)}
+.h{font:400 100px/.96 "Playfair Display";}
+.q{font:400 104px/1.02 "Playfair Display";}
+.line{font:400 34px/1.35 "DM Sans"}
+.script{font:400 84px/1 "Mrs Saint Delafield";color:var(--pink)}
+.pill{display:inline-flex;align-items:center;gap:14px;border:2px solid currentColor;border-radius:999px;padding:0 44px;height:84px;font:700 24px "Syne";letter-spacing:.2em;text-transform:uppercase}
+.tag{display:inline-block;background:var(--cream);color:var(--deep);border-radius:999px;padding:16px 30px;font:700 22px "Syne";letter-spacing:.2em;text-transform:uppercase}
+.abs{position:absolute}
+.num{font-family:'Playfair Display';font-size:72px;line-height:1;font-weight:400;color:var(--pink);font-style:italic}
+</style></head><body>
+
+<!-- 1 COVER, photo on top, wine panel below -->
+<section data-document-role="page" class="s wine chk">
+  <img class="logo" src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/logos/la-gueras-guide-pink-on-dark.png" style="left:72px;top:72px">
+  <img class="ph" src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/placeholder-photo.png" style="left:230px;top:200px;width:620px;height:760px;border-radius:310px 310px 0 0">
+  <div class="abs eyebrow" style="left:0;width:1080px;text-align:center;top:1010px">Colonia</div>
+  <div class="abs big" style="font-family:'Playfair Display';left:0;width:1080px;text-align:center;top:1055px;color:var(--rosa)">Venue <i>name</i></div>
+  <div class="abs" style="left:699px;top:1230px;width:291px;height:108px"><img src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/sig-pink.png" style="width:291px;height:108px;display:block"></div>
+</section>
+
+<!-- 3 PHOTO, full bleed with label pill -->
+<section data-document-role="page" class="s wine">
+  <img class="ph" src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/placeholder-photo.png" style="left:0;top:0;width:1080px;height:1350px">
+  <div class="abs" style="left:56px;bottom:56px"><span class="tag">Venue name · Colonia</span></div>
+</section>
+
+<!-- 4 PHOTO with caption below, cream -->
+<section data-document-role="page" class="s creamb">
+  <img class="ph" src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/placeholder-photo.png" style="left:72px;top:72px;width:936px;height:830px;border-radius:8px">
+  <div class="abs eyebrow" style="left:72px;top:950px">Venue name · Colonia</div>
+  <div class="abs h" style="font-family:'Playfair Display';left:72px;top:995px;width:936px;font-size:76px">A short line about the <i>dish.</i></div>
+  <div class="abs" style="left:717px;top:1186px;width:291px;height:108px"><img src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/sig-pink.png" style="width:291px;height:108px;display:block"></div>
+</section>
+
+<!-- 5 TWO PHOTOS -->
+<section data-document-role="page" class="s wine chk">
+  <img class="logo" src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/logos/la-gueras-guide-pink-on-dark.png" style="left:72px;top:72px">
+  <div class="abs h" style="font-family:'Playfair Display';left:72px;top:380px;width:936px;color:var(--rosa)">Save this for your next <i>trip.</i></div>
+  <div class="abs line" style="left:72px;top:800px;width:800px;color:var(--rosa)">Venue name<br>Street address, Colonia</div>
+  <div class="abs" style="left:72px;top:990px"><span class="pill" style="color:var(--rosa)">See the whole map →</span></div>
+  <div class="abs line" style="left:72px;top:1120px;color:var(--nude)">laguerasguide.com</div>
+  <div class="abs" style="left:658px;top:1164px;width:350px;height:130px"><img src="https://raw.githubusercontent.com/wardashley001-lang/cdmx/main/brand/kit/templates/carousel-set/sig-pink.png" style="width:350px;height:130px;display:block"></div>
+</section>
+
+<!-- 10 STARTER GUIDE PROMO, pink -->
+</body></html>
