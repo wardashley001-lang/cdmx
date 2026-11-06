@@ -42,7 +42,7 @@ export function StarterThanks() {
         </div>
 
         <div aria-hidden="true" style={{ position: "relative", height: 420, maxWidth: 420, margin: "0 auto", width: "100%" }}>
-          <img src={asset("starter-lalo.jpg")} alt="" style={{ position: "absolute", right: 0, top: 24, width: "58%", borderRadius: 6, boxShadow: "0 18px 40px rgba(0,0,0,.45)", transform: "rotate(6deg)" }} />
+          <img src={asset("starter-silverio.jpg")} alt="" style={{ position: "absolute", right: 0, top: 24, width: "58%", borderRadius: 6, boxShadow: "0 18px 40px rgba(0,0,0,.45)", transform: "rotate(6deg)" }} />
           <img src={asset("starter-cover.jpg")} alt="" style={{ position: "absolute", left: 0, top: 0, width: "58%", borderRadius: 6, boxShadow: "0 18px 40px rgba(0,0,0,.5)", transform: "rotate(-5deg)" }} />
         </div>
       </div>
