@@ -8472,10 +8472,7 @@
       ],
       "group": "eat",
       "image": "photos/japanese-ranma.jpg",
-      "imageCredit": "Photo: Ranma",
-      "hot": true,
-      "featuredOrder": 9,
-      "featuredApprovalState": "approved"
+      "imageCredit": "Photo: Ranma"
     },
     {
       "id": "bars-pistilo",
