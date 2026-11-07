@@ -2404,7 +2404,7 @@
       "mapsUrl": "https://www.google.com/maps/place/Baby+Bar/data=!4m2!3m1!1s0x85d1ff899ac0312d:0x49890086eddc06a9",
       "neighborhood": "Juárez",
       "instagram": "babybar____",
-      "vibe": "A tiny, nostalgic bar in Juárez you enter through a window, pouring batangas, martinis, and gildas to a cassette-tape soundtrack of Madonna and Luis Miguel.",
+      "vibe": "A tiny, nostalgic bar in Juárez you enter through a window, pouring batangas, martinis, and gildas to a cassette-tape soundtrack of Madonna and Luis Miguel. No reservations.",
       "lat": 19.425584,
       "lng": -99.156624,
       "priceTier": null,
@@ -2415,13 +2415,27 @@
       ],
       "sourceFile": "Bars_cocktails.csv",
       "group": "drinks",
-      "image": null,
+      "image": "photos/bars-baby-bar.jpg",
+      "imageCredit": "Photo: Baby Bar (@babybar____)",
+      "hot": true,
+      "featuredOrder": 5,
+      "featuredApprovalState": "approved",
       "address": "C. Versalles 113, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
       "sources": [
         {
           "label": "Google Maps place listing",
           "checkedOn": "2026-11-02",
           "note": "Exact coordinates and street address from the Google Maps place listing for the saved place link."
+        },
+        {
+          "label": "Baby Bar's Instagram profile (@babybar____), screenshot from Ashley",
+          "checkedOn": "2026-11-07",
+          "note": "Bio says \"No tenemos reservas\" (no reservations) and \"Entra por la ventana\" (enter through the window), and gives Calle Versalles 113, Col. Juárez. The bio lists opening hours as 3pm to 12am on most days and 12pm to 6pm on Sunday, but the day letters are ambiguous, so no hours are shown on the card."
+        },
+        {
+          "label": "Photo from Baby Bar's Instagram (@babybar____), supplied by Ashley",
+          "checkedOn": "2026-11-07",
+          "note": "Ashley supplied the photo and directed its use. Venue/photographer permission not separately confirmed; credit shown on the place card. Cropped to 4:5, no edits. Added to New & hot at Ashley's request; the site does not claim it just opened."
         }
       ]
     },
@@ -4548,7 +4562,7 @@
       "group": "eat",
       "image": "photos/italian-la-bellezza.jpg",
       "hot": true,
-      "featuredOrder": 7,
+      "featuredOrder": 8,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Sourced"
     },
@@ -8391,7 +8405,7 @@
       "group": "eat",
       "image": "photos/american-cassette.jpg",
       "hot": true,
-      "featuredOrder": 8,
+      "featuredOrder": 9,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: Sourced"
     },
@@ -8609,7 +8623,7 @@
         "approvedOn": "2026-11-06"
       },
       "hot": true,
-      "featuredOrder": 6,
+      "featuredOrder": 7,
       "featuredApprovalState": "approved",
       "imageCredit": "Photo: La Güera",
       "gallery": [
@@ -8706,7 +8720,7 @@
         "approvedOn": "2026-11-06"
       },
       "hot": true,
-      "featuredOrder": 5,
+      "featuredOrder": 6,
       "featuredApprovalState": "approved",
       "gallery": [
         "photos/bars-el-silverio-2.jpg",
