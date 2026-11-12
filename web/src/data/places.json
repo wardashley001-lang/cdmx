@@ -8707,6 +8707,11 @@
           "checkedOn": "2026-11-03",
           "url": "https://thehappening.com/nuevos-hotspots-para-conocer-en-noviembre-2026/",
           "note": "Checked by OpenClaw (source dated 2026-10-30): A recent-opening roundup places the tapas bar and asador at Fernando Montes de Oca 83. Editorial evidence, not a same-day door check."
+        },
+        {
+          "label": "Ashley (owner): El Silverio is new",
+          "checkedOn": "2026-11-12",
+          "note": "Ashley confirmed on 2026-11-12 that El Silverio is new. It stays in La Güera's Picks (the pick stamp takes priority over the New stamp)."
         }
       ],
       "unverifiedFields": [
@@ -8728,7 +8733,8 @@
         "photos/bars-el-silverio-4.jpg",
         "photos/bars-el-silverio-5.jpg"
       ],
-      "imageCredit": "Photo: La Güera"
+      "imageCredit": "Photo: La Güera",
+      "isNew": true
     },
     {
       "id": "wine-astronomic",
