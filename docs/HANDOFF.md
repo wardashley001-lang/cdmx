@@ -1,6 +1,6 @@
 # La Güera's Guide: working notes for the next agent
 
-Last updated 2026-11-12. This file is public, so it holds no private details.
+Last updated 2026-11-13. This file is public, so it holds no private details.
 Private planning for the paid guide, the storefront and Instagram stays in the
 private OpenClaw repo, not here.
 
@@ -216,3 +216,4 @@ All of this stays hidden until `VITE_EMAIL_FORM_ACTION` is set and the privacy p
 - **Ranma off the New & hot list (2026-11-07):** Ashley said Ranma is not that new, so its `hot`, `featuredOrder` and `featuredApprovalState` were removed. It stays on the map with its photo and no stamp. New & hot is now 8 places.
 - **Baby Bar on New & hot (2026-11-07):** Baby Bar was already on the map; now it has Ashley's martini photo (`bars-baby-bar.jpg`, 4:5 crop, credit "Photo: Baby Bar (@babybar____)"), the "Hot" stamp, and featuredOrder 5 (El Silverio, Lalo, La Bellezza, Cassette each moved down one, so New & hot is now 9). Added "No reservations" from its bio. Hours are not shown: the bio's day letters (M J V S L / D) are ambiguous. It uses Hot, not New, because we have no source saying when it opened. The homepage shelf still shows the first four (Bikini Pizza, El Bar, La Belle Epoque, Astronomic).
 - **El Silverio marked new (2026-11-12):** `isNew: true` set on El Silverio (Ashley confirmed it is new). It stays in La Güera's Picks on the homepage; the pick stamp takes priority over New, so the card looks the same. Data-only change. Baby Bar's address confirmed correct by Ashley (same building as Chopsticks, C. Versalles 113).
+- **Loup Bar added (2026-11-13):** new wine bar in Roma Norte (`wine-loup-bar`, Tonalá 23, @loupwinebar, since 2017), added at Ashley's request from her Instagram screenshot. Sources: her screenshot, En Primeur Club, OpenTable, OSM geocode. Pin is building-level (`unverifiedFields: Exact map pin`); no hours (sources disagree); no photo yet; no Hot/New/Pick flags.
