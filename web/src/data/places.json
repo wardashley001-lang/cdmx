@@ -9369,6 +9369,52 @@
         "Instagram handle",
         "Exact pin confirmed on Google Maps"
       ]
+    },
+    {
+      "id": "wine-loup-bar",
+      "name": "Loup Bar",
+      "category": "wine",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Loup%20Bar%2C%20Tonal%C3%A1%2023%2C%20Roma%20Norte%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Tonalá 23, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+      "instagram": "loupwinebar",
+      "vibe": "A Roma Norte wine bar on Calle Tonalá, open since 2017.",
+      "lat": 19.420719,
+      "lng": -99.163464,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "Ashley Instagram screenshot 2026-11-13",
+      "sources": [
+        {
+          "label": "Ashley's Instagram screenshot (@loupwinebar)",
+          "checkedOn": "2026-11-13",
+          "url": "https://www.instagram.com/loupwinebar/",
+          "note": "Profile bio: \"Wine Bar\", \"Bar Vivant, since 2017\", website loupbar.mx. Hours are not shown on the site: the bio and a listing site disagree, so they were left out."
+        },
+        {
+          "label": "En Primeur Club listing",
+          "checkedOn": "2026-11-13",
+          "url": "https://www.enprimeurclub.com/bars/loup-bar-mexico-city-bar",
+          "note": "Lists Loup Bar at Tonalá 23, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, with the website loupbar.mx."
+        },
+        {
+          "label": "OpenTable listing",
+          "checkedOn": "2026-11-13",
+          "url": "https://www.opentable.com/r/loup-bar-ciudad-de-mexico",
+          "note": "Corroborates the address Calle Tonalá 23, Colonia Roma Norte."
+        },
+        {
+          "label": "OpenStreetMap address geocode",
+          "checkedOn": "2026-11-13",
+          "url": "https://www.openstreetmap.org/way/1420811292",
+          "note": "Building at Calle Tonalá 23, Roma Norte (Maison Artemisia, the bar above Loup, is mapped at the same number). The coordinates are building-level, not a verified venue pin."
+        }
+      ],
+      "unverifiedFields": [
+        "Exact map pin"
+      ],
+      "group": "drinks",
+      "image": null
     }
   ],
   "meta": {
