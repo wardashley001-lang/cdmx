@@ -47,7 +47,7 @@ export function SpotDetail({ spot, onClose, mobile: mobileProp }: { spot: Place 
   }
 
   return (
-    <Dialog open onClose={onClose} ariaLabel={spot.name} variant={mobile ? "sheet" : "modal"} width={600} style={{ padding: mobile ? "10px 20px 28px" : 0 }}>
+    <Dialog open onClose={onClose} ariaLabel={spot.name} variant={mobile ? "sheet" : "modal"} width={600} style={{ padding: mobile ? "10px 20px calc(28px + env(safe-area-inset-bottom, 0px))" : 0 }}>
       <div style={{ display: "grid", gridTemplateColumns: mobile ? "minmax(0,1fr)" : "220px minmax(0,1fr)" }}>
         <div
           style={{
