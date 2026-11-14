@@ -9439,7 +9439,7 @@
           "label": "Mesa's Instagram profile (@mesa____________), screenshot from Ashley",
           "checkedOn": "2026-11-14",
           "url": "https://www.instagram.com/mesa____________/",
-          "note": "Bio: \"Café Cocina Vino. No reservaciones.\" Address Protasio Tagle 132, San Miguel Chapultepec. Bio hours: Tue–Fri 8:30–12:00 and 13:30–17:00, Sat–Sun 9:00–13:00 and 14:30–16:30. Hours are not shown on the site yet."
+          "note": "Bio: \"Café Cocina Vino. No reservaciones.\" Address Protasio Tagle 132, San Miguel Chapultepec. Bio hours: Tue–Fri 8:30–12:00 and 13:30–17:00, Sat–Sun 9:00–13:00 and 14:30–16:30. Hours shown on the card are copied from this bio (Ma–Vie = Tue–Fri, Sáb–Dom = Sat–Sun), as Ashley asked."
         },
         {
           "label": "Photo from Mesa's Instagram post, supplied by Ashley",
@@ -9455,9 +9455,9 @@
       ],
       "unverifiedFields": [
         "Exact map pin",
-        "Hours",
         "Category (café vs. restaurant)"
-      ]
+      ],
+      "hours": "Tuesday–Friday 8:30 AM–12 PM and 1:30–5 PM; Saturday–Sunday 9 AM–1 PM and 2:30–4:30 PM"
     }
   ],
   "meta": {
