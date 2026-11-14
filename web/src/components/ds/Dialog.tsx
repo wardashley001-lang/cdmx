@@ -1,4 +1,5 @@
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { IconButton } from "./IconButton";
 
 export interface DialogProps {
@@ -63,8 +64,11 @@ export function Dialog({ open, onClose, title, ariaLabel, children, footer, vari
   const sheet = variant === "sheet";
   const dark = tone === "vino";
   const bg = tone === "rosa" ? "var(--rosa-200)" : dark ? "var(--vino-800)" : "var(--leche-50)";
+  const floatingClose = !title && !!onClose;
 
-  return (
+  // Rendered into document.body (portal) so no page container (like the map's isolated stacking
+  // context) can put the site header or bottom bar on top of the sheet.
+  return createPortal(
     <div
       onClick={onClose}
       style={{
@@ -78,6 +82,7 @@ export function Dialog({ open, onClose, title, ariaLabel, children, footer, vari
         alignItems: sheet ? "flex-end" : "center",
         justifyContent: "center",
         padding: sheet ? 0 : 24,
+        overscrollBehavior: "contain",
       }}
     >
       <div
@@ -91,41 +96,48 @@ export function Dialog({ open, onClose, title, ariaLabel, children, footer, vari
           position: "relative",
           width: "100%",
           maxWidth: sheet ? "100%" : width,
-          maxHeight: "90vh",
-          overflow: "auto",
+          // Percent of the overlay (the visible screen). 90vh on iPhone Safari is taller than the
+          // visible area, which pushed the top of long sheets off screen.
+          maxHeight: sheet ? "92%" : "90%",
+          display: "flex",
+          flexDirection: "column",
+          overflow: "hidden",
           background: bg,
           color: dark ? "var(--rosa-200)" : "var(--vino-900)",
           borderRadius: sheet ? "22px 22px 0 0" : "var(--radius-md)",
           boxShadow: "var(--shadow-float)",
-          padding: sheet ? "10px 20px 28px" : "28px",
-          ...style,
         }}
       >
-        {sheet && <div style={{ width: 40, height: 4, borderRadius: 2, background: "currentColor", opacity: 0.25, margin: "0 auto 14px" }} />}
-        {(title || onClose) && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              gap: 12,
-              marginBottom: title ? 16 : 0,
-              position: title ? "static" : "absolute",
-              right: title ? undefined : sheet ? 16 : 18,
-              top: title ? undefined : sheet ? 22 : 18,
-              zIndex: 2,
-            }}
-          >
-            {title && (
+        {floatingClose && (
+          <div style={{ position: "absolute", right: sheet ? 16 : 18, top: sheet ? 22 : 18, zIndex: 3 }}>
+            <IconButton icon="x" label="Cerrar" variant={dark ? "inverse" : "secondary"} onClick={onClose} />
+          </div>
+        )}
+        <div
+          style={{
+            flex: "1 1 auto",
+            minHeight: 0,
+            overflowY: "auto",
+            overscrollBehavior: "contain",
+            WebkitOverflowScrolling: "touch",
+            padding: sheet ? "10px 20px 28px" : "28px",
+            ...style,
+          }}
+        >
+          {sheet && <div style={{ width: 40, height: 4, borderRadius: 2, background: "currentColor", opacity: 0.25, margin: "0 auto 14px" }} />}
+          {title && (
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 16 }}>
               <h2 style={{ flex: 1, margin: 0, fontFamily: "var(--font-serif)", fontWeight: 400, fontSize: 34, lineHeight: 1, letterSpacing: "-.01em" }}>
                 {title}
               </h2>
-            )}
-            {onClose && <IconButton icon="x" label="Cerrar" variant={dark ? "inverse" : "secondary"} onClick={onClose} />}
-          </div>
-        )}
-        {children}
-        {footer && <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", marginTop: 24, flexWrap: "wrap" }}>{footer}</div>}
+              {onClose && <IconButton icon="x" label="Cerrar" variant={dark ? "inverse" : "secondary"} onClick={onClose} />}
+            </div>
+          )}
+          {children}
+          {footer && <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", marginTop: 24, flexWrap: "wrap" }}>{footer}</div>}
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
