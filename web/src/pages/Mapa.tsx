@@ -231,7 +231,7 @@ export function Mapa() {
           {filters}
         </div>
         {view === "map" && (
-          <div ref={listRef} style={{ position: "absolute", left: 0, right: 0, bottom: 86, zIndex: 500, display: "flex", gap: 12, overflowX: "auto", padding: "8px 16px 10px", scrollSnapType: "x mandatory", scrollbarWidth: "none" }}>
+          <div ref={listRef} style={{ position: "absolute", left: 0, right: 0, bottom: 86, zIndex: 500, display: "flex", alignItems: "flex-start", gap: 12, overflowX: "auto", padding: "8px 16px 10px", scrollSnapType: "x mandatory", scrollbarWidth: "none" }}>
             {filtered.map(row)}
           </div>
         )}
