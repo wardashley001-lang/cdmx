@@ -9415,6 +9415,49 @@
       ],
       "group": "drinks",
       "image": null
+    },
+    {
+      "id": "cafe-mesa",
+      "name": "Mesa",
+      "category": "cafe",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mesa%2C%20Protasio%20Tagle%20132%2C%20San%20Miguel%20Chapultepec%2C%20CDMX",
+      "neighborhood": "San Miguel Chapultepec",
+      "address": "Protasio Tagle 132, San Miguel Chapultepec, Miguel Hidalgo, CDMX",
+      "instagram": "mesa____________",
+      "vibe": "A café, cocina and vino spot in San Miguel Chapultepec. No reservations.",
+      "lat": 19.4123453,
+      "lng": -99.1837997,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "ashley-2026-11-14",
+      "group": "coffee",
+      "image": "photos/cafe-mesa.jpg",
+      "imageCredit": "Photo: Mesa (@mesa____________)",
+      "isNew": true,
+      "sources": [
+        {
+          "label": "Mesa's Instagram profile (@mesa____________), screenshot from Ashley",
+          "checkedOn": "2026-11-14",
+          "url": "https://www.instagram.com/mesa____________/",
+          "note": "Bio: \"Café Cocina Vino. No reservaciones.\" Address Protasio Tagle 132, San Miguel Chapultepec. Bio hours: Tue–Fri 8:30–12:00 and 13:30–17:00, Sat–Sun 9:00–13:00 and 14:30–16:30. Hours are not shown on the site yet."
+        },
+        {
+          "label": "Photo from Mesa's Instagram post, supplied by Ashley",
+          "checkedOn": "2026-11-14",
+          "url": "https://www.instagram.com/p/DfH7qU8MIGL/",
+          "note": "Ashley supplied the post and directed its use, credited as Mesa. Venue permission not separately confirmed. Shown as posted (640px square), no edits."
+        },
+        {
+          "label": "OpenStreetMap address geocode",
+          "checkedOn": "2026-11-14",
+          "note": "Only the street (Calle Gobernador Protasio Pérez de Tagle, San Miguel Chapultepec) resolved, not the building number. The pin sits on the street, so it is approximate."
+        }
+      ],
+      "unverifiedFields": [
+        "Exact map pin",
+        "Hours",
+        "Category (café vs. restaurant)"
+      ]
     }
   ],
   "meta": {
