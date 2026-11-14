@@ -162,7 +162,7 @@ export function Mapa() {
   );
 
   const row = ({ place, coords }: MapEntry) => (
-    <div key={place.id} data-id={place.id} style={{ flex: mobile ? "0 0 86%" : "none", background: mobile && view === "map" ? "var(--leche-50)" : "transparent", borderRadius: 10, boxShadow: mobile && view === "map" ? "var(--shadow-float)" : "none", scrollSnapAlign: "start" }}>
+    <div key={place.id} data-id={place.id} style={{ flex: mobile && view === "map" ? "0 0 86%" : "none", background: mobile && view === "map" ? "var(--leche-50)" : "transparent", borderRadius: 10, boxShadow: mobile && view === "map" ? "var(--shadow-float)" : "none", scrollSnapAlign: "start" }}>
       <SpotCard
         layout="row"
         name={place.name}
@@ -231,7 +231,7 @@ export function Mapa() {
           {filters}
         </div>
         {view === "map" && (
-          <div ref={listRef} style={{ position: "absolute", left: 0, right: 0, bottom: 86, zIndex: 500, display: "flex", gap: 12, overflowX: "auto", padding: "8px 16px 10px", scrollSnapType: "x mandatory", scrollbarWidth: "none" }}>
+          <div ref={listRef} style={{ position: "absolute", left: 0, right: 0, bottom: 86, zIndex: 500, display: "flex", alignItems: "flex-end", gap: 12, overflowX: "auto", padding: "8px 16px 10px", scrollSnapType: "x mandatory", scrollbarWidth: "none" }}>
             {filtered.map(row)}
           </div>
         )}
