@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SpotCard } from "../components/ds/SpotCard";
 import { Button } from "../components/ds/Button";
 import { SpotDetail } from "../components/SpotDetail";
@@ -10,10 +10,28 @@ import { useToast } from "../lib/ToastProvider";
 import type { Place } from "../types";
 
 export function MiLista() {
-  const { saved, toggle } = useSaved();
+  const { saved, toggle, clear } = useSaved();
   const showToast = useToast();
   const [spot, setSpot] = useState<Place | null>(null);
+  const [confirmClear, setConfirmClear] = useState(false);
   const list = DATA.places.filter((p) => saved.includes(p.id));
+
+  // The confirm step steps back on its own so a stray tap never wipes the list.
+  useEffect(() => {
+    if (!confirmClear) return;
+    const t = setTimeout(() => setConfirmClear(false), 5000);
+    return () => clearTimeout(t);
+  }, [confirmClear]);
+
+  function onClear() {
+    if (!confirmClear) {
+      setConfirmClear(true);
+      return;
+    }
+    clear();
+    setConfirmClear(false);
+    showToast("List cleared. Fresh start.", "heart-off");
+  }
 
   function onToggle(p: Place) {
     const wasSaved = saved.includes(p.id);
@@ -57,6 +75,9 @@ export function MiLista() {
           )}
           <Button variant={canNativeShare() ? "secondary" : "pink"} size="sm" icon="copy" onClick={onCopy}>
             Copy my list
+          </Button>
+          <Button variant={confirmClear ? "primary" : "ghost"} size="sm" icon="x" onClick={onClear}>
+            {confirmClear ? `Tap again to clear all ${list.length}` : "Clear my list"}
           </Button>
         </div>
       )}
