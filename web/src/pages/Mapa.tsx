@@ -162,7 +162,7 @@ export function Mapa() {
   );
 
   const row = ({ place, coords }: MapEntry) => (
-    <div key={place.id} data-id={place.id} style={{ flex: mobile ? "0 0 86%" : "none", background: mobile && view === "map" ? "var(--leche-50)" : "transparent", borderRadius: 10, boxShadow: mobile && view === "map" ? "var(--shadow-float)" : "none", scrollSnapAlign: "start" }}>
+    <div key={place.id} data-id={place.id} style={{ flex: mobile && view === "map" ? "0 0 86%" : "none", background: mobile && view === "map" ? "var(--leche-50)" : "transparent", borderRadius: 10, boxShadow: mobile && view === "map" ? "var(--shadow-float)" : "none", scrollSnapAlign: "start" }}>
       <SpotCard
         layout="row"
         name={place.name}
