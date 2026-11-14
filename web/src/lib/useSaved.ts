@@ -22,6 +22,7 @@ function write(ids: string[]) {
 interface SavedContextValue {
   saved: string[];
   toggle: (id: string) => void;
+  clear: () => void;
   isSaved: (id: string) => boolean;
 }
 
@@ -46,9 +47,14 @@ export function SavedProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const clear = useCallback(() => {
+    write([]);
+    setSaved([]);
+  }, []);
+
   const isSaved = useCallback((id: string) => saved.includes(id), [saved]);
 
-  const value = useMemo(() => ({ saved, toggle, isSaved }), [saved, toggle, isSaved]);
+  const value = useMemo(() => ({ saved, toggle, clear, isSaved }), [saved, toggle, clear, isSaved]);
 
   return createElement(SavedContext.Provider, { value }, children);
 }
