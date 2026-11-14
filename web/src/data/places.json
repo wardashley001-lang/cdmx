@@ -9415,6 +9415,41 @@
       ],
       "group": "drinks",
       "image": null
+    },
+    {
+      "id": "bakery-panaderia-gala",
+      "name": "Panadería Gala",
+      "category": "bakery",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Panader%C3%ADa%20Gala%2C%20Tonal%C3%A1%20143%2C%20Roma%20Norte%2C%20CDMX",
+      "neighborhood": "Roma Norte",
+      "address": "Tonalá 143, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+      "instagram": "panaderiagala",
+      "vibe": "A bakery on Calle Tonalá in Roma Norte. Closed Mondays.",
+      "hours": "Tuesday–Sunday 8 AM–3 PM; Monday closed",
+      "lat": 19.4196478,
+      "lng": -99.1630316,
+      "priceTier": null,
+      "occasionTags": [],
+      "sourceFile": "ashley-2026-11-14",
+      "group": "coffee",
+      "image": null,
+      "sources": [
+        {
+          "label": "Panadería Gala's Instagram profile (@panaderiagala), screenshot from Ashley",
+          "checkedOn": "2026-11-14",
+          "url": "https://www.instagram.com/panaderiagala/",
+          "note": "Bio: \"Bakery\", Tonalá 143, Roma Norte, \"Ma–D 8–15 h, L cerrado\" (Tue–Sun 8 AM–3 PM, closed Monday). Hours on the card are copied from this bio. The profile also has a Horario highlight that was not checked."
+        },
+        {
+          "label": "OpenStreetMap address geocode",
+          "checkedOn": "2026-11-14",
+          "note": "Only the street (Calle Tonalá, Roma Norte) resolved, not the building number. The pin sits on the street, so it is approximate."
+        }
+      ],
+      "unverifiedFields": [
+        "Exact map pin",
+        "Hours"
+      ]
     }
   ],
   "meta": {
